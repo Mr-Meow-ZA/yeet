@@ -7,7 +7,7 @@ namespace evenNumberChecker {
     /**
      *  Checks if a number is even
      */
-    //% blockID = CheckIfANumberIsEven
+    
     //% block = "checkeven"
     export function checkEven(num: number): boolean {
         let result = false;
