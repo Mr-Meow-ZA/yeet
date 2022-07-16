@@ -1,9 +1,20 @@
-namespace yeetus{
+/**
+ * Custom blocks
+ */
+//% weight=10 color=#20bd93
+namespace evenNumberChecker {
 
-//% block = "showMiddlePin"
-export function showMiddlePin(x:number, y:number): void
-{
-    led.plot(x,y)
-}
-
+    /**
+     *  Checks if a number is even
+     */
+    //% blockID = CheckIfANumberIsEven
+    //% block = "checkeven"
+    export function checkEven(num: number): boolean {
+        let result = false;
+        let value = num % 2;
+        if (value === 0) {
+            result = true;
+        }
+        return result;
+    }
 }
