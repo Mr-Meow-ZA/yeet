@@ -1,0 +1,27 @@
+name: SA Lotto Lab
+status: active
+owner: Rapha
+production_url: https://sa-lotto-lab.vercel.app
+framework: static-python-generated-data
+runtime: python-3.12-validation
+source_directory: drawlab-sa
+maintenance:
+  result_refresh: daily
+  integrity_review: weekly
+  source_parser_review: monthly
+  auto_merge: false
+  production_deploy_from_pull_requests: false
+checks:
+  - python-syntax
+  - result-range-validation
+  - duplicate-draw-validation
+  - ticket-integrity
+  - data-freshness
+critical_routes:
+  - /
+data_freshness:
+  source: data/cloud-state.json
+  maximum_age_hours: 48
+notes:
+  - Integrity checks are read-only and never fetch, rewrite or commit lottery data.
+  - Existing result-update workflows remain unchanged by this proposal.
