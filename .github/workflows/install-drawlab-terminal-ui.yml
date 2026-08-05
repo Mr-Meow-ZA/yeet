@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - drawlab-sa/scripts/install_terminal_ui.py
+      - .github/workflows/install-drawlab-terminal-ui.yml
 jobs:
   install:
     runs-on: ubuntu-latest
