@@ -1,0 +1,44 @@
+name: DrawLab Cloud Tracker
+
+on:
+  push:
+    paths:
+      - 'drawlab-sa/**'
+      - '.github/workflows/drawlab-cloud.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '0 18 * * *'
+      timezone: 'Africa/Johannesburg'
+    - cron: '20 22 * * *'
+      timezone: 'Africa/Johannesburg'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: drawlab-cloud
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+      - name: Update virtual ledger and results
+        run: python drawlab-sa/scripts/update_cloud.py
+      - name: Commit cloud state
+        run: |
+          git config user.name 'DrawLab Cloud Bot'
+          git config user.email 'drawlab-bot@users.noreply.github.com'
+          git add drawlab-sa/data/cloud-state.json
+          if git diff --cached --quiet; then
+            echo 'No state changes'
+          else
+            git commit -m 'Update DrawLab cloud state'
+            git push
+          fi
