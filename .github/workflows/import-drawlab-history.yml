@@ -4,39 +4,56 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '35 20 * * 0'
-  push:
-    paths:
-      - 'drawlab-sa/scripts/install_history_importer.py'
-      - '.github/workflows/import-drawlab-history.yml'
 
 permissions:
   contents: write
 
+concurrency:
+  group: drawlab-data-writes
+  cancel-in-progress: false
+
 jobs:
   import:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Install importer
-        run: python drawlab-sa/scripts/install_history_importer.py
       - name: Install dependencies
         run: pip install requests beautifulsoup4
-      - name: Validate scripts
-        run: |
-          python -m py_compile drawlab-sa/scripts/import_history.py
-          python -m py_compile drawlab-sa/scripts/update_cloud.py
-      - name: Import current-format history
+      - name: Validate importer
+        run: python -m py_compile drawlab-sa/scripts/import_history.py
+      - name: Import and validate current-format history
         run: python drawlab-sa/scripts/import_history.py --start-year 2024 --end-year 2026
-      - name: Refresh live cloud state
-        run: python drawlab-sa/scripts/update_cloud.py
-      - name: Commit imported history
+      - name: Commit validated history safely
+        shell: bash
         run: |
+          set -euo pipefail
           git config user.name 'DrawLab History Bot'
           git config user.email 'drawlab-history@users.noreply.github.com'
-          git add drawlab-sa/scripts/import_history.py drawlab-sa/scripts/update_cloud.py drawlab-sa/data/historical-results.json drawlab-sa/data/cloud-state.json
-          git diff --cached --quiet || git commit -m 'Import verified DrawLab historical results'
-          git pull --rebase origin master
-          git push
+
+          for attempt in 1 2 3; do
+            git add drawlab-sa/data/historical-results.json
+            if git diff --cached --quiet; then
+              echo 'No validated history changes'
+              exit 0
+            fi
+
+            git commit -m 'Import validated DrawLab historical results'
+            if git push origin HEAD:master; then
+              echo 'Historical results pushed successfully'
+              exit 0
+            fi
+
+            echo "Push attempt ${attempt} conflicted with another data writer; rebuilding from current master"
+            git fetch origin master
+            git reset --hard origin/master
+            python drawlab-sa/scripts/import_history.py --start-year 2024 --end-year 2026
+          done
+
+          echo 'Unable to push historical results after three attempts'
+          exit 1
