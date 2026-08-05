@@ -10,6 +10,7 @@ on:
   push:
     paths:
       - 'drawlab-sa/scripts/update_cloud.py'
+      - 'drawlab-sa/data/historical-results.json'
       - '.github/workflows/drawlab-cloud.yml'
 
 permissions:
