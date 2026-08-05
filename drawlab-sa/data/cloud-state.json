@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-06T00:41:35.385387+02:00",
-  "status": "ok",
+  "updated_at": "2026-08-06T00:44:20.703939+02:00",
+  "status": "partial",
   "virtual": {
     "starting_bankroll": 1000,
     "costs": {
@@ -121,7 +121,7 @@
         "prize_key": "1",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/lotto/results/05-august-2026",
-        "settled_at": "2026-08-06T00:41:35.385387+02:00"
+        "settled_at": "2026-08-06T00:44:20.703939+02:00"
       },
       {
         "id": "2026-08-05|Lotto|Hot 6M",
@@ -147,7 +147,7 @@
         "prize_key": "3",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/lotto/results/05-august-2026",
-        "settled_at": "2026-08-06T00:41:35.385387+02:00"
+        "settled_at": "2026-08-06T00:44:20.703939+02:00"
       },
       {
         "id": "2026-08-05|Lotto|Diversified Coverage",
@@ -173,7 +173,7 @@
         "prize_key": "0",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/lotto/results/05-august-2026",
-        "settled_at": "2026-08-06T00:41:35.385387+02:00"
+        "settled_at": "2026-08-06T00:44:20.703939+02:00"
       },
       {
         "id": "2026-08-05|Daily Lotto|Weighted Historical",
@@ -198,7 +198,7 @@
         "prize_key": "1",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/05-august-2026",
-        "settled_at": "2026-08-06T00:41:35.385387+02:00"
+        "settled_at": "2026-08-06T00:44:20.703939+02:00"
       },
       {
         "id": "2026-08-05|Daily Lotto|Hot 6M",
@@ -223,7 +223,7 @@
         "prize_key": "2",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/05-august-2026",
-        "settled_at": "2026-08-06T00:41:35.385387+02:00"
+        "settled_at": "2026-08-06T00:44:20.703939+02:00"
       },
       {
         "id": "2026-08-05|Daily Lotto|Diversified Coverage",
@@ -248,7 +248,7 @@
         "prize_key": "0",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/05-august-2026",
-        "settled_at": "2026-08-06T00:41:35.385387+02:00"
+        "settled_at": "2026-08-06T00:44:20.703939+02:00"
       }
     ]
   },
@@ -374,7 +374,14 @@
       "payout_source": "https://za.national-lottery.com/lotto/results/01-august-2026"
     }
   ],
-  "errors": [],
+  "errors": [
+    "Daily Lotto: https://za.national-lottery.com/daily-lotto/results: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /daily-lotto/results (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7f199b12e960>, 'Connection to za.national-lottery.com timed out. (connect timeout=5)'))",
+    "Daily Lotto: https://www.lottery.co.za/daily-lotto/results: ConnectTimeout: HTTPSConnectionPool(host='www.lottery.co.za', port=443): Max retries exceeded with url: /daily-lotto/results (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.lottery.co.za', port=443) at 0x7f199a99e270>, 'Connection to www.lottery.co.za timed out. (connect timeout=5)'))",
+    "Lotto: https://za.national-lottery.com/lotto/results: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /lotto/results (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7f199a99e630>, 'Connection to za.national-lottery.com timed out. (connect timeout=5)'))",
+    "Lotto: https://www.lottery.co.za/lotto/results: ConnectTimeout: HTTPSConnectionPool(host='www.lottery.co.za', port=443): Max retries exceeded with url: /lotto/results (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.lottery.co.za', port=443) at 0x7f199a99ea50>, 'Connection to www.lottery.co.za timed out. (connect timeout=5)'))",
+    "PowerBall: https://www.powerball.net/southafrica/results: ConnectTimeout: HTTPSConnectionPool(host='www.powerball.net', port=443): Max retries exceeded with url: /southafrica/results (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.powerball.net', port=443) at 0x7f199a99ed80>, 'Connection to www.powerball.net timed out. (connect timeout=5)'))",
+    "PowerBall: https://za.national-lottery.com/powerball/results: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /powerball/results (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7f199a99f0e0>, 'Connection to za.national-lottery.com timed out. (connect timeout=5)'))"
+  ],
   "strategy_catalog": {
     "Hot 6M": {
       "version": "1.0",
