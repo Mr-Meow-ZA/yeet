@@ -1,0 +1,22 @@
+name: Patch DrawLab payout parser
+on:
+  push:
+    paths:
+      - 'drawlab-sa/scripts/patch_parser.py'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Patch parser
+        run: python drawlab-sa/scripts/patch_parser.py
+      - name: Commit parser fix
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add drawlab-sa/scripts/update_cloud.py
+          git commit -m "Use precise prize-table columns" || exit 0
+          git push
