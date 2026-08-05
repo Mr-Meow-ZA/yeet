@@ -26,8 +26,6 @@ SOURCES = {
 }
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; DrawLabSA/2.0; +https://sa-lotto-lab.vercel.app)"}
 
-# Used only if a draw-specific payout page is temporarily unavailable.
-# These are explicitly marked as estimates in the ledger.
 FALLBACK = {
     "Daily Lotto": {"2": 5.00, "3": 19.00, "4": 330.00, "5": 400000.00},
     "Lotto": {"3": 20.00, "2+B": 30.00, "3+B": 200.00, "4": 200.00, "4+B": 4000.00, "5": 45000.00, "5+B": 500000.00, "6": 5000000.00},
@@ -166,11 +164,13 @@ def canonical_match(game,label):
     s=re.sub(r"\s+"," ",label.strip().lower()).replace("powerball","pb").replace("bonus ball","bonus")
     nums=[int(x) for x in re.findall(r"\d+",s)]
     n=nums[0] if nums else None
-    has_pb="pb" in s
-    has_bonus="bonus" in s
-    if game=="Daily Lotto" and n is not None: return str(n)
-    if game=="PowerBall" and n is not None: return f"{n}+PB" if has_pb else str(n)
-    if game=="Lotto" and n is not None: return f"{n}+B" if has_bonus else str(n)
+    if n is None: return None
+    if game=="Daily Lotto":
+        return str(n) if 2 <= n <= 5 else None
+    if game=="PowerBall":
+        return (f"{n}+PB" if "pb" in s else str(n)) if 0 <= n <= 5 else None
+    if game=="Lotto":
+        return (f"{n}+B" if "bonus" in s else str(n)) if 2 <= n <= 6 else None
     return None
 
 def parse_payouts(game, html):
@@ -182,7 +182,7 @@ def parse_payouts(game, html):
         key=None; amount=None
         for c in cells:
             k=canonical_match(game,c)
-            if k and key is None: key=k
+            if k: key=k
             v=money_value(c)
             if v is not None and amount is None: amount=v
         if key and amount is not None: payouts[key]=amount
@@ -247,7 +247,6 @@ def main():
             if perr: state["errors"].append(f"{game} payout: {perr}")
             merge_result(state,result)
     for result in state.get("results",[]):
-        if result.get("payouts"): continue
         payouts,ptype,purl,perr=fetch_payouts(result)
         result.update({"payouts":payouts,"payout_type":ptype,"payout_source":purl})
         if perr: state["errors"].append(f"{result.get('game')} {result.get('date')} payout: {perr}")
