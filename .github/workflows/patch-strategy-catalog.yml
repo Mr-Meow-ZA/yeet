@@ -1,0 +1,33 @@
+name: Patch DrawLab strategy catalog
+
+on:
+  push:
+    paths:
+      - 'drawlab-sa/scripts/patch_strategy_catalog.py'
+      - '.github/workflows/patch-strategy-catalog.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Patch strategy catalog
+        run: python drawlab-sa/scripts/patch_strategy_catalog.py
+      - name: Validate markers
+        run: |
+          grep -q 'STRATEGY_CATALOG_V1' drawlab-sa/index.html
+          grep -q 'Cold 6M' drawlab-sa/index.html
+      - name: Commit app update
+        run: |
+          git config user.name 'DrawLab UI Bot'
+          git config user.email 'drawlab-ui@users.noreply.github.com'
+          git add drawlab-sa/index.html
+          git diff --cached --quiet || git commit -m 'Show complete deterministic strategy catalog'
+          git push
