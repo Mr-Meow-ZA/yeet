@@ -1,0 +1,42 @@
+name: DrawLab Integrity
+
+on:
+  pull_request:
+    paths:
+      - 'drawlab-sa/**'
+      - '.github/workflows/drawlab-integrity.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '30 4 * * 1'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: drawlab-integrity-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Use Python 3.12
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Compile all DrawLab scripts
+        shell: bash
+        run: python -m py_compile drawlab-sa/scripts/*.py
+
+      - name: Validate stored results and tickets
+        run: python drawlab-sa/scripts/validate_state.py
+
+      - name: Check scheduled data freshness
+        if: github.event_name == 'schedule'
+        run: python drawlab-sa/scripts/validate_state.py --max-age-hours 48
