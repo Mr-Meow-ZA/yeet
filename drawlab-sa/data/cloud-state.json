@@ -1,0 +1,11 @@
+{
+  "updated_at": null,
+  "status": "initialising",
+  "virtual": {
+    "starting_bankroll": 1000,
+    "costs": {"Daily Lotto": 3, "Lotto": 5, "PowerBall": 5},
+    "tickets": []
+  },
+  "results": [],
+  "errors": []
+}
