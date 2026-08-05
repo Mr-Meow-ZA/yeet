@@ -174,30 +174,22 @@ def canonical_match(game,label):
     return None
 
 def parse_payouts(game, html):
-    soup=BeautifulSoup(html,"html.parser")
-    payouts={}
+    soup = BeautifulSoup(html, "html.parser")
+    payouts = {}
     for tr in soup.select("table tr"):
-        cells=[c.get_text(" ",strip=True) for c in tr.select("th,td")]
-        if len(cells)<2: continue
-        key=None; amount=None
-        for c in cells:
-            k=canonical_match(game,c)
-            if k: key=k
-            v=money_value(c)
-            if v is not None and amount is None: amount=v
-        if key and amount is not None: payouts[key]=amount
-    raw=soup.get_text("\n",strip=True)
-    patterns = {
-      "Daily Lotto": r"(?:Match\s*)?([2-5])\s+R\s*([\d,]+(?:\.\d+)?)",
-      "Lotto": r"Match\s*([2-6])(\s*(?:plus|\+)\s*Bonus)?\s+R\s*([\d,]+(?:\.\d+)?)",
-      "PowerBall": r"Match\s*([0-5])(\s*(?:plus|\+)\s*Powerball)?\s+R\s*([\d,]+(?:\.\d+)?)",
-    }
-    for m in re.finditer(patterns[game],raw,re.I):
-        if game=="Daily Lotto": key=m.group(1); val=m.group(2)
+        cells = [c.get_text(" ", strip=True) for c in tr.select("th,td")]
+        if game in ("Daily Lotto", "Lotto"):
+            if len(cells) < 3:
+                continue
+            key = canonical_match(game, cells[1])
+            amount = money_value(cells[2])
         else:
-            key=m.group(1)+("+B" if game=="Lotto" and m.group(2) else "+PB" if game=="PowerBall" and m.group(2) else "")
-            val=m.group(3)
-        payouts.setdefault(key,float(val.replace(",","")))
+            if len(cells) < 2:
+                continue
+            key = canonical_match(game, cells[0])
+            amount = money_value(cells[1])
+        if key and amount is not None:
+            payouts[key] = amount
     return payouts
 
 def fetch_payouts(result):
