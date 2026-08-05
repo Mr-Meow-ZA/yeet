@@ -1,0 +1,31 @@
+name: Clean strategy rollout
+on:
+  push:
+    paths:
+      - '.github/workflows/clean-strategy-rollout.yml'
+      - 'drawlab-sa/scripts/clean_strategy_rollout.py'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Clean rollout and install guard
+        run: python drawlab-sa/scripts/clean_strategy_rollout.py
+      - name: Validate strategy engine
+        run: python -m py_compile drawlab-sa/scripts/update_cloud.py
+      - name: Commit clean rollout
+        run: |
+          git config user.name 'DrawLab Cloud Bot'
+          git config user.email 'drawlab-bot@users.noreply.github.com'
+          git add drawlab-sa/scripts/update_cloud.py drawlab-sa/data/cloud-state.json
+          git diff --cached --quiet || git commit -m 'Start deterministic strategy league from next eligible draw'
+          git pull --rebase origin master
+          git push origin master
