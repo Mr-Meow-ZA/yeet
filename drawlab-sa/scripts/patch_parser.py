@@ -28,3 +28,4 @@ if count != 1:
     raise SystemExit(f'Expected one parse_payouts function, found {count}')
 path.write_text(text2)
 print('Parser patched')
+# trigger precise parser workflow
