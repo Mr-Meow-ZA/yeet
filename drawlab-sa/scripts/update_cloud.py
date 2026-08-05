@@ -153,6 +153,9 @@ def ensure_virtual_entries(state):
     state["strategy_catalog"] = STRATEGIES
     order = ("Hot 6M", "Weighted Historical", "Cold 6M", "Diversified Coverage")
     for game in games_for_date(NOW.date()):
+        # Never create a virtual ticket after that game's result is already known.
+        if any(r.get("date") == TODAY and r.get("game") == game for r in state.get("results", [])):
+            continue
         costs.setdefault(game, RULES[game]["cost"])
         generated = []
         for strategy in order:
