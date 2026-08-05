@@ -1,11 +1,168 @@
 {
-  "updated_at": null,
-  "status": "initialising",
+  "updated_at": "2026-08-05T20:35:37.262458+02:00",
+  "status": "ok",
   "virtual": {
     "starting_bankroll": 1000,
-    "costs": {"Daily Lotto": 3, "Lotto": 5, "PowerBall": 5},
-    "tickets": []
+    "costs": {
+      "Daily Lotto": 3,
+      "Lotto": 5,
+      "PowerBall": 5
+    },
+    "tickets": [
+      {
+        "id": "2026-08-05|Lotto|Weighted Historical",
+        "date": "2026-08-05",
+        "game": "Lotto",
+        "strategy": "Weighted Historical",
+        "numbers": [
+          4,
+          7,
+          14,
+          24,
+          30,
+          33
+        ],
+        "bonus": null,
+        "cost": 5.0,
+        "won": 0,
+        "status": "Pending result",
+        "created_at": "2026-08-05T20:35:37.262458+02:00"
+      },
+      {
+        "id": "2026-08-05|Lotto|Hot 6M",
+        "date": "2026-08-05",
+        "game": "Lotto",
+        "strategy": "Hot 6M",
+        "numbers": [
+          17,
+          23,
+          25,
+          33,
+          36,
+          46
+        ],
+        "bonus": null,
+        "cost": 5.0,
+        "won": 0,
+        "status": "Pending result",
+        "created_at": "2026-08-05T20:35:37.262458+02:00"
+      },
+      {
+        "id": "2026-08-05|Lotto|Diversified Coverage",
+        "date": "2026-08-05",
+        "game": "Lotto",
+        "strategy": "Diversified Coverage",
+        "numbers": [
+          6,
+          10,
+          22,
+          32,
+          38,
+          44
+        ],
+        "bonus": null,
+        "cost": 5.0,
+        "won": 0,
+        "status": "Pending result",
+        "created_at": "2026-08-05T20:35:37.262458+02:00"
+      },
+      {
+        "id": "2026-08-05|Daily Lotto|Weighted Historical",
+        "date": "2026-08-05",
+        "game": "Daily Lotto",
+        "strategy": "Weighted Historical",
+        "numbers": [
+          9,
+          21,
+          26,
+          30,
+          33
+        ],
+        "bonus": null,
+        "cost": 3.0,
+        "won": 0,
+        "status": "Pending result",
+        "created_at": "2026-08-05T20:35:37.262458+02:00"
+      },
+      {
+        "id": "2026-08-05|Daily Lotto|Hot 6M",
+        "date": "2026-08-05",
+        "game": "Daily Lotto",
+        "strategy": "Hot 6M",
+        "numbers": [
+          4,
+          15,
+          20,
+          21,
+          32
+        ],
+        "bonus": null,
+        "cost": 3.0,
+        "won": 0,
+        "status": "Pending result",
+        "created_at": "2026-08-05T20:35:37.262458+02:00"
+      },
+      {
+        "id": "2026-08-05|Daily Lotto|Diversified Coverage",
+        "date": "2026-08-05",
+        "game": "Daily Lotto",
+        "strategy": "Diversified Coverage",
+        "numbers": [
+          7,
+          10,
+          18,
+          23,
+          33
+        ],
+        "bonus": null,
+        "cost": 3.0,
+        "won": 0,
+        "status": "Pending result",
+        "created_at": "2026-08-05T20:35:37.262458+02:00"
+      }
+    ]
   },
-  "results": [],
+  "results": [
+    {
+      "date": "2026-08-04",
+      "game": "PowerBall",
+      "numbers": [
+        16,
+        24,
+        29,
+        34,
+        38
+      ],
+      "bonus": 15,
+      "source": "https://za.national-lottery.com/powerball/results"
+    },
+    {
+      "date": "2026-08-04",
+      "game": "Daily Lotto",
+      "numbers": [
+        2,
+        5,
+        21,
+        23,
+        25
+      ],
+      "bonus": null,
+      "source": "https://za.national-lottery.com/daily-lotto/results"
+    },
+    {
+      "date": "2026-08-01",
+      "game": "Lotto",
+      "numbers": [
+        9,
+        11,
+        12,
+        24,
+        39,
+        41
+      ],
+      "bonus": 16,
+      "source": "https://za.national-lottery.com/lotto/results"
+    }
+  ],
   "errors": []
 }
