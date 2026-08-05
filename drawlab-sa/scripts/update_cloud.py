@@ -20,36 +20,31 @@ RULES = {
     "PowerBall": {"count": 5, "max": 50, "days": {1, 4}, "bonus_max": 16, "cost": 5},
 }
 SOURCES = {
-    "Daily Lotto": [
-        "https://za.national-lottery.com/daily-lotto/results",
-        "https://www.lottery.co.za/daily-lotto/results",
-    ],
-    "Lotto": [
-        "https://za.national-lottery.com/lotto/results",
-        "https://www.lottery.co.za/lotto/results",
-    ],
-    "PowerBall": [
-        "https://za.national-lottery.com/powerball/results",
-        "https://www.lottery.co.za/powerball/results",
-    ],
+    "Daily Lotto": ["https://za.national-lottery.com/daily-lotto/results", "https://www.lottery.co.za/daily-lotto/results"],
+    "Lotto": ["https://za.national-lottery.com/lotto/results", "https://www.lottery.co.za/lotto/results"],
+    "PowerBall": ["https://za.national-lottery.com/powerball/results", "https://www.lottery.co.za/powerball/results"],
 }
-HEADERS = {"User-Agent": "Mozilla/5.0 DrawLabSA/1.0"}
+HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; DrawLabSA/2.0; +https://sa-lotto-lab.vercel.app)"}
 
+# Used only if a draw-specific payout page is temporarily unavailable.
+# These are explicitly marked as estimates in the ledger.
+FALLBACK = {
+    "Daily Lotto": {"2": 5.00, "3": 19.00, "4": 330.00, "5": 400000.00},
+    "Lotto": {"3": 20.00, "2+B": 30.00, "3+B": 200.00, "4": 200.00, "4+B": 4000.00, "5": 45000.00, "5+B": 500000.00, "6": 5000000.00},
+    "PowerBall": {"0+PB": 10.00, "1+PB": 20.00, "2+PB": 100.00, "3": 100.00, "3+PB": 500.00, "4": 2000.00, "4+PB": 25000.00, "5": 350000.00, "5+PB": 5000000.00},
+}
 
 def load_state():
     if STATE_PATH.exists():
         return json.loads(STATE_PATH.read_text())
     return {"updated_at": None, "status": "initialising", "virtual": {"starting_bankroll": 1000, "costs": {}, "tickets": []}, "results": [], "errors": []}
 
-
 def save_state(state):
     state["updated_at"] = NOW.isoformat()
     STATE_PATH.write_text(json.dumps(state, indent=2, sort_keys=False) + "\n")
 
-
 def games_for_date(dt):
     return [g for g, r in RULES.items() if dt.weekday() in r["days"]]
-
 
 def historical_numbers(state, game):
     nums = []
@@ -58,23 +53,18 @@ def historical_numbers(state, game):
             nums.extend(r.get("numbers", []))
     return nums
 
-
 def seeded_rng(*parts):
     seed = int(hashlib.sha256("|".join(map(str, parts)).encode()).hexdigest()[:16], 16)
     return random.Random(seed)
 
-
 def make_line(state, game, strategy, date_str):
     rule = RULES[game]
     rng = seeded_rng(date_str, game, strategy)
-    hist = historical_numbers(state, game)
-    counts = Counter(hist)
+    counts = Counter(historical_numbers(state, game))
     all_nums = list(range(1, rule["max"] + 1))
-
     if strategy == "Hot 6M":
         ranked = sorted(all_nums, key=lambda n: (-counts[n], rng.random()))
-        pool = ranked[:max(rule["count"] * 2, 12)]
-        picked = rng.sample(pool, rule["count"])
+        picked = rng.sample(ranked[:max(rule["count"] * 2, 12)], rule["count"])
     elif strategy == "Weighted Historical":
         weights = [1 + counts[n] for n in all_nums]
         picked = []
@@ -83,166 +73,193 @@ def make_line(state, game, strategy, date_str):
             if n not in picked:
                 picked.append(n)
     else:
-        bands = []
+        picked = []
         size = rule["max"] / rule["count"]
         for i in range(rule["count"]):
-            lo = int(i * size) + 1
-            hi = int((i + 1) * size)
-            bands.append(rng.randint(lo, max(lo, hi)))
-        picked = list(dict.fromkeys(bands))
+            lo, hi = int(i * size) + 1, int((i + 1) * size)
+            n = rng.randint(lo, max(lo, hi))
+            if n not in picked:
+                picked.append(n)
         while len(picked) < rule["count"]:
             n = rng.randint(1, rule["max"])
             if n not in picked:
                 picked.append(n)
-
-    picked = sorted(picked)
-    bonus = rng.randint(1, rule.get("bonus_max", 1)) if game == "PowerBall" else None
-    return picked, bonus
-
+    return sorted(picked), (rng.randint(1, rule["bonus_max"]) if game == "PowerBall" else None)
 
 def ensure_virtual_entries(state):
     tickets = state.setdefault("virtual", {}).setdefault("tickets", [])
     costs = state["virtual"].setdefault("costs", {})
-    strategies = ["Hot 6M", "Weighted Historical", "Diversified Coverage"]
     for game in games_for_date(NOW.date()):
         costs.setdefault(game, RULES[game]["cost"])
-        for strategy in strategies:
+        for strategy in ("Hot 6M", "Weighted Historical", "Diversified Coverage"):
             tid = f"{TODAY}|{game}|{strategy}"
             if any(t.get("id") == tid for t in tickets):
                 continue
             numbers, bonus = make_line(state, game, strategy, TODAY)
-            tickets.append({
-                "id": tid,
-                "date": TODAY,
-                "game": game,
-                "strategy": strategy,
-                "numbers": numbers,
-                "bonus": bonus,
-                "cost": float(costs[game]),
-                "won": 0,
-                "status": "Pending result",
-                "created_at": NOW.isoformat(),
-            })
-
+            tickets.append({"id": tid, "date": TODAY, "game": game, "strategy": strategy, "numbers": numbers, "bonus": bonus,
+                            "cost": float(costs[game]), "won": 0, "payout_type": None, "status": "Pending result", "created_at": NOW.isoformat()})
 
 def extract_date(text):
     iso = re.search(r"\b(20\d{2}-\d{2}-\d{2})\b", text)
-    if iso:
-        return iso.group(1)
+    if iso: return iso.group(1)
     months = "January|February|March|April|May|June|July|August|September|October|November|December"
     m = re.search(rf"\b(\d{{1,2}})\s+({months})\s+(20\d{{2}})\b", text, re.I)
-    if m:
-        return datetime.strptime(" ".join(m.groups()), "%d %B %Y").date().isoformat()
-    return None
+    return datetime.strptime(" ".join(m.groups()), "%d %B %Y").date().isoformat() if m else None
 
+def money_value(text):
+    if not text: return None
+    m = re.search(r"R\s*([\d,]+(?:\.\d+)?)", text.replace("\xa0", " "), re.I)
+    return float(m.group(1).replace(",", "")) if m else None
 
 def parse_result_html(game, html, url):
     soup = BeautifulSoup(html, "html.parser")
     raw = soup.get_text(" ", strip=True)
     draw_date = extract_date(raw)
-
-    patterns = [
-        r'"(?:winningNumbers|mainNumbers|numbers)"\s*:\s*\[([^\]]+)\]',
-        r'"balls"\s*:\s*\[([^\]]+)\]',
-    ]
     candidates = []
-    for p in patterns:
+    for p in [r'"(?:winningNumbers|mainNumbers|numbers)"\s*:\s*\[([^\]]+)\]', r'"balls"\s*:\s*\[([^\]]+)\]']:
         for match in re.findall(p, html, re.I):
             nums = [int(x) for x in re.findall(r"\b\d{1,2}\b", match)]
-            if nums:
-                candidates.append(nums)
-
-    selectors = ['[class*="ball"]', '[class*="number"]', '[data-number]']
-    dom_nums = []
-    for sel in selectors:
+            if nums: candidates.append(nums)
+    for sel in ['[class*="ball"]', '[class*="number"]', '[data-number]']:
+        dom = []
         for el in soup.select(sel):
             txt = el.get("data-number") or el.get_text(" ", strip=True)
-            m = re.fullmatch(r"\s*(\d{1,2})\s*", txt or "")
-            if m:
-                dom_nums.append(int(m.group(1)))
-        if len(dom_nums) >= RULES[game]["count"]:
-            break
-    if dom_nums:
-        candidates.insert(0, dom_nums)
-
-    count = RULES[game]["count"]
-    maximum = RULES[game]["max"]
+            if re.fullmatch(r"\s*\d{1,2}\s*", txt or ""): dom.append(int(txt))
+        if len(dom) >= RULES[game]["count"]:
+            candidates.insert(0, dom); break
+    count, maximum = RULES[game]["count"], RULES[game]["max"]
     for nums in candidates:
-        valid = []
+        valid=[]
         for n in nums:
-            if 1 <= n <= maximum and n not in valid:
-                valid.append(n)
+            if 1 <= n <= maximum and n not in valid: valid.append(n)
         if len(valid) >= count:
-            main = sorted(valid[:count])
-            bonus = None
-            if game == "PowerBall":
-                rest = [n for n in nums[count:] if 1 <= n <= RULES[game]["bonus_max"]]
-                bonus = rest[0] if rest else None
-            elif game == "Lotto" and len(nums) > count:
-                rest = [n for n in nums[count:] if 1 <= n <= maximum]
-                bonus = rest[0] if rest else None
-            return {"date": draw_date, "game": game, "numbers": main, "bonus": bonus, "source": url}
+            main=sorted(valid[:count]); bonus=None
+            if game=="PowerBall":
+                rest=[n for n in nums[count:] if 1<=n<=RULES[game]["bonus_max"]]; bonus=rest[0] if rest else None
+            elif game=="Lotto":
+                rest=[n for n in nums[count:] if 1<=n<=maximum]; bonus=rest[0] if rest else None
+            return {"date":draw_date,"game":game,"numbers":main,"bonus":bonus,"source":url}
     return None
 
-
 def fetch_latest_result(game):
-    errors = []
+    errors=[]
     for url in SOURCES[game]:
         try:
-            response = requests.get(url, headers=HEADERS, timeout=25)
-            response.raise_for_status()
-            parsed = parse_result_html(game, response.text, url)
-            if parsed and parsed.get("date"):
-                return parsed, errors
+            r=requests.get(url,headers=HEADERS,timeout=25); r.raise_for_status()
+            parsed=parse_result_html(game,r.text,url)
+            if parsed and parsed.get("date"): return parsed,errors
             errors.append(f"{game}: could not parse {url}")
-        except Exception as exc:
-            errors.append(f"{game}: {url}: {type(exc).__name__}: {exc}")
-    return None, errors
+        except Exception as exc: errors.append(f"{game}: {url}: {type(exc).__name__}: {exc}")
+    return None,errors
 
+def date_slug(date_str):
+    dt=datetime.strptime(date_str,"%Y-%m-%d")
+    return f"{dt.day:02d}-{dt.strftime('%B').lower()}-{dt.year}"
 
-def merge_result(state, result):
-    key = (result["date"], result["game"])
-    for existing in state.setdefault("results", []):
-        if (existing.get("date"), existing.get("game")) == key:
-            existing.update(result)
-            return
+def payout_url(result):
+    d=result["date"]
+    if result["game"]=="Daily Lotto": return f"https://za.national-lottery.com/daily-lotto/results/{date_slug(d)}"
+    if result["game"]=="Lotto": return f"https://za.national-lottery.com/lotto/results/{date_slug(d)}"
+    return f"https://www.powerball.net/southafrica/results/{d}"
+
+def canonical_match(game,label):
+    s=re.sub(r"\s+"," ",label.strip().lower()).replace("powerball","pb").replace("bonus ball","bonus")
+    nums=[int(x) for x in re.findall(r"\d+",s)]
+    n=nums[0] if nums else None
+    has_pb="pb" in s
+    has_bonus="bonus" in s
+    if game=="Daily Lotto" and n is not None: return str(n)
+    if game=="PowerBall" and n is not None: return f"{n}+PB" if has_pb else str(n)
+    if game=="Lotto" and n is not None: return f"{n}+B" if has_bonus else str(n)
+    return None
+
+def parse_payouts(game, html):
+    soup=BeautifulSoup(html,"html.parser")
+    payouts={}
+    for tr in soup.select("table tr"):
+        cells=[c.get_text(" ",strip=True) for c in tr.select("th,td")]
+        if len(cells)<2: continue
+        key=None; amount=None
+        for c in cells:
+            k=canonical_match(game,c)
+            if k and key is None: key=k
+            v=money_value(c)
+            if v is not None and amount is None: amount=v
+        if key and amount is not None: payouts[key]=amount
+    raw=soup.get_text("\n",strip=True)
+    patterns = {
+      "Daily Lotto": r"(?:Match\s*)?([2-5])\s+R\s*([\d,]+(?:\.\d+)?)",
+      "Lotto": r"Match\s*([2-6])(\s*(?:plus|\+)\s*Bonus)?\s+R\s*([\d,]+(?:\.\d+)?)",
+      "PowerBall": r"Match\s*([0-5])(\s*(?:plus|\+)\s*Powerball)?\s+R\s*([\d,]+(?:\.\d+)?)",
+    }
+    for m in re.finditer(patterns[game],raw,re.I):
+        if game=="Daily Lotto": key=m.group(1); val=m.group(2)
+        else:
+            key=m.group(1)+("+B" if game=="Lotto" and m.group(2) else "+PB" if game=="PowerBall" and m.group(2) else "")
+            val=m.group(3)
+        payouts.setdefault(key,float(val.replace(",","")))
+    return payouts
+
+def fetch_payouts(result):
+    url=payout_url(result)
+    try:
+        r=requests.get(url,headers=HEADERS,timeout=25); r.raise_for_status()
+        payouts=parse_payouts(result["game"],r.text)
+        if payouts: return payouts,"exact",url,None
+        return FALLBACK[result["game"]],"estimated",url,f"No payout table parsed at {url}"
+    except Exception as exc:
+        return FALLBACK[result["game"]],"estimated",url,f"{type(exc).__name__}: {exc}"
+
+def merge_result(state,result):
+    key=(result["date"],result["game"])
+    for existing in state.setdefault("results",[]):
+        if (existing.get("date"),existing.get("game"))==key:
+            existing.update(result); return
     state["results"].append(result)
 
+def result_key(game,matches,pb_match=False,bonus_match=False):
+    if game=="Daily Lotto": return str(matches)
+    if game=="PowerBall": return f"{matches}+PB" if pb_match else str(matches)
+    return f"{matches}+B" if bonus_match else str(matches)
 
 def settle(state):
-    result_map = {(r.get("date"), r.get("game")): r for r in state.get("results", [])}
-    for t in state.get("virtual", {}).get("tickets", []):
-        r = result_map.get((t.get("date"), t.get("game")))
-        if not r:
-            continue
-        matches = len(set(t.get("numbers", [])) & set(r.get("numbers", [])))
-        pb_match = t.get("game") == "PowerBall" and t.get("bonus") is not None and t.get("bonus") == r.get("bonus")
-        t["matches"] = matches
-        t["pb_match"] = pb_match
-        t["status"] = "Settled"
-        t.setdefault("won", 0)
-        t["settled_at"] = NOW.isoformat()
-
+    result_map={(r.get("date"),r.get("game")):r for r in state.get("results",[])}
+    for t in state.get("virtual",{}).get("tickets",[]):
+        r=result_map.get((t.get("date"),t.get("game")))
+        if not r: continue
+        matches=len(set(t.get("numbers",[])) & set(r.get("numbers",[])))
+        pb=t.get("game")=="PowerBall" and t.get("bonus")==r.get("bonus")
+        bonus=t.get("game")=="Lotto" and r.get("bonus") in t.get("numbers",[])
+        key=result_key(t["game"],matches,pb,bonus)
+        payout=float(r.get("payouts",{}).get(key,0))
+        t.update({"matches":matches,"pb_match":pb,"bonus_match":bonus,"prize_key":key,"won":payout,
+                  "payout_type":r.get("payout_type","estimated"),"payout_source":r.get("payout_source"),
+                  "status":"Settled","settled_at":NOW.isoformat()})
 
 def main():
-    state = load_state()
-    state["errors"] = []
+    state=load_state(); state["errors"]=[]
     ensure_virtual_entries(state)
-
-    # Results are checked on every run. Stale results are harmless because merge uses date+game.
     for game in RULES:
-        result, errors = fetch_latest_result(game)
-        state["errors"].extend(errors)
+        result,errors=fetch_latest_result(game); state["errors"].extend(errors)
         if result:
-            merge_result(state, result)
-
+            payouts,ptype,purl,perr=fetch_payouts(result)
+            result.update({"payouts":payouts,"payout_type":ptype,"payout_source":purl})
+            if perr: state["errors"].append(f"{game} payout: {perr}")
+            merge_result(state,result)
+    for result in state.get("results",[]):
+        if result.get("payouts"): continue
+        payouts,ptype,purl,perr=fetch_payouts(result)
+        result.update({"payouts":payouts,"payout_type":ptype,"payout_source":purl})
+        if perr: state["errors"].append(f"{result.get('game')} {result.get('date')} payout: {perr}")
     settle(state)
-    state["status"] = "ok" if not state["errors"] else "partial"
-    state["results"] = sorted(state["results"], key=lambda x: (x.get("date", ""), x.get("game", "")), reverse=True)[:300]
-    state["virtual"]["tickets"] = sorted(state["virtual"]["tickets"], key=lambda x: (x.get("date", ""), x.get("game", ""), x.get("strategy", "")), reverse=True)[:3000]
+    state["status"]="ok" if not state["errors"] else "partial"
+    state["results"]=sorted(state["results"],key=lambda x:(x.get("date",""),x.get("game","")),reverse=True)[:300]
+    state["virtual"]["tickets"]=sorted(state["virtual"]["tickets"],key=lambda x:(x.get("date",""),x.get("game",""),x.get("strategy","")),reverse=True)[:3000]
     save_state(state)
-    print(json.dumps({"status": state["status"], "updated_at": state["updated_at"], "tickets": len(state["virtual"]["tickets"]), "results": len(state["results"]), "errors": state["errors"][:5]}, indent=2))
+    exact=sum(1 for r in state["results"] if r.get("payout_type")=="exact")
+    estimated=sum(1 for r in state["results"] if r.get("payout_type")=="estimated")
+    print(json.dumps({"status":state["status"],"updated_at":state["updated_at"],"tickets":len(state["virtual"]["tickets"]),
+                      "results":len(state["results"]),"exact_payout_draws":exact,"estimated_payout_draws":estimated,
+                      "errors":state["errors"][:8]},indent=2))
 
-
-if __name__ == "__main__":
-    main()
+if __name__=="__main__": main()
