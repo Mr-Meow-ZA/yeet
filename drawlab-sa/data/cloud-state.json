@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05T20:35:37.262458+02:00",
+  "updated_at": "2026-08-05T21:05:38.584376+02:00",
   "status": "ok",
   "virtual": {
     "starting_bankroll": 1000,
@@ -134,7 +134,20 @@
         38
       ],
       "bonus": 15,
-      "source": "https://za.national-lottery.com/powerball/results"
+      "source": "https://za.national-lottery.com/powerball/results",
+      "payouts": {
+        "5+PB": 3000000.0,
+        "5": 0.0,
+        "4+PB": 21660.0,
+        "4": 1000.0,
+        "3+PB": 250.0,
+        "3": 50.0,
+        "2+PB": 50.0,
+        "1+PB": 10.0,
+        "0+PB": 5.0
+      },
+      "payout_type": "exact",
+      "payout_source": "https://www.powerball.net/southafrica/results/2026-08-04"
     },
     {
       "date": "2026-08-04",
@@ -147,7 +160,17 @@
         25
       ],
       "bonus": null,
-      "source": "https://za.national-lottery.com/daily-lotto/results"
+      "source": "https://za.national-lottery.com/daily-lotto/results",
+      "payouts": {
+        "1": 86065.8,
+        "2": 391.3,
+        "3": 18.4,
+        "4": 4.9,
+        "131": 1466710.7,
+        "5": 86065.8
+      },
+      "payout_type": "exact",
+      "payout_source": "https://za.national-lottery.com/daily-lotto/results/04-august-2026"
     },
     {
       "date": "2026-08-01",
@@ -161,7 +184,20 @@
         41
       ],
       "bonus": 16,
-      "source": "https://za.national-lottery.com/lotto/results"
+      "source": "https://za.national-lottery.com/lotto/results",
+      "payouts": {
+        "1": 5500000.0,
+        "2": 0.0,
+        "3": 33643.9,
+        "4": 4000.0,
+        "5": 200.0,
+        "6": 200.0,
+        "7": 30.0,
+        "8": 20.0,
+        "65": 3921612.1
+      },
+      "payout_type": "exact",
+      "payout_source": "https://za.national-lottery.com/lotto/results/01-august-2026"
     }
   ],
   "errors": []
