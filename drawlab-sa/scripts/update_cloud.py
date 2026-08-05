@@ -10,6 +10,7 @@ from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[1]
 STATE_PATH = ROOT / "data" / "cloud-state.json"
+HISTORY_PATH = ROOT / "data" / "historical-results.json"
 TZ = ZoneInfo("Africa/Johannesburg")
 NOW = datetime.now(TZ)
 TODAY = NOW.date().isoformat()
@@ -53,7 +54,14 @@ def games_for_date(dt):
 
 def historical_results(state, game):
     rows = [r for r in state.get("results", []) if r.get("game") == game and r.get("date")]
-    return sorted(rows, key=lambda r: r["date"], reverse=True)
+    if HISTORY_PATH.exists():
+        try:
+            history = json.loads(HISTORY_PATH.read_text())
+            rows.extend(r for r in history.get("results", []) if r.get("game") == game and r.get("date"))
+        except Exception:
+            pass
+    dedup = {(r.get("date"), r.get("game")): r for r in rows}
+    return sorted(dedup.values(), key=lambda r: r["date"], reverse=True)
 
 def counts_for_window(rows, days=None, draw_limit=None):
     selected = rows
