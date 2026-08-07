@@ -10,6 +10,8 @@ on:
   push:
     paths:
       - 'drawlab-sa/scripts/update_cloud.py'
+      - 'drawlab-sa/scripts/build_v3_state.py'
+      - 'drawlab-sa/v3/data/frozen-alpha.json'
       - 'drawlab-sa/data/historical-results.json'
       - '.github/workflows/drawlab-cloud.yml'
 
@@ -22,7 +24,7 @@ concurrency:
 
 jobs:
   update:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v7
@@ -33,11 +35,15 @@ jobs:
           python-version: '3.12'
       - name: Install dependencies
         run: pip install requests beautifulsoup4
-      - name: Validate cloud engine
-        run: python -m py_compile drawlab-sa/scripts/update_cloud.py
+      - name: Validate cloud and v3 engines
+        run: |
+          python -m py_compile drawlab-sa/scripts/update_cloud.py
+          python -m py_compile drawlab-sa/scripts/build_v3_state.py
       - name: Update virtual ledger and results
         run: python drawlab-sa/scripts/update_cloud.py
-      - name: Commit cloud state safely
+      - name: Rebuild v3 read model
+        run: python drawlab-sa/scripts/build_v3_state.py
+      - name: Commit cloud and v3 state safely
         shell: bash
         run: |
           set -euo pipefail
@@ -45,15 +51,15 @@ jobs:
           git config user.email 'drawlab-bot@users.noreply.github.com'
 
           for attempt in 1 2 3; do
-            git add drawlab-sa/data/cloud-state.json
+            git add drawlab-sa/data/cloud-state.json drawlab-sa/v3/data/v3-state.json
             if git diff --cached --quiet; then
-              echo 'No cloud-state changes'
+              echo 'No cloud/v3 state changes'
               exit 0
             fi
 
-            git commit -m 'Update DrawLab cloud state'
+            git commit -m 'Update DrawLab cloud and v3 state'
             if git push origin HEAD:master; then
-              echo 'Cloud state pushed successfully'
+              echo 'Cloud and v3 state pushed successfully'
               exit 0
             fi
 
@@ -61,6 +67,7 @@ jobs:
             git fetch origin master
             git reset --hard origin/master
             python drawlab-sa/scripts/update_cloud.py
+            python drawlab-sa/scripts/build_v3_state.py
           done
 
           echo 'Unable to push cloud state after three attempts'
