@@ -4,6 +4,7 @@ on:
     paths:
       - '.github/workflows/install-drawlab-v3.yml'
       - 'drawlab-sa/scripts/retrospective_v3.py'
+      - 'drawlab-sa/scripts/patch_retrospective_rule_eras.py'
 permissions:
   contents: write
 concurrency:
@@ -22,6 +23,8 @@ jobs:
           python-version: '3.12'
       - name: Install dependencies
         run: pip install requests beautifulsoup4
+      - name: Apply rule-era retrospective patch
+        run: python drawlab-sa/scripts/patch_retrospective_rule_eras.py
       - name: Compile v3 engines
         run: |
           python -m py_compile drawlab-sa/scripts/install_v3_live.py
@@ -45,6 +48,7 @@ jobs:
           test -s drawlab-sa/v3/data/retrospective.json
           test -s drawlab-sa/v3/data/v3-state.json
           grep -q 'Frozen Alpha' drawlab-sa/scripts/update_cloud.py
+          grep -q 'model_rows' drawlab-sa/scripts/retrospective_v3.py
           grep -q 'Research Lab' drawlab-sa/v3/index.html
           grep -q 'Hall of Records' drawlab-sa/v3/index.html
       - name: Commit generated v3 state
@@ -53,7 +57,7 @@ jobs:
           set -euo pipefail
           git config user.name 'DrawLab v3 Builder'
           git config user.email 'drawlab-v3@users.noreply.github.com'
-          git add drawlab-sa/scripts/update_cloud.py drawlab-sa/v3/data/frozen-alpha.json drawlab-sa/v3/data/retrospective.json drawlab-sa/v3/data/v3-state.json drawlab-sa/data/cloud-state.json
+          git add drawlab-sa/scripts/update_cloud.py drawlab-sa/scripts/retrospective_v3.py drawlab-sa/v3/data/frozen-alpha.json drawlab-sa/v3/data/retrospective.json drawlab-sa/v3/data/v3-state.json drawlab-sa/data/cloud-state.json
           if git diff --cached --quiet; then
             echo 'No generated changes'
             exit 0
