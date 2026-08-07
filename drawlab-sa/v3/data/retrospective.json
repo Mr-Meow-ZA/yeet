@@ -1,0 +1,1144 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-07T14:31:05.223241+00:00",
+  "simulation": {
+    "start": "2025-08-07",
+    "end": "2026-08-06",
+    "method": "strict walk-forward; no future leakage",
+    "frozen_policy": "generated once per legal rule era and never changed within that era; reset only when the lottery itself changes the ticket format"
+  },
+  "summary": {
+    "Daily Lotto": {
+      "Hot 6M": {
+        "tickets": 364,
+        "spend": 1092.0,
+        "won": 361.0,
+        "net": -731.0,
+        "roi_pct": -66.94,
+        "avg_matches": 0.7088,
+        "ge2_rate": 12.91,
+        "ge3_rate": 2.47,
+        "best_matches": 3,
+        "longest_losing_streak": 33,
+        "exact_winning_draws": 0,
+        "estimated_winning_draws": 47
+      },
+      "Weighted Historical": {
+        "tickets": 364,
+        "spend": 1092.0,
+        "won": 207.0,
+        "net": -885.0,
+        "roi_pct": -81.04,
+        "avg_matches": 0.6731,
+        "ge2_rate": 9.07,
+        "ge3_rate": 0.82,
+        "best_matches": 3,
+        "longest_losing_streak": 39,
+        "exact_winning_draws": 0,
+        "estimated_winning_draws": 33
+      },
+      "Cold 6M": {
+        "tickets": 364,
+        "spend": 1092.0,
+        "won": 315.0,
+        "net": -777.0,
+        "roi_pct": -71.15,
+        "avg_matches": 0.6951,
+        "ge2_rate": 13.46,
+        "ge3_rate": 1.37,
+        "best_matches": 3,
+        "longest_losing_streak": 32,
+        "exact_winning_draws": 0,
+        "estimated_winning_draws": 49
+      },
+      "Diversified Coverage": {
+        "tickets": 364,
+        "spend": 1092.0,
+        "won": 375.0,
+        "net": -717.0,
+        "roi_pct": -65.66,
+        "avg_matches": 0.7582,
+        "ge2_rate": 16.76,
+        "ge3_rate": 1.37,
+        "best_matches": 3,
+        "longest_losing_streak": 34,
+        "exact_winning_draws": 0,
+        "estimated_winning_draws": 61
+      },
+      "Frozen Alpha": {
+        "tickets": 364,
+        "spend": 1092.0,
+        "won": 211.0,
+        "net": -881.0,
+        "roi_pct": -80.68,
+        "avg_matches": 0.6346,
+        "ge2_rate": 8.52,
+        "ge3_rate": 1.1,
+        "best_matches": 3,
+        "longest_losing_streak": 53,
+        "exact_winning_draws": 0,
+        "estimated_winning_draws": 31
+      }
+    },
+    "PowerBall": {
+      "Hot 6M": {
+        "tickets": 104,
+        "spend": 615.0,
+        "won": 40.0,
+        "net": -575.0,
+        "roi_pct": -93.5,
+        "avg_matches": 0.3846,
+        "ge2_rate": 1.92,
+        "ge3_rate": 0.0,
+        "best_matches": 2,
+        "longest_losing_streak": 44,
+        "exact_winning_draws": 0,
+        "estimated_winning_draws": 5
+      },
+      "Weighted Historical": {
+        "tickets": 104,
+        "spend": 615.0,
+        "won": 270.0,
+        "net": -345.0,
+        "roi_pct": -56.1,
+        "avg_matches": 0.4615,
+        "ge2_rate": 5.77,
+        "ge3_rate": 0.96,
+        "best_matches": 3,
+        "longest_losing_streak": 54,
+        "exact_winning_draws": 0,
+        "estimated_winning_draws": 4
+      },
+      "Cold 6M": {
+        "tickets": 104,
+        "spend": 615.0,
+        "won": 85.0,
+        "net": -530.0,
+        "roi_pct": -86.18,
+        "avg_matches": 0.4808,
+        "ge2_rate": 7.69,
+        "ge3_rate": 0.0,
+        "best_matches": 2,
+        "longest_losing_streak": 40,
+        "exact_winning_draws": 0,
+        "estimated_winning_draws": 6
+      },
+      "Diversified Coverage": {
+        "tickets": 104,
+        "spend": 615.0,
+        "won": 55.0,
+        "net": -560.0,
+        "roi_pct": -91.06,
+        "avg_matches": 0.4808,
+        "ge2_rate": 3.85,
+        "ge3_rate": 0.0,
+        "best_matches": 2,
+        "longest_losing_streak": 47,
+        "exact_winning_draws": 0,
+        "estimated_winning_draws": 6
+      },
+      "Frozen Alpha": {
+        "tickets": 104,
+        "spend": 615.0,
+        "won": 85.0,
+        "net": -530.0,
+        "roi_pct": -86.18,
+        "avg_matches": 0.5096,
+        "ge2_rate": 8.65,
+        "ge3_rate": 0.96,
+        "best_matches": 3,
+        "longest_losing_streak": 42,
+        "exact_winning_draws": 0,
+        "estimated_winning_draws": 6
+      }
+    },
+    "Lotto": {
+      "Hot 6M": {
+        "tickets": 85,
+        "spend": 425.0,
+        "won": 220.0,
+        "net": -205.0,
+        "roi_pct": -48.24,
+        "avg_matches": 0.6588,
+        "ge2_rate": 10.59,
+        "ge3_rate": 2.35,
+        "best_matches": 4,
+        "longest_losing_streak": 62,
+        "exact_winning_draws": 0,
+        "estimated_winning_draws": 2
+      },
+      "Weighted Historical": {
+        "tickets": 85,
+        "spend": 425.0,
+        "won": 30.0,
+        "net": -395.0,
+        "roi_pct": -92.94,
+        "avg_matches": 0.6353,
+        "ge2_rate": 14.12,
+        "ge3_rate": 0.0,
+        "best_matches": 2,
+        "longest_losing_streak": 44,
+        "exact_winning_draws": 0,
+        "estimated_winning_draws": 1
+      },
+      "Cold 6M": {
+        "tickets": 85,
+        "spend": 425.0,
+        "won": 80.0,
+        "net": -345.0,
+        "roi_pct": -81.18,
+        "avg_matches": 0.7176,
+        "ge2_rate": 12.94,
+        "ge3_rate": 1.18,
+        "best_matches": 3,
+        "longest_losing_streak": 48,
+        "exact_winning_draws": 0,
+        "estimated_winning_draws": 3
+      },
+      "Diversified Coverage": {
+        "tickets": 85,
+        "spend": 425.0,
+        "won": 60.0,
+        "net": -365.0,
+        "roi_pct": -85.88,
+        "avg_matches": 0.6118,
+        "ge2_rate": 12.94,
+        "ge3_rate": 0.0,
+        "best_matches": 2,
+        "longest_losing_streak": 45,
+        "exact_winning_draws": 0,
+        "estimated_winning_draws": 2
+      },
+      "Frozen Alpha": {
+        "tickets": 85,
+        "spend": 425.0,
+        "won": 60.0,
+        "net": -365.0,
+        "roi_pct": -85.88,
+        "avg_matches": 0.6,
+        "ge2_rate": 11.76,
+        "ge3_rate": 0.0,
+        "best_matches": 2,
+        "longest_losing_streak": 49,
+        "exact_winning_draws": 0,
+        "estimated_winning_draws": 2
+      }
+    }
+  },
+  "top_tickets": [
+    {
+      "game": "Lotto",
+      "date": "2026-03-14",
+      "strategy": "Hot 6M",
+      "numbers": [
+        7,
+        12,
+        22,
+        32,
+        43,
+        58
+      ],
+      "bonus": null,
+      "matches": 4,
+      "bonus_match": false,
+      "won": 200.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/lotto/results/14-march-2026"
+    },
+    {
+      "game": "PowerBall",
+      "date": "2025-09-23",
+      "strategy": "Weighted Historical",
+      "numbers": [
+        10,
+        20,
+        22,
+        32,
+        43
+      ],
+      "bonus": 18,
+      "matches": 3,
+      "bonus_match": true,
+      "won": 250.0,
+      "payout_type": "estimated",
+      "source": "https://www.powerball.net/southafrica/results/2025-09-23"
+    },
+    {
+      "game": "PowerBall",
+      "date": "2025-09-23",
+      "strategy": "Frozen Alpha",
+      "numbers": [
+        5,
+        20,
+        23,
+        32,
+        43
+      ],
+      "bonus": 7,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 50.0,
+      "payout_type": "estimated",
+      "source": "https://www.powerball.net/southafrica/results/2025-09-23"
+    },
+    {
+      "game": "Lotto",
+      "date": "2026-05-20",
+      "strategy": "Hot 6M",
+      "numbers": [
+        1,
+        12,
+        22,
+        32,
+        40,
+        58
+      ],
+      "bonus": null,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 20.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/lotto/results/20-may-2026"
+    },
+    {
+      "game": "Lotto",
+      "date": "2026-03-25",
+      "strategy": "Cold 6M",
+      "numbers": [
+        3,
+        19,
+        25,
+        31,
+        41,
+        52
+      ],
+      "bonus": null,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 20.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/lotto/results/25-march-2026"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2026-07-11",
+      "strategy": "Hot 6M",
+      "numbers": [
+        7,
+        10,
+        21,
+        25,
+        30
+      ],
+      "bonus": null,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 19.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/11-july-2026"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2026-07-06",
+      "strategy": "Hot 6M",
+      "numbers": [
+        7,
+        10,
+        21,
+        25,
+        30
+      ],
+      "bonus": null,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 19.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/06-july-2026"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2026-07-06",
+      "strategy": "Weighted Historical",
+      "numbers": [
+        7,
+        10,
+        21,
+        25,
+        30
+      ],
+      "bonus": null,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 19.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/06-july-2026"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2026-06-25",
+      "strategy": "Diversified Coverage",
+      "numbers": [
+        2,
+        11,
+        17,
+        22,
+        32
+      ],
+      "bonus": null,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 19.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/25-june-2026"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2026-06-23",
+      "strategy": "Diversified Coverage",
+      "numbers": [
+        2,
+        11,
+        19,
+        22,
+        33
+      ],
+      "bonus": null,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 19.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/23-june-2026"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2026-06-23",
+      "strategy": "Frozen Alpha",
+      "numbers": [
+        4,
+        11,
+        19,
+        27,
+        33
+      ],
+      "bonus": null,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 19.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/23-june-2026"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2026-05-06",
+      "strategy": "Weighted Historical",
+      "numbers": [
+        7,
+        10,
+        21,
+        26,
+        35
+      ],
+      "bonus": null,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 19.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/06-may-2026"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2026-05-05",
+      "strategy": "Hot 6M",
+      "numbers": [
+        6,
+        9,
+        21,
+        26,
+        35
+      ],
+      "bonus": null,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 19.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/05-may-2026"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2026-04-27",
+      "strategy": "Hot 6M",
+      "numbers": [
+        5,
+        9,
+        21,
+        26,
+        35
+      ],
+      "bonus": null,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 19.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/27-april-2026"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2026-04-13",
+      "strategy": "Cold 6M",
+      "numbers": [
+        1,
+        14,
+        19,
+        24,
+        29
+      ],
+      "bonus": null,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 19.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/13-april-2026"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2026-03-31",
+      "strategy": "Diversified Coverage",
+      "numbers": [
+        6,
+        14,
+        18,
+        25,
+        32
+      ],
+      "bonus": null,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 19.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/31-march-2026"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2026-02-10",
+      "strategy": "Hot 6M",
+      "numbers": [
+        7,
+        14,
+        21,
+        26,
+        34
+      ],
+      "bonus": null,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 19.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/10-february-2026"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2026-01-10",
+      "strategy": "Cold 6M",
+      "numbers": [
+        1,
+        8,
+        15,
+        24,
+        35
+      ],
+      "bonus": null,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 19.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/10-january-2026"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2026-01-07",
+      "strategy": "Hot 6M",
+      "numbers": [
+        2,
+        14,
+        17,
+        26,
+        30
+      ],
+      "bonus": null,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 19.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/07-january-2026"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2026-01-03",
+      "strategy": "Diversified Coverage",
+      "numbers": [
+        6,
+        11,
+        15,
+        23,
+        29
+      ],
+      "bonus": null,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 19.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/03-january-2026"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2025-12-28",
+      "strategy": "Cold 6M",
+      "numbers": [
+        1,
+        13,
+        15,
+        24,
+        31
+      ],
+      "bonus": null,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 19.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/28-december-2025"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2025-12-21",
+      "strategy": "Hot 6M",
+      "numbers": [
+        3,
+        14,
+        17,
+        26,
+        33
+      ],
+      "bonus": null,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 19.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/21-december-2025"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2025-12-21",
+      "strategy": "Weighted Historical",
+      "numbers": [
+        7,
+        11,
+        17,
+        26,
+        33
+      ],
+      "bonus": null,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 19.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/21-december-2025"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2025-11-20",
+      "strategy": "Frozen Alpha",
+      "numbers": [
+        4,
+        11,
+        19,
+        27,
+        33
+      ],
+      "bonus": null,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 19.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/20-november-2025"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2025-09-25",
+      "strategy": "Diversified Coverage",
+      "numbers": [
+        1,
+        9,
+        20,
+        22,
+        34
+      ],
+      "bonus": null,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 19.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/25-september-2025"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2025-09-09",
+      "strategy": "Cold 6M",
+      "numbers": [
+        6,
+        8,
+        16,
+        23,
+        36
+      ],
+      "bonus": null,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 19.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/09-september-2025"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2025-09-06",
+      "strategy": "Frozen Alpha",
+      "numbers": [
+        4,
+        11,
+        19,
+        27,
+        33
+      ],
+      "bonus": null,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 19.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/06-september-2025"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2025-09-03",
+      "strategy": "Frozen Alpha",
+      "numbers": [
+        4,
+        11,
+        19,
+        27,
+        33
+      ],
+      "bonus": null,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 19.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/03-september-2025"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2025-08-31",
+      "strategy": "Hot 6M",
+      "numbers": [
+        3,
+        14,
+        19,
+        27,
+        35
+      ],
+      "bonus": null,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 19.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/31-august-2025"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2025-08-16",
+      "strategy": "Cold 6M",
+      "numbers": [
+        5,
+        8,
+        18,
+        23,
+        34
+      ],
+      "bonus": null,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 19.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/16-august-2025"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2025-08-08",
+      "strategy": "Hot 6M",
+      "numbers": [
+        3,
+        13,
+        19,
+        27,
+        35
+      ],
+      "bonus": null,
+      "matches": 3,
+      "bonus_match": false,
+      "won": 19.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/08-august-2025"
+    },
+    {
+      "game": "PowerBall",
+      "date": "2026-01-16",
+      "strategy": "Cold 6M",
+      "numbers": [
+        1,
+        19,
+        26,
+        36,
+        47
+      ],
+      "bonus": 20,
+      "matches": 2,
+      "bonus_match": true,
+      "won": 50.0,
+      "payout_type": "estimated",
+      "source": "https://www.powerball.net/southafrica/results/2026-01-16"
+    },
+    {
+      "game": "Lotto",
+      "date": "2026-05-27",
+      "strategy": "Frozen Alpha",
+      "numbers": [
+        8,
+        18,
+        29,
+        31,
+        45,
+        50
+      ],
+      "bonus": null,
+      "matches": 2,
+      "bonus_match": true,
+      "won": 30.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/lotto/results/27-may-2026"
+    },
+    {
+      "game": "Lotto",
+      "date": "2026-03-04",
+      "strategy": "Cold 6M",
+      "numbers": [
+        3,
+        11,
+        25,
+        31,
+        47,
+        57
+      ],
+      "bonus": null,
+      "matches": 2,
+      "bonus_match": true,
+      "won": 30.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/lotto/results/04-march-2026"
+    },
+    {
+      "game": "Lotto",
+      "date": "2025-12-27",
+      "strategy": "Weighted Historical",
+      "numbers": [
+        8,
+        12,
+        29,
+        32,
+        41,
+        50
+      ],
+      "bonus": null,
+      "matches": 2,
+      "bonus_match": true,
+      "won": 30.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/lotto/results/27-december-2025"
+    },
+    {
+      "game": "Lotto",
+      "date": "2025-12-24",
+      "strategy": "Diversified Coverage",
+      "numbers": [
+        7,
+        10,
+        23,
+        34,
+        43,
+        55
+      ],
+      "bonus": null,
+      "matches": 2,
+      "bonus_match": true,
+      "won": 30.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/lotto/results/24-december-2025"
+    },
+    {
+      "game": "Lotto",
+      "date": "2025-12-03",
+      "strategy": "Frozen Alpha",
+      "numbers": [
+        8,
+        18,
+        29,
+        31,
+        45,
+        50
+      ],
+      "bonus": null,
+      "matches": 2,
+      "bonus_match": true,
+      "won": 30.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/lotto/results/03-december-2025"
+    },
+    {
+      "game": "Lotto",
+      "date": "2025-10-29",
+      "strategy": "Diversified Coverage",
+      "numbers": [
+        6,
+        10,
+        22,
+        34,
+        42,
+        55
+      ],
+      "bonus": null,
+      "matches": 2,
+      "bonus_match": true,
+      "won": 30.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/lotto/results/29-october-2025"
+    },
+    {
+      "game": "Lotto",
+      "date": "2025-09-13",
+      "strategy": "Cold 6M",
+      "numbers": [
+        4,
+        14,
+        21,
+        33,
+        42,
+        53
+      ],
+      "bonus": null,
+      "matches": 2,
+      "bonus_match": true,
+      "won": 30.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/lotto/results/13-september-2025"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2026-08-06",
+      "strategy": "Cold 6M",
+      "numbers": [
+        2,
+        12,
+        18,
+        27,
+        29
+      ],
+      "bonus": null,
+      "matches": 2,
+      "bonus_match": false,
+      "won": 5.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/06-august-2026"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2026-08-01",
+      "strategy": "Hot 6M",
+      "numbers": [
+        7,
+        10,
+        16,
+        25,
+        30
+      ],
+      "bonus": null,
+      "matches": 2,
+      "bonus_match": false,
+      "won": 5.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/01-august-2026"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2026-08-01",
+      "strategy": "Weighted Historical",
+      "numbers": [
+        7,
+        10,
+        16,
+        25,
+        30
+      ],
+      "bonus": null,
+      "matches": 2,
+      "bonus_match": false,
+      "won": 5.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/01-august-2026"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2026-07-31",
+      "strategy": "Cold 6M",
+      "numbers": [
+        2,
+        12,
+        18,
+        27,
+        29
+      ],
+      "bonus": null,
+      "matches": 2,
+      "bonus_match": false,
+      "won": 5.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/31-july-2026"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2026-07-31",
+      "strategy": "Frozen Alpha",
+      "numbers": [
+        4,
+        11,
+        19,
+        27,
+        33
+      ],
+      "bonus": null,
+      "matches": 2,
+      "bonus_match": false,
+      "won": 5.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/31-july-2026"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2026-07-28",
+      "strategy": "Diversified Coverage",
+      "numbers": [
+        5,
+        13,
+        15,
+        28,
+        29
+      ],
+      "bonus": null,
+      "matches": 2,
+      "bonus_match": false,
+      "won": 5.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/28-july-2026"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2026-07-27",
+      "strategy": "Frozen Alpha",
+      "numbers": [
+        4,
+        11,
+        19,
+        27,
+        33
+      ],
+      "bonus": null,
+      "matches": 2,
+      "bonus_match": false,
+      "won": 5.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/27-july-2026"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2026-07-26",
+      "strategy": "Hot 6M",
+      "numbers": [
+        7,
+        10,
+        16,
+        25,
+        30
+      ],
+      "bonus": null,
+      "matches": 2,
+      "bonus_match": false,
+      "won": 5.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/26-july-2026"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2026-07-25",
+      "strategy": "Hot 6M",
+      "numbers": [
+        7,
+        10,
+        16,
+        25,
+        30
+      ],
+      "bonus": null,
+      "matches": 2,
+      "bonus_match": false,
+      "won": 5.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/25-july-2026"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2026-07-22",
+      "strategy": "Weighted Historical",
+      "numbers": [
+        7,
+        10,
+        16,
+        25,
+        30
+      ],
+      "bonus": null,
+      "matches": 2,
+      "bonus_match": false,
+      "won": 5.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/22-july-2026"
+    },
+    {
+      "game": "Daily Lotto",
+      "date": "2026-07-14",
+      "strategy": "Diversified Coverage",
+      "numbers": [
+        3,
+        11,
+        19,
+        26,
+        33
+      ],
+      "bonus": null,
+      "matches": 2,
+      "bonus_match": false,
+      "won": 5.0,
+      "payout_type": "estimated",
+      "source": "https://za.national-lottery.com/daily-lotto/results/14-july-2026"
+    }
+  ],
+  "payout_quality": {
+    "exact_draws": 0,
+    "estimated_draws": 212
+  }
+}

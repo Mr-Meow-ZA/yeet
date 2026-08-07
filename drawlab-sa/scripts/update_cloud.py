@@ -12,6 +12,7 @@ from bs4 import BeautifulSoup
 ROOT = Path(__file__).resolve().parents[1]
 STATE_PATH = ROOT / "data" / "cloud-state.json"
 HISTORY_PATH = ROOT / "data" / "historical-results.json"
+FROZEN_PATH = ROOT / "v3" / "data" / "frozen-alpha.json"
 TZ = ZoneInfo("Africa/Johannesburg")
 NOW = datetime.now(TZ)
 TODAY = NOW.date().isoformat()
@@ -60,6 +61,10 @@ STRATEGIES = {
     "Diversified Coverage": {
         "version": "1.0",
         "hypothesis": "Structured range coverage with low overlap diversifies the portfolio.",
+    },
+    "Frozen Alpha": {
+        "version": "1.0",
+        "hypothesis": "A fixed deterministic line provides a permanent control against dynamic refresh strategies.",
     },
 }
 
@@ -293,7 +298,24 @@ def bonus_number(rows, strategy, maximum):
     return min(numbers, key=lambda n: (counts[n], n))
 
 
+
+def load_frozen_line(game):
+    try:
+        payload = json.loads(FROZEN_PATH.read_text())
+        line = payload.get("lines", {}).get(game, {})
+        numbers = line.get("numbers", [])
+        bonus = line.get("bonus")
+        rule = RULES[game]
+        if len(numbers) == rule["count"] and len(set(numbers)) == len(numbers) and all(1 <= n <= rule["max"] for n in numbers):
+            if game != "PowerBall" or (isinstance(bonus, int) and 1 <= bonus <= rule["bonus_max"]):
+                return sorted(numbers), bonus
+    except Exception:
+        pass
+    raise RuntimeError(f"Frozen Alpha line unavailable or invalid for {game}")
+
 def make_line(state, game, strategy, avoid=None):
+    if strategy == "Frozen Alpha":
+        return load_frozen_line(game)
     rule = RULES[game]
     rows = historical_results(state, game)
     all_numbers = list(range(1, rule["max"] + 1))
@@ -382,7 +404,7 @@ def ensure_virtual_entries(state):
     if NOW.hour < ENTRY_OPEN_HOUR or NOW.hour >= ENTRY_CUTOFF_HOUR:
         return
 
-    order = ("Hot 6M", "Weighted Historical", "Cold 6M", "Diversified Coverage")
+    order = ("Hot 6M", "Weighted Historical", "Cold 6M", "Diversified Coverage", "Frozen Alpha")
     for game in games_for_date(NOW.date()):
         if any(
             row.get("date") == TODAY and row.get("game") == game

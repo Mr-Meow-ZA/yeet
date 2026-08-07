@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "name": "Frozen Alpha",
+  "version": "1.0",
+  "locked": true,
+  "generated_at": "2026-08-07T14:31:03.273786+00:00",
+  "generation_method": "Weighted Historical v1.0 snapshot",
+  "data_policy_version": "2.0-rule-aware",
+  "lines": {
+    "Daily Lotto": {
+      "numbers": [
+        7,
+        10,
+        16,
+        25,
+        30
+      ],
+      "bonus": null,
+      "cost": 3
+    },
+    "Lotto": {
+      "numbers": [
+        8,
+        10,
+        23,
+        29,
+        41,
+        47
+      ],
+      "bonus": null,
+      "cost": 5
+    },
+    "PowerBall": {
+      "numbers": [
+        9,
+        13,
+        23,
+        40,
+        47
+      ],
+      "bonus": 11,
+      "cost": 10
+    }
+  },
+  "policy": "These lines never change. A ticket is entered on every eligible draw using the era-correct board cost."
+}

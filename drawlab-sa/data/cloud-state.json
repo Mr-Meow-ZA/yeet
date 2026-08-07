@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07T13:26:33.277097+02:00",
+  "updated_at": "2026-08-07T16:31:05.414211+02:00",
   "status": "ok",
   "virtual": {
     "starting_bankroll": 1000,
@@ -35,7 +35,7 @@
         "bonus_match": false,
         "prize_key": "2",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/06-august-2026",
-        "settled_at": "2026-08-07T13:26:33.277097+02:00"
+        "settled_at": "2026-08-07T16:31:05.414211+02:00"
       },
       {
         "id": "2026-08-06|Daily Lotto|Hot 6M|v1.0",
@@ -63,7 +63,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/06-august-2026",
-        "settled_at": "2026-08-07T13:26:33.277097+02:00"
+        "settled_at": "2026-08-07T16:31:05.414211+02:00"
       },
       {
         "id": "2026-08-06|Daily Lotto|Diversified Coverage|v1.0",
@@ -91,7 +91,7 @@
         "bonus_match": false,
         "prize_key": "0",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/06-august-2026",
-        "settled_at": "2026-08-07T13:26:33.277097+02:00"
+        "settled_at": "2026-08-07T16:31:05.414211+02:00"
       },
       {
         "id": "2026-08-06|Daily Lotto|Cold 6M|v1.0",
@@ -119,7 +119,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/06-august-2026",
-        "settled_at": "2026-08-07T13:26:33.277097+02:00"
+        "settled_at": "2026-08-07T16:31:05.414211+02:00"
       },
       {
         "id": "2026-08-05|Lotto|Weighted Historical",
@@ -145,7 +145,7 @@
         "prize_key": "1",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/lotto/results/05-august-2026",
-        "settled_at": "2026-08-07T13:26:33.277097+02:00"
+        "settled_at": "2026-08-07T16:31:05.414211+02:00"
       },
       {
         "id": "2026-08-05|Lotto|Hot 6M",
@@ -171,7 +171,7 @@
         "prize_key": "3",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/lotto/results/05-august-2026",
-        "settled_at": "2026-08-07T13:26:33.277097+02:00"
+        "settled_at": "2026-08-07T16:31:05.414211+02:00"
       },
       {
         "id": "2026-08-05|Lotto|Diversified Coverage",
@@ -197,7 +197,7 @@
         "prize_key": "0",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/lotto/results/05-august-2026",
-        "settled_at": "2026-08-07T13:26:33.277097+02:00"
+        "settled_at": "2026-08-07T16:31:05.414211+02:00"
       },
       {
         "id": "2026-08-05|Daily Lotto|Weighted Historical",
@@ -222,7 +222,7 @@
         "prize_key": "1",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/05-august-2026",
-        "settled_at": "2026-08-07T13:26:33.277097+02:00"
+        "settled_at": "2026-08-07T16:31:05.414211+02:00"
       },
       {
         "id": "2026-08-05|Daily Lotto|Hot 6M",
@@ -247,7 +247,7 @@
         "prize_key": "2",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/05-august-2026",
-        "settled_at": "2026-08-07T13:26:33.277097+02:00"
+        "settled_at": "2026-08-07T16:31:05.414211+02:00"
       },
       {
         "id": "2026-08-05|Daily Lotto|Diversified Coverage",
@@ -272,7 +272,7 @@
         "prize_key": "0",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/05-august-2026",
-        "settled_at": "2026-08-07T13:26:33.277097+02:00"
+        "settled_at": "2026-08-07T16:31:05.414211+02:00"
       }
     ]
   },
@@ -436,6 +436,10 @@
     "Diversified Coverage": {
       "version": "1.0",
       "hypothesis": "Structured range coverage with low overlap diversifies the portfolio."
+    },
+    "Frozen Alpha": {
+      "version": "1.0",
+      "hypothesis": "A fixed deterministic line provides a permanent control against dynamic refresh strategies."
     }
   },
   "history_quality": {
@@ -471,12 +475,5 @@
     "PowerBall": "main model uses 5/50 history; special ball uses current 1-16 era",
     "Daily Lotto": "5/36 format unchanged"
   },
-  "warnings": [
-    "Daily Lotto: https://za.national-lottery.com/daily-lotto/results: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /daily-lotto/results (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7fb2fac09730>, 'Connection to za.national-lottery.com timed out. (connect timeout=5)'))",
-    "Daily Lotto: https://www.lottery.co.za/daily-lotto/results: ConnectTimeout: HTTPSConnectionPool(host='www.lottery.co.za', port=443): Max retries exceeded with url: /daily-lotto/results (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.lottery.co.za', port=443) at 0x7fb2f9c71280>, 'Connection to www.lottery.co.za timed out. (connect timeout=5)'))",
-    "Lotto: https://za.national-lottery.com/lotto/results: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /lotto/results (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7fb2f9c71640>, 'Connection to za.national-lottery.com timed out. (connect timeout=5)'))",
-    "Lotto: https://www.lottery.co.za/lotto/results: ConnectTimeout: HTTPSConnectionPool(host='www.lottery.co.za', port=443): Max retries exceeded with url: /lotto/results (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.lottery.co.za', port=443) at 0x7fb2f9c71a60>, 'Connection to www.lottery.co.za timed out. (connect timeout=5)'))",
-    "PowerBall: https://www.powerball.net/southafrica/results: ConnectTimeout: HTTPSConnectionPool(host='www.powerball.net', port=443): Max retries exceeded with url: /southafrica/results (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.powerball.net', port=443) at 0x7fb2f9c71cd0>, 'Connection to www.powerball.net timed out. (connect timeout=5)'))",
-    "PowerBall: https://za.national-lottery.com/powerball/results: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /powerball/results (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7fb2f9c720c0>, 'Connection to za.national-lottery.com timed out. (connect timeout=5)'))"
-  ]
+  "warnings": []
 }

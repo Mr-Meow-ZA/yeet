@@ -1,0 +1,2103 @@
+{
+  "schema_version": 3,
+  "generated_at": "2026-08-07T14:31:06.208308+00:00",
+  "platform": "DrawLab v3 Research Platform",
+  "cloud_status": "ok",
+  "cloud_updated_at": "2026-08-07T16:31:05.414211+02:00",
+  "history_quality": {
+    "Daily Lotto": {
+      "raw": 947,
+      "accepted": 947,
+      "model_eligible": 947,
+      "rejected": 0,
+      "status": "usable",
+      "rule_scope": "5/36 unchanged"
+    },
+    "Lotto": {
+      "raw": 270,
+      "accepted": 270,
+      "model_eligible": 19,
+      "rejected": 0,
+      "status": "usable",
+      "rule_scope": "current 6/52 era from 2026-06-01"
+    },
+    "PowerBall": {
+      "raw": 271,
+      "accepted": 271,
+      "model_eligible": 271,
+      "rejected": 0,
+      "status": "usable",
+      "rule_scope": "5/50 main history; current PB 1-16 from 2026-06-01"
+    }
+  },
+  "live_league": [
+    {
+      "strategy": "Hot 6M",
+      "tickets": 3,
+      "settled": 3,
+      "spend": 11.0,
+      "won": 25.1,
+      "net": 14.1,
+      "roi_pct": 128.18,
+      "avg_matches": 2.0,
+      "best_matches": 3,
+      "winning_ticket_rate": 66.67
+    },
+    {
+      "strategy": "Weighted Historical",
+      "tickets": 3,
+      "settled": 3,
+      "spend": 11.0,
+      "won": 4.8,
+      "net": -6.2,
+      "roi_pct": -56.36,
+      "avg_matches": 1.333,
+      "best_matches": 2,
+      "winning_ticket_rate": 33.33
+    },
+    {
+      "strategy": "Cold 6M",
+      "tickets": 1,
+      "settled": 1,
+      "spend": 3.0,
+      "won": 0.0,
+      "net": -3.0,
+      "roi_pct": -100.0,
+      "avg_matches": 1.0,
+      "best_matches": 1,
+      "winning_ticket_rate": 0.0
+    },
+    {
+      "strategy": "Diversified Coverage",
+      "tickets": 3,
+      "settled": 3,
+      "spend": 11.0,
+      "won": 0.0,
+      "net": -11.0,
+      "roi_pct": -100.0,
+      "avg_matches": 0.0,
+      "best_matches": 0,
+      "winning_ticket_rate": 0.0
+    }
+  ],
+  "hall_of_records": [
+    {
+      "rank": 1,
+      "date": "2026-08-05",
+      "game": "Lotto",
+      "strategy": "Hot 6M",
+      "version": null,
+      "numbers": [
+        17,
+        23,
+        25,
+        33,
+        36,
+        46
+      ],
+      "bonus": null,
+      "matches": 3,
+      "won": 20.0,
+      "payout_type": "exact"
+    },
+    {
+      "rank": 2,
+      "date": "2026-08-05",
+      "game": "Daily Lotto",
+      "strategy": "Hot 6M",
+      "version": null,
+      "numbers": [
+        4,
+        15,
+        20,
+        21,
+        32
+      ],
+      "bonus": null,
+      "matches": 2,
+      "won": 5.1,
+      "payout_type": "exact"
+    },
+    {
+      "rank": 3,
+      "date": "2026-08-06",
+      "game": "Daily Lotto",
+      "strategy": "Weighted Historical",
+      "version": "1.0",
+      "numbers": [
+        5,
+        14,
+        18,
+        22,
+        29
+      ],
+      "bonus": null,
+      "matches": 2,
+      "won": 4.8,
+      "payout_type": "exact"
+    },
+    {
+      "rank": 4,
+      "date": "2026-08-06",
+      "game": "Daily Lotto",
+      "strategy": "Hot 6M",
+      "version": "1.0",
+      "numbers": [
+        1,
+        8,
+        15,
+        22,
+        29
+      ],
+      "bonus": null,
+      "matches": 1,
+      "won": 0.0,
+      "payout_type": "exact"
+    },
+    {
+      "rank": 5,
+      "date": "2026-08-06",
+      "game": "Daily Lotto",
+      "strategy": "Cold 6M",
+      "version": "1.0",
+      "numbers": [
+        2,
+        10,
+        15,
+        22,
+        29
+      ],
+      "bonus": null,
+      "matches": 1,
+      "won": 0.0,
+      "payout_type": "exact"
+    },
+    {
+      "rank": 6,
+      "date": "2026-08-05",
+      "game": "Lotto",
+      "strategy": "Weighted Historical",
+      "version": null,
+      "numbers": [
+        4,
+        7,
+        14,
+        24,
+        30,
+        33
+      ],
+      "bonus": null,
+      "matches": 1,
+      "won": 0.0,
+      "payout_type": "exact"
+    },
+    {
+      "rank": 7,
+      "date": "2026-08-05",
+      "game": "Daily Lotto",
+      "strategy": "Weighted Historical",
+      "version": null,
+      "numbers": [
+        9,
+        21,
+        26,
+        30,
+        33
+      ],
+      "bonus": null,
+      "matches": 1,
+      "won": 0.0,
+      "payout_type": "exact"
+    },
+    {
+      "rank": 8,
+      "date": "2026-08-06",
+      "game": "Daily Lotto",
+      "strategy": "Diversified Coverage",
+      "version": "1.0",
+      "numbers": [
+        3,
+        11,
+        16,
+        23,
+        30
+      ],
+      "bonus": null,
+      "matches": 0,
+      "won": 0.0,
+      "payout_type": "exact"
+    },
+    {
+      "rank": 9,
+      "date": "2026-08-05",
+      "game": "Lotto",
+      "strategy": "Diversified Coverage",
+      "version": null,
+      "numbers": [
+        6,
+        10,
+        22,
+        32,
+        38,
+        44
+      ],
+      "bonus": null,
+      "matches": 0,
+      "won": 0.0,
+      "payout_type": "exact"
+    },
+    {
+      "rank": 10,
+      "date": "2026-08-05",
+      "game": "Daily Lotto",
+      "strategy": "Diversified Coverage",
+      "version": null,
+      "numbers": [
+        7,
+        10,
+        18,
+        23,
+        33
+      ],
+      "bonus": null,
+      "matches": 0,
+      "won": 0.0,
+      "payout_type": "exact"
+    }
+  ],
+  "frozen": {
+    "schema_version": 1,
+    "name": "Frozen Alpha",
+    "version": "1.0",
+    "locked": true,
+    "generated_at": "2026-08-07T14:31:03.273786+00:00",
+    "generation_method": "Weighted Historical v1.0 snapshot",
+    "data_policy_version": "2.0-rule-aware",
+    "lines": {
+      "Daily Lotto": {
+        "numbers": [
+          7,
+          10,
+          16,
+          25,
+          30
+        ],
+        "bonus": null,
+        "cost": 3
+      },
+      "Lotto": {
+        "numbers": [
+          8,
+          10,
+          23,
+          29,
+          41,
+          47
+        ],
+        "bonus": null,
+        "cost": 5
+      },
+      "PowerBall": {
+        "numbers": [
+          9,
+          13,
+          23,
+          40,
+          47
+        ],
+        "bonus": 11,
+        "cost": 10
+      }
+    },
+    "policy": "These lines never change. A ticket is entered on every eligible draw using the era-correct board cost."
+  },
+  "research": {
+    "methodology_version": "2.0",
+    "null_hypothesis": "Lottery draws are treated as random and independent unless out-of-sample evidence shows otherwise.",
+    "data_quality": {
+      "Daily Lotto": {
+        "draws": 947,
+        "first_draw": "2024-01-01",
+        "last_draw": "2026-08-06",
+        "status": "usable",
+        "minimum_training_draws": 90,
+        "rule_scope": "5/36 unchanged"
+      },
+      "Lotto": {
+        "draws": 19,
+        "first_draw": "2026-06-03",
+        "last_draw": "2026-08-05",
+        "status": "insufficient",
+        "minimum_training_draws": 60,
+        "rule_scope": "current 6/52 era from 2026-06-01; legacy 6/58 archived but excluded"
+      },
+      "PowerBall": {
+        "draws": 271,
+        "first_draw": "2024-01-02",
+        "last_draw": "2026-08-04",
+        "status": "usable",
+        "minimum_training_draws": 60,
+        "rule_scope": "5/50 main-number history spans both eras; current PowerBall pool is 1-16"
+      }
+    },
+    "chance_baselines": {
+      "Daily Lotto": {
+        "expected_matches": 0.694444,
+        "ge2_pct": 13.1982,
+        "ge3_pct": 1.2748
+      },
+      "Lotto": {
+        "expected_matches": 0.692308,
+        "ge2_pct": 13.5922,
+        "ge3_pct": 1.5689
+      },
+      "PowerBall": {
+        "expected_matches": 0.5,
+        "ge2_pct": 7.1752,
+        "ge3_pct": 0.4779
+      }
+    },
+    "horizon1": [
+      {
+        "game": "Daily Lotto",
+        "strategy": "Hot 6M",
+        "horizon": 1,
+        "samples": 857,
+        "avg_matches": 0.7153,
+        "ge2_rate": 13.19,
+        "ge3_rate": 2.68,
+        "best_matches": 3,
+        "distribution": {
+          "0": 380,
+          "1": 364,
+          "2": 90,
+          "3": 23,
+          "4": 0,
+          "5": 0
+        },
+        "expected_matches": 0.694444,
+        "lift_vs_expected_pct": 3.0,
+        "standard_error": 0.02486,
+        "z_score": 0.8384,
+        "p_value": 0.401827,
+        "p_adjusted": 1.0,
+        "comparisons_adjusted": 16,
+        "evidence": "not_significant"
+      },
+      {
+        "game": "Daily Lotto",
+        "strategy": "Weighted Historical",
+        "horizon": 1,
+        "samples": 857,
+        "avg_matches": 0.6791,
+        "ge2_rate": 11.2,
+        "ge3_rate": 1.28,
+        "best_matches": 3,
+        "distribution": {
+          "0": 382,
+          "1": 379,
+          "2": 85,
+          "3": 11,
+          "4": 0,
+          "5": 0
+        },
+        "expected_matches": 0.694444,
+        "lift_vs_expected_pct": -2.21,
+        "standard_error": 0.02486,
+        "z_score": -0.6167,
+        "p_value": 0.537445,
+        "p_adjusted": 1.0,
+        "comparisons_adjusted": 16,
+        "evidence": "not_significant"
+      },
+      {
+        "game": "Daily Lotto",
+        "strategy": "Cold 6M",
+        "horizon": 1,
+        "samples": 857,
+        "avg_matches": 0.7421,
+        "ge2_rate": 14.94,
+        "ge3_rate": 1.17,
+        "best_matches": 3,
+        "distribution": {
+          "0": 359,
+          "1": 370,
+          "2": 118,
+          "3": 10,
+          "4": 0,
+          "5": 0
+        },
+        "expected_matches": 0.694444,
+        "lift_vs_expected_pct": 6.87,
+        "standard_error": 0.02486,
+        "z_score": 1.9179,
+        "p_value": 0.055122,
+        "p_adjusted": 0.881955,
+        "comparisons_adjusted": 16,
+        "evidence": "not_significant"
+      },
+      {
+        "game": "Daily Lotto",
+        "strategy": "Diversified Coverage",
+        "horizon": 1,
+        "samples": 857,
+        "avg_matches": 0.6966,
+        "ge2_rate": 12.49,
+        "ge3_rate": 1.05,
+        "best_matches": 4,
+        "distribution": {
+          "0": 377,
+          "1": 373,
+          "2": 98,
+          "3": 8,
+          "4": 1,
+          "5": 0
+        },
+        "expected_matches": 0.694444,
+        "lift_vs_expected_pct": 0.31,
+        "standard_error": 0.02486,
+        "z_score": 0.0874,
+        "p_value": 0.930375,
+        "p_adjusted": 1.0,
+        "comparisons_adjusted": 16,
+        "evidence": "not_significant"
+      },
+      {
+        "game": "Lotto",
+        "strategy": "Hot 6M",
+        "horizon": 1,
+        "samples": 0,
+        "avg_matches": 0.0,
+        "ge2_rate": 0,
+        "ge3_rate": 0,
+        "best_matches": 0,
+        "distribution": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        },
+        "expected_matches": 0.692308,
+        "lift_vs_expected_pct": 0,
+        "standard_error": 0.0,
+        "z_score": 0.0,
+        "p_value": 1.0,
+        "p_adjusted": 1.0,
+        "comparisons_adjusted": 16,
+        "evidence": "early"
+      },
+      {
+        "game": "Lotto",
+        "strategy": "Weighted Historical",
+        "horizon": 1,
+        "samples": 0,
+        "avg_matches": 0.0,
+        "ge2_rate": 0,
+        "ge3_rate": 0,
+        "best_matches": 0,
+        "distribution": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        },
+        "expected_matches": 0.692308,
+        "lift_vs_expected_pct": 0,
+        "standard_error": 0.0,
+        "z_score": 0.0,
+        "p_value": 1.0,
+        "p_adjusted": 1.0,
+        "comparisons_adjusted": 16,
+        "evidence": "early"
+      },
+      {
+        "game": "Lotto",
+        "strategy": "Cold 6M",
+        "horizon": 1,
+        "samples": 0,
+        "avg_matches": 0.0,
+        "ge2_rate": 0,
+        "ge3_rate": 0,
+        "best_matches": 0,
+        "distribution": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        },
+        "expected_matches": 0.692308,
+        "lift_vs_expected_pct": 0,
+        "standard_error": 0.0,
+        "z_score": 0.0,
+        "p_value": 1.0,
+        "p_adjusted": 1.0,
+        "comparisons_adjusted": 16,
+        "evidence": "early"
+      },
+      {
+        "game": "Lotto",
+        "strategy": "Diversified Coverage",
+        "horizon": 1,
+        "samples": 0,
+        "avg_matches": 0.0,
+        "ge2_rate": 0,
+        "ge3_rate": 0,
+        "best_matches": 0,
+        "distribution": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        },
+        "expected_matches": 0.692308,
+        "lift_vs_expected_pct": 0,
+        "standard_error": 0.0,
+        "z_score": 0.0,
+        "p_value": 1.0,
+        "p_adjusted": 1.0,
+        "comparisons_adjusted": 16,
+        "evidence": "early"
+      },
+      {
+        "game": "PowerBall",
+        "strategy": "Hot 6M",
+        "horizon": 1,
+        "samples": 211,
+        "avg_matches": 0.4692,
+        "ge2_rate": 5.69,
+        "ge3_rate": 0.0,
+        "best_matches": 2,
+        "distribution": {
+          "0": 124,
+          "1": 75,
+          "2": 12,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "expected_matches": 0.5,
+        "lift_vs_expected_pct": -6.16,
+        "standard_error": 0.044256,
+        "z_score": -0.6961,
+        "p_value": 0.48638,
+        "p_adjusted": 1.0,
+        "comparisons_adjusted": 16,
+        "evidence": "not_significant"
+      },
+      {
+        "game": "PowerBall",
+        "strategy": "Weighted Historical",
+        "horizon": 1,
+        "samples": 211,
+        "avg_matches": 0.4739,
+        "ge2_rate": 7.11,
+        "ge3_rate": 0.47,
+        "best_matches": 3,
+        "distribution": {
+          "0": 127,
+          "1": 69,
+          "2": 14,
+          "3": 1,
+          "4": 0,
+          "5": 0
+        },
+        "expected_matches": 0.5,
+        "lift_vs_expected_pct": -5.21,
+        "standard_error": 0.044256,
+        "z_score": -0.589,
+        "p_value": 0.555869,
+        "p_adjusted": 1.0,
+        "comparisons_adjusted": 16,
+        "evidence": "not_significant"
+      },
+      {
+        "game": "PowerBall",
+        "strategy": "Cold 6M",
+        "horizon": 1,
+        "samples": 211,
+        "avg_matches": 0.4834,
+        "ge2_rate": 8.06,
+        "ge3_rate": 0.95,
+        "best_matches": 3,
+        "distribution": {
+          "0": 128,
+          "1": 66,
+          "2": 15,
+          "3": 2,
+          "4": 0,
+          "5": 0
+        },
+        "expected_matches": 0.5,
+        "lift_vs_expected_pct": -3.32,
+        "standard_error": 0.044256,
+        "z_score": -0.3748,
+        "p_value": 0.707801,
+        "p_adjusted": 1.0,
+        "comparisons_adjusted": 16,
+        "evidence": "not_significant"
+      },
+      {
+        "game": "PowerBall",
+        "strategy": "Diversified Coverage",
+        "horizon": 1,
+        "samples": 211,
+        "avg_matches": 0.4834,
+        "ge2_rate": 6.64,
+        "ge3_rate": 0.0,
+        "best_matches": 2,
+        "distribution": {
+          "0": 123,
+          "1": 74,
+          "2": 14,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "expected_matches": 0.5,
+        "lift_vs_expected_pct": -3.32,
+        "standard_error": 0.044256,
+        "z_score": -0.3748,
+        "p_value": 0.707801,
+        "p_adjusted": 1.0,
+        "comparisons_adjusted": 16,
+        "evidence": "not_significant"
+      }
+    ],
+    "best_hold": [
+      {
+        "game": "Daily Lotto",
+        "strategy": "Hot 6M",
+        "best_horizon": 1,
+        "avg_matches": 0.7153,
+        "ge2_rate": 13.19,
+        "samples": 857,
+        "p_adjusted": 1.0,
+        "evidence": "not_significant"
+      },
+      {
+        "game": "Daily Lotto",
+        "strategy": "Weighted Historical",
+        "best_horizon": 1,
+        "avg_matches": 0.6791,
+        "ge2_rate": 11.2,
+        "samples": 857,
+        "p_adjusted": 1.0,
+        "evidence": "not_significant"
+      },
+      {
+        "game": "Daily Lotto",
+        "strategy": "Cold 6M",
+        "best_horizon": 8,
+        "avg_matches": 0.7456,
+        "ge2_rate": 15.17,
+        "samples": 857,
+        "p_adjusted": 0.632333,
+        "evidence": "not_significant"
+      },
+      {
+        "game": "Daily Lotto",
+        "strategy": "Diversified Coverage",
+        "best_horizon": 1,
+        "avg_matches": 0.6966,
+        "ge2_rate": 12.49,
+        "samples": 857,
+        "p_adjusted": 1.0,
+        "evidence": "not_significant"
+      },
+      {
+        "game": "PowerBall",
+        "strategy": "Hot 6M",
+        "best_horizon": 4,
+        "avg_matches": 0.4787,
+        "ge2_rate": 5.21,
+        "samples": 211,
+        "p_adjusted": 1.0,
+        "evidence": "not_significant"
+      },
+      {
+        "game": "PowerBall",
+        "strategy": "Weighted Historical",
+        "best_horizon": 8,
+        "avg_matches": 0.4882,
+        "ge2_rate": 8.06,
+        "samples": 211,
+        "p_adjusted": 1.0,
+        "evidence": "not_significant"
+      },
+      {
+        "game": "PowerBall",
+        "strategy": "Cold 6M",
+        "best_horizon": 1,
+        "avg_matches": 0.4834,
+        "ge2_rate": 8.06,
+        "samples": 211,
+        "p_adjusted": 1.0,
+        "evidence": "not_significant"
+      },
+      {
+        "game": "PowerBall",
+        "strategy": "Diversified Coverage",
+        "best_horizon": 8,
+        "avg_matches": 0.5308,
+        "ge2_rate": 8.53,
+        "samples": 211,
+        "p_adjusted": 1.0,
+        "evidence": "not_significant"
+      }
+    ],
+    "challengers": {
+      "Daily Lotto": {
+        "status": "candidate",
+        "model": "Weighted Historical v2.0 challenger",
+        "weights": {
+          "long": 0.3,
+          "six": 0.25,
+          "recent": 0.15,
+          "gap": 0.15,
+          "pair": 0.15
+        },
+        "validation_window": {
+          "from": "2025-04-19",
+          "to": "2025-12-11",
+          "metrics": {
+            "samples": 237,
+            "avg_matches": 0.7131,
+            "ge2_rate": 11.81,
+            "ge3_rate": 1.69,
+            "best_matches": 3,
+            "distribution": {
+              "0": 100,
+              "1": 109,
+              "2": 24,
+              "3": 4,
+              "4": 0,
+              "5": 0
+            },
+            "expected_matches": 0.694444,
+            "lift_vs_expected_pct": 2.68,
+            "standard_error": 0.047274,
+            "z_score": 0.3942,
+            "p_value": 0.693421,
+            "p_adjusted": 1.0,
+            "comparisons_adjusted": 10,
+            "evidence": "not_significant"
+          }
+        },
+        "held_out_test": {
+          "from": "2025-12-12",
+          "to": "2026-08-06",
+          "challenger": {
+            "samples": 237,
+            "avg_matches": 0.7215,
+            "ge2_rate": 11.39,
+            "ge3_rate": 0.84,
+            "best_matches": 3,
+            "distribution": {
+              "0": 95,
+              "1": 115,
+              "2": 25,
+              "3": 2,
+              "4": 0,
+              "5": 0
+            },
+            "expected_matches": 0.694444,
+            "lift_vs_expected_pct": 3.9,
+            "standard_error": 0.047274,
+            "z_score": 0.5727,
+            "p_value": 0.56683,
+            "p_adjusted": 1.0,
+            "comparisons_adjusted": 10,
+            "evidence": "not_significant"
+          },
+          "champion_v1": {
+            "samples": 237,
+            "avg_matches": 0.6709,
+            "ge2_rate": 9.28,
+            "ge3_rate": 1.27,
+            "best_matches": 3,
+            "distribution": {
+              "0": 103,
+              "1": 112,
+              "2": 19,
+              "3": 3,
+              "4": 0,
+              "5": 0
+            },
+            "expected_matches": 0.694444,
+            "lift_vs_expected_pct": -3.39,
+            "standard_error": 0.047274,
+            "z_score": -0.4983,
+            "p_value": 0.618252,
+            "p_adjusted": 0.618252,
+            "comparisons_adjusted": 1,
+            "evidence": "not_significant"
+          },
+          "promote": false,
+          "reason": "Research-only challenger. Promotion requires a pre-defined evidence threshold and sufficient out-of-sample samples."
+        }
+      },
+      "Lotto": {
+        "status": "insufficient_data",
+        "draws": 19,
+        "minimum_needed": 100
+      },
+      "PowerBall": {
+        "status": "candidate",
+        "model": "Weighted Historical v2.0 challenger",
+        "weights": {
+          "long": 0.25,
+          "six": 0.3,
+          "recent": 0.1,
+          "gap": 0.15,
+          "pair": 0.2
+        },
+        "validation_window": {
+          "from": "2025-04-18",
+          "to": "2025-12-09",
+          "metrics": {
+            "samples": 68,
+            "avg_matches": 0.5735,
+            "ge2_rate": 5.88,
+            "ge3_rate": 0.0,
+            "best_matches": 2,
+            "distribution": {
+              "0": 33,
+              "1": 31,
+              "2": 4,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            },
+            "expected_matches": 0.5,
+            "lift_vs_expected_pct": 14.71,
+            "standard_error": 0.077958,
+            "z_score": 0.9432,
+            "p_value": 0.345582,
+            "p_adjusted": 1.0,
+            "comparisons_adjusted": 10,
+            "evidence": "early"
+          }
+        },
+        "held_out_test": {
+          "from": "2025-12-12",
+          "to": "2026-08-04",
+          "challenger": {
+            "samples": 68,
+            "avg_matches": 0.4265,
+            "ge2_rate": 4.41,
+            "ge3_rate": 0.0,
+            "best_matches": 2,
+            "distribution": {
+              "0": 42,
+              "1": 23,
+              "2": 3,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            },
+            "expected_matches": 0.5,
+            "lift_vs_expected_pct": -14.71,
+            "standard_error": 0.077958,
+            "z_score": -0.9432,
+            "p_value": 0.345582,
+            "p_adjusted": 1.0,
+            "comparisons_adjusted": 10,
+            "evidence": "early"
+          },
+          "champion_v1": {
+            "samples": 68,
+            "avg_matches": 0.4118,
+            "ge2_rate": 5.88,
+            "ge3_rate": 0.0,
+            "best_matches": 2,
+            "distribution": {
+              "0": 44,
+              "1": 20,
+              "2": 4,
+              "3": 0,
+              "4": 0,
+              "5": 0
+            },
+            "expected_matches": 0.5,
+            "lift_vs_expected_pct": -17.65,
+            "standard_error": 0.077958,
+            "z_score": -1.1318,
+            "p_value": 0.257705,
+            "p_adjusted": 0.257705,
+            "comparisons_adjusted": 1,
+            "evidence": "early"
+          },
+          "promote": false,
+          "reason": "Research-only challenger. Promotion requires a pre-defined evidence threshold and sufficient out-of-sample samples."
+        }
+      }
+    }
+  },
+  "retrospective": {
+    "schema_version": 1,
+    "generated_at": "2026-08-07T14:31:05.223241+00:00",
+    "simulation": {
+      "start": "2025-08-07",
+      "end": "2026-08-06",
+      "method": "strict walk-forward; no future leakage",
+      "frozen_policy": "generated once per legal rule era and never changed within that era; reset only when the lottery itself changes the ticket format"
+    },
+    "summary": {
+      "Daily Lotto": {
+        "Hot 6M": {
+          "tickets": 364,
+          "spend": 1092.0,
+          "won": 361.0,
+          "net": -731.0,
+          "roi_pct": -66.94,
+          "avg_matches": 0.7088,
+          "ge2_rate": 12.91,
+          "ge3_rate": 2.47,
+          "best_matches": 3,
+          "longest_losing_streak": 33,
+          "exact_winning_draws": 0,
+          "estimated_winning_draws": 47
+        },
+        "Weighted Historical": {
+          "tickets": 364,
+          "spend": 1092.0,
+          "won": 207.0,
+          "net": -885.0,
+          "roi_pct": -81.04,
+          "avg_matches": 0.6731,
+          "ge2_rate": 9.07,
+          "ge3_rate": 0.82,
+          "best_matches": 3,
+          "longest_losing_streak": 39,
+          "exact_winning_draws": 0,
+          "estimated_winning_draws": 33
+        },
+        "Cold 6M": {
+          "tickets": 364,
+          "spend": 1092.0,
+          "won": 315.0,
+          "net": -777.0,
+          "roi_pct": -71.15,
+          "avg_matches": 0.6951,
+          "ge2_rate": 13.46,
+          "ge3_rate": 1.37,
+          "best_matches": 3,
+          "longest_losing_streak": 32,
+          "exact_winning_draws": 0,
+          "estimated_winning_draws": 49
+        },
+        "Diversified Coverage": {
+          "tickets": 364,
+          "spend": 1092.0,
+          "won": 375.0,
+          "net": -717.0,
+          "roi_pct": -65.66,
+          "avg_matches": 0.7582,
+          "ge2_rate": 16.76,
+          "ge3_rate": 1.37,
+          "best_matches": 3,
+          "longest_losing_streak": 34,
+          "exact_winning_draws": 0,
+          "estimated_winning_draws": 61
+        },
+        "Frozen Alpha": {
+          "tickets": 364,
+          "spend": 1092.0,
+          "won": 211.0,
+          "net": -881.0,
+          "roi_pct": -80.68,
+          "avg_matches": 0.6346,
+          "ge2_rate": 8.52,
+          "ge3_rate": 1.1,
+          "best_matches": 3,
+          "longest_losing_streak": 53,
+          "exact_winning_draws": 0,
+          "estimated_winning_draws": 31
+        }
+      },
+      "PowerBall": {
+        "Hot 6M": {
+          "tickets": 104,
+          "spend": 615.0,
+          "won": 40.0,
+          "net": -575.0,
+          "roi_pct": -93.5,
+          "avg_matches": 0.3846,
+          "ge2_rate": 1.92,
+          "ge3_rate": 0.0,
+          "best_matches": 2,
+          "longest_losing_streak": 44,
+          "exact_winning_draws": 0,
+          "estimated_winning_draws": 5
+        },
+        "Weighted Historical": {
+          "tickets": 104,
+          "spend": 615.0,
+          "won": 270.0,
+          "net": -345.0,
+          "roi_pct": -56.1,
+          "avg_matches": 0.4615,
+          "ge2_rate": 5.77,
+          "ge3_rate": 0.96,
+          "best_matches": 3,
+          "longest_losing_streak": 54,
+          "exact_winning_draws": 0,
+          "estimated_winning_draws": 4
+        },
+        "Cold 6M": {
+          "tickets": 104,
+          "spend": 615.0,
+          "won": 85.0,
+          "net": -530.0,
+          "roi_pct": -86.18,
+          "avg_matches": 0.4808,
+          "ge2_rate": 7.69,
+          "ge3_rate": 0.0,
+          "best_matches": 2,
+          "longest_losing_streak": 40,
+          "exact_winning_draws": 0,
+          "estimated_winning_draws": 6
+        },
+        "Diversified Coverage": {
+          "tickets": 104,
+          "spend": 615.0,
+          "won": 55.0,
+          "net": -560.0,
+          "roi_pct": -91.06,
+          "avg_matches": 0.4808,
+          "ge2_rate": 3.85,
+          "ge3_rate": 0.0,
+          "best_matches": 2,
+          "longest_losing_streak": 47,
+          "exact_winning_draws": 0,
+          "estimated_winning_draws": 6
+        },
+        "Frozen Alpha": {
+          "tickets": 104,
+          "spend": 615.0,
+          "won": 85.0,
+          "net": -530.0,
+          "roi_pct": -86.18,
+          "avg_matches": 0.5096,
+          "ge2_rate": 8.65,
+          "ge3_rate": 0.96,
+          "best_matches": 3,
+          "longest_losing_streak": 42,
+          "exact_winning_draws": 0,
+          "estimated_winning_draws": 6
+        }
+      },
+      "Lotto": {
+        "Hot 6M": {
+          "tickets": 85,
+          "spend": 425.0,
+          "won": 220.0,
+          "net": -205.0,
+          "roi_pct": -48.24,
+          "avg_matches": 0.6588,
+          "ge2_rate": 10.59,
+          "ge3_rate": 2.35,
+          "best_matches": 4,
+          "longest_losing_streak": 62,
+          "exact_winning_draws": 0,
+          "estimated_winning_draws": 2
+        },
+        "Weighted Historical": {
+          "tickets": 85,
+          "spend": 425.0,
+          "won": 30.0,
+          "net": -395.0,
+          "roi_pct": -92.94,
+          "avg_matches": 0.6353,
+          "ge2_rate": 14.12,
+          "ge3_rate": 0.0,
+          "best_matches": 2,
+          "longest_losing_streak": 44,
+          "exact_winning_draws": 0,
+          "estimated_winning_draws": 1
+        },
+        "Cold 6M": {
+          "tickets": 85,
+          "spend": 425.0,
+          "won": 80.0,
+          "net": -345.0,
+          "roi_pct": -81.18,
+          "avg_matches": 0.7176,
+          "ge2_rate": 12.94,
+          "ge3_rate": 1.18,
+          "best_matches": 3,
+          "longest_losing_streak": 48,
+          "exact_winning_draws": 0,
+          "estimated_winning_draws": 3
+        },
+        "Diversified Coverage": {
+          "tickets": 85,
+          "spend": 425.0,
+          "won": 60.0,
+          "net": -365.0,
+          "roi_pct": -85.88,
+          "avg_matches": 0.6118,
+          "ge2_rate": 12.94,
+          "ge3_rate": 0.0,
+          "best_matches": 2,
+          "longest_losing_streak": 45,
+          "exact_winning_draws": 0,
+          "estimated_winning_draws": 2
+        },
+        "Frozen Alpha": {
+          "tickets": 85,
+          "spend": 425.0,
+          "won": 60.0,
+          "net": -365.0,
+          "roi_pct": -85.88,
+          "avg_matches": 0.6,
+          "ge2_rate": 11.76,
+          "ge3_rate": 0.0,
+          "best_matches": 2,
+          "longest_losing_streak": 49,
+          "exact_winning_draws": 0,
+          "estimated_winning_draws": 2
+        }
+      }
+    },
+    "top_tickets": [
+      {
+        "game": "Lotto",
+        "date": "2026-03-14",
+        "strategy": "Hot 6M",
+        "numbers": [
+          7,
+          12,
+          22,
+          32,
+          43,
+          58
+        ],
+        "bonus": null,
+        "matches": 4,
+        "bonus_match": false,
+        "won": 200.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/lotto/results/14-march-2026"
+      },
+      {
+        "game": "PowerBall",
+        "date": "2025-09-23",
+        "strategy": "Weighted Historical",
+        "numbers": [
+          10,
+          20,
+          22,
+          32,
+          43
+        ],
+        "bonus": 18,
+        "matches": 3,
+        "bonus_match": true,
+        "won": 250.0,
+        "payout_type": "estimated",
+        "source": "https://www.powerball.net/southafrica/results/2025-09-23"
+      },
+      {
+        "game": "PowerBall",
+        "date": "2025-09-23",
+        "strategy": "Frozen Alpha",
+        "numbers": [
+          5,
+          20,
+          23,
+          32,
+          43
+        ],
+        "bonus": 7,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 50.0,
+        "payout_type": "estimated",
+        "source": "https://www.powerball.net/southafrica/results/2025-09-23"
+      },
+      {
+        "game": "Lotto",
+        "date": "2026-05-20",
+        "strategy": "Hot 6M",
+        "numbers": [
+          1,
+          12,
+          22,
+          32,
+          40,
+          58
+        ],
+        "bonus": null,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 20.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/lotto/results/20-may-2026"
+      },
+      {
+        "game": "Lotto",
+        "date": "2026-03-25",
+        "strategy": "Cold 6M",
+        "numbers": [
+          3,
+          19,
+          25,
+          31,
+          41,
+          52
+        ],
+        "bonus": null,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 20.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/lotto/results/25-march-2026"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2026-07-11",
+        "strategy": "Hot 6M",
+        "numbers": [
+          7,
+          10,
+          21,
+          25,
+          30
+        ],
+        "bonus": null,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 19.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/11-july-2026"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2026-07-06",
+        "strategy": "Hot 6M",
+        "numbers": [
+          7,
+          10,
+          21,
+          25,
+          30
+        ],
+        "bonus": null,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 19.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/06-july-2026"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2026-07-06",
+        "strategy": "Weighted Historical",
+        "numbers": [
+          7,
+          10,
+          21,
+          25,
+          30
+        ],
+        "bonus": null,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 19.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/06-july-2026"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2026-06-25",
+        "strategy": "Diversified Coverage",
+        "numbers": [
+          2,
+          11,
+          17,
+          22,
+          32
+        ],
+        "bonus": null,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 19.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/25-june-2026"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2026-06-23",
+        "strategy": "Diversified Coverage",
+        "numbers": [
+          2,
+          11,
+          19,
+          22,
+          33
+        ],
+        "bonus": null,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 19.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/23-june-2026"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2026-06-23",
+        "strategy": "Frozen Alpha",
+        "numbers": [
+          4,
+          11,
+          19,
+          27,
+          33
+        ],
+        "bonus": null,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 19.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/23-june-2026"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2026-05-06",
+        "strategy": "Weighted Historical",
+        "numbers": [
+          7,
+          10,
+          21,
+          26,
+          35
+        ],
+        "bonus": null,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 19.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/06-may-2026"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2026-05-05",
+        "strategy": "Hot 6M",
+        "numbers": [
+          6,
+          9,
+          21,
+          26,
+          35
+        ],
+        "bonus": null,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 19.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/05-may-2026"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2026-04-27",
+        "strategy": "Hot 6M",
+        "numbers": [
+          5,
+          9,
+          21,
+          26,
+          35
+        ],
+        "bonus": null,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 19.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/27-april-2026"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2026-04-13",
+        "strategy": "Cold 6M",
+        "numbers": [
+          1,
+          14,
+          19,
+          24,
+          29
+        ],
+        "bonus": null,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 19.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/13-april-2026"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2026-03-31",
+        "strategy": "Diversified Coverage",
+        "numbers": [
+          6,
+          14,
+          18,
+          25,
+          32
+        ],
+        "bonus": null,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 19.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/31-march-2026"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2026-02-10",
+        "strategy": "Hot 6M",
+        "numbers": [
+          7,
+          14,
+          21,
+          26,
+          34
+        ],
+        "bonus": null,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 19.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/10-february-2026"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2026-01-10",
+        "strategy": "Cold 6M",
+        "numbers": [
+          1,
+          8,
+          15,
+          24,
+          35
+        ],
+        "bonus": null,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 19.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/10-january-2026"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2026-01-07",
+        "strategy": "Hot 6M",
+        "numbers": [
+          2,
+          14,
+          17,
+          26,
+          30
+        ],
+        "bonus": null,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 19.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/07-january-2026"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2026-01-03",
+        "strategy": "Diversified Coverage",
+        "numbers": [
+          6,
+          11,
+          15,
+          23,
+          29
+        ],
+        "bonus": null,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 19.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/03-january-2026"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2025-12-28",
+        "strategy": "Cold 6M",
+        "numbers": [
+          1,
+          13,
+          15,
+          24,
+          31
+        ],
+        "bonus": null,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 19.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/28-december-2025"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2025-12-21",
+        "strategy": "Hot 6M",
+        "numbers": [
+          3,
+          14,
+          17,
+          26,
+          33
+        ],
+        "bonus": null,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 19.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/21-december-2025"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2025-12-21",
+        "strategy": "Weighted Historical",
+        "numbers": [
+          7,
+          11,
+          17,
+          26,
+          33
+        ],
+        "bonus": null,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 19.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/21-december-2025"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2025-11-20",
+        "strategy": "Frozen Alpha",
+        "numbers": [
+          4,
+          11,
+          19,
+          27,
+          33
+        ],
+        "bonus": null,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 19.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/20-november-2025"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2025-09-25",
+        "strategy": "Diversified Coverage",
+        "numbers": [
+          1,
+          9,
+          20,
+          22,
+          34
+        ],
+        "bonus": null,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 19.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/25-september-2025"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2025-09-09",
+        "strategy": "Cold 6M",
+        "numbers": [
+          6,
+          8,
+          16,
+          23,
+          36
+        ],
+        "bonus": null,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 19.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/09-september-2025"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2025-09-06",
+        "strategy": "Frozen Alpha",
+        "numbers": [
+          4,
+          11,
+          19,
+          27,
+          33
+        ],
+        "bonus": null,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 19.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/06-september-2025"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2025-09-03",
+        "strategy": "Frozen Alpha",
+        "numbers": [
+          4,
+          11,
+          19,
+          27,
+          33
+        ],
+        "bonus": null,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 19.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/03-september-2025"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2025-08-31",
+        "strategy": "Hot 6M",
+        "numbers": [
+          3,
+          14,
+          19,
+          27,
+          35
+        ],
+        "bonus": null,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 19.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/31-august-2025"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2025-08-16",
+        "strategy": "Cold 6M",
+        "numbers": [
+          5,
+          8,
+          18,
+          23,
+          34
+        ],
+        "bonus": null,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 19.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/16-august-2025"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2025-08-08",
+        "strategy": "Hot 6M",
+        "numbers": [
+          3,
+          13,
+          19,
+          27,
+          35
+        ],
+        "bonus": null,
+        "matches": 3,
+        "bonus_match": false,
+        "won": 19.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/08-august-2025"
+      },
+      {
+        "game": "PowerBall",
+        "date": "2026-01-16",
+        "strategy": "Cold 6M",
+        "numbers": [
+          1,
+          19,
+          26,
+          36,
+          47
+        ],
+        "bonus": 20,
+        "matches": 2,
+        "bonus_match": true,
+        "won": 50.0,
+        "payout_type": "estimated",
+        "source": "https://www.powerball.net/southafrica/results/2026-01-16"
+      },
+      {
+        "game": "Lotto",
+        "date": "2026-05-27",
+        "strategy": "Frozen Alpha",
+        "numbers": [
+          8,
+          18,
+          29,
+          31,
+          45,
+          50
+        ],
+        "bonus": null,
+        "matches": 2,
+        "bonus_match": true,
+        "won": 30.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/lotto/results/27-may-2026"
+      },
+      {
+        "game": "Lotto",
+        "date": "2026-03-04",
+        "strategy": "Cold 6M",
+        "numbers": [
+          3,
+          11,
+          25,
+          31,
+          47,
+          57
+        ],
+        "bonus": null,
+        "matches": 2,
+        "bonus_match": true,
+        "won": 30.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/lotto/results/04-march-2026"
+      },
+      {
+        "game": "Lotto",
+        "date": "2025-12-27",
+        "strategy": "Weighted Historical",
+        "numbers": [
+          8,
+          12,
+          29,
+          32,
+          41,
+          50
+        ],
+        "bonus": null,
+        "matches": 2,
+        "bonus_match": true,
+        "won": 30.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/lotto/results/27-december-2025"
+      },
+      {
+        "game": "Lotto",
+        "date": "2025-12-24",
+        "strategy": "Diversified Coverage",
+        "numbers": [
+          7,
+          10,
+          23,
+          34,
+          43,
+          55
+        ],
+        "bonus": null,
+        "matches": 2,
+        "bonus_match": true,
+        "won": 30.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/lotto/results/24-december-2025"
+      },
+      {
+        "game": "Lotto",
+        "date": "2025-12-03",
+        "strategy": "Frozen Alpha",
+        "numbers": [
+          8,
+          18,
+          29,
+          31,
+          45,
+          50
+        ],
+        "bonus": null,
+        "matches": 2,
+        "bonus_match": true,
+        "won": 30.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/lotto/results/03-december-2025"
+      },
+      {
+        "game": "Lotto",
+        "date": "2025-10-29",
+        "strategy": "Diversified Coverage",
+        "numbers": [
+          6,
+          10,
+          22,
+          34,
+          42,
+          55
+        ],
+        "bonus": null,
+        "matches": 2,
+        "bonus_match": true,
+        "won": 30.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/lotto/results/29-october-2025"
+      },
+      {
+        "game": "Lotto",
+        "date": "2025-09-13",
+        "strategy": "Cold 6M",
+        "numbers": [
+          4,
+          14,
+          21,
+          33,
+          42,
+          53
+        ],
+        "bonus": null,
+        "matches": 2,
+        "bonus_match": true,
+        "won": 30.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/lotto/results/13-september-2025"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2026-08-06",
+        "strategy": "Cold 6M",
+        "numbers": [
+          2,
+          12,
+          18,
+          27,
+          29
+        ],
+        "bonus": null,
+        "matches": 2,
+        "bonus_match": false,
+        "won": 5.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/06-august-2026"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2026-08-01",
+        "strategy": "Hot 6M",
+        "numbers": [
+          7,
+          10,
+          16,
+          25,
+          30
+        ],
+        "bonus": null,
+        "matches": 2,
+        "bonus_match": false,
+        "won": 5.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/01-august-2026"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2026-08-01",
+        "strategy": "Weighted Historical",
+        "numbers": [
+          7,
+          10,
+          16,
+          25,
+          30
+        ],
+        "bonus": null,
+        "matches": 2,
+        "bonus_match": false,
+        "won": 5.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/01-august-2026"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2026-07-31",
+        "strategy": "Cold 6M",
+        "numbers": [
+          2,
+          12,
+          18,
+          27,
+          29
+        ],
+        "bonus": null,
+        "matches": 2,
+        "bonus_match": false,
+        "won": 5.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/31-july-2026"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2026-07-31",
+        "strategy": "Frozen Alpha",
+        "numbers": [
+          4,
+          11,
+          19,
+          27,
+          33
+        ],
+        "bonus": null,
+        "matches": 2,
+        "bonus_match": false,
+        "won": 5.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/31-july-2026"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2026-07-28",
+        "strategy": "Diversified Coverage",
+        "numbers": [
+          5,
+          13,
+          15,
+          28,
+          29
+        ],
+        "bonus": null,
+        "matches": 2,
+        "bonus_match": false,
+        "won": 5.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/28-july-2026"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2026-07-27",
+        "strategy": "Frozen Alpha",
+        "numbers": [
+          4,
+          11,
+          19,
+          27,
+          33
+        ],
+        "bonus": null,
+        "matches": 2,
+        "bonus_match": false,
+        "won": 5.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/27-july-2026"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2026-07-26",
+        "strategy": "Hot 6M",
+        "numbers": [
+          7,
+          10,
+          16,
+          25,
+          30
+        ],
+        "bonus": null,
+        "matches": 2,
+        "bonus_match": false,
+        "won": 5.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/26-july-2026"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2026-07-25",
+        "strategy": "Hot 6M",
+        "numbers": [
+          7,
+          10,
+          16,
+          25,
+          30
+        ],
+        "bonus": null,
+        "matches": 2,
+        "bonus_match": false,
+        "won": 5.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/25-july-2026"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2026-07-22",
+        "strategy": "Weighted Historical",
+        "numbers": [
+          7,
+          10,
+          16,
+          25,
+          30
+        ],
+        "bonus": null,
+        "matches": 2,
+        "bonus_match": false,
+        "won": 5.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/22-july-2026"
+      },
+      {
+        "game": "Daily Lotto",
+        "date": "2026-07-14",
+        "strategy": "Diversified Coverage",
+        "numbers": [
+          3,
+          11,
+          19,
+          26,
+          33
+        ],
+        "bonus": null,
+        "matches": 2,
+        "bonus_match": false,
+        "won": 5.0,
+        "payout_type": "estimated",
+        "source": "https://za.national-lottery.com/daily-lotto/results/14-july-2026"
+      }
+    ],
+    "payout_quality": {
+      "exact_draws": 0,
+      "estimated_draws": 212
+    }
+  },
+  "principles": [
+    "No future leakage",
+    "Immutable historical predictions",
+    "Version every algorithm",
+    "Live results evaluate models but do not directly reward or punish individual numbers",
+    "Randomness is the null hypothesis",
+    "ROI alone does not establish predictive ability",
+    "Adjust for multiple testing",
+    "Respect rule eras",
+    "Exclude questionable data rather than inventing it"
+  ]
+}

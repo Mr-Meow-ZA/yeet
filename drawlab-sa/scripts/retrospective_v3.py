@@ -10,6 +10,7 @@ qualifies for a prize. Network failures fall back to clearly-labelled estimates.
 from __future__ import annotations
 
 import json
+import os
 import re
 from collections import Counter, defaultdict
 from datetime import date, datetime, timedelta, timezone
@@ -129,7 +130,13 @@ def select_spread(ranked, count, maximum, avoid=None):
     return sorted(picked[:count])
 
 
-def bonus_number(rows, strategy, maximum):
+def bonus_number(rows, strategy, maximum, target):
+    # Special-ball ranking is isolated to the applicable PowerBall rule era.
+    change = date(2026, 6, 1)
+    if target >= change:
+        rows = [r for r in rows if r["_date"] >= change]
+    else:
+        rows = [r for r in rows if r["_date"] < change]
     eligible = [r for r in rows if isinstance(r.get("bonus"), int) and 1 <= r["bonus"] <= maximum]
     c = Counter(r["bonus"] for r in eligible)
     g = {n: len(eligible) + 1 for n in range(1, maximum + 1)}
@@ -147,8 +154,18 @@ def bonus_number(rows, strategy, maximum):
     return min(nums, key=lambda n: (c[n], n))
 
 
+def model_rows(rows, game, target):
+    # Lotto changed its main number space from 6/58 to 6/52 on 1 June 2026.
+    # Never let a model score a current-era number using incompatible legacy rows.
+    if game == "Lotto":
+        change = date(2026, 6, 1)
+        return [r for r in rows if (r["_date"] >= change) == (target >= change)]
+    return rows
+
+
 def make_line(rows, game, strategy, target, avoid=None):
     rule = rule_for(game, target)
+    rows = model_rows(rows, game, target)
     nums = list(range(1, rule["max"] + 1))
     lc = counts(rows, target)
     c6 = counts(rows, target, 183)
@@ -174,7 +191,7 @@ def make_line(rows, game, strategy, target, avoid=None):
         pop = {n: c6[n] + cr[n] for n in nums}
         ranked = sorted(nums, key=lambda n: (sum(n in line for line in (avoid or [])), pop[n], n))
     picked = select_spread(ranked, rule["count"], rule["max"], avoid if strategy == "Diversified Coverage" else None)
-    bonus = bonus_number(rows, strategy, rule["bonus_max"]) if game == "PowerBall" else None
+    bonus = bonus_number(rows, strategy, rule["bonus_max"], target) if game == "PowerBall" else None
     return picked, bonus
 
 
@@ -245,6 +262,11 @@ def fetch_payouts(game, d, cache):
     if key in cache:
         return cache[key]
     url = payout_url(game, d)
+    # Fast deterministic rebuilds use the explicit payout model. Exact archival
+    # enrichment is opt-in so source latency cannot block the research platform.
+    if os.getenv("DRAWLAB_RETRO_EXACT", "0") != "1":
+        cache[key] = (FALLBACK[game], "estimated", url)
+        return cache[key]
     try:
         response = SESSION.get(url, timeout=(4, 8))
         response.raise_for_status()
@@ -286,10 +308,11 @@ def main():
             s: {"tickets": 0, "spend": 0.0, "won": 0.0, "matches": 0, "ge2": 0, "ge3": 0, "best": 0, "returns": [], "exact": 0, "estimated": 0}
             for s in names
         }
-        frozen = None
+        frozen_by_era = {}
         for draw in targets:
             prior = [r for r in rows if r["_date"] < draw["_date"]]
-            if len(prior) < 60:
+            eligible_prior = model_rows(prior, game, draw["_date"])
+            if len(eligible_prior) < 60:
                 continue
             generated = []
             lines = {}
@@ -297,9 +320,11 @@ def main():
                 line = make_line(prior, game, strategy, draw["_date"], generated)
                 generated.append(line[0])
                 lines[strategy] = line
-            if frozen is None:
-                frozen = make_line(prior, game, "Weighted Historical", draw["_date"])
-            lines[FROZEN] = frozen
+            rule = rule_for(game, draw["_date"])
+            era_key = (rule["max"], rule["bonus_max"], rule["cost"])
+            if era_key not in frozen_by_era:
+                frozen_by_era[era_key] = make_line(prior, game, "Weighted Historical", draw["_date"])
+            lines[FROZEN] = frozen_by_era[era_key]
             outcomes = {strategy: prize_key(game, line, draw) for strategy, line in lines.items()}
             need_payout = any(potentially_paid(game, outcome[0]) for outcome in outcomes.values())
             payouts = ptype = source = None
@@ -354,7 +379,7 @@ def main():
         "simulation": {
             "start": START.isoformat(), "end": END.isoformat(),
             "method": "strict walk-forward; no future leakage",
-            "frozen_policy": "generated once at first eligible simulated draw and never changed",
+            "frozen_policy": "generated once per legal rule era and never changed within that era; reset only when the lottery itself changes the ticket format",
         },
         "summary": stats,
         "top_tickets": top,
