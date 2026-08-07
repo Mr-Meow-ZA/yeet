@@ -4,6 +4,14 @@ on:
   pull_request:
     paths:
       - 'drawlab-sa/**'
+      - '.github/workflows/drawlab-*.yml'
+  push:
+    paths:
+      - 'drawlab-sa/**'
+      - '.github/workflows/drawlab-cloud.yml'
+      - '.github/workflows/drawlab-research.yml'
+      - '.github/workflows/drawlab-supabase-sync.yml'
+      - '.github/workflows/import-drawlab-history.yml'
       - '.github/workflows/drawlab-integrity.yml'
   workflow_dispatch:
   schedule:
@@ -30,9 +38,16 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Compile all DrawLab scripts
+      - name: Compile permanent DrawLab engines
         shell: bash
-        run: python -m py_compile drawlab-sa/scripts/*.py
+        run: |
+          python -m py_compile \
+            drawlab-sa/scripts/update_cloud.py \
+            drawlab-sa/scripts/import_history.py \
+            drawlab-sa/scripts/research_engine.py \
+            drawlab-sa/scripts/retrospective_v3.py \
+            drawlab-sa/scripts/build_v3_state.py \
+            drawlab-sa/scripts/validate_state.py
 
       - name: Validate stored results and tickets
         run: python drawlab-sa/scripts/validate_state.py
@@ -48,17 +63,60 @@ jobs:
               path=root/name
               assert path.exists() and path.stat().st_size > 2, f'missing {path}'
               json.loads(path.read_text())
+
           state=json.loads((root/'v3-state.json').read_text())
-          assert state.get('schema_version') == 3
+          assert state.get('schema_version',0) >= 4, state.get('schema_version')
+          assert state.get('cloud_status') == 'ok', state.get('cloud_status')
+
           frozen=json.loads((root/'frozen-alpha.json').read_text())
           assert frozen.get('locked') is True and len(frozen.get('lines',{})) == 3
+
           retro=json.loads((root/'retrospective.json').read_text())
           assert retro.get('simulation',{}).get('method') == 'strict walk-forward; no future leakage'
-          print('Validated DrawLab v3 artifacts')
+
+          research=json.loads(Path('drawlab-sa/data/research-state.json').read_text())
+          assert research.get('methodology_version') == '3.0', research.get('methodology_version')
+          horizons={str(r.get('horizon')) for r in research.get('walk_forward',[])}
+          assert {'1','2','4','8','20','never'} <= horizons, horizons
+          assert len(research.get('walk_forward',[])) >= 72
+          print('Validated DrawLab v3 state, retrospective and hold-policy research')
           PY
+
+      - name: Validate production website
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check drawlab-sa/v3/app.js
+          test -s drawlab-sa/index.html
+          test -s drawlab-sa/legacy/index.html
+          test -s drawlab-sa/v3/styles.css
+          test -s drawlab-sa/manifest.webmanifest
+          test -s drawlab-sa/sw.js
+          grep -q 'Research the process' drawlab-sa/index.html
+          grep -q '1 · 2 · 4 · 8 · 20 · Never' drawlab-sa/index.html
+          grep -q 'drawlab-state' drawlab-sa/v3/app.js
+          grep -q 'const rs = db.research' drawlab-sa/v3/app.js
           grep -q 'Frozen Alpha' drawlab-sa/scripts/update_cloud.py
-          grep -qi 'Research lab' drawlab-sa/v3/index.html
-          grep -q 'Hall of Records' drawlab-sa/v3/index.html
+          ! grep -q '__PLACEHOLDER__' drawlab-sa/v3/styles.css
+
+      - name: Verify Supabase read model
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        shell: bash
+        run: |
+          set -euo pipefail
+          response="$(curl --fail-with-body --silent --show-error --max-time 30 'https://lnmgieielbqqqvboonzj.supabase.co/functions/v1/drawlab-state')"
+          python - <<'PY' "$response"
+          import json,sys
+          p=json.loads(sys.argv[1])
+          assert p.get('database_status') == 'ok', p.get('database_status')
+          counts=p.get('counts') or {}
+          assert counts.get('draws',0) >= 1488, counts
+          research=p.get('research') or {}
+          assert research.get('methodology_version') == '3.0', research.get('methodology_version')
+          hs={str(r.get('horizon')) for r in research.get('walk_forward',[])}
+          assert {'1','2','4','8','20','never'} <= hs, hs
+          print('Supabase primary read model is healthy:',counts)
+          PY
 
       - name: Check scheduled data freshness
         if: github.event_name == 'schedule'
