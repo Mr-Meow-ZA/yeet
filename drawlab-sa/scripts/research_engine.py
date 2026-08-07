@@ -27,7 +27,8 @@ RULES = {
     "PowerBall": {"count": 5, "max": 50, "bonus_max": 16},
 }
 STRATEGIES = ("Hot 6M", "Weighted Historical", "Cold 6M", "Diversified Coverage")
-HORIZONS = (1, 2, 4, 8)
+HORIZONS = (1, 2, 4, 8, 20)
+WALK_COMPARISONS = len(STRATEGIES) * (len(HORIZONS) + 1)
 MIN_TRAIN = {"Daily Lotto": 90, "Lotto": 60, "PowerBall": 60}
 WEIGHT_CANDIDATES = (
     {"long": .25, "six": .30, "recent": .15, "gap": .15, "pair": .15},
@@ -273,11 +274,24 @@ def metric(matches: list[int], game: str, comparisons: int = 1) -> dict[str, Any
     }
 
 
-def walk_forward(game: str, rows: list[dict[str, Any]], horizon: int) -> dict[str, dict[str, Any]]:
+def walk_forward(game: str, rows: list[dict[str, Any]], horizon: int | None) -> dict[str, dict[str, Any]]:
+    """Replay one refresh policy without future leakage.
+
+    horizon=None is the true never-refresh control: each strategy is generated
+    once at the first eligible target draw and then held for the rest of the
+    compatible rule era. Numeric horizons regenerate only after that many
+    unseen draws have been scored.
+    """
     start = MIN_TRAIN[game]
     collected = {s: [] for s in STRATEGIES}
     if len(rows) <= start:
-        return {s: metric([], game, comparisons=16) for s in STRATEGIES}
+        return {s: metric([], game, comparisons=WALK_COMPARISONS) for s in STRATEGIES}
+    if horizon is None:
+        lines = v1_set(rows[:start], game)
+        for draw in rows[start:]:
+            for strategy in STRATEGIES:
+                collected[strategy].append(score_line(lines[strategy], draw))
+        return {s: metric(collected[s], game, comparisons=WALK_COMPARISONS) for s in STRATEGIES}
     idx = start
     while idx < len(rows):
         lines = v1_set(rows[:idx], game)
@@ -285,7 +299,7 @@ def walk_forward(game: str, rows: list[dict[str, Any]], horizon: int) -> dict[st
             for strategy in STRATEGIES:
                 collected[strategy].append(score_line(lines[strategy], draw))
         idx += horizon
-    return {s: metric(collected[s], game, comparisons=16) for s in STRATEGIES}
+    return {s: metric(collected[s], game, comparisons=WALK_COMPARISONS) for s in STRATEGIES}
 
 
 def evaluate_weight_candidate(game: str, rows: list[dict[str, Any]], weights: dict[str, float], start: int, end: int) -> dict[str, Any]:
@@ -355,22 +369,25 @@ def main() -> None:
     walk_rows = []
     best_hold = []
     for game, rows in histories.items():
-        for horizon in HORIZONS:
+        for horizon in (*HORIZONS, None):
             results = walk_forward(game, rows, horizon)
+            label = "never" if horizon is None else horizon
             for strategy, stats in results.items():
-                walk_rows.append({"game": game, "strategy": strategy, "horizon": horizon, **stats})
+                walk_rows.append({"game": game, "strategy": strategy, "horizon": label, **stats})
         for strategy in STRATEGIES:
             candidates = [r for r in walk_rows if r["game"] == game and r["strategy"] == strategy and r["samples"] > 0]
             if candidates:
-                best = max(candidates, key=lambda r: (r["avg_matches"], r["ge2_rate"], -r["horizon"]))
+                def hold_order(row: dict[str, Any]) -> int:
+                    return 999999 if row["horizon"] == "never" else int(row["horizon"])
+                best = max(candidates, key=lambda r: (r["avg_matches"], r["ge2_rate"], -hold_order(r)))
                 best_hold.append({"game": game, "strategy": strategy, "best_horizon": best["horizon"], "avg_matches": best["avg_matches"], "ge2_rate": best["ge2_rate"], "samples": best["samples"], "p_adjusted": best["p_adjusted"], "evidence": best["evidence"]})
 
     output = {
-        "schema_version": 1,
-        "methodology_version": "2.0",
+        "schema_version": 2,
+        "methodology_version": "3.0",
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "null_hypothesis": "Lottery draws are treated as random and independent unless out-of-sample evidence shows otherwise.",
-        "live_policy": "The four v1.0 strategies remain frozen champions. Research results do not alter live recommendations automatically.",
+        "live_policy": "The four dynamic v1.0 strategies plus Frozen Alpha v1.0 remain locked live competitors. Research results do not alter them automatically.",
         "feedback_policy": "Played-ticket outcomes are used to evaluate models, not as direct number-level features for future recommendations.",
         "data_quality": {game: data_quality(game, rows) for game, rows in histories.items()},
         "chance_baselines": {game: chance_baseline(game) for game in RULES},
@@ -379,7 +396,7 @@ def main() -> None:
         "challengers": {game: train_challenger(game, rows) for game, rows in histories.items()},
         "notes": [
             "All backtests are walk-forward: a target draw is never visible when its prediction is generated.",
-            "Hold horizons compare refreshing every draw with holding the same deterministic recommendation for 2, 4 or 8 draws.",
+            "Hold policies compare refreshing every 1, 2, 4, 8 or 20 draws with a true never-refresh control within a compatible rule era.",
             "ROI is intentionally not used as the primary research score because lottery payout variance can dominate small samples.",
             "Theoretical chance is a research control only; no random tickets are added to the live portfolio.",
             "Evidence labels use hypergeometric match-count variance and Bonferroni correction across the strategy/hold comparisons; challenger validation is corrected across candidate weight profiles.",

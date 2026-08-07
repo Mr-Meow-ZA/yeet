@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-08-07T16:41:55.744183+00:00",
+  "generated_at": "2026-08-07T16:58:00.925262+00:00",
   "platform": "DrawLab v3 Research Platform",
   "cloud_status": "ok",
   "cloud_updated_at": "2026-08-07T18:41:54.815730+02:00",
@@ -324,7 +324,7 @@
     "policy": "These lines never change. A ticket is entered on every eligible draw using the era-correct board cost."
   },
   "research": {
-    "methodology_version": "2.0",
+    "methodology_version": "3.0",
     "null_hypothesis": "Lottery draws are treated as random and independent unless out-of-sample evidence shows otherwise.",
     "data_quality": {
       "Daily Lotto": {
@@ -393,7 +393,7 @@
         "z_score": 0.8384,
         "p_value": 0.401827,
         "p_adjusted": 1.0,
-        "comparisons_adjusted": 16,
+        "comparisons_adjusted": 24,
         "evidence": "not_significant"
       },
       {
@@ -419,7 +419,7 @@
         "z_score": -0.6167,
         "p_value": 0.537445,
         "p_adjusted": 1.0,
-        "comparisons_adjusted": 16,
+        "comparisons_adjusted": 24,
         "evidence": "not_significant"
       },
       {
@@ -444,8 +444,8 @@
         "standard_error": 0.02486,
         "z_score": 1.9179,
         "p_value": 0.055122,
-        "p_adjusted": 0.881955,
-        "comparisons_adjusted": 16,
+        "p_adjusted": 1.0,
+        "comparisons_adjusted": 24,
         "evidence": "not_significant"
       },
       {
@@ -471,7 +471,7 @@
         "z_score": 0.0874,
         "p_value": 0.930375,
         "p_adjusted": 1.0,
-        "comparisons_adjusted": 16,
+        "comparisons_adjusted": 24,
         "evidence": "not_significant"
       },
       {
@@ -498,7 +498,7 @@
         "z_score": 0.0,
         "p_value": 1.0,
         "p_adjusted": 1.0,
-        "comparisons_adjusted": 16,
+        "comparisons_adjusted": 24,
         "evidence": "early"
       },
       {
@@ -525,7 +525,7 @@
         "z_score": 0.0,
         "p_value": 1.0,
         "p_adjusted": 1.0,
-        "comparisons_adjusted": 16,
+        "comparisons_adjusted": 24,
         "evidence": "early"
       },
       {
@@ -552,7 +552,7 @@
         "z_score": 0.0,
         "p_value": 1.0,
         "p_adjusted": 1.0,
-        "comparisons_adjusted": 16,
+        "comparisons_adjusted": 24,
         "evidence": "early"
       },
       {
@@ -579,7 +579,7 @@
         "z_score": 0.0,
         "p_value": 1.0,
         "p_adjusted": 1.0,
-        "comparisons_adjusted": 16,
+        "comparisons_adjusted": 24,
         "evidence": "early"
       },
       {
@@ -605,7 +605,7 @@
         "z_score": -0.6961,
         "p_value": 0.48638,
         "p_adjusted": 1.0,
-        "comparisons_adjusted": 16,
+        "comparisons_adjusted": 24,
         "evidence": "not_significant"
       },
       {
@@ -631,7 +631,7 @@
         "z_score": -0.589,
         "p_value": 0.555869,
         "p_adjusted": 1.0,
-        "comparisons_adjusted": 16,
+        "comparisons_adjusted": 24,
         "evidence": "not_significant"
       },
       {
@@ -657,7 +657,7 @@
         "z_score": -0.3748,
         "p_value": 0.707801,
         "p_adjusted": 1.0,
-        "comparisons_adjusted": 16,
+        "comparisons_adjusted": 24,
         "evidence": "not_significant"
       },
       {
@@ -683,7 +683,7 @@
         "z_score": -0.3748,
         "p_value": 0.707801,
         "p_adjusted": 1.0,
-        "comparisons_adjusted": 16,
+        "comparisons_adjusted": 24,
         "evidence": "not_significant"
       }
     ],
@@ -701,9 +701,9 @@
       {
         "game": "Daily Lotto",
         "strategy": "Weighted Historical",
-        "best_horizon": 1,
-        "avg_matches": 0.6791,
-        "ge2_rate": 11.2,
+        "best_horizon": "never",
+        "avg_matches": 0.7001,
+        "ge2_rate": 13.19,
         "samples": 857,
         "p_adjusted": 1.0,
         "evidence": "not_significant"
@@ -715,7 +715,7 @@
         "avg_matches": 0.7456,
         "ge2_rate": 15.17,
         "samples": 857,
-        "p_adjusted": 0.632333,
+        "p_adjusted": 0.9485,
         "evidence": "not_significant"
       },
       {
@@ -731,9 +731,9 @@
       {
         "game": "PowerBall",
         "strategy": "Hot 6M",
-        "best_horizon": 4,
-        "avg_matches": 0.4787,
-        "ge2_rate": 5.21,
+        "best_horizon": 20,
+        "avg_matches": 0.5166,
+        "ge2_rate": 6.16,
         "samples": 211,
         "p_adjusted": 1.0,
         "evidence": "not_significant"
@@ -741,9 +741,9 @@
       {
         "game": "PowerBall",
         "strategy": "Weighted Historical",
-        "best_horizon": 8,
-        "avg_matches": 0.4882,
-        "ge2_rate": 8.06,
+        "best_horizon": 20,
+        "avg_matches": 0.5118,
+        "ge2_rate": 7.58,
         "samples": 211,
         "p_adjusted": 1.0,
         "evidence": "not_significant"
@@ -751,9 +751,9 @@
       {
         "game": "PowerBall",
         "strategy": "Cold 6M",
-        "best_horizon": 1,
-        "avg_matches": 0.4834,
-        "ge2_rate": 8.06,
+        "best_horizon": 20,
+        "avg_matches": 0.4929,
+        "ge2_rate": 6.64,
         "samples": 211,
         "p_adjusted": 1.0,
         "evidence": "not_significant"
