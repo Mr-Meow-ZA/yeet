@@ -5,15 +5,16 @@ on:
       - '.github/workflows/install-drawlab-v3.yml'
       - 'drawlab-sa/scripts/retrospective_v3.py'
       - 'drawlab-sa/scripts/patch_retrospective_rule_eras.py'
+      - 'drawlab-sa/scripts/patch_retrospective_fast_mode.py'
 permissions:
   contents: write
 concurrency:
   group: drawlab-data-writer
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   install:
     runs-on: ubuntu-24.04
-    timeout-minutes: 25
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v7
         with:
@@ -23,8 +24,10 @@ jobs:
           python-version: '3.12'
       - name: Install dependencies
         run: pip install requests beautifulsoup4
-      - name: Apply rule-era retrospective patch
-        run: python drawlab-sa/scripts/patch_retrospective_rule_eras.py
+      - name: Apply retrospective hardening
+        run: |
+          python drawlab-sa/scripts/patch_retrospective_rule_eras.py
+          python drawlab-sa/scripts/patch_retrospective_fast_mode.py
       - name: Compile v3 engines
         run: |
           python -m py_compile drawlab-sa/scripts/install_v3_live.py
@@ -49,6 +52,7 @@ jobs:
           test -s drawlab-sa/v3/data/v3-state.json
           grep -q 'Frozen Alpha' drawlab-sa/scripts/update_cloud.py
           grep -q 'model_rows' drawlab-sa/scripts/retrospective_v3.py
+          grep -q 'DRAWLAB_RETRO_EXACT' drawlab-sa/scripts/retrospective_v3.py
           grep -q 'Research Lab' drawlab-sa/v3/index.html
           grep -q 'Hall of Records' drawlab-sa/v3/index.html
       - name: Commit generated v3 state
