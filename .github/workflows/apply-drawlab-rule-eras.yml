@@ -1,0 +1,58 @@
+name: Apply DrawLab Rule Eras
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'drawlab-sa/scripts/apply_rule_era_research.py'
+      - '.github/workflows/apply-drawlab-rule-eras.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: drawlab-data-writes
+  cancel-in-progress: false
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Apply rule-era migration
+        run: python drawlab-sa/scripts/apply_rule_era_research.py
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+      - name: Compile DrawLab engines
+        run: |
+          python -m py_compile drawlab-sa/scripts/update_cloud.py
+          python -m py_compile drawlab-sa/scripts/import_history.py
+          python -m py_compile drawlab-sa/scripts/research_engine.py
+          python -m py_compile drawlab-sa/scripts/validate_state.py
+      - name: Rebuild validated history
+        run: python drawlab-sa/scripts/import_history.py --start-year 2024 --end-year 2026
+      - name: Rebuild walk-forward research
+        run: python drawlab-sa/scripts/research_engine.py
+      - name: Refresh live cloud state
+        run: python drawlab-sa/scripts/update_cloud.py
+      - name: Validate all state
+        run: python drawlab-sa/scripts/validate_state.py
+      - name: Commit rule-aware app and data
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'DrawLab Research Migration'
+          git config user.email 'drawlab-research@users.noreply.github.com'
+          git add drawlab-sa/index.html drawlab-sa/scripts/update_cloud.py drawlab-sa/scripts/import_history.py drawlab-sa/scripts/research_engine.py drawlab-sa/scripts/validate_state.py drawlab-sa/data/historical-results.json drawlab-sa/data/research-state.json drawlab-sa/data/cloud-state.json
+          if git diff --cached --quiet; then
+            echo 'No migration changes'
+            exit 0
+          fi
+          git commit -m 'Make DrawLab research rule-era aware'
+          git push origin HEAD:master
