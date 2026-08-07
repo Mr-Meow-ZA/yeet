@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "methodology_version": "2.0",
-  "generated_at": "2026-08-07T11:18:44.101746+00:00",
+  "generated_at": "2026-08-07T14:34:48.533563+00:00",
   "null_hypothesis": "Lottery draws are treated as random and independent unless out-of-sample evidence shows otherwise.",
   "live_policy": "The four v1.0 strategies remain frozen champions. Research results do not alter live recommendations automatically.",
   "feedback_policy": "Played-ticket outcomes are used to evaluate models, not as direct number-level features for future recommendations.",
