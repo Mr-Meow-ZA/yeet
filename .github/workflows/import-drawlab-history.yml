@@ -4,6 +4,9 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '35 20 * * 0'
+  push:
+    paths:
+      - '.github/workflows/import-drawlab-history.yml'
 
 permissions:
   contents: write
