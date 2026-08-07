@@ -1,0 +1,13 @@
+{
+  "name": "DrawLab SA Research Platform",
+  "short_name": "DrawLab SA",
+  "description": "Private deterministic South African lottery research platform.",
+  "start_url": "/yeet/drawlab-sa/",
+  "scope": "/yeet/drawlab-sa/",
+  "display": "standalone",
+  "background_color": "#05080d",
+  "theme_color": "#05080d",
+  "icons": [
+    {"src":"v3/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
