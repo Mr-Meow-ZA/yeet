@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-08-05T22:39:44.857887+00:00",
+  "updated_at": "2026-08-07T11:02:11.465606+00:00",
   "coverage": {
     "Daily Lotto": {
       "2024": 365,
       "2025": 364,
-      "2026": 217
+      "2026": 218
     },
     "Lotto": {
       "2024": 103,
@@ -19,6 +19,22 @@
     }
   },
   "results": [
+    {
+      "date": "2026-08-06",
+      "game": "Daily Lotto",
+      "numbers": [
+        6,
+        12,
+        14,
+        29,
+        34
+      ],
+      "bonus": null,
+      "source": "https://za.national-lottery.com/daily-lotto/results/06-august-2026",
+      "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
     {
       "date": "2026-08-05",
       "game": "Daily Lotto",
@@ -18322,7 +18338,7 @@
     "Lotto 2026: rejected archive parse; parsed=32, expected\u224862, duplicates=1",
     "PowerBall 2024: rejected archive parse; parsed=0, expected\u2248105, duplicates=0",
     "PowerBall 2025: rejected archive parse; parsed=0, expected\u2248104, duplicates=0",
-    "PowerBall 2026: rejected archive parse; parsed=0, expected\u224862, duplicates=0"
+    "PowerBall 2026: rejected archive parse; parsed=0, expected\u224863, duplicates=0"
   ],
   "status": "partial",
   "quality": {
@@ -18348,9 +18364,9 @@
         "archive": "https://za.national-lottery.com/daily-lotto/results/2025-archive"
       },
       "2026": {
-        "expected": 217,
-        "parsed": 217,
-        "minimum": 141,
+        "expected": 219,
+        "parsed": 218,
+        "minimum": 142,
         "unique_ratio": 0.9954,
         "largest_duplicate_group": 2,
         "bonus_completeness": 1.0,
@@ -18412,7 +18428,7 @@
         "archive": "https://www.powerball.net/southafrica/results/history/2025"
       },
       "2026": {
-        "expected": 62,
+        "expected": 63,
         "parsed": 0,
         "minimum": 40,
         "unique_ratio": 0.0,
