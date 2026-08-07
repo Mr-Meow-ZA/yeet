@@ -29,7 +29,7 @@ GAMES = {
         "weekdays": {2, 5},
     },
     "PowerBall": {
-        "archive": "https://www.powerball.net/southafrica/results/history/{year}",
+        "archive": "https://za.national-lottery.com/powerball/results/{year}-archive",
         "count": 5,
         "max": 50,
         "bonus_max": 20,
@@ -73,9 +73,9 @@ def extract_date(text):
 
 def draw_url(game, date_str):
     dt = datetime.strptime(date_str, "%Y-%m-%d")
-    if game == "PowerBall":
-        return f"https://www.powerball.net/southafrica/results/{date_str}"
     slug = f"{dt.day:02d}-{dt.strftime('%B').lower()}-{dt.year}"
+    if game == "PowerBall":
+        return f"https://za.national-lottery.com/powerball/results/{slug}"
     path = "daily-lotto" if game == "Daily Lotto" else "lotto"
     return f"https://za.national-lottery.com/{path}/results/{slug}"
 
