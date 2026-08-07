@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "methodology_version": "2.0",
-  "generated_at": "2026-08-07T11:05:09.154843+00:00",
+  "generated_at": "2026-08-07T11:10:56.549616+00:00",
   "null_hypothesis": "Lottery draws are treated as random and independent unless out-of-sample evidence shows otherwise.",
   "live_policy": "The four v1.0 strategies remain frozen champions. Research results do not alter live recommendations automatically.",
   "feedback_policy": "Played-ticket outcomes are used to evaluate models, not as direct number-level features for future recommendations.",
@@ -21,10 +21,10 @@
       "minimum_training_draws": 60
     },
     "PowerBall": {
-      "draws": 1,
-      "first_draw": "2026-08-04",
+      "draws": 271,
+      "first_draw": "2024-01-02",
       "last_draw": "2026-08-04",
-      "status": "insufficient",
+      "status": "usable",
       "minimum_training_draws": 60
     }
   },
@@ -64,13 +64,7 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": 3.0,
-      "standard_error": 0.02486,
-      "z_score": 0.8384,
-      "p_value": 0.401827,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": 3.0
     },
     {
       "game": "Daily Lotto",
@@ -90,13 +84,7 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": -2.21,
-      "standard_error": 0.02486,
-      "z_score": -0.6167,
-      "p_value": 0.537445,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": -2.21
     },
     {
       "game": "Daily Lotto",
@@ -116,13 +104,7 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": 6.87,
-      "standard_error": 0.02486,
-      "z_score": 1.9179,
-      "p_value": 0.055122,
-      "p_adjusted": 0.881955,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": 6.87
     },
     {
       "game": "Daily Lotto",
@@ -142,13 +124,7 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": 0.31,
-      "standard_error": 0.02486,
-      "z_score": 0.0874,
-      "p_value": 0.930375,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": 0.31
     },
     {
       "game": "Daily Lotto",
@@ -168,13 +144,7 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": 2.33,
-      "standard_error": 0.02486,
-      "z_score": 0.6506,
-      "p_value": 0.515295,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": 2.33
     },
     {
       "game": "Daily Lotto",
@@ -194,13 +164,7 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": -2.38,
-      "standard_error": 0.02486,
-      "z_score": -0.6636,
-      "p_value": 0.506935,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": -2.38
     },
     {
       "game": "Daily Lotto",
@@ -220,13 +184,7 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": 7.03,
-      "standard_error": 0.02486,
-      "z_score": 1.9648,
-      "p_value": 0.049432,
-      "p_adjusted": 0.790908,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": 7.03
     },
     {
       "game": "Daily Lotto",
@@ -246,13 +204,7 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": -0.86,
-      "standard_error": 0.02486,
-      "z_score": -0.2412,
-      "p_value": 0.809411,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": -0.86
     },
     {
       "game": "Daily Lotto",
@@ -272,13 +224,7 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": 1.49,
-      "standard_error": 0.02486,
-      "z_score": 0.4159,
-      "p_value": 0.677461,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": 1.49
     },
     {
       "game": "Daily Lotto",
@@ -298,13 +244,7 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": -3.22,
-      "standard_error": 0.02486,
-      "z_score": -0.8983,
-      "p_value": 0.369024,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": -3.22
     },
     {
       "game": "Daily Lotto",
@@ -324,13 +264,7 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": 7.2,
-      "standard_error": 0.02486,
-      "z_score": 2.0118,
-      "p_value": 0.044243,
-      "p_adjusted": 0.707881,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": 7.2
     },
     {
       "game": "Daily Lotto",
@@ -350,13 +284,7 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": -1.7,
-      "standard_error": 0.02486,
-      "z_score": -0.4759,
-      "p_value": 0.634167,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": -1.7
     },
     {
       "game": "Daily Lotto",
@@ -376,13 +304,7 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": 0.31,
-      "standard_error": 0.02486,
-      "z_score": 0.0874,
-      "p_value": 0.930375,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": 0.31
     },
     {
       "game": "Daily Lotto",
@@ -402,13 +324,7 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": -3.22,
-      "standard_error": 0.02486,
-      "z_score": -0.8983,
-      "p_value": 0.369024,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": -3.22
     },
     {
       "game": "Daily Lotto",
@@ -428,13 +344,7 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": 7.37,
-      "standard_error": 0.02486,
-      "z_score": 2.0587,
-      "p_value": 0.039521,
-      "p_adjusted": 0.632333,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": 7.37
     },
     {
       "game": "Daily Lotto",
@@ -454,13 +364,7 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": 0.14,
-      "standard_error": 0.02486,
-      "z_score": 0.0404,
-      "p_value": 0.967746,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": 0.14
     },
     {
       "game": "Lotto",
@@ -481,13 +385,7 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": -14.24,
-      "standard_error": 0.065692,
-      "z_score": -1.5003,
-      "p_value": 0.133538,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": -14.24
     },
     {
       "game": "Lotto",
@@ -508,13 +406,7 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": -13.11,
-      "standard_error": 0.065692,
-      "z_score": -1.3814,
-      "p_value": 0.167166,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": -13.11
     },
     {
       "game": "Lotto",
@@ -535,13 +427,7 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": -1.82,
-      "standard_error": 0.065692,
-      "z_score": -0.1921,
-      "p_value": 0.847652,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": -1.82
     },
     {
       "game": "Lotto",
@@ -562,13 +448,7 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": -1.82,
-      "standard_error": 0.065692,
-      "z_score": -0.1921,
-      "p_value": 0.847652,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": -1.82
     },
     {
       "game": "Lotto",
@@ -589,13 +469,7 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": -17.62,
-      "standard_error": 0.065692,
-      "z_score": -1.8571,
-      "p_value": 0.063301,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": -17.62
     },
     {
       "game": "Lotto",
@@ -616,13 +490,7 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": -17.62,
-      "standard_error": 0.065692,
-      "z_score": -1.8571,
-      "p_value": 0.063301,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": -17.62
     },
     {
       "game": "Lotto",
@@ -643,13 +511,7 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": -5.21,
-      "standard_error": 0.065692,
-      "z_score": -0.5489,
-      "p_value": 0.58308,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": -5.21
     },
     {
       "game": "Lotto",
@@ -670,13 +532,7 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": 0.43,
-      "standard_error": 0.065692,
-      "z_score": 0.0457,
-      "p_value": 0.963521,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": 0.43
     },
     {
       "game": "Lotto",
@@ -697,13 +553,7 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": -17.62,
-      "standard_error": 0.065692,
-      "z_score": -1.8571,
-      "p_value": 0.063301,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": -17.62
     },
     {
       "game": "Lotto",
@@ -724,13 +574,7 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": -18.75,
-      "standard_error": 0.065692,
-      "z_score": -1.976,
-      "p_value": 0.048155,
-      "p_adjusted": 0.770486,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": -18.75
     },
     {
       "game": "Lotto",
@@ -751,13 +595,7 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": 0.43,
-      "standard_error": 0.065692,
-      "z_score": 0.0457,
-      "p_value": 0.963521,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": 0.43
     },
     {
       "game": "Lotto",
@@ -778,13 +616,7 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": 3.82,
-      "standard_error": 0.065692,
-      "z_score": 0.4025,
-      "p_value": 0.687307,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": 3.82
     },
     {
       "game": "Lotto",
@@ -805,13 +637,7 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": -17.62,
-      "standard_error": 0.065692,
-      "z_score": -1.8571,
-      "p_value": 0.063301,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": -17.62
     },
     {
       "game": "Lotto",
@@ -832,13 +658,7 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": -10.85,
-      "standard_error": 0.065692,
-      "z_score": -1.1435,
-      "p_value": 0.252824,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": -10.85
     },
     {
       "game": "Lotto",
@@ -859,13 +679,7 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": 10.59,
-      "standard_error": 0.065692,
-      "z_score": 1.1161,
-      "p_value": 0.264395,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": 10.59
     },
     {
       "game": "Lotto",
@@ -886,429 +700,327 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": -5.21,
-      "standard_error": 0.065692,
-      "z_score": -0.5489,
-      "p_value": 0.58308,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "not_significant"
+      "lift_vs_expected_pct": -5.21
     },
     {
       "game": "PowerBall",
       "strategy": "Hot 6M",
       "horizon": 1,
-      "samples": 0,
-      "avg_matches": 0.0,
-      "ge2_rate": 0,
-      "ge3_rate": 0,
-      "best_matches": 0,
+      "samples": 211,
+      "avg_matches": 0.4692,
+      "ge2_rate": 5.69,
+      "ge3_rate": 0.0,
+      "best_matches": 2,
       "distribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0,
+        "0": 124,
+        "1": 75,
+        "2": 12,
         "3": 0,
         "4": 0,
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0,
-      "standard_error": 0.0,
-      "z_score": 0.0,
-      "p_value": 1.0,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "early"
+      "lift_vs_expected_pct": -6.16
     },
     {
       "game": "PowerBall",
       "strategy": "Weighted Historical",
       "horizon": 1,
-      "samples": 0,
-      "avg_matches": 0.0,
-      "ge2_rate": 0,
-      "ge3_rate": 0,
-      "best_matches": 0,
+      "samples": 211,
+      "avg_matches": 0.4739,
+      "ge2_rate": 7.11,
+      "ge3_rate": 0.47,
+      "best_matches": 3,
       "distribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0,
-        "3": 0,
+        "0": 127,
+        "1": 69,
+        "2": 14,
+        "3": 1,
         "4": 0,
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0,
-      "standard_error": 0.0,
-      "z_score": 0.0,
-      "p_value": 1.0,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "early"
+      "lift_vs_expected_pct": -5.21
     },
     {
       "game": "PowerBall",
       "strategy": "Cold 6M",
       "horizon": 1,
-      "samples": 0,
-      "avg_matches": 0.0,
-      "ge2_rate": 0,
-      "ge3_rate": 0,
-      "best_matches": 0,
+      "samples": 211,
+      "avg_matches": 0.4834,
+      "ge2_rate": 8.06,
+      "ge3_rate": 0.95,
+      "best_matches": 3,
       "distribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0,
-        "3": 0,
+        "0": 128,
+        "1": 66,
+        "2": 15,
+        "3": 2,
         "4": 0,
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0,
-      "standard_error": 0.0,
-      "z_score": 0.0,
-      "p_value": 1.0,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "early"
+      "lift_vs_expected_pct": -3.32
     },
     {
       "game": "PowerBall",
       "strategy": "Diversified Coverage",
       "horizon": 1,
-      "samples": 0,
-      "avg_matches": 0.0,
-      "ge2_rate": 0,
-      "ge3_rate": 0,
-      "best_matches": 0,
+      "samples": 211,
+      "avg_matches": 0.4834,
+      "ge2_rate": 6.64,
+      "ge3_rate": 0.0,
+      "best_matches": 2,
       "distribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0,
+        "0": 123,
+        "1": 74,
+        "2": 14,
         "3": 0,
         "4": 0,
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0,
-      "standard_error": 0.0,
-      "z_score": 0.0,
-      "p_value": 1.0,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "early"
+      "lift_vs_expected_pct": -3.32
     },
     {
       "game": "PowerBall",
       "strategy": "Hot 6M",
       "horizon": 2,
-      "samples": 0,
-      "avg_matches": 0.0,
-      "ge2_rate": 0,
-      "ge3_rate": 0,
-      "best_matches": 0,
+      "samples": 211,
+      "avg_matches": 0.4408,
+      "ge2_rate": 5.69,
+      "ge3_rate": 0.0,
+      "best_matches": 2,
       "distribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0,
+        "0": 130,
+        "1": 69,
+        "2": 12,
         "3": 0,
         "4": 0,
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0,
-      "standard_error": 0.0,
-      "z_score": 0.0,
-      "p_value": 1.0,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "early"
+      "lift_vs_expected_pct": -11.85
     },
     {
       "game": "PowerBall",
       "strategy": "Weighted Historical",
       "horizon": 2,
-      "samples": 0,
-      "avg_matches": 0.0,
-      "ge2_rate": 0,
-      "ge3_rate": 0,
-      "best_matches": 0,
+      "samples": 211,
+      "avg_matches": 0.4692,
+      "ge2_rate": 6.16,
+      "ge3_rate": 0.47,
+      "best_matches": 3,
       "distribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0,
-        "3": 0,
+        "0": 126,
+        "1": 72,
+        "2": 12,
+        "3": 1,
         "4": 0,
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0,
-      "standard_error": 0.0,
-      "z_score": 0.0,
-      "p_value": 1.0,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "early"
+      "lift_vs_expected_pct": -6.16
     },
     {
       "game": "PowerBall",
       "strategy": "Cold 6M",
       "horizon": 2,
-      "samples": 0,
-      "avg_matches": 0.0,
-      "ge2_rate": 0,
-      "ge3_rate": 0,
-      "best_matches": 0,
+      "samples": 211,
+      "avg_matches": 0.4692,
+      "ge2_rate": 8.06,
+      "ge3_rate": 0.47,
+      "best_matches": 3,
       "distribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0,
-        "3": 0,
+        "0": 130,
+        "1": 64,
+        "2": 16,
+        "3": 1,
         "4": 0,
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0,
-      "standard_error": 0.0,
-      "z_score": 0.0,
-      "p_value": 1.0,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "early"
+      "lift_vs_expected_pct": -6.16
     },
     {
       "game": "PowerBall",
       "strategy": "Diversified Coverage",
       "horizon": 2,
-      "samples": 0,
-      "avg_matches": 0.0,
-      "ge2_rate": 0,
-      "ge3_rate": 0,
-      "best_matches": 0,
+      "samples": 211,
+      "avg_matches": 0.4834,
+      "ge2_rate": 7.58,
+      "ge3_rate": 0.0,
+      "best_matches": 2,
       "distribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0,
+        "0": 125,
+        "1": 70,
+        "2": 16,
         "3": 0,
         "4": 0,
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0,
-      "standard_error": 0.0,
-      "z_score": 0.0,
-      "p_value": 1.0,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "early"
+      "lift_vs_expected_pct": -3.32
     },
     {
       "game": "PowerBall",
       "strategy": "Hot 6M",
       "horizon": 4,
-      "samples": 0,
-      "avg_matches": 0.0,
-      "ge2_rate": 0,
-      "ge3_rate": 0,
-      "best_matches": 0,
+      "samples": 211,
+      "avg_matches": 0.4787,
+      "ge2_rate": 5.21,
+      "ge3_rate": 0.47,
+      "best_matches": 3,
       "distribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0,
-        "3": 0,
+        "0": 122,
+        "1": 78,
+        "2": 10,
+        "3": 1,
         "4": 0,
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0,
-      "standard_error": 0.0,
-      "z_score": 0.0,
-      "p_value": 1.0,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "early"
+      "lift_vs_expected_pct": -4.27
     },
     {
       "game": "PowerBall",
       "strategy": "Weighted Historical",
       "horizon": 4,
-      "samples": 0,
-      "avg_matches": 0.0,
-      "ge2_rate": 0,
-      "ge3_rate": 0,
-      "best_matches": 0,
+      "samples": 211,
+      "avg_matches": 0.455,
+      "ge2_rate": 6.64,
+      "ge3_rate": 0.95,
+      "best_matches": 3,
       "distribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0,
-        "3": 0,
+        "0": 131,
+        "1": 66,
+        "2": 12,
+        "3": 2,
         "4": 0,
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0,
-      "standard_error": 0.0,
-      "z_score": 0.0,
-      "p_value": 1.0,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "early"
+      "lift_vs_expected_pct": -9.0
     },
     {
       "game": "PowerBall",
       "strategy": "Cold 6M",
       "horizon": 4,
-      "samples": 0,
-      "avg_matches": 0.0,
-      "ge2_rate": 0,
-      "ge3_rate": 0,
-      "best_matches": 0,
+      "samples": 211,
+      "avg_matches": 0.4502,
+      "ge2_rate": 6.16,
+      "ge3_rate": 0.47,
+      "best_matches": 3,
       "distribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0,
-        "3": 0,
+        "0": 130,
+        "1": 68,
+        "2": 12,
+        "3": 1,
         "4": 0,
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0,
-      "standard_error": 0.0,
-      "z_score": 0.0,
-      "p_value": 1.0,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "early"
+      "lift_vs_expected_pct": -9.95
     },
     {
       "game": "PowerBall",
       "strategy": "Diversified Coverage",
       "horizon": 4,
-      "samples": 0,
-      "avg_matches": 0.0,
-      "ge2_rate": 0,
-      "ge3_rate": 0,
-      "best_matches": 0,
+      "samples": 211,
+      "avg_matches": 0.5071,
+      "ge2_rate": 7.11,
+      "ge3_rate": 0.0,
+      "best_matches": 2,
       "distribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0,
+        "0": 119,
+        "1": 77,
+        "2": 15,
         "3": 0,
         "4": 0,
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0,
-      "standard_error": 0.0,
-      "z_score": 0.0,
-      "p_value": 1.0,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "early"
+      "lift_vs_expected_pct": 1.42
     },
     {
       "game": "PowerBall",
       "strategy": "Hot 6M",
       "horizon": 8,
-      "samples": 0,
-      "avg_matches": 0.0,
-      "ge2_rate": 0,
-      "ge3_rate": 0,
-      "best_matches": 0,
+      "samples": 211,
+      "avg_matches": 0.4739,
+      "ge2_rate": 4.27,
+      "ge3_rate": 0.47,
+      "best_matches": 3,
       "distribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0,
-        "3": 0,
+        "0": 121,
+        "1": 81,
+        "2": 8,
+        "3": 1,
         "4": 0,
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0,
-      "standard_error": 0.0,
-      "z_score": 0.0,
-      "p_value": 1.0,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "early"
+      "lift_vs_expected_pct": -5.21
     },
     {
       "game": "PowerBall",
       "strategy": "Weighted Historical",
       "horizon": 8,
-      "samples": 0,
-      "avg_matches": 0.0,
-      "ge2_rate": 0,
-      "ge3_rate": 0,
-      "best_matches": 0,
+      "samples": 211,
+      "avg_matches": 0.4882,
+      "ge2_rate": 8.06,
+      "ge3_rate": 0.47,
+      "best_matches": 3,
       "distribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0,
-        "3": 0,
+        "0": 126,
+        "1": 68,
+        "2": 16,
+        "3": 1,
         "4": 0,
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0,
-      "standard_error": 0.0,
-      "z_score": 0.0,
-      "p_value": 1.0,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "early"
+      "lift_vs_expected_pct": -2.37
     },
     {
       "game": "PowerBall",
       "strategy": "Cold 6M",
       "horizon": 8,
-      "samples": 0,
-      "avg_matches": 0.0,
-      "ge2_rate": 0,
-      "ge3_rate": 0,
-      "best_matches": 0,
+      "samples": 211,
+      "avg_matches": 0.455,
+      "ge2_rate": 5.69,
+      "ge3_rate": 0.0,
+      "best_matches": 2,
       "distribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0,
+        "0": 127,
+        "1": 72,
+        "2": 12,
         "3": 0,
         "4": 0,
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0,
-      "standard_error": 0.0,
-      "z_score": 0.0,
-      "p_value": 1.0,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "early"
+      "lift_vs_expected_pct": -9.0
     },
     {
       "game": "PowerBall",
       "strategy": "Diversified Coverage",
       "horizon": 8,
-      "samples": 0,
-      "avg_matches": 0.0,
-      "ge2_rate": 0,
-      "ge3_rate": 0,
-      "best_matches": 0,
+      "samples": 211,
+      "avg_matches": 0.5308,
+      "ge2_rate": 8.53,
+      "ge3_rate": 0.47,
+      "best_matches": 3,
       "distribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0,
-        "3": 0,
+        "0": 118,
+        "1": 75,
+        "2": 17,
+        "3": 1,
         "4": 0,
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0,
-      "standard_error": 0.0,
-      "z_score": 0.0,
-      "p_value": 1.0,
-      "p_adjusted": 1.0,
-      "comparisons_adjusted": 16,
-      "evidence": "early"
+      "lift_vs_expected_pct": 6.16
     }
   ],
   "best_hold": [
@@ -1318,9 +1030,7 @@
       "best_horizon": 1,
       "avg_matches": 0.7153,
       "ge2_rate": 13.19,
-      "samples": 857,
-      "p_adjusted": 1.0,
-      "evidence": "not_significant"
+      "samples": 857
     },
     {
       "game": "Daily Lotto",
@@ -1328,9 +1038,7 @@
       "best_horizon": 1,
       "avg_matches": 0.6791,
       "ge2_rate": 11.2,
-      "samples": 857,
-      "p_adjusted": 1.0,
-      "evidence": "not_significant"
+      "samples": 857
     },
     {
       "game": "Daily Lotto",
@@ -1338,9 +1046,7 @@
       "best_horizon": 8,
       "avg_matches": 0.7456,
       "ge2_rate": 15.17,
-      "samples": 857,
-      "p_adjusted": 0.632333,
-      "evidence": "not_significant"
+      "samples": 857
     },
     {
       "game": "Daily Lotto",
@@ -1348,9 +1054,7 @@
       "best_horizon": 1,
       "avg_matches": 0.6966,
       "ge2_rate": 12.49,
-      "samples": 857,
-      "p_adjusted": 1.0,
-      "evidence": "not_significant"
+      "samples": 857
     },
     {
       "game": "Lotto",
@@ -1358,9 +1062,7 @@
       "best_horizon": 1,
       "avg_matches": 0.5938,
       "ge2_rate": 7.81,
-      "samples": 128,
-      "p_adjusted": 1.0,
-      "evidence": "not_significant"
+      "samples": 128
     },
     {
       "game": "Lotto",
@@ -1368,9 +1070,7 @@
       "best_horizon": 8,
       "avg_matches": 0.6172,
       "ge2_rate": 9.38,
-      "samples": 128,
-      "p_adjusted": 1.0,
-      "evidence": "not_significant"
+      "samples": 128
     },
     {
       "game": "Lotto",
@@ -1378,9 +1078,7 @@
       "best_horizon": 8,
       "avg_matches": 0.7656,
       "ge2_rate": 17.19,
-      "samples": 128,
-      "p_adjusted": 1.0,
-      "evidence": "not_significant"
+      "samples": 128
     },
     {
       "game": "Lotto",
@@ -1388,9 +1086,39 @@
       "best_horizon": 4,
       "avg_matches": 0.7188,
       "ge2_rate": 13.28,
-      "samples": 128,
-      "p_adjusted": 1.0,
-      "evidence": "not_significant"
+      "samples": 128
+    },
+    {
+      "game": "PowerBall",
+      "strategy": "Hot 6M",
+      "best_horizon": 4,
+      "avg_matches": 0.4787,
+      "ge2_rate": 5.21,
+      "samples": 211
+    },
+    {
+      "game": "PowerBall",
+      "strategy": "Weighted Historical",
+      "best_horizon": 8,
+      "avg_matches": 0.4882,
+      "ge2_rate": 8.06,
+      "samples": 211
+    },
+    {
+      "game": "PowerBall",
+      "strategy": "Cold 6M",
+      "best_horizon": 1,
+      "avg_matches": 0.4834,
+      "ge2_rate": 8.06,
+      "samples": 211
+    },
+    {
+      "game": "PowerBall",
+      "strategy": "Diversified Coverage",
+      "best_horizon": 8,
+      "avg_matches": 0.5308,
+      "ge2_rate": 8.53,
+      "samples": 211
     }
   ],
   "challengers": {
@@ -1422,13 +1150,7 @@
             "5": 0
           },
           "expected_matches": 0.694444,
-          "lift_vs_expected_pct": 2.68,
-          "standard_error": 0.047274,
-          "z_score": 0.3942,
-          "p_value": 0.693421,
-          "p_adjusted": 1.0,
-          "comparisons_adjusted": 10,
-          "evidence": "not_significant"
+          "lift_vs_expected_pct": 2.68
         }
       },
       "held_out_test": {
@@ -1449,13 +1171,7 @@
             "5": 0
           },
           "expected_matches": 0.694444,
-          "lift_vs_expected_pct": 3.9,
-          "standard_error": 0.047274,
-          "z_score": 0.5727,
-          "p_value": 0.56683,
-          "p_adjusted": 1.0,
-          "comparisons_adjusted": 10,
-          "evidence": "not_significant"
+          "lift_vs_expected_pct": 3.9
         },
         "champion_v1": {
           "samples": 237,
@@ -1472,13 +1188,7 @@
             "5": 0
           },
           "expected_matches": 0.694444,
-          "lift_vs_expected_pct": -3.39,
-          "standard_error": 0.047274,
-          "z_score": -0.4983,
-          "p_value": 0.618252,
-          "p_adjusted": 0.618252,
-          "comparisons_adjusted": 1,
-          "evidence": "not_significant"
+          "lift_vs_expected_pct": -3.39
         },
         "promote": false,
         "reason": "Research-only challenger. Promotion requires a pre-defined evidence threshold and sufficient out-of-sample samples."
@@ -1513,13 +1223,7 @@
             "6": 0
           },
           "expected_matches": 0.692308,
-          "lift_vs_expected_pct": -17.02,
-          "standard_error": 0.108411,
-          "z_score": -1.087,
-          "p_value": 0.277047,
-          "p_adjusted": 1.0,
-          "comparisons_adjusted": 10,
-          "evidence": "early"
+          "lift_vs_expected_pct": -17.02
         }
       },
       "held_out_test": {
@@ -1541,13 +1245,7 @@
             "6": 0
           },
           "expected_matches": 0.692308,
-          "lift_vs_expected_pct": 7.56,
-          "standard_error": 0.108411,
-          "z_score": 0.4831,
-          "p_value": 0.629027,
-          "p_adjusted": 1.0,
-          "comparisons_adjusted": 10,
-          "evidence": "early"
+          "lift_vs_expected_pct": 7.56
         },
         "champion_v1": {
           "samples": 47,
@@ -1565,29 +1263,89 @@
             "6": 0
           },
           "expected_matches": 0.692308,
-          "lift_vs_expected_pct": 7.56,
-          "standard_error": 0.108411,
-          "z_score": 0.4831,
-          "p_value": 0.629027,
-          "p_adjusted": 0.629027,
-          "comparisons_adjusted": 1,
-          "evidence": "early"
+          "lift_vs_expected_pct": 7.56
         },
         "promote": false,
         "reason": "Research-only challenger. Promotion requires a pre-defined evidence threshold and sufficient out-of-sample samples."
       }
     },
     "PowerBall": {
-      "status": "insufficient_data",
-      "draws": 1,
-      "minimum_needed": 100
+      "status": "candidate",
+      "model": "Weighted Historical v2.0 challenger",
+      "weights": {
+        "long": 0.25,
+        "six": 0.3,
+        "recent": 0.1,
+        "gap": 0.15,
+        "pair": 0.2
+      },
+      "validation_window": {
+        "from": "2025-04-18",
+        "to": "2025-12-09",
+        "metrics": {
+          "samples": 68,
+          "avg_matches": 0.5735,
+          "ge2_rate": 5.88,
+          "ge3_rate": 0.0,
+          "best_matches": 2,
+          "distribution": {
+            "0": 33,
+            "1": 31,
+            "2": 4,
+            "3": 0,
+            "4": 0,
+            "5": 0
+          },
+          "expected_matches": 0.5,
+          "lift_vs_expected_pct": 14.71
+        }
+      },
+      "held_out_test": {
+        "from": "2025-12-12",
+        "to": "2026-08-04",
+        "challenger": {
+          "samples": 68,
+          "avg_matches": 0.4265,
+          "ge2_rate": 4.41,
+          "ge3_rate": 0.0,
+          "best_matches": 2,
+          "distribution": {
+            "0": 42,
+            "1": 23,
+            "2": 3,
+            "3": 0,
+            "4": 0,
+            "5": 0
+          },
+          "expected_matches": 0.5,
+          "lift_vs_expected_pct": -14.71
+        },
+        "champion_v1": {
+          "samples": 68,
+          "avg_matches": 0.4118,
+          "ge2_rate": 5.88,
+          "ge3_rate": 0.0,
+          "best_matches": 2,
+          "distribution": {
+            "0": 44,
+            "1": 20,
+            "2": 4,
+            "3": 0,
+            "4": 0,
+            "5": 0
+          },
+          "expected_matches": 0.5,
+          "lift_vs_expected_pct": -17.65
+        },
+        "promote": false,
+        "reason": "Research-only challenger. Promotion requires a pre-defined evidence threshold and sufficient out-of-sample samples."
+      }
     }
   },
   "notes": [
     "All backtests are walk-forward: a target draw is never visible when its prediction is generated.",
     "Hold horizons compare refreshing every draw with holding the same deterministic recommendation for 2, 4 or 8 draws.",
     "ROI is intentionally not used as the primary research score because lottery payout variance can dominate small samples.",
-    "Theoretical chance is a research control only; no random tickets are added to the live portfolio.",
-    "Walk-forward evidence labels use the hypergeometric match-count variance and a Bonferroni correction across the 16 strategy/horizon comparisons per game; challenger validation is corrected across candidate weight profiles."
+    "Theoretical chance is a research control only; no random tickets are added to the live portfolio."
   ]
 }

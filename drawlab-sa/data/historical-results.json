@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-08-07T11:02:11.465606+00:00",
+  "updated_at": "2026-08-07T11:10:50.232221+00:00",
   "coverage": {
     "Daily Lotto": {
       "2024": 365,
@@ -13,9 +13,9 @@
       "2026": 0
     },
     "PowerBall": {
-      "2024": 0,
-      "2025": 0,
-      "2026": 0
+      "2024": 105,
+      "2025": 104,
+      "2026": 62
     }
   },
   "results": [
@@ -48,6 +48,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/05-august-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-08-04",
+      "game": "PowerBall",
+      "numbers": [
+        16,
+        24,
+        29,
+        34,
+        38
+      ],
+      "bonus": 15,
+      "source": "https://za.national-lottery.com/powerball/results/04-august-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -117,6 +133,22 @@
     },
     {
       "date": "2026-07-31",
+      "game": "PowerBall",
+      "numbers": [
+        10,
+        11,
+        37,
+        45,
+        46
+      ],
+      "bonus": 11,
+      "source": "https://za.national-lottery.com/powerball/results/31-july-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-07-31",
       "game": "Daily Lotto",
       "numbers": [
         2,
@@ -160,6 +192,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/29-july-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-07-28",
+      "game": "PowerBall",
+      "numbers": [
+        3,
+        12,
+        27,
+        36,
+        47
+      ],
+      "bonus": 15,
+      "source": "https://za.national-lottery.com/powerball/results/28-july-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -229,6 +277,22 @@
     },
     {
       "date": "2026-07-24",
+      "game": "PowerBall",
+      "numbers": [
+        4,
+        8,
+        13,
+        22,
+        38
+      ],
+      "bonus": 1,
+      "source": "https://za.national-lottery.com/powerball/results/24-july-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-07-24",
       "game": "Daily Lotto",
       "numbers": [
         2,
@@ -272,6 +336,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/22-july-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-07-21",
+      "game": "PowerBall",
+      "numbers": [
+        15,
+        40,
+        41,
+        47,
+        50
+      ],
+      "bonus": 16,
+      "source": "https://za.national-lottery.com/powerball/results/21-july-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -341,6 +421,22 @@
     },
     {
       "date": "2026-07-17",
+      "game": "PowerBall",
+      "numbers": [
+        6,
+        9,
+        31,
+        37,
+        42
+      ],
+      "bonus": 4,
+      "source": "https://za.national-lottery.com/powerball/results/17-july-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-07-17",
       "game": "Daily Lotto",
       "numbers": [
         6,
@@ -384,6 +480,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/15-july-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-07-14",
+      "game": "PowerBall",
+      "numbers": [
+        9,
+        13,
+        21,
+        36,
+        40
+      ],
+      "bonus": 4,
+      "source": "https://za.national-lottery.com/powerball/results/14-july-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -453,6 +565,22 @@
     },
     {
       "date": "2026-07-10",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        12,
+        13,
+        20,
+        23
+      ],
+      "bonus": 12,
+      "source": "https://za.national-lottery.com/powerball/results/10-july-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-07-10",
       "game": "Daily Lotto",
       "numbers": [
         10,
@@ -496,6 +624,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/08-july-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-07-07",
+      "game": "PowerBall",
+      "numbers": [
+        16,
+        18,
+        21,
+        29,
+        47
+      ],
+      "bonus": 11,
+      "source": "https://za.national-lottery.com/powerball/results/07-july-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -565,6 +709,22 @@
     },
     {
       "date": "2026-07-03",
+      "game": "PowerBall",
+      "numbers": [
+        9,
+        14,
+        27,
+        32,
+        34
+      ],
+      "bonus": 15,
+      "source": "https://za.national-lottery.com/powerball/results/03-july-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-07-03",
       "game": "Daily Lotto",
       "numbers": [
         1,
@@ -608,6 +768,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/01-july-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-06-30",
+      "game": "PowerBall",
+      "numbers": [
+        21,
+        26,
+        40,
+        42,
+        44
+      ],
+      "bonus": 15,
+      "source": "https://za.national-lottery.com/powerball/results/30-june-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -677,6 +853,22 @@
     },
     {
       "date": "2026-06-26",
+      "game": "PowerBall",
+      "numbers": [
+        17,
+        26,
+        37,
+        40,
+        45
+      ],
+      "bonus": 13,
+      "source": "https://za.national-lottery.com/powerball/results/26-june-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-06-26",
       "game": "Daily Lotto",
       "numbers": [
         1,
@@ -720,6 +912,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/24-june-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-06-23",
+      "game": "PowerBall",
+      "numbers": [
+        16,
+        25,
+        32,
+        33,
+        50
+      ],
+      "bonus": 11,
+      "source": "https://za.national-lottery.com/powerball/results/23-june-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -789,6 +997,22 @@
     },
     {
       "date": "2026-06-19",
+      "game": "PowerBall",
+      "numbers": [
+        9,
+        10,
+        27,
+        37,
+        44
+      ],
+      "bonus": 13,
+      "source": "https://za.national-lottery.com/powerball/results/19-june-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-06-19",
       "game": "Daily Lotto",
       "numbers": [
         10,
@@ -832,6 +1056,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/17-june-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-06-16",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        19,
+        20,
+        40,
+        43
+      ],
+      "bonus": 11,
+      "source": "https://za.national-lottery.com/powerball/results/16-june-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -901,6 +1141,22 @@
     },
     {
       "date": "2026-06-12",
+      "game": "PowerBall",
+      "numbers": [
+        7,
+        23,
+        27,
+        30,
+        45
+      ],
+      "bonus": 6,
+      "source": "https://za.national-lottery.com/powerball/results/12-june-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-06-12",
       "game": "Daily Lotto",
       "numbers": [
         20,
@@ -944,6 +1200,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/10-june-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-06-09",
+      "game": "PowerBall",
+      "numbers": [
+        5,
+        8,
+        12,
+        19,
+        48
+      ],
+      "bonus": 1,
+      "source": "https://za.national-lottery.com/powerball/results/09-june-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -1013,6 +1285,22 @@
     },
     {
       "date": "2026-06-05",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        16,
+        33,
+        37,
+        43
+      ],
+      "bonus": 6,
+      "source": "https://za.national-lottery.com/powerball/results/05-june-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-06-05",
       "game": "Daily Lotto",
       "numbers": [
         3,
@@ -1056,6 +1344,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/03-june-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-06-02",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        10,
+        22,
+        28,
+        49
+      ],
+      "bonus": 7,
+      "source": "https://za.national-lottery.com/powerball/results/02-june-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -1125,6 +1429,22 @@
     },
     {
       "date": "2026-05-29",
+      "game": "PowerBall",
+      "numbers": [
+        9,
+        14,
+        16,
+        25,
+        30
+      ],
+      "bonus": 14,
+      "source": "https://za.national-lottery.com/powerball/results/29-may-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-05-29",
       "game": "Daily Lotto",
       "numbers": [
         11,
@@ -1168,6 +1488,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/27-may-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-05-26",
+      "game": "PowerBall",
+      "numbers": [
+        1,
+        9,
+        30,
+        31,
+        47
+      ],
+      "bonus": 3,
+      "source": "https://za.national-lottery.com/powerball/results/26-may-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -1237,6 +1573,22 @@
     },
     {
       "date": "2026-05-22",
+      "game": "PowerBall",
+      "numbers": [
+        6,
+        8,
+        16,
+        22,
+        25
+      ],
+      "bonus": 18,
+      "source": "https://za.national-lottery.com/powerball/results/22-may-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-05-22",
       "game": "Daily Lotto",
       "numbers": [
         1,
@@ -1280,6 +1632,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/20-may-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-05-19",
+      "game": "PowerBall",
+      "numbers": [
+        19,
+        24,
+        29,
+        47,
+        48
+      ],
+      "bonus": 4,
+      "source": "https://za.national-lottery.com/powerball/results/19-may-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -1349,6 +1717,22 @@
     },
     {
       "date": "2026-05-15",
+      "game": "PowerBall",
+      "numbers": [
+        20,
+        24,
+        29,
+        38,
+        39
+      ],
+      "bonus": 11,
+      "source": "https://za.national-lottery.com/powerball/results/15-may-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-05-15",
       "game": "Daily Lotto",
       "numbers": [
         2,
@@ -1392,6 +1776,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/13-may-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-05-12",
+      "game": "PowerBall",
+      "numbers": [
+        25,
+        30,
+        32,
+        33,
+        46
+      ],
+      "bonus": 6,
+      "source": "https://za.national-lottery.com/powerball/results/12-may-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -1461,6 +1861,22 @@
     },
     {
       "date": "2026-05-08",
+      "game": "PowerBall",
+      "numbers": [
+        1,
+        32,
+        40,
+        43,
+        48
+      ],
+      "bonus": 9,
+      "source": "https://za.national-lottery.com/powerball/results/08-may-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-05-08",
       "game": "Daily Lotto",
       "numbers": [
         1,
@@ -1504,6 +1920,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/06-may-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-05-05",
+      "game": "PowerBall",
+      "numbers": [
+        1,
+        4,
+        5,
+        22,
+        28
+      ],
+      "bonus": 5,
+      "source": "https://za.national-lottery.com/powerball/results/05-may-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -1573,6 +2005,22 @@
     },
     {
       "date": "2026-05-01",
+      "game": "PowerBall",
+      "numbers": [
+        15,
+        17,
+        27,
+        29,
+        35
+      ],
+      "bonus": 12,
+      "source": "https://za.national-lottery.com/powerball/results/01-may-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-05-01",
       "game": "Daily Lotto",
       "numbers": [
         11,
@@ -1616,6 +2064,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/29-april-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-04-28",
+      "game": "PowerBall",
+      "numbers": [
+        5,
+        17,
+        38,
+        44,
+        47
+      ],
+      "bonus": 2,
+      "source": "https://za.national-lottery.com/powerball/results/28-april-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -1685,6 +2149,22 @@
     },
     {
       "date": "2026-04-24",
+      "game": "PowerBall",
+      "numbers": [
+        16,
+        19,
+        24,
+        25,
+        41
+      ],
+      "bonus": 20,
+      "source": "https://za.national-lottery.com/powerball/results/24-april-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-04-24",
       "game": "Daily Lotto",
       "numbers": [
         6,
@@ -1728,6 +2208,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/22-april-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-04-21",
+      "game": "PowerBall",
+      "numbers": [
+        5,
+        13,
+        31,
+        32,
+        47
+      ],
+      "bonus": 3,
+      "source": "https://za.national-lottery.com/powerball/results/21-april-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -1797,6 +2293,22 @@
     },
     {
       "date": "2026-04-17",
+      "game": "PowerBall",
+      "numbers": [
+        17,
+        26,
+        39,
+        43,
+        45
+      ],
+      "bonus": 2,
+      "source": "https://za.national-lottery.com/powerball/results/17-april-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-04-17",
       "game": "Daily Lotto",
       "numbers": [
         4,
@@ -1840,6 +2352,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/15-april-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-04-14",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        6,
+        16,
+        30,
+        31
+      ],
+      "bonus": 6,
+      "source": "https://za.national-lottery.com/powerball/results/14-april-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -1909,6 +2437,22 @@
     },
     {
       "date": "2026-04-10",
+      "game": "PowerBall",
+      "numbers": [
+        27,
+        36,
+        38,
+        40,
+        48
+      ],
+      "bonus": 17,
+      "source": "https://za.national-lottery.com/powerball/results/10-april-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-04-10",
       "game": "Daily Lotto",
       "numbers": [
         6,
@@ -1952,6 +2496,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/08-april-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-04-07",
+      "game": "PowerBall",
+      "numbers": [
+        16,
+        17,
+        18,
+        22,
+        41
+      ],
+      "bonus": 10,
+      "source": "https://za.national-lottery.com/powerball/results/07-april-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -2021,6 +2581,22 @@
     },
     {
       "date": "2026-04-03",
+      "game": "PowerBall",
+      "numbers": [
+        1,
+        14,
+        25,
+        29,
+        41
+      ],
+      "bonus": 18,
+      "source": "https://za.national-lottery.com/powerball/results/03-april-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-04-03",
       "game": "Daily Lotto",
       "numbers": [
         3,
@@ -2064,6 +2640,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/01-april-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-03-31",
+      "game": "PowerBall",
+      "numbers": [
+        5,
+        13,
+        15,
+        24,
+        43
+      ],
+      "bonus": 6,
+      "source": "https://za.national-lottery.com/powerball/results/31-march-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -2133,6 +2725,22 @@
     },
     {
       "date": "2026-03-27",
+      "game": "PowerBall",
+      "numbers": [
+        6,
+        12,
+        25,
+        28,
+        36
+      ],
+      "bonus": 15,
+      "source": "https://za.national-lottery.com/powerball/results/27-march-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-03-27",
       "game": "Daily Lotto",
       "numbers": [
         9,
@@ -2176,6 +2784,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/25-march-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-03-24",
+      "game": "PowerBall",
+      "numbers": [
+        11,
+        13,
+        19,
+        22,
+        39
+      ],
+      "bonus": 1,
+      "source": "https://za.national-lottery.com/powerball/results/24-march-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -2245,6 +2869,22 @@
     },
     {
       "date": "2026-03-20",
+      "game": "PowerBall",
+      "numbers": [
+        5,
+        8,
+        11,
+        17,
+        41
+      ],
+      "bonus": 2,
+      "source": "https://za.national-lottery.com/powerball/results/20-march-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-03-20",
       "game": "Daily Lotto",
       "numbers": [
         16,
@@ -2288,6 +2928,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/18-march-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-03-17",
+      "game": "PowerBall",
+      "numbers": [
+        10,
+        13,
+        40,
+        47,
+        48
+      ],
+      "bonus": 5,
+      "source": "https://za.national-lottery.com/powerball/results/17-march-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -2357,6 +3013,22 @@
     },
     {
       "date": "2026-03-13",
+      "game": "PowerBall",
+      "numbers": [
+        1,
+        3,
+        27,
+        45,
+        50
+      ],
+      "bonus": 17,
+      "source": "https://za.national-lottery.com/powerball/results/13-march-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-03-13",
       "game": "Daily Lotto",
       "numbers": [
         10,
@@ -2400,6 +3072,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/11-march-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-03-10",
+      "game": "PowerBall",
+      "numbers": [
+        1,
+        5,
+        13,
+        20,
+        25
+      ],
+      "bonus": 14,
+      "source": "https://za.national-lottery.com/powerball/results/10-march-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -2469,6 +3157,22 @@
     },
     {
       "date": "2026-03-06",
+      "game": "PowerBall",
+      "numbers": [
+        10,
+        11,
+        15,
+        18,
+        50
+      ],
+      "bonus": 11,
+      "source": "https://za.national-lottery.com/powerball/results/06-march-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-03-06",
       "game": "Daily Lotto",
       "numbers": [
         8,
@@ -2512,6 +3216,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/04-march-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-03-03",
+      "game": "PowerBall",
+      "numbers": [
+        1,
+        9,
+        29,
+        38,
+        43
+      ],
+      "bonus": 15,
+      "source": "https://za.national-lottery.com/powerball/results/03-march-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -2581,6 +3301,22 @@
     },
     {
       "date": "2026-02-27",
+      "game": "PowerBall",
+      "numbers": [
+        11,
+        14,
+        24,
+        32,
+        43
+      ],
+      "bonus": 2,
+      "source": "https://za.national-lottery.com/powerball/results/27-february-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-02-27",
       "game": "Daily Lotto",
       "numbers": [
         1,
@@ -2624,6 +3360,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/25-february-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-02-24",
+      "game": "PowerBall",
+      "numbers": [
+        19,
+        23,
+        33,
+        34,
+        41
+      ],
+      "bonus": 9,
+      "source": "https://za.national-lottery.com/powerball/results/24-february-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -2693,6 +3445,22 @@
     },
     {
       "date": "2026-02-20",
+      "game": "PowerBall",
+      "numbers": [
+        17,
+        19,
+        25,
+        28,
+        35
+      ],
+      "bonus": 17,
+      "source": "https://za.national-lottery.com/powerball/results/20-february-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-02-20",
       "game": "Daily Lotto",
       "numbers": [
         5,
@@ -2736,6 +3504,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/18-february-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-02-17",
+      "game": "PowerBall",
+      "numbers": [
+        5,
+        15,
+        23,
+        24,
+        42
+      ],
+      "bonus": 5,
+      "source": "https://za.national-lottery.com/powerball/results/17-february-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -2805,6 +3589,22 @@
     },
     {
       "date": "2026-02-13",
+      "game": "PowerBall",
+      "numbers": [
+        4,
+        10,
+        23,
+        26,
+        37
+      ],
+      "bonus": 20,
+      "source": "https://za.national-lottery.com/powerball/results/13-february-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-02-13",
       "game": "Daily Lotto",
       "numbers": [
         3,
@@ -2848,6 +3648,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/11-february-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-02-10",
+      "game": "PowerBall",
+      "numbers": [
+        17,
+        23,
+        25,
+        39,
+        49
+      ],
+      "bonus": 11,
+      "source": "https://za.national-lottery.com/powerball/results/10-february-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -2917,6 +3733,22 @@
     },
     {
       "date": "2026-02-06",
+      "game": "PowerBall",
+      "numbers": [
+        6,
+        13,
+        21,
+        28,
+        31
+      ],
+      "bonus": 5,
+      "source": "https://za.national-lottery.com/powerball/results/06-february-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-02-06",
       "game": "Daily Lotto",
       "numbers": [
         1,
@@ -2960,6 +3792,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/04-february-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-02-03",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        11,
+        20,
+        40,
+        49
+      ],
+      "bonus": 2,
+      "source": "https://za.national-lottery.com/powerball/results/03-february-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -3029,6 +3877,22 @@
     },
     {
       "date": "2026-01-30",
+      "game": "PowerBall",
+      "numbers": [
+        19,
+        26,
+        31,
+        33,
+        39
+      ],
+      "bonus": 2,
+      "source": "https://za.national-lottery.com/powerball/results/30-january-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-01-30",
       "game": "Daily Lotto",
       "numbers": [
         8,
@@ -3072,6 +3936,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/28-january-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-01-27",
+      "game": "PowerBall",
+      "numbers": [
+        11,
+        13,
+        28,
+        43,
+        48
+      ],
+      "bonus": 3,
+      "source": "https://za.national-lottery.com/powerball/results/27-january-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -3141,6 +4021,22 @@
     },
     {
       "date": "2026-01-23",
+      "game": "PowerBall",
+      "numbers": [
+        4,
+        16,
+        24,
+        29,
+        31
+      ],
+      "bonus": 15,
+      "source": "https://za.national-lottery.com/powerball/results/23-january-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-01-23",
       "game": "Daily Lotto",
       "numbers": [
         5,
@@ -3184,6 +4080,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/21-january-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-01-20",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        3,
+        16,
+        17,
+        35
+      ],
+      "bonus": 5,
+      "source": "https://za.national-lottery.com/powerball/results/20-january-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -3253,6 +4165,22 @@
     },
     {
       "date": "2026-01-16",
+      "game": "PowerBall",
+      "numbers": [
+        8,
+        22,
+        36,
+        39,
+        47
+      ],
+      "bonus": 20,
+      "source": "https://za.national-lottery.com/powerball/results/16-january-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-01-16",
       "game": "Daily Lotto",
       "numbers": [
         2,
@@ -3296,6 +4224,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/14-january-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-01-13",
+      "game": "PowerBall",
+      "numbers": [
+        21,
+        32,
+        33,
+        39,
+        50
+      ],
+      "bonus": 3,
+      "source": "https://za.national-lottery.com/powerball/results/13-january-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -3365,6 +4309,22 @@
     },
     {
       "date": "2026-01-09",
+      "game": "PowerBall",
+      "numbers": [
+        11,
+        20,
+        35,
+        42,
+        50
+      ],
+      "bonus": 7,
+      "source": "https://za.national-lottery.com/powerball/results/09-january-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-01-09",
       "game": "Daily Lotto",
       "numbers": [
         2,
@@ -3408,6 +4368,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/07-january-2026",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-01-06",
+      "game": "PowerBall",
+      "numbers": [
+        9,
+        12,
+        13,
+        30,
+        34
+      ],
+      "bonus": 2,
+      "source": "https://za.national-lottery.com/powerball/results/06-january-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -3477,6 +4453,22 @@
     },
     {
       "date": "2026-01-02",
+      "game": "PowerBall",
+      "numbers": [
+        17,
+        18,
+        35,
+        38,
+        39
+      ],
+      "bonus": 9,
+      "source": "https://za.national-lottery.com/powerball/results/02-january-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2026-01-02",
       "game": "Daily Lotto",
       "numbers": [
         9,
@@ -3537,6 +4529,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/31-december-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-12-30",
+      "game": "PowerBall",
+      "numbers": [
+        6,
+        13,
+        14,
+        42,
+        45
+      ],
+      "bonus": 11,
+      "source": "https://za.national-lottery.com/powerball/results/30-december-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -3623,6 +4631,22 @@
     },
     {
       "date": "2025-12-26",
+      "game": "PowerBall",
+      "numbers": [
+        18,
+        20,
+        35,
+        46,
+        48
+      ],
+      "bonus": 2,
+      "source": "https://za.national-lottery.com/powerball/results/26-december-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-12-26",
       "game": "Daily Lotto",
       "numbers": [
         9,
@@ -3650,6 +4674,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/24-december-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-12-23",
+      "game": "PowerBall",
+      "numbers": [
+        3,
+        12,
+        29,
+        46,
+        49
+      ],
+      "bonus": 3,
+      "source": "https://za.national-lottery.com/powerball/results/23-december-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -3719,6 +4759,22 @@
     },
     {
       "date": "2025-12-19",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        11,
+        15,
+        16,
+        30
+      ],
+      "bonus": 15,
+      "source": "https://za.national-lottery.com/powerball/results/19-december-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-12-19",
       "game": "Daily Lotto",
       "numbers": [
         12,
@@ -3762,6 +4818,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/17-december-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-12-16",
+      "game": "PowerBall",
+      "numbers": [
+        11,
+        17,
+        18,
+        35,
+        50
+      ],
+      "bonus": 7,
+      "source": "https://za.national-lottery.com/powerball/results/16-december-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -3831,6 +4903,22 @@
     },
     {
       "date": "2025-12-12",
+      "game": "PowerBall",
+      "numbers": [
+        17,
+        18,
+        30,
+        42,
+        50
+      ],
+      "bonus": 3,
+      "source": "https://za.national-lottery.com/powerball/results/12-december-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-12-12",
       "game": "Daily Lotto",
       "numbers": [
         6,
@@ -3874,6 +4962,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/10-december-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-12-09",
+      "game": "PowerBall",
+      "numbers": [
+        11,
+        36,
+        41,
+        43,
+        46
+      ],
+      "bonus": 8,
+      "source": "https://za.national-lottery.com/powerball/results/09-december-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -3960,6 +5064,22 @@
     },
     {
       "date": "2025-12-05",
+      "game": "PowerBall",
+      "numbers": [
+        12,
+        20,
+        27,
+        35,
+        46
+      ],
+      "bonus": 9,
+      "source": "https://za.national-lottery.com/powerball/results/05-december-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-12-05",
       "game": "Daily Lotto",
       "numbers": [
         9,
@@ -4003,6 +5123,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/03-december-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-12-02",
+      "game": "PowerBall",
+      "numbers": [
+        16,
+        21,
+        33,
+        39,
+        46
+      ],
+      "bonus": 12,
+      "source": "https://za.national-lottery.com/powerball/results/02-december-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -4072,6 +5208,22 @@
     },
     {
       "date": "2025-11-28",
+      "game": "PowerBall",
+      "numbers": [
+        3,
+        17,
+        28,
+        29,
+        34
+      ],
+      "bonus": 1,
+      "source": "https://za.national-lottery.com/powerball/results/28-november-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-11-28",
       "game": "Daily Lotto",
       "numbers": [
         1,
@@ -4132,6 +5284,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/26-november-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-11-25",
+      "game": "PowerBall",
+      "numbers": [
+        15,
+        24,
+        28,
+        31,
+        37
+      ],
+      "bonus": 16,
+      "source": "https://za.national-lottery.com/powerball/results/25-november-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -4218,6 +5386,22 @@
     },
     {
       "date": "2025-11-21",
+      "game": "PowerBall",
+      "numbers": [
+        1,
+        28,
+        39,
+        49,
+        50
+      ],
+      "bonus": 6,
+      "source": "https://za.national-lottery.com/powerball/results/21-november-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-11-21",
       "game": "Daily Lotto",
       "numbers": [
         2,
@@ -4261,6 +5445,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/19-november-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-11-18",
+      "game": "PowerBall",
+      "numbers": [
+        23,
+        30,
+        42,
+        45,
+        50
+      ],
+      "bonus": 19,
+      "source": "https://za.national-lottery.com/powerball/results/18-november-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -4330,6 +5530,22 @@
     },
     {
       "date": "2025-11-14",
+      "game": "PowerBall",
+      "numbers": [
+        16,
+        28,
+        32,
+        36,
+        48
+      ],
+      "bonus": 13,
+      "source": "https://za.national-lottery.com/powerball/results/14-november-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-11-14",
       "game": "Daily Lotto",
       "numbers": [
         2,
@@ -4373,6 +5589,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/12-november-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-11-11",
+      "game": "PowerBall",
+      "numbers": [
+        9,
+        13,
+        17,
+        47,
+        49
+      ],
+      "bonus": 8,
+      "source": "https://za.national-lottery.com/powerball/results/11-november-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -4442,6 +5674,22 @@
     },
     {
       "date": "2025-11-07",
+      "game": "PowerBall",
+      "numbers": [
+        7,
+        33,
+        40,
+        41,
+        49
+      ],
+      "bonus": 10,
+      "source": "https://za.national-lottery.com/powerball/results/07-november-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-11-07",
       "game": "Daily Lotto",
       "numbers": [
         7,
@@ -4485,6 +5733,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/05-november-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-11-04",
+      "game": "PowerBall",
+      "numbers": [
+        5,
+        20,
+        22,
+        28,
+        46
+      ],
+      "bonus": 1,
+      "source": "https://za.national-lottery.com/powerball/results/04-november-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -4554,6 +5818,22 @@
     },
     {
       "date": "2025-10-31",
+      "game": "PowerBall",
+      "numbers": [
+        19,
+        24,
+        25,
+        30,
+        49
+      ],
+      "bonus": 6,
+      "source": "https://za.national-lottery.com/powerball/results/31-october-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-10-31",
       "game": "Daily Lotto",
       "numbers": [
         5,
@@ -4597,6 +5877,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/29-october-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-10-28",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        13,
+        31,
+        32,
+        42
+      ],
+      "bonus": 1,
+      "source": "https://za.national-lottery.com/powerball/results/28-october-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -4666,6 +5962,22 @@
     },
     {
       "date": "2025-10-24",
+      "game": "PowerBall",
+      "numbers": [
+        15,
+        18,
+        24,
+        32,
+        44
+      ],
+      "bonus": 20,
+      "source": "https://za.national-lottery.com/powerball/results/24-october-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-10-24",
       "game": "Daily Lotto",
       "numbers": [
         3,
@@ -4709,6 +6021,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/22-october-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-10-21",
+      "game": "PowerBall",
+      "numbers": [
+        7,
+        10,
+        16,
+        21,
+        30
+      ],
+      "bonus": 11,
+      "source": "https://za.national-lottery.com/powerball/results/21-october-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -4778,6 +6106,22 @@
     },
     {
       "date": "2025-10-17",
+      "game": "PowerBall",
+      "numbers": [
+        18,
+        27,
+        29,
+        32,
+        45
+      ],
+      "bonus": 16,
+      "source": "https://za.national-lottery.com/powerball/results/17-october-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-10-17",
       "game": "Daily Lotto",
       "numbers": [
         7,
@@ -4821,6 +6165,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/15-october-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-10-14",
+      "game": "PowerBall",
+      "numbers": [
+        5,
+        25,
+        31,
+        40,
+        41
+      ],
+      "bonus": 20,
+      "source": "https://za.national-lottery.com/powerball/results/14-october-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -4890,6 +6250,22 @@
     },
     {
       "date": "2025-10-10",
+      "game": "PowerBall",
+      "numbers": [
+        6,
+        10,
+        40,
+        44,
+        50
+      ],
+      "bonus": 11,
+      "source": "https://za.national-lottery.com/powerball/results/10-october-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-10-10",
       "game": "Daily Lotto",
       "numbers": [
         6,
@@ -4933,6 +6309,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/08-october-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-10-07",
+      "game": "PowerBall",
+      "numbers": [
+        13,
+        18,
+        21,
+        23,
+        24
+      ],
+      "bonus": 16,
+      "source": "https://za.national-lottery.com/powerball/results/07-october-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -5002,6 +6394,22 @@
     },
     {
       "date": "2025-10-03",
+      "game": "PowerBall",
+      "numbers": [
+        12,
+        14,
+        33,
+        41,
+        44
+      ],
+      "bonus": 10,
+      "source": "https://za.national-lottery.com/powerball/results/03-october-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-10-03",
       "game": "Daily Lotto",
       "numbers": [
         14,
@@ -5062,6 +6470,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/01-october-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-09-30",
+      "game": "PowerBall",
+      "numbers": [
+        14,
+        22,
+        25,
+        37,
+        46
+      ],
+      "bonus": 4,
+      "source": "https://za.national-lottery.com/powerball/results/30-september-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -5148,6 +6572,22 @@
     },
     {
       "date": "2025-09-26",
+      "game": "PowerBall",
+      "numbers": [
+        3,
+        13,
+        19,
+        24,
+        40
+      ],
+      "bonus": 12,
+      "source": "https://za.national-lottery.com/powerball/results/26-september-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-09-26",
       "game": "Daily Lotto",
       "numbers": [
         12,
@@ -5191,6 +6631,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/24-september-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-09-23",
+      "game": "PowerBall",
+      "numbers": [
+        10,
+        23,
+        32,
+        43,
+        45
+      ],
+      "bonus": 18,
+      "source": "https://za.national-lottery.com/powerball/results/23-september-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -5277,6 +6733,22 @@
     },
     {
       "date": "2025-09-19",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        16,
+        24,
+        41,
+        47
+      ],
+      "bonus": 19,
+      "source": "https://za.national-lottery.com/powerball/results/19-september-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-09-19",
       "game": "Daily Lotto",
       "numbers": [
         9,
@@ -5337,6 +6809,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/17-september-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-09-16",
+      "game": "PowerBall",
+      "numbers": [
+        22,
+        24,
+        26,
+        33,
+        35
+      ],
+      "bonus": 7,
+      "source": "https://za.national-lottery.com/powerball/results/16-september-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -5423,6 +6911,22 @@
     },
     {
       "date": "2025-09-12",
+      "game": "PowerBall",
+      "numbers": [
+        17,
+        23,
+        25,
+        26,
+        37
+      ],
+      "bonus": 18,
+      "source": "https://za.national-lottery.com/powerball/results/12-september-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-09-12",
       "game": "Daily Lotto",
       "numbers": [
         7,
@@ -5483,6 +6987,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/10-september-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-09-09",
+      "game": "PowerBall",
+      "numbers": [
+        21,
+        28,
+        40,
+        43,
+        45
+      ],
+      "bonus": 13,
+      "source": "https://za.national-lottery.com/powerball/results/09-september-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -5569,6 +7089,22 @@
     },
     {
       "date": "2025-09-05",
+      "game": "PowerBall",
+      "numbers": [
+        22,
+        30,
+        33,
+        35,
+        38
+      ],
+      "bonus": 20,
+      "source": "https://za.national-lottery.com/powerball/results/05-september-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-09-05",
       "game": "Daily Lotto",
       "numbers": [
         7,
@@ -5629,6 +7165,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/03-september-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-09-02",
+      "game": "PowerBall",
+      "numbers": [
+        20,
+        31,
+        33,
+        34,
+        50
+      ],
+      "bonus": 6,
+      "source": "https://za.national-lottery.com/powerball/results/02-september-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -5715,6 +7267,22 @@
     },
     {
       "date": "2025-08-29",
+      "game": "PowerBall",
+      "numbers": [
+        12,
+        14,
+        29,
+        45,
+        50
+      ],
+      "bonus": 15,
+      "source": "https://za.national-lottery.com/powerball/results/29-august-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-08-29",
       "game": "Daily Lotto",
       "numbers": [
         1,
@@ -5775,6 +7343,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/27-august-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-08-26",
+      "game": "PowerBall",
+      "numbers": [
+        13,
+        19,
+        24,
+        44,
+        50
+      ],
+      "bonus": 15,
+      "source": "https://za.national-lottery.com/powerball/results/26-august-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -5861,6 +7445,22 @@
     },
     {
       "date": "2025-08-22",
+      "game": "PowerBall",
+      "numbers": [
+        4,
+        10,
+        27,
+        37,
+        50
+      ],
+      "bonus": 18,
+      "source": "https://za.national-lottery.com/powerball/results/22-august-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-08-22",
       "game": "Daily Lotto",
       "numbers": [
         11,
@@ -5921,6 +7521,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/20-august-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-08-19",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        10,
+        22,
+        27,
+        40
+      ],
+      "bonus": 17,
+      "source": "https://za.national-lottery.com/powerball/results/19-august-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -6007,6 +7623,22 @@
     },
     {
       "date": "2025-08-15",
+      "game": "PowerBall",
+      "numbers": [
+        4,
+        11,
+        19,
+        32,
+        33
+      ],
+      "bonus": 12,
+      "source": "https://za.national-lottery.com/powerball/results/15-august-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-08-15",
       "game": "Daily Lotto",
       "numbers": [
         14,
@@ -6067,6 +7699,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/13-august-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-08-12",
+      "game": "PowerBall",
+      "numbers": [
+        8,
+        10,
+        20,
+        41,
+        48
+      ],
+      "bonus": 4,
+      "source": "https://za.national-lottery.com/powerball/results/12-august-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -6153,6 +7801,22 @@
     },
     {
       "date": "2025-08-08",
+      "game": "PowerBall",
+      "numbers": [
+        13,
+        26,
+        39,
+        41,
+        48
+      ],
+      "bonus": 18,
+      "source": "https://za.national-lottery.com/powerball/results/08-august-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-08-08",
       "game": "Daily Lotto",
       "numbers": [
         3,
@@ -6213,6 +7877,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/06-august-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-08-05",
+      "game": "PowerBall",
+      "numbers": [
+        10,
+        32,
+        34,
+        40,
+        48
+      ],
+      "bonus": 14,
+      "source": "https://za.national-lottery.com/powerball/results/05-august-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -6299,6 +7979,22 @@
     },
     {
       "date": "2025-08-01",
+      "game": "PowerBall",
+      "numbers": [
+        5,
+        31,
+        33,
+        34,
+        40
+      ],
+      "bonus": 13,
+      "source": "https://za.national-lottery.com/powerball/results/01-august-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-08-01",
       "game": "Daily Lotto",
       "numbers": [
         9,
@@ -6359,6 +8055,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/30-july-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-07-29",
+      "game": "PowerBall",
+      "numbers": [
+        4,
+        17,
+        20,
+        24,
+        30
+      ],
+      "bonus": 19,
+      "source": "https://za.national-lottery.com/powerball/results/29-july-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -6445,6 +8157,22 @@
     },
     {
       "date": "2025-07-25",
+      "game": "PowerBall",
+      "numbers": [
+        3,
+        29,
+        35,
+        39,
+        42
+      ],
+      "bonus": 5,
+      "source": "https://za.national-lottery.com/powerball/results/25-july-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-07-25",
       "game": "Daily Lotto",
       "numbers": [
         2,
@@ -6505,6 +8233,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/23-july-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-07-22",
+      "game": "PowerBall",
+      "numbers": [
+        3,
+        8,
+        10,
+        27,
+        49
+      ],
+      "bonus": 1,
+      "source": "https://za.national-lottery.com/powerball/results/22-july-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -6591,6 +8335,22 @@
     },
     {
       "date": "2025-07-18",
+      "game": "PowerBall",
+      "numbers": [
+        10,
+        15,
+        26,
+        31,
+        41
+      ],
+      "bonus": 5,
+      "source": "https://za.national-lottery.com/powerball/results/18-july-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-07-18",
       "game": "Daily Lotto",
       "numbers": [
         2,
@@ -6651,6 +8411,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/16-july-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-07-15",
+      "game": "PowerBall",
+      "numbers": [
+        5,
+        21,
+        26,
+        28,
+        39
+      ],
+      "bonus": 6,
+      "source": "https://za.national-lottery.com/powerball/results/15-july-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -6737,6 +8513,22 @@
     },
     {
       "date": "2025-07-11",
+      "game": "PowerBall",
+      "numbers": [
+        1,
+        7,
+        8,
+        15,
+        20
+      ],
+      "bonus": 15,
+      "source": "https://za.national-lottery.com/powerball/results/11-july-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-07-11",
       "game": "Daily Lotto",
       "numbers": [
         6,
@@ -6797,6 +8589,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/09-july-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-07-08",
+      "game": "PowerBall",
+      "numbers": [
+        14,
+        19,
+        37,
+        44,
+        48
+      ],
+      "bonus": 17,
+      "source": "https://za.national-lottery.com/powerball/results/08-july-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -6883,6 +8691,22 @@
     },
     {
       "date": "2025-07-04",
+      "game": "PowerBall",
+      "numbers": [
+        15,
+        16,
+        22,
+        30,
+        32
+      ],
+      "bonus": 7,
+      "source": "https://za.national-lottery.com/powerball/results/04-july-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-07-04",
       "game": "Daily Lotto",
       "numbers": [
         10,
@@ -6943,6 +8767,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/02-july-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-07-01",
+      "game": "PowerBall",
+      "numbers": [
+        8,
+        9,
+        26,
+        30,
+        31
+      ],
+      "bonus": 8,
+      "source": "https://za.national-lottery.com/powerball/results/01-july-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -7029,6 +8869,22 @@
     },
     {
       "date": "2025-06-27",
+      "game": "PowerBall",
+      "numbers": [
+        11,
+        23,
+        32,
+        41,
+        47
+      ],
+      "bonus": 17,
+      "source": "https://za.national-lottery.com/powerball/results/27-june-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-06-27",
       "game": "Daily Lotto",
       "numbers": [
         9,
@@ -7089,6 +8945,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/25-june-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-06-24",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        22,
+        27,
+        36,
+        39
+      ],
+      "bonus": 19,
+      "source": "https://za.national-lottery.com/powerball/results/24-june-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -7175,6 +9047,22 @@
     },
     {
       "date": "2025-06-20",
+      "game": "PowerBall",
+      "numbers": [
+        22,
+        23,
+        25,
+        29,
+        42
+      ],
+      "bonus": 8,
+      "source": "https://za.national-lottery.com/powerball/results/20-june-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-06-20",
       "game": "Daily Lotto",
       "numbers": [
         2,
@@ -7235,6 +9123,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/18-june-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-06-17",
+      "game": "PowerBall",
+      "numbers": [
+        5,
+        23,
+        26,
+        38,
+        43
+      ],
+      "bonus": 4,
+      "source": "https://za.national-lottery.com/powerball/results/17-june-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -7321,6 +9225,22 @@
     },
     {
       "date": "2025-06-13",
+      "game": "PowerBall",
+      "numbers": [
+        1,
+        21,
+        34,
+        46,
+        47
+      ],
+      "bonus": 12,
+      "source": "https://za.national-lottery.com/powerball/results/13-june-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-06-13",
       "game": "Daily Lotto",
       "numbers": [
         2,
@@ -7381,6 +9301,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/11-june-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-06-10",
+      "game": "PowerBall",
+      "numbers": [
+        5,
+        11,
+        23,
+        29,
+        48
+      ],
+      "bonus": 1,
+      "source": "https://za.national-lottery.com/powerball/results/10-june-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -7467,6 +9403,22 @@
     },
     {
       "date": "2025-06-06",
+      "game": "PowerBall",
+      "numbers": [
+        9,
+        24,
+        34,
+        41,
+        44
+      ],
+      "bonus": 2,
+      "source": "https://za.national-lottery.com/powerball/results/06-june-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-06-06",
       "game": "Daily Lotto",
       "numbers": [
         4,
@@ -7527,6 +9479,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/04-june-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-06-03",
+      "game": "PowerBall",
+      "numbers": [
+        5,
+        26,
+        40,
+        47,
+        50
+      ],
+      "bonus": 14,
+      "source": "https://za.national-lottery.com/powerball/results/03-june-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -7613,6 +9581,22 @@
     },
     {
       "date": "2025-05-30",
+      "game": "PowerBall",
+      "numbers": [
+        10,
+        13,
+        34,
+        43,
+        46
+      ],
+      "bonus": 1,
+      "source": "https://za.national-lottery.com/powerball/results/30-may-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-05-30",
       "game": "Daily Lotto",
       "numbers": [
         9,
@@ -7673,6 +9657,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/28-may-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-05-27",
+      "game": "PowerBall",
+      "numbers": [
+        13,
+        22,
+        33,
+        38,
+        50
+      ],
+      "bonus": 15,
+      "source": "https://za.national-lottery.com/powerball/results/27-may-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -7759,6 +9759,22 @@
     },
     {
       "date": "2025-05-23",
+      "game": "PowerBall",
+      "numbers": [
+        1,
+        17,
+        18,
+        27,
+        49
+      ],
+      "bonus": 15,
+      "source": "https://za.national-lottery.com/powerball/results/23-may-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-05-23",
       "game": "Daily Lotto",
       "numbers": [
         2,
@@ -7819,6 +9835,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/21-may-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-05-20",
+      "game": "PowerBall",
+      "numbers": [
+        13,
+        26,
+        31,
+        32,
+        47
+      ],
+      "bonus": 18,
+      "source": "https://za.national-lottery.com/powerball/results/20-may-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -7905,6 +9937,22 @@
     },
     {
       "date": "2025-05-16",
+      "game": "PowerBall",
+      "numbers": [
+        9,
+        16,
+        20,
+        28,
+        39
+      ],
+      "bonus": 19,
+      "source": "https://za.national-lottery.com/powerball/results/16-may-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-05-16",
       "game": "Daily Lotto",
       "numbers": [
         1,
@@ -7965,6 +10013,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/14-may-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-05-13",
+      "game": "PowerBall",
+      "numbers": [
+        11,
+        21,
+        29,
+        37,
+        39
+      ],
+      "bonus": 12,
+      "source": "https://za.national-lottery.com/powerball/results/13-may-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -8051,6 +10115,22 @@
     },
     {
       "date": "2025-05-09",
+      "game": "PowerBall",
+      "numbers": [
+        5,
+        6,
+        14,
+        38,
+        50
+      ],
+      "bonus": 10,
+      "source": "https://za.national-lottery.com/powerball/results/09-may-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-05-09",
       "game": "Daily Lotto",
       "numbers": [
         1,
@@ -8111,6 +10191,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/07-may-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-05-06",
+      "game": "PowerBall",
+      "numbers": [
+        19,
+        20,
+        32,
+        35,
+        37
+      ],
+      "bonus": 19,
+      "source": "https://za.national-lottery.com/powerball/results/06-may-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -8197,6 +10293,22 @@
     },
     {
       "date": "2025-05-02",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        6,
+        17,
+        37,
+        47
+      ],
+      "bonus": 9,
+      "source": "https://za.national-lottery.com/powerball/results/02-may-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-05-02",
       "game": "Daily Lotto",
       "numbers": [
         4,
@@ -8257,6 +10369,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/30-april-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-04-29",
+      "game": "PowerBall",
+      "numbers": [
+        5,
+        14,
+        32,
+        33,
+        45
+      ],
+      "bonus": 13,
+      "source": "https://za.national-lottery.com/powerball/results/29-april-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -8343,6 +10471,22 @@
     },
     {
       "date": "2025-04-25",
+      "game": "PowerBall",
+      "numbers": [
+        5,
+        9,
+        13,
+        46,
+        47
+      ],
+      "bonus": 11,
+      "source": "https://za.national-lottery.com/powerball/results/25-april-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-04-25",
       "game": "Daily Lotto",
       "numbers": [
         4,
@@ -8403,6 +10547,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/23-april-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-04-22",
+      "game": "PowerBall",
+      "numbers": [
+        18,
+        32,
+        33,
+        38,
+        43
+      ],
+      "bonus": 9,
+      "source": "https://za.national-lottery.com/powerball/results/22-april-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -8489,6 +10649,22 @@
     },
     {
       "date": "2025-04-18",
+      "game": "PowerBall",
+      "numbers": [
+        15,
+        17,
+        22,
+        33,
+        45
+      ],
+      "bonus": 12,
+      "source": "https://za.national-lottery.com/powerball/results/18-april-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-04-18",
       "game": "Daily Lotto",
       "numbers": [
         2,
@@ -8549,6 +10725,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/16-april-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-04-15",
+      "game": "PowerBall",
+      "numbers": [
+        19,
+        24,
+        38,
+        40,
+        41
+      ],
+      "bonus": 2,
+      "source": "https://za.national-lottery.com/powerball/results/15-april-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -8635,6 +10827,22 @@
     },
     {
       "date": "2025-04-11",
+      "game": "PowerBall",
+      "numbers": [
+        5,
+        12,
+        14,
+        22,
+        48
+      ],
+      "bonus": 18,
+      "source": "https://za.national-lottery.com/powerball/results/11-april-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-04-11",
       "game": "Daily Lotto",
       "numbers": [
         3,
@@ -8695,6 +10903,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/09-april-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-04-08",
+      "game": "PowerBall",
+      "numbers": [
+        1,
+        16,
+        23,
+        37,
+        42
+      ],
+      "bonus": 6,
+      "source": "https://za.national-lottery.com/powerball/results/08-april-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -8781,6 +11005,22 @@
     },
     {
       "date": "2025-04-04",
+      "game": "PowerBall",
+      "numbers": [
+        8,
+        20,
+        35,
+        36,
+        38
+      ],
+      "bonus": 2,
+      "source": "https://za.national-lottery.com/powerball/results/04-april-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-04-04",
       "game": "Daily Lotto",
       "numbers": [
         2,
@@ -8841,6 +11081,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/02-april-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-04-01",
+      "game": "PowerBall",
+      "numbers": [
+        1,
+        6,
+        12,
+        13,
+        36
+      ],
+      "bonus": 7,
+      "source": "https://za.national-lottery.com/powerball/results/01-april-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -8927,6 +11183,22 @@
     },
     {
       "date": "2025-03-28",
+      "game": "PowerBall",
+      "numbers": [
+        1,
+        6,
+        13,
+        14,
+        35
+      ],
+      "bonus": 3,
+      "source": "https://za.national-lottery.com/powerball/results/28-march-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-03-28",
       "game": "Daily Lotto",
       "numbers": [
         5,
@@ -8987,6 +11259,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/26-march-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-03-25",
+      "game": "PowerBall",
+      "numbers": [
+        22,
+        32,
+        38,
+        39,
+        40
+      ],
+      "bonus": 10,
+      "source": "https://za.national-lottery.com/powerball/results/25-march-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -9073,6 +11361,22 @@
     },
     {
       "date": "2025-03-21",
+      "game": "PowerBall",
+      "numbers": [
+        9,
+        16,
+        24,
+        32,
+        50
+      ],
+      "bonus": 19,
+      "source": "https://za.national-lottery.com/powerball/results/21-march-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-03-21",
       "game": "Daily Lotto",
       "numbers": [
         2,
@@ -9133,6 +11437,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/19-march-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-03-18",
+      "game": "PowerBall",
+      "numbers": [
+        15,
+        22,
+        29,
+        35,
+        43
+      ],
+      "bonus": 10,
+      "source": "https://za.national-lottery.com/powerball/results/18-march-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -9219,6 +11539,22 @@
     },
     {
       "date": "2025-03-14",
+      "game": "PowerBall",
+      "numbers": [
+        7,
+        32,
+        38,
+        45,
+        46
+      ],
+      "bonus": 2,
+      "source": "https://za.national-lottery.com/powerball/results/14-march-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-03-14",
       "game": "Daily Lotto",
       "numbers": [
         16,
@@ -9279,6 +11615,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/12-march-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-03-11",
+      "game": "PowerBall",
+      "numbers": [
+        8,
+        28,
+        30,
+        44,
+        48
+      ],
+      "bonus": 2,
+      "source": "https://za.national-lottery.com/powerball/results/11-march-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -9365,6 +11717,22 @@
     },
     {
       "date": "2025-03-07",
+      "game": "PowerBall",
+      "numbers": [
+        12,
+        13,
+        16,
+        28,
+        46
+      ],
+      "bonus": 3,
+      "source": "https://za.national-lottery.com/powerball/results/07-march-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-03-07",
       "game": "Daily Lotto",
       "numbers": [
         6,
@@ -9425,6 +11793,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/05-march-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-03-04",
+      "game": "PowerBall",
+      "numbers": [
+        20,
+        23,
+        35,
+        43,
+        50
+      ],
+      "bonus": 15,
+      "source": "https://za.national-lottery.com/powerball/results/04-march-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -9511,6 +11895,22 @@
     },
     {
       "date": "2025-02-28",
+      "game": "PowerBall",
+      "numbers": [
+        11,
+        19,
+        20,
+        21,
+        44
+      ],
+      "bonus": 6,
+      "source": "https://za.national-lottery.com/powerball/results/28-february-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-02-28",
       "game": "Daily Lotto",
       "numbers": [
         9,
@@ -9571,6 +11971,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/26-february-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-02-25",
+      "game": "PowerBall",
+      "numbers": [
+        18,
+        23,
+        27,
+        34,
+        44
+      ],
+      "bonus": 18,
+      "source": "https://za.national-lottery.com/powerball/results/25-february-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -9657,6 +12073,22 @@
     },
     {
       "date": "2025-02-21",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        3,
+        15,
+        17,
+        42
+      ],
+      "bonus": 5,
+      "source": "https://za.national-lottery.com/powerball/results/21-february-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-02-21",
       "game": "Daily Lotto",
       "numbers": [
         12,
@@ -9717,6 +12149,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/19-february-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-02-18",
+      "game": "PowerBall",
+      "numbers": [
+        16,
+        19,
+        34,
+        36,
+        43
+      ],
+      "bonus": 16,
+      "source": "https://za.national-lottery.com/powerball/results/18-february-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -9803,6 +12251,22 @@
     },
     {
       "date": "2025-02-14",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        8,
+        25,
+        37,
+        44
+      ],
+      "bonus": 18,
+      "source": "https://za.national-lottery.com/powerball/results/14-february-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-02-14",
       "game": "Daily Lotto",
       "numbers": [
         1,
@@ -9863,6 +12327,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/12-february-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-02-11",
+      "game": "PowerBall",
+      "numbers": [
+        7,
+        15,
+        21,
+        23,
+        33
+      ],
+      "bonus": 13,
+      "source": "https://za.national-lottery.com/powerball/results/11-february-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -9949,6 +12429,22 @@
     },
     {
       "date": "2025-02-07",
+      "game": "PowerBall",
+      "numbers": [
+        7,
+        30,
+        34,
+        42,
+        49
+      ],
+      "bonus": 1,
+      "source": "https://za.national-lottery.com/powerball/results/07-february-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-02-07",
       "game": "Daily Lotto",
       "numbers": [
         2,
@@ -10009,6 +12505,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/05-february-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-02-04",
+      "game": "PowerBall",
+      "numbers": [
+        19,
+        23,
+        27,
+        41,
+        49
+      ],
+      "bonus": 8,
+      "source": "https://za.national-lottery.com/powerball/results/04-february-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -10095,6 +12607,22 @@
     },
     {
       "date": "2025-01-31",
+      "game": "PowerBall",
+      "numbers": [
+        3,
+        27,
+        36,
+        40,
+        47
+      ],
+      "bonus": 15,
+      "source": "https://za.national-lottery.com/powerball/results/31-january-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-01-31",
       "game": "Daily Lotto",
       "numbers": [
         1,
@@ -10155,6 +12683,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/29-january-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-01-28",
+      "game": "PowerBall",
+      "numbers": [
+        17,
+        21,
+        26,
+        42,
+        43
+      ],
+      "bonus": 14,
+      "source": "https://za.national-lottery.com/powerball/results/28-january-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -10241,6 +12785,22 @@
     },
     {
       "date": "2025-01-24",
+      "game": "PowerBall",
+      "numbers": [
+        12,
+        15,
+        24,
+        43,
+        49
+      ],
+      "bonus": 18,
+      "source": "https://za.national-lottery.com/powerball/results/24-january-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-01-24",
       "game": "Daily Lotto",
       "numbers": [
         14,
@@ -10301,6 +12861,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/22-january-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-01-21",
+      "game": "PowerBall",
+      "numbers": [
+        1,
+        2,
+        15,
+        23,
+        37
+      ],
+      "bonus": 4,
+      "source": "https://za.national-lottery.com/powerball/results/21-january-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -10387,6 +12963,22 @@
     },
     {
       "date": "2025-01-17",
+      "game": "PowerBall",
+      "numbers": [
+        4,
+        11,
+        27,
+        39,
+        40
+      ],
+      "bonus": 8,
+      "source": "https://za.national-lottery.com/powerball/results/17-january-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-01-17",
       "game": "Daily Lotto",
       "numbers": [
         11,
@@ -10447,6 +13039,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/15-january-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-01-14",
+      "game": "PowerBall",
+      "numbers": [
+        20,
+        23,
+        30,
+        34,
+        44
+      ],
+      "bonus": 7,
+      "source": "https://za.national-lottery.com/powerball/results/14-january-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -10533,6 +13141,22 @@
     },
     {
       "date": "2025-01-10",
+      "game": "PowerBall",
+      "numbers": [
+        10,
+        14,
+        33,
+        44,
+        47
+      ],
+      "bonus": 2,
+      "source": "https://za.national-lottery.com/powerball/results/10-january-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-01-10",
       "game": "Daily Lotto",
       "numbers": [
         7,
@@ -10593,6 +13217,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/08-january-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-01-07",
+      "game": "PowerBall",
+      "numbers": [
+        9,
+        12,
+        27,
+        39,
+        42
+      ],
+      "bonus": 18,
+      "source": "https://za.national-lottery.com/powerball/results/07-january-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -10679,6 +13319,22 @@
     },
     {
       "date": "2025-01-03",
+      "game": "PowerBall",
+      "numbers": [
+        6,
+        9,
+        10,
+        25,
+        47
+      ],
+      "bonus": 1,
+      "source": "https://za.national-lottery.com/powerball/results/03-january-2025",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2025-01-03",
       "game": "Daily Lotto",
       "numbers": [
         1,
@@ -10739,6 +13395,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/01-january-2025",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2025-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-12-31",
+      "game": "PowerBall",
+      "numbers": [
+        1,
+        26,
+        31,
+        32,
+        47
+      ],
+      "bonus": 2,
+      "source": "https://za.national-lottery.com/powerball/results/31-december-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -10825,6 +13497,22 @@
     },
     {
       "date": "2024-12-27",
+      "game": "PowerBall",
+      "numbers": [
+        6,
+        10,
+        23,
+        30,
+        47
+      ],
+      "bonus": 18,
+      "source": "https://za.national-lottery.com/powerball/results/27-december-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-12-27",
       "game": "Daily Lotto",
       "numbers": [
         2,
@@ -10852,6 +13540,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/26-december-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-12-24",
+      "game": "PowerBall",
+      "numbers": [
+        5,
+        7,
+        8,
+        12,
+        18
+      ],
+      "bonus": 9,
+      "source": "https://za.national-lottery.com/powerball/results/24-december-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -10938,6 +13642,22 @@
     },
     {
       "date": "2024-12-20",
+      "game": "PowerBall",
+      "numbers": [
+        1,
+        16,
+        20,
+        41,
+        48
+      ],
+      "bonus": 8,
+      "source": "https://za.national-lottery.com/powerball/results/20-december-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-12-20",
       "game": "Daily Lotto",
       "numbers": [
         9,
@@ -10998,6 +13718,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/18-december-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-12-17",
+      "game": "PowerBall",
+      "numbers": [
+        12,
+        21,
+        28,
+        32,
+        40
+      ],
+      "bonus": 12,
+      "source": "https://za.national-lottery.com/powerball/results/17-december-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -11084,6 +13820,22 @@
     },
     {
       "date": "2024-12-13",
+      "game": "PowerBall",
+      "numbers": [
+        3,
+        28,
+        39,
+        40,
+        49
+      ],
+      "bonus": 14,
+      "source": "https://za.national-lottery.com/powerball/results/13-december-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-12-13",
       "game": "Daily Lotto",
       "numbers": [
         7,
@@ -11144,6 +13896,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/11-december-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-12-10",
+      "game": "PowerBall",
+      "numbers": [
+        1,
+        6,
+        29,
+        39,
+        44
+      ],
+      "bonus": 17,
+      "source": "https://za.national-lottery.com/powerball/results/10-december-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -11230,6 +13998,22 @@
     },
     {
       "date": "2024-12-06",
+      "game": "PowerBall",
+      "numbers": [
+        5,
+        15,
+        19,
+        32,
+        35
+      ],
+      "bonus": 11,
+      "source": "https://za.national-lottery.com/powerball/results/06-december-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-12-06",
       "game": "Daily Lotto",
       "numbers": [
         5,
@@ -11290,6 +14074,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/04-december-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-12-03",
+      "game": "PowerBall",
+      "numbers": [
+        6,
+        9,
+        11,
+        23,
+        27
+      ],
+      "bonus": 10,
+      "source": "https://za.national-lottery.com/powerball/results/03-december-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -11376,6 +14176,22 @@
     },
     {
       "date": "2024-11-29",
+      "game": "PowerBall",
+      "numbers": [
+        5,
+        16,
+        27,
+        32,
+        40
+      ],
+      "bonus": 1,
+      "source": "https://za.national-lottery.com/powerball/results/29-november-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-11-29",
       "game": "Daily Lotto",
       "numbers": [
         13,
@@ -11436,6 +14252,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/27-november-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-11-26",
+      "game": "PowerBall",
+      "numbers": [
+        12,
+        18,
+        22,
+        36,
+        38
+      ],
+      "bonus": 12,
+      "source": "https://za.national-lottery.com/powerball/results/26-november-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -11522,6 +14354,22 @@
     },
     {
       "date": "2024-11-22",
+      "game": "PowerBall",
+      "numbers": [
+        15,
+        17,
+        19,
+        43,
+        49
+      ],
+      "bonus": 8,
+      "source": "https://za.national-lottery.com/powerball/results/22-november-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-11-22",
       "game": "Daily Lotto",
       "numbers": [
         2,
@@ -11582,6 +14430,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/20-november-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-11-19",
+      "game": "PowerBall",
+      "numbers": [
+        3,
+        11,
+        17,
+        21,
+        37
+      ],
+      "bonus": 6,
+      "source": "https://za.national-lottery.com/powerball/results/19-november-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -11668,6 +14532,22 @@
     },
     {
       "date": "2024-11-15",
+      "game": "PowerBall",
+      "numbers": [
+        5,
+        18,
+        21,
+        23,
+        31
+      ],
+      "bonus": 18,
+      "source": "https://za.national-lottery.com/powerball/results/15-november-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-11-15",
       "game": "Daily Lotto",
       "numbers": [
         8,
@@ -11728,6 +14608,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/13-november-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-11-12",
+      "game": "PowerBall",
+      "numbers": [
+        4,
+        5,
+        18,
+        39,
+        42
+      ],
+      "bonus": 14,
+      "source": "https://za.national-lottery.com/powerball/results/12-november-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -11814,6 +14710,22 @@
     },
     {
       "date": "2024-11-08",
+      "game": "PowerBall",
+      "numbers": [
+        4,
+        5,
+        29,
+        35,
+        45
+      ],
+      "bonus": 7,
+      "source": "https://za.national-lottery.com/powerball/results/08-november-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-11-08",
       "game": "Daily Lotto",
       "numbers": [
         5,
@@ -11874,6 +14786,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/06-november-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-11-05",
+      "game": "PowerBall",
+      "numbers": [
+        10,
+        14,
+        20,
+        36,
+        43
+      ],
+      "bonus": 17,
+      "source": "https://za.national-lottery.com/powerball/results/05-november-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -11960,6 +14888,22 @@
     },
     {
       "date": "2024-11-01",
+      "game": "PowerBall",
+      "numbers": [
+        3,
+        12,
+        17,
+        29,
+        38
+      ],
+      "bonus": 18,
+      "source": "https://za.national-lottery.com/powerball/results/01-november-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-11-01",
       "game": "Daily Lotto",
       "numbers": [
         15,
@@ -12020,6 +14964,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/30-october-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-10-29",
+      "game": "PowerBall",
+      "numbers": [
+        1,
+        19,
+        30,
+        37,
+        40
+      ],
+      "bonus": 16,
+      "source": "https://za.national-lottery.com/powerball/results/29-october-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -12106,6 +15066,22 @@
     },
     {
       "date": "2024-10-25",
+      "game": "PowerBall",
+      "numbers": [
+        10,
+        38,
+        39,
+        42,
+        49
+      ],
+      "bonus": 17,
+      "source": "https://za.national-lottery.com/powerball/results/25-october-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-10-25",
       "game": "Daily Lotto",
       "numbers": [
         6,
@@ -12166,6 +15142,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/23-october-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-10-22",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        23,
+        27,
+        45,
+        49
+      ],
+      "bonus": 12,
+      "source": "https://za.national-lottery.com/powerball/results/22-october-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -12252,6 +15244,22 @@
     },
     {
       "date": "2024-10-18",
+      "game": "PowerBall",
+      "numbers": [
+        4,
+        12,
+        28,
+        33,
+        48
+      ],
+      "bonus": 14,
+      "source": "https://za.national-lottery.com/powerball/results/18-october-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-10-18",
       "game": "Daily Lotto",
       "numbers": [
         4,
@@ -12312,6 +15320,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/16-october-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-10-15",
+      "game": "PowerBall",
+      "numbers": [
+        14,
+        32,
+        35,
+        39,
+        44
+      ],
+      "bonus": 17,
+      "source": "https://za.national-lottery.com/powerball/results/15-october-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -12398,6 +15422,22 @@
     },
     {
       "date": "2024-10-11",
+      "game": "PowerBall",
+      "numbers": [
+        3,
+        8,
+        13,
+        46,
+        48
+      ],
+      "bonus": 11,
+      "source": "https://za.national-lottery.com/powerball/results/11-october-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-10-11",
       "game": "Daily Lotto",
       "numbers": [
         5,
@@ -12458,6 +15498,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/09-october-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-10-08",
+      "game": "PowerBall",
+      "numbers": [
+        3,
+        13,
+        31,
+        37,
+        40
+      ],
+      "bonus": 9,
+      "source": "https://za.national-lottery.com/powerball/results/08-october-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -12544,6 +15600,22 @@
     },
     {
       "date": "2024-10-04",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        8,
+        24,
+        42,
+        48
+      ],
+      "bonus": 17,
+      "source": "https://za.national-lottery.com/powerball/results/04-october-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-10-04",
       "game": "Daily Lotto",
       "numbers": [
         17,
@@ -12604,6 +15676,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/02-october-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-10-01",
+      "game": "PowerBall",
+      "numbers": [
+        3,
+        10,
+        14,
+        25,
+        39
+      ],
+      "bonus": 1,
+      "source": "https://za.national-lottery.com/powerball/results/01-october-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -12690,6 +15778,22 @@
     },
     {
       "date": "2024-09-27",
+      "game": "PowerBall",
+      "numbers": [
+        12,
+        22,
+        29,
+        43,
+        47
+      ],
+      "bonus": 10,
+      "source": "https://za.national-lottery.com/powerball/results/27-september-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-09-27",
       "game": "Daily Lotto",
       "numbers": [
         4,
@@ -12750,6 +15854,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/25-september-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-09-24",
+      "game": "PowerBall",
+      "numbers": [
+        19,
+        23,
+        30,
+        31,
+        38
+      ],
+      "bonus": 19,
+      "source": "https://za.national-lottery.com/powerball/results/24-september-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -12836,6 +15956,22 @@
     },
     {
       "date": "2024-09-20",
+      "game": "PowerBall",
+      "numbers": [
+        6,
+        12,
+        16,
+        18,
+        47
+      ],
+      "bonus": 19,
+      "source": "https://za.national-lottery.com/powerball/results/20-september-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-09-20",
       "game": "Daily Lotto",
       "numbers": [
         2,
@@ -12896,6 +16032,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/18-september-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-09-17",
+      "game": "PowerBall",
+      "numbers": [
+        23,
+        26,
+        43,
+        44,
+        49
+      ],
+      "bonus": 16,
+      "source": "https://za.national-lottery.com/powerball/results/17-september-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -12982,6 +16134,22 @@
     },
     {
       "date": "2024-09-13",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        10,
+        25,
+        37,
+        43
+      ],
+      "bonus": 7,
+      "source": "https://za.national-lottery.com/powerball/results/13-september-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-09-13",
       "game": "Daily Lotto",
       "numbers": [
         4,
@@ -13042,6 +16210,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/11-september-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-09-10",
+      "game": "PowerBall",
+      "numbers": [
+        16,
+        17,
+        18,
+        47,
+        48
+      ],
+      "bonus": 6,
+      "source": "https://za.national-lottery.com/powerball/results/10-september-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -13128,6 +16312,22 @@
     },
     {
       "date": "2024-09-06",
+      "game": "PowerBall",
+      "numbers": [
+        10,
+        17,
+        23,
+        44,
+        46
+      ],
+      "bonus": 4,
+      "source": "https://za.national-lottery.com/powerball/results/06-september-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-09-06",
       "game": "Daily Lotto",
       "numbers": [
         11,
@@ -13188,6 +16388,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/04-september-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-09-03",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        9,
+        30,
+        38,
+        47
+      ],
+      "bonus": 2,
+      "source": "https://za.national-lottery.com/powerball/results/03-september-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -13274,6 +16490,22 @@
     },
     {
       "date": "2024-08-30",
+      "game": "PowerBall",
+      "numbers": [
+        8,
+        27,
+        33,
+        43,
+        48
+      ],
+      "bonus": 14,
+      "source": "https://za.national-lottery.com/powerball/results/30-august-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-08-30",
       "game": "Daily Lotto",
       "numbers": [
         2,
@@ -13334,6 +16566,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/28-august-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-08-27",
+      "game": "PowerBall",
+      "numbers": [
+        13,
+        35,
+        39,
+        42,
+        49
+      ],
+      "bonus": 2,
+      "source": "https://za.national-lottery.com/powerball/results/27-august-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -13420,6 +16668,22 @@
     },
     {
       "date": "2024-08-23",
+      "game": "PowerBall",
+      "numbers": [
+        20,
+        22,
+        37,
+        39,
+        40
+      ],
+      "bonus": 7,
+      "source": "https://za.national-lottery.com/powerball/results/23-august-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-08-23",
       "game": "Daily Lotto",
       "numbers": [
         2,
@@ -13480,6 +16744,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/21-august-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-08-20",
+      "game": "PowerBall",
+      "numbers": [
+        5,
+        7,
+        13,
+        23,
+        40
+      ],
+      "bonus": 7,
+      "source": "https://za.national-lottery.com/powerball/results/20-august-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -13566,6 +16846,22 @@
     },
     {
       "date": "2024-08-16",
+      "game": "PowerBall",
+      "numbers": [
+        9,
+        14,
+        15,
+        22,
+        36
+      ],
+      "bonus": 1,
+      "source": "https://za.national-lottery.com/powerball/results/16-august-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-08-16",
       "game": "Daily Lotto",
       "numbers": [
         10,
@@ -13626,6 +16922,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/14-august-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-08-13",
+      "game": "PowerBall",
+      "numbers": [
+        6,
+        34,
+        35,
+        42,
+        46
+      ],
+      "bonus": 11,
+      "source": "https://za.national-lottery.com/powerball/results/13-august-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -13712,6 +17024,22 @@
     },
     {
       "date": "2024-08-09",
+      "game": "PowerBall",
+      "numbers": [
+        7,
+        13,
+        28,
+        37,
+        44
+      ],
+      "bonus": 6,
+      "source": "https://za.national-lottery.com/powerball/results/09-august-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-08-09",
       "game": "Daily Lotto",
       "numbers": [
         8,
@@ -13772,6 +17100,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/07-august-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-08-06",
+      "game": "PowerBall",
+      "numbers": [
+        5,
+        31,
+        34,
+        40,
+        46
+      ],
+      "bonus": 10,
+      "source": "https://za.national-lottery.com/powerball/results/06-august-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -13858,6 +17202,22 @@
     },
     {
       "date": "2024-08-02",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        5,
+        10,
+        31,
+        32
+      ],
+      "bonus": 11,
+      "source": "https://za.national-lottery.com/powerball/results/02-august-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-08-02",
       "game": "Daily Lotto",
       "numbers": [
         1,
@@ -13918,6 +17278,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/31-july-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-07-30",
+      "game": "PowerBall",
+      "numbers": [
+        7,
+        15,
+        20,
+        32,
+        46
+      ],
+      "bonus": 4,
+      "source": "https://za.national-lottery.com/powerball/results/30-july-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -14004,6 +17380,22 @@
     },
     {
       "date": "2024-07-26",
+      "game": "PowerBall",
+      "numbers": [
+        6,
+        9,
+        12,
+        38,
+        39
+      ],
+      "bonus": 17,
+      "source": "https://za.national-lottery.com/powerball/results/26-july-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-07-26",
       "game": "Daily Lotto",
       "numbers": [
         4,
@@ -14064,6 +17456,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/24-july-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-07-23",
+      "game": "PowerBall",
+      "numbers": [
+        3,
+        11,
+        16,
+        26,
+        48
+      ],
+      "bonus": 7,
+      "source": "https://za.national-lottery.com/powerball/results/23-july-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -14150,6 +17558,22 @@
     },
     {
       "date": "2024-07-19",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        6,
+        9,
+        31,
+        37
+      ],
+      "bonus": 6,
+      "source": "https://za.national-lottery.com/powerball/results/19-july-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-07-19",
       "game": "Daily Lotto",
       "numbers": [
         11,
@@ -14210,6 +17634,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/17-july-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-07-16",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        10,
+        22,
+        48,
+        49
+      ],
+      "bonus": 7,
+      "source": "https://za.national-lottery.com/powerball/results/16-july-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -14296,6 +17736,22 @@
     },
     {
       "date": "2024-07-12",
+      "game": "PowerBall",
+      "numbers": [
+        5,
+        10,
+        26,
+        37,
+        44
+      ],
+      "bonus": 15,
+      "source": "https://za.national-lottery.com/powerball/results/12-july-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-07-12",
       "game": "Daily Lotto",
       "numbers": [
         9,
@@ -14356,6 +17812,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/10-july-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-07-09",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        7,
+        19,
+        31,
+        45
+      ],
+      "bonus": 4,
+      "source": "https://za.national-lottery.com/powerball/results/09-july-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -14442,6 +17914,22 @@
     },
     {
       "date": "2024-07-05",
+      "game": "PowerBall",
+      "numbers": [
+        18,
+        19,
+        22,
+        38,
+        49
+      ],
+      "bonus": 15,
+      "source": "https://za.national-lottery.com/powerball/results/05-july-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-07-05",
       "game": "Daily Lotto",
       "numbers": [
         8,
@@ -14502,6 +17990,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/03-july-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-07-02",
+      "game": "PowerBall",
+      "numbers": [
+        6,
+        15,
+        20,
+        32,
+        42
+      ],
+      "bonus": 5,
+      "source": "https://za.national-lottery.com/powerball/results/02-july-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -14588,6 +18092,22 @@
     },
     {
       "date": "2024-06-28",
+      "game": "PowerBall",
+      "numbers": [
+        19,
+        22,
+        31,
+        40,
+        47
+      ],
+      "bonus": 5,
+      "source": "https://za.national-lottery.com/powerball/results/28-june-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-06-28",
       "game": "Daily Lotto",
       "numbers": [
         4,
@@ -14648,6 +18168,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/26-june-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-06-25",
+      "game": "PowerBall",
+      "numbers": [
+        3,
+        32,
+        40,
+        42,
+        49
+      ],
+      "bonus": 5,
+      "source": "https://za.national-lottery.com/powerball/results/25-june-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -14734,6 +18270,22 @@
     },
     {
       "date": "2024-06-21",
+      "game": "PowerBall",
+      "numbers": [
+        9,
+        29,
+        30,
+        33,
+        49
+      ],
+      "bonus": 10,
+      "source": "https://za.national-lottery.com/powerball/results/21-june-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-06-21",
       "game": "Daily Lotto",
       "numbers": [
         7,
@@ -14794,6 +18346,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/19-june-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-06-18",
+      "game": "PowerBall",
+      "numbers": [
+        9,
+        13,
+        18,
+        45,
+        49
+      ],
+      "bonus": 2,
+      "source": "https://za.national-lottery.com/powerball/results/18-june-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -14880,6 +18448,22 @@
     },
     {
       "date": "2024-06-14",
+      "game": "PowerBall",
+      "numbers": [
+        19,
+        24,
+        40,
+        45,
+        49
+      ],
+      "bonus": 7,
+      "source": "https://za.national-lottery.com/powerball/results/14-june-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-06-14",
       "game": "Daily Lotto",
       "numbers": [
         2,
@@ -14940,6 +18524,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/12-june-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-06-11",
+      "game": "PowerBall",
+      "numbers": [
+        12,
+        22,
+        25,
+        43,
+        50
+      ],
+      "bonus": 16,
+      "source": "https://za.national-lottery.com/powerball/results/11-june-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -15026,6 +18626,22 @@
     },
     {
       "date": "2024-06-07",
+      "game": "PowerBall",
+      "numbers": [
+        6,
+        9,
+        17,
+        37,
+        41
+      ],
+      "bonus": 19,
+      "source": "https://za.national-lottery.com/powerball/results/07-june-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-06-07",
       "game": "Daily Lotto",
       "numbers": [
         4,
@@ -15086,6 +18702,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/05-june-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-06-04",
+      "game": "PowerBall",
+      "numbers": [
+        4,
+        15,
+        38,
+        41,
+        42
+      ],
+      "bonus": 17,
+      "source": "https://za.national-lottery.com/powerball/results/04-june-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -15172,6 +18804,22 @@
     },
     {
       "date": "2024-05-31",
+      "game": "PowerBall",
+      "numbers": [
+        17,
+        20,
+        22,
+        35,
+        43
+      ],
+      "bonus": 7,
+      "source": "https://za.national-lottery.com/powerball/results/31-may-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-05-31",
       "game": "Daily Lotto",
       "numbers": [
         1,
@@ -15232,6 +18880,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/29-may-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-05-28",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        3,
+        23,
+        39,
+        45
+      ],
+      "bonus": 14,
+      "source": "https://za.national-lottery.com/powerball/results/28-may-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -15318,6 +18982,22 @@
     },
     {
       "date": "2024-05-24",
+      "game": "PowerBall",
+      "numbers": [
+        4,
+        14,
+        16,
+        18,
+        25
+      ],
+      "bonus": 11,
+      "source": "https://za.national-lottery.com/powerball/results/24-may-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-05-24",
       "game": "Daily Lotto",
       "numbers": [
         17,
@@ -15378,6 +19058,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/22-may-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-05-21",
+      "game": "PowerBall",
+      "numbers": [
+        3,
+        9,
+        16,
+        26,
+        38
+      ],
+      "bonus": 8,
+      "source": "https://za.national-lottery.com/powerball/results/21-may-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -15464,6 +19160,22 @@
     },
     {
       "date": "2024-05-17",
+      "game": "PowerBall",
+      "numbers": [
+        18,
+        22,
+        23,
+        31,
+        32
+      ],
+      "bonus": 18,
+      "source": "https://za.national-lottery.com/powerball/results/17-may-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-05-17",
       "game": "Daily Lotto",
       "numbers": [
         3,
@@ -15524,6 +19236,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/15-may-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-05-14",
+      "game": "PowerBall",
+      "numbers": [
+        4,
+        9,
+        39,
+        41,
+        44
+      ],
+      "bonus": 19,
+      "source": "https://za.national-lottery.com/powerball/results/14-may-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -15610,6 +19338,22 @@
     },
     {
       "date": "2024-05-10",
+      "game": "PowerBall",
+      "numbers": [
+        9,
+        21,
+        33,
+        43,
+        44
+      ],
+      "bonus": 10,
+      "source": "https://za.national-lottery.com/powerball/results/10-may-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-05-10",
       "game": "Daily Lotto",
       "numbers": [
         1,
@@ -15670,6 +19414,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/08-may-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-05-07",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        4,
+        10,
+        39,
+        40
+      ],
+      "bonus": 11,
+      "source": "https://za.national-lottery.com/powerball/results/07-may-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -15756,6 +19516,22 @@
     },
     {
       "date": "2024-05-03",
+      "game": "PowerBall",
+      "numbers": [
+        28,
+        31,
+        33,
+        37,
+        44
+      ],
+      "bonus": 2,
+      "source": "https://za.national-lottery.com/powerball/results/03-may-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-05-03",
       "game": "Daily Lotto",
       "numbers": [
         2,
@@ -15816,6 +19592,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/01-may-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-04-30",
+      "game": "PowerBall",
+      "numbers": [
+        5,
+        8,
+        14,
+        33,
+        36
+      ],
+      "bonus": 2,
+      "source": "https://za.national-lottery.com/powerball/results/30-april-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -15902,6 +19694,22 @@
     },
     {
       "date": "2024-04-26",
+      "game": "PowerBall",
+      "numbers": [
+        5,
+        12,
+        13,
+        17,
+        32
+      ],
+      "bonus": 12,
+      "source": "https://za.national-lottery.com/powerball/results/26-april-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-04-26",
       "game": "Daily Lotto",
       "numbers": [
         6,
@@ -15962,6 +19770,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/24-april-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-04-23",
+      "game": "PowerBall",
+      "numbers": [
+        13,
+        20,
+        26,
+        37,
+        42
+      ],
+      "bonus": 7,
+      "source": "https://za.national-lottery.com/powerball/results/23-april-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -16048,6 +19872,22 @@
     },
     {
       "date": "2024-04-19",
+      "game": "PowerBall",
+      "numbers": [
+        4,
+        17,
+        18,
+        44,
+        48
+      ],
+      "bonus": 19,
+      "source": "https://za.national-lottery.com/powerball/results/19-april-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-04-19",
       "game": "Daily Lotto",
       "numbers": [
         4,
@@ -16108,6 +19948,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/17-april-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-04-16",
+      "game": "PowerBall",
+      "numbers": [
+        6,
+        14,
+        26,
+        32,
+        41
+      ],
+      "bonus": 3,
+      "source": "https://za.national-lottery.com/powerball/results/16-april-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -16194,6 +20050,22 @@
     },
     {
       "date": "2024-04-12",
+      "game": "PowerBall",
+      "numbers": [
+        22,
+        26,
+        42,
+        43,
+        45
+      ],
+      "bonus": 20,
+      "source": "https://za.national-lottery.com/powerball/results/12-april-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-04-12",
       "game": "Daily Lotto",
       "numbers": [
         9,
@@ -16254,6 +20126,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/10-april-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-04-09",
+      "game": "PowerBall",
+      "numbers": [
+        5,
+        7,
+        31,
+        36,
+        42
+      ],
+      "bonus": 10,
+      "source": "https://za.national-lottery.com/powerball/results/09-april-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -16340,6 +20228,22 @@
     },
     {
       "date": "2024-04-05",
+      "game": "PowerBall",
+      "numbers": [
+        6,
+        8,
+        16,
+        28,
+        36
+      ],
+      "bonus": 18,
+      "source": "https://za.national-lottery.com/powerball/results/05-april-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-04-05",
       "game": "Daily Lotto",
       "numbers": [
         2,
@@ -16400,6 +20304,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/03-april-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-04-02",
+      "game": "PowerBall",
+      "numbers": [
+        13,
+        20,
+        28,
+        39,
+        47
+      ],
+      "bonus": 18,
+      "source": "https://za.national-lottery.com/powerball/results/02-april-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -16486,6 +20406,22 @@
     },
     {
       "date": "2024-03-29",
+      "game": "PowerBall",
+      "numbers": [
+        1,
+        13,
+        24,
+        25,
+        35
+      ],
+      "bonus": 4,
+      "source": "https://za.national-lottery.com/powerball/results/29-march-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-03-29",
       "game": "Daily Lotto",
       "numbers": [
         2,
@@ -16546,6 +20482,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/27-march-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-03-26",
+      "game": "PowerBall",
+      "numbers": [
+        11,
+        15,
+        35,
+        41,
+        45
+      ],
+      "bonus": 12,
+      "source": "https://za.national-lottery.com/powerball/results/26-march-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -16632,6 +20584,22 @@
     },
     {
       "date": "2024-03-22",
+      "game": "PowerBall",
+      "numbers": [
+        9,
+        10,
+        36,
+        43,
+        44
+      ],
+      "bonus": 7,
+      "source": "https://za.national-lottery.com/powerball/results/22-march-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-03-22",
       "game": "Daily Lotto",
       "numbers": [
         6,
@@ -16692,6 +20660,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/20-march-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-03-19",
+      "game": "PowerBall",
+      "numbers": [
+        7,
+        15,
+        19,
+        26,
+        36
+      ],
+      "bonus": 15,
+      "source": "https://za.national-lottery.com/powerball/results/19-march-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -16778,6 +20762,22 @@
     },
     {
       "date": "2024-03-15",
+      "game": "PowerBall",
+      "numbers": [
+        4,
+        9,
+        20,
+        22,
+        33
+      ],
+      "bonus": 20,
+      "source": "https://za.national-lottery.com/powerball/results/15-march-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-03-15",
       "game": "Daily Lotto",
       "numbers": [
         4,
@@ -16838,6 +20838,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/13-march-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-03-12",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        18,
+        21,
+        47,
+        48
+      ],
+      "bonus": 9,
+      "source": "https://za.national-lottery.com/powerball/results/12-march-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -16924,6 +20940,22 @@
     },
     {
       "date": "2024-03-08",
+      "game": "PowerBall",
+      "numbers": [
+        7,
+        18,
+        19,
+        27,
+        28
+      ],
+      "bonus": 14,
+      "source": "https://za.national-lottery.com/powerball/results/08-march-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-03-08",
       "game": "Daily Lotto",
       "numbers": [
         10,
@@ -16984,6 +21016,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/06-march-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-03-05",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        4,
+        23,
+        27,
+        31
+      ],
+      "bonus": 4,
+      "source": "https://za.national-lottery.com/powerball/results/05-march-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -17070,6 +21118,22 @@
     },
     {
       "date": "2024-03-01",
+      "game": "PowerBall",
+      "numbers": [
+        10,
+        30,
+        35,
+        42,
+        46
+      ],
+      "bonus": 10,
+      "source": "https://za.national-lottery.com/powerball/results/01-march-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-03-01",
       "game": "Daily Lotto",
       "numbers": [
         20,
@@ -17130,6 +21194,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/28-february-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-02-27",
+      "game": "PowerBall",
+      "numbers": [
+        12,
+        13,
+        33,
+        39,
+        43
+      ],
+      "bonus": 4,
+      "source": "https://za.national-lottery.com/powerball/results/27-february-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -17216,6 +21296,22 @@
     },
     {
       "date": "2024-02-23",
+      "game": "PowerBall",
+      "numbers": [
+        3,
+        19,
+        22,
+        35,
+        38
+      ],
+      "bonus": 17,
+      "source": "https://za.national-lottery.com/powerball/results/23-february-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-02-23",
       "game": "Daily Lotto",
       "numbers": [
         4,
@@ -17276,6 +21372,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/21-february-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-02-20",
+      "game": "PowerBall",
+      "numbers": [
+        4,
+        13,
+        16,
+        21,
+        32
+      ],
+      "bonus": 4,
+      "source": "https://za.national-lottery.com/powerball/results/20-february-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -17362,6 +21474,22 @@
     },
     {
       "date": "2024-02-16",
+      "game": "PowerBall",
+      "numbers": [
+        18,
+        33,
+        35,
+        46,
+        48
+      ],
+      "bonus": 16,
+      "source": "https://za.national-lottery.com/powerball/results/16-february-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-02-16",
       "game": "Daily Lotto",
       "numbers": [
         1,
@@ -17422,6 +21550,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/14-february-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-02-13",
+      "game": "PowerBall",
+      "numbers": [
+        13,
+        15,
+        30,
+        32,
+        46
+      ],
+      "bonus": 17,
+      "source": "https://za.national-lottery.com/powerball/results/13-february-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -17508,6 +21652,22 @@
     },
     {
       "date": "2024-02-09",
+      "game": "PowerBall",
+      "numbers": [
+        8,
+        16,
+        24,
+        29,
+        36
+      ],
+      "bonus": 17,
+      "source": "https://za.national-lottery.com/powerball/results/09-february-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-02-09",
       "game": "Daily Lotto",
       "numbers": [
         10,
@@ -17568,6 +21728,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/07-february-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-02-06",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        6,
+        10,
+        18,
+        28
+      ],
+      "bonus": 15,
+      "source": "https://za.national-lottery.com/powerball/results/06-february-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -17654,6 +21830,22 @@
     },
     {
       "date": "2024-02-02",
+      "game": "PowerBall",
+      "numbers": [
+        21,
+        35,
+        37,
+        43,
+        46
+      ],
+      "bonus": 19,
+      "source": "https://za.national-lottery.com/powerball/results/02-february-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-02-02",
       "game": "Daily Lotto",
       "numbers": [
         11,
@@ -17714,6 +21906,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/31-january-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-01-30",
+      "game": "PowerBall",
+      "numbers": [
+        1,
+        8,
+        30,
+        39,
+        44
+      ],
+      "bonus": 3,
+      "source": "https://za.national-lottery.com/powerball/results/30-january-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -17800,6 +22008,22 @@
     },
     {
       "date": "2024-01-26",
+      "game": "PowerBall",
+      "numbers": [
+        1,
+        6,
+        13,
+        20,
+        21
+      ],
+      "bonus": 12,
+      "source": "https://za.national-lottery.com/powerball/results/26-january-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-01-26",
       "game": "Daily Lotto",
       "numbers": [
         2,
@@ -17860,6 +22084,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/24-january-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-01-23",
+      "game": "PowerBall",
+      "numbers": [
+        9,
+        16,
+        21,
+        26,
+        39
+      ],
+      "bonus": 16,
+      "source": "https://za.national-lottery.com/powerball/results/23-january-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -17946,6 +22186,22 @@
     },
     {
       "date": "2024-01-19",
+      "game": "PowerBall",
+      "numbers": [
+        11,
+        18,
+        20,
+        41,
+        46
+      ],
+      "bonus": 15,
+      "source": "https://za.national-lottery.com/powerball/results/19-january-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-01-19",
       "game": "Daily Lotto",
       "numbers": [
         9,
@@ -18006,6 +22262,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/17-january-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-01-16",
+      "game": "PowerBall",
+      "numbers": [
+        5,
+        29,
+        40,
+        42,
+        47
+      ],
+      "bonus": 6,
+      "source": "https://za.national-lottery.com/powerball/results/16-january-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -18092,6 +22364,22 @@
     },
     {
       "date": "2024-01-12",
+      "game": "PowerBall",
+      "numbers": [
+        15,
+        29,
+        36,
+        45,
+        49
+      ],
+      "bonus": 5,
+      "source": "https://za.national-lottery.com/powerball/results/12-january-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-01-12",
       "game": "Daily Lotto",
       "numbers": [
         1,
@@ -18152,6 +22440,22 @@
       "bonus": null,
       "source": "https://za.national-lottery.com/daily-lotto/results/10-january-2024",
       "archive_source": "https://za.national-lottery.com/daily-lotto/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-01-09",
+      "game": "PowerBall",
+      "numbers": [
+        12,
+        20,
+        24,
+        33,
+        43
+      ],
+      "bonus": 19,
+      "source": "https://za.national-lottery.com/powerball/results/09-january-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
       "verified": true,
       "parser_version": "archive-v2"
     },
@@ -18238,6 +22542,22 @@
     },
     {
       "date": "2024-01-05",
+      "game": "PowerBall",
+      "numbers": [
+        2,
+        18,
+        31,
+        43,
+        50
+      ],
+      "bonus": 7,
+      "source": "https://za.national-lottery.com/powerball/results/05-january-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-01-05",
       "game": "Daily Lotto",
       "numbers": [
         3,
@@ -18303,6 +22623,22 @@
     },
     {
       "date": "2024-01-02",
+      "game": "PowerBall",
+      "numbers": [
+        9,
+        20,
+        23,
+        46,
+        50
+      ],
+      "bonus": 5,
+      "source": "https://za.national-lottery.com/powerball/results/02-january-2024",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2024-archive",
+      "verified": true,
+      "parser_version": "archive-v2"
+    },
+    {
+      "date": "2024-01-02",
       "game": "Daily Lotto",
       "numbers": [
         16,
@@ -18335,10 +22671,7 @@
     }
   ],
   "errors": [
-    "Lotto 2026: rejected archive parse; parsed=32, expected\u224862, duplicates=1",
-    "PowerBall 2024: rejected archive parse; parsed=0, expected\u2248105, duplicates=0",
-    "PowerBall 2025: rejected archive parse; parsed=0, expected\u2248104, duplicates=0",
-    "PowerBall 2026: rejected archive parse; parsed=0, expected\u224863, duplicates=0"
+    "Lotto 2026: rejected archive parse; parsed=32, expected\u224862, duplicates=1"
   ],
   "status": "partial",
   "quality": {
@@ -18409,33 +22742,33 @@
     "PowerBall": {
       "2024": {
         "expected": 105,
-        "parsed": 0,
+        "parsed": 105,
         "minimum": 68,
-        "unique_ratio": 0.0,
-        "largest_duplicate_group": 0,
+        "unique_ratio": 1.0,
+        "largest_duplicate_group": 1,
         "bonus_completeness": 1.0,
-        "status": "rejected",
-        "archive": "https://www.powerball.net/southafrica/results/history/2024"
+        "status": "accepted",
+        "archive": "https://za.national-lottery.com/powerball/results/2024-archive"
       },
       "2025": {
         "expected": 104,
-        "parsed": 0,
+        "parsed": 104,
         "minimum": 67,
-        "unique_ratio": 0.0,
-        "largest_duplicate_group": 0,
+        "unique_ratio": 1.0,
+        "largest_duplicate_group": 1,
         "bonus_completeness": 1.0,
-        "status": "rejected",
-        "archive": "https://www.powerball.net/southafrica/results/history/2025"
+        "status": "accepted",
+        "archive": "https://za.national-lottery.com/powerball/results/2025-archive"
       },
       "2026": {
         "expected": 63,
-        "parsed": 0,
+        "parsed": 62,
         "minimum": 40,
-        "unique_ratio": 0.0,
-        "largest_duplicate_group": 0,
+        "unique_ratio": 1.0,
+        "largest_duplicate_group": 1,
         "bonus_completeness": 1.0,
-        "status": "rejected",
-        "archive": "https://www.powerball.net/southafrica/results/history/2026"
+        "status": "accepted",
+        "archive": "https://za.national-lottery.com/powerball/results/2026-archive"
       }
     }
   }
