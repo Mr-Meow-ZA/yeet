@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "methodology_version": "2.0",
-  "generated_at": "2026-08-07T10:57:32.531256+00:00",
+  "generated_at": "2026-08-07T11:05:09.154843+00:00",
   "null_hypothesis": "Lottery draws are treated as random and independent unless out-of-sample evidence shows otherwise.",
   "live_policy": "The four v1.0 strategies remain frozen champions. Research results do not alter live recommendations automatically.",
   "feedback_policy": "Played-ticket outcomes are used to evaluate models, not as direct number-level features for future recommendations.",
@@ -64,7 +64,13 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": 3.0
+      "lift_vs_expected_pct": 3.0,
+      "standard_error": 0.02486,
+      "z_score": 0.8384,
+      "p_value": 0.401827,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Daily Lotto",
@@ -84,7 +90,13 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": -2.21
+      "lift_vs_expected_pct": -2.21,
+      "standard_error": 0.02486,
+      "z_score": -0.6167,
+      "p_value": 0.537445,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Daily Lotto",
@@ -104,7 +116,13 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": 6.87
+      "lift_vs_expected_pct": 6.87,
+      "standard_error": 0.02486,
+      "z_score": 1.9179,
+      "p_value": 0.055122,
+      "p_adjusted": 0.881955,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Daily Lotto",
@@ -124,7 +142,13 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": 0.31
+      "lift_vs_expected_pct": 0.31,
+      "standard_error": 0.02486,
+      "z_score": 0.0874,
+      "p_value": 0.930375,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Daily Lotto",
@@ -144,7 +168,13 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": 2.33
+      "lift_vs_expected_pct": 2.33,
+      "standard_error": 0.02486,
+      "z_score": 0.6506,
+      "p_value": 0.515295,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Daily Lotto",
@@ -164,7 +194,13 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": -2.38
+      "lift_vs_expected_pct": -2.38,
+      "standard_error": 0.02486,
+      "z_score": -0.6636,
+      "p_value": 0.506935,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Daily Lotto",
@@ -184,7 +220,13 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": 7.03
+      "lift_vs_expected_pct": 7.03,
+      "standard_error": 0.02486,
+      "z_score": 1.9648,
+      "p_value": 0.049432,
+      "p_adjusted": 0.790908,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Daily Lotto",
@@ -204,7 +246,13 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": -0.86
+      "lift_vs_expected_pct": -0.86,
+      "standard_error": 0.02486,
+      "z_score": -0.2412,
+      "p_value": 0.809411,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Daily Lotto",
@@ -224,7 +272,13 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": 1.49
+      "lift_vs_expected_pct": 1.49,
+      "standard_error": 0.02486,
+      "z_score": 0.4159,
+      "p_value": 0.677461,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Daily Lotto",
@@ -244,7 +298,13 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": -3.22
+      "lift_vs_expected_pct": -3.22,
+      "standard_error": 0.02486,
+      "z_score": -0.8983,
+      "p_value": 0.369024,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Daily Lotto",
@@ -264,7 +324,13 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": 7.2
+      "lift_vs_expected_pct": 7.2,
+      "standard_error": 0.02486,
+      "z_score": 2.0118,
+      "p_value": 0.044243,
+      "p_adjusted": 0.707881,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Daily Lotto",
@@ -284,7 +350,13 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": -1.7
+      "lift_vs_expected_pct": -1.7,
+      "standard_error": 0.02486,
+      "z_score": -0.4759,
+      "p_value": 0.634167,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Daily Lotto",
@@ -304,7 +376,13 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": 0.31
+      "lift_vs_expected_pct": 0.31,
+      "standard_error": 0.02486,
+      "z_score": 0.0874,
+      "p_value": 0.930375,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Daily Lotto",
@@ -324,7 +402,13 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": -3.22
+      "lift_vs_expected_pct": -3.22,
+      "standard_error": 0.02486,
+      "z_score": -0.8983,
+      "p_value": 0.369024,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Daily Lotto",
@@ -344,7 +428,13 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": 7.37
+      "lift_vs_expected_pct": 7.37,
+      "standard_error": 0.02486,
+      "z_score": 2.0587,
+      "p_value": 0.039521,
+      "p_adjusted": 0.632333,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Daily Lotto",
@@ -364,7 +454,13 @@
         "5": 0
       },
       "expected_matches": 0.694444,
-      "lift_vs_expected_pct": 0.14
+      "lift_vs_expected_pct": 0.14,
+      "standard_error": 0.02486,
+      "z_score": 0.0404,
+      "p_value": 0.967746,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Lotto",
@@ -385,7 +481,13 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": -14.24
+      "lift_vs_expected_pct": -14.24,
+      "standard_error": 0.065692,
+      "z_score": -1.5003,
+      "p_value": 0.133538,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Lotto",
@@ -406,7 +508,13 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": -13.11
+      "lift_vs_expected_pct": -13.11,
+      "standard_error": 0.065692,
+      "z_score": -1.3814,
+      "p_value": 0.167166,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Lotto",
@@ -427,7 +535,13 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": -1.82
+      "lift_vs_expected_pct": -1.82,
+      "standard_error": 0.065692,
+      "z_score": -0.1921,
+      "p_value": 0.847652,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Lotto",
@@ -448,7 +562,13 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": -1.82
+      "lift_vs_expected_pct": -1.82,
+      "standard_error": 0.065692,
+      "z_score": -0.1921,
+      "p_value": 0.847652,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Lotto",
@@ -469,7 +589,13 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": -17.62
+      "lift_vs_expected_pct": -17.62,
+      "standard_error": 0.065692,
+      "z_score": -1.8571,
+      "p_value": 0.063301,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Lotto",
@@ -490,7 +616,13 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": -17.62
+      "lift_vs_expected_pct": -17.62,
+      "standard_error": 0.065692,
+      "z_score": -1.8571,
+      "p_value": 0.063301,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Lotto",
@@ -511,7 +643,13 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": -5.21
+      "lift_vs_expected_pct": -5.21,
+      "standard_error": 0.065692,
+      "z_score": -0.5489,
+      "p_value": 0.58308,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Lotto",
@@ -532,7 +670,13 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": 0.43
+      "lift_vs_expected_pct": 0.43,
+      "standard_error": 0.065692,
+      "z_score": 0.0457,
+      "p_value": 0.963521,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Lotto",
@@ -553,7 +697,13 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": -17.62
+      "lift_vs_expected_pct": -17.62,
+      "standard_error": 0.065692,
+      "z_score": -1.8571,
+      "p_value": 0.063301,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Lotto",
@@ -574,7 +724,13 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": -18.75
+      "lift_vs_expected_pct": -18.75,
+      "standard_error": 0.065692,
+      "z_score": -1.976,
+      "p_value": 0.048155,
+      "p_adjusted": 0.770486,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Lotto",
@@ -595,7 +751,13 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": 0.43
+      "lift_vs_expected_pct": 0.43,
+      "standard_error": 0.065692,
+      "z_score": 0.0457,
+      "p_value": 0.963521,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Lotto",
@@ -616,7 +778,13 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": 3.82
+      "lift_vs_expected_pct": 3.82,
+      "standard_error": 0.065692,
+      "z_score": 0.4025,
+      "p_value": 0.687307,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Lotto",
@@ -637,7 +805,13 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": -17.62
+      "lift_vs_expected_pct": -17.62,
+      "standard_error": 0.065692,
+      "z_score": -1.8571,
+      "p_value": 0.063301,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Lotto",
@@ -658,7 +832,13 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": -10.85
+      "lift_vs_expected_pct": -10.85,
+      "standard_error": 0.065692,
+      "z_score": -1.1435,
+      "p_value": 0.252824,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Lotto",
@@ -679,7 +859,13 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": 10.59
+      "lift_vs_expected_pct": 10.59,
+      "standard_error": 0.065692,
+      "z_score": 1.1161,
+      "p_value": 0.264395,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "Lotto",
@@ -700,7 +886,13 @@
         "6": 0
       },
       "expected_matches": 0.692308,
-      "lift_vs_expected_pct": -5.21
+      "lift_vs_expected_pct": -5.21,
+      "standard_error": 0.065692,
+      "z_score": -0.5489,
+      "p_value": 0.58308,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "not_significant"
     },
     {
       "game": "PowerBall",
@@ -720,7 +912,13 @@
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0
+      "lift_vs_expected_pct": 0,
+      "standard_error": 0.0,
+      "z_score": 0.0,
+      "p_value": 1.0,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "early"
     },
     {
       "game": "PowerBall",
@@ -740,7 +938,13 @@
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0
+      "lift_vs_expected_pct": 0,
+      "standard_error": 0.0,
+      "z_score": 0.0,
+      "p_value": 1.0,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "early"
     },
     {
       "game": "PowerBall",
@@ -760,7 +964,13 @@
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0
+      "lift_vs_expected_pct": 0,
+      "standard_error": 0.0,
+      "z_score": 0.0,
+      "p_value": 1.0,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "early"
     },
     {
       "game": "PowerBall",
@@ -780,7 +990,13 @@
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0
+      "lift_vs_expected_pct": 0,
+      "standard_error": 0.0,
+      "z_score": 0.0,
+      "p_value": 1.0,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "early"
     },
     {
       "game": "PowerBall",
@@ -800,7 +1016,13 @@
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0
+      "lift_vs_expected_pct": 0,
+      "standard_error": 0.0,
+      "z_score": 0.0,
+      "p_value": 1.0,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "early"
     },
     {
       "game": "PowerBall",
@@ -820,7 +1042,13 @@
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0
+      "lift_vs_expected_pct": 0,
+      "standard_error": 0.0,
+      "z_score": 0.0,
+      "p_value": 1.0,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "early"
     },
     {
       "game": "PowerBall",
@@ -840,7 +1068,13 @@
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0
+      "lift_vs_expected_pct": 0,
+      "standard_error": 0.0,
+      "z_score": 0.0,
+      "p_value": 1.0,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "early"
     },
     {
       "game": "PowerBall",
@@ -860,7 +1094,13 @@
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0
+      "lift_vs_expected_pct": 0,
+      "standard_error": 0.0,
+      "z_score": 0.0,
+      "p_value": 1.0,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "early"
     },
     {
       "game": "PowerBall",
@@ -880,7 +1120,13 @@
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0
+      "lift_vs_expected_pct": 0,
+      "standard_error": 0.0,
+      "z_score": 0.0,
+      "p_value": 1.0,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "early"
     },
     {
       "game": "PowerBall",
@@ -900,7 +1146,13 @@
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0
+      "lift_vs_expected_pct": 0,
+      "standard_error": 0.0,
+      "z_score": 0.0,
+      "p_value": 1.0,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "early"
     },
     {
       "game": "PowerBall",
@@ -920,7 +1172,13 @@
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0
+      "lift_vs_expected_pct": 0,
+      "standard_error": 0.0,
+      "z_score": 0.0,
+      "p_value": 1.0,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "early"
     },
     {
       "game": "PowerBall",
@@ -940,7 +1198,13 @@
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0
+      "lift_vs_expected_pct": 0,
+      "standard_error": 0.0,
+      "z_score": 0.0,
+      "p_value": 1.0,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "early"
     },
     {
       "game": "PowerBall",
@@ -960,7 +1224,13 @@
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0
+      "lift_vs_expected_pct": 0,
+      "standard_error": 0.0,
+      "z_score": 0.0,
+      "p_value": 1.0,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "early"
     },
     {
       "game": "PowerBall",
@@ -980,7 +1250,13 @@
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0
+      "lift_vs_expected_pct": 0,
+      "standard_error": 0.0,
+      "z_score": 0.0,
+      "p_value": 1.0,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "early"
     },
     {
       "game": "PowerBall",
@@ -1000,7 +1276,13 @@
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0
+      "lift_vs_expected_pct": 0,
+      "standard_error": 0.0,
+      "z_score": 0.0,
+      "p_value": 1.0,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "early"
     },
     {
       "game": "PowerBall",
@@ -1020,7 +1302,13 @@
         "5": 0
       },
       "expected_matches": 0.5,
-      "lift_vs_expected_pct": 0
+      "lift_vs_expected_pct": 0,
+      "standard_error": 0.0,
+      "z_score": 0.0,
+      "p_value": 1.0,
+      "p_adjusted": 1.0,
+      "comparisons_adjusted": 16,
+      "evidence": "early"
     }
   ],
   "best_hold": [
@@ -1030,7 +1318,9 @@
       "best_horizon": 1,
       "avg_matches": 0.7153,
       "ge2_rate": 13.19,
-      "samples": 857
+      "samples": 857,
+      "p_adjusted": 1.0,
+      "evidence": "not_significant"
     },
     {
       "game": "Daily Lotto",
@@ -1038,7 +1328,9 @@
       "best_horizon": 1,
       "avg_matches": 0.6791,
       "ge2_rate": 11.2,
-      "samples": 857
+      "samples": 857,
+      "p_adjusted": 1.0,
+      "evidence": "not_significant"
     },
     {
       "game": "Daily Lotto",
@@ -1046,7 +1338,9 @@
       "best_horizon": 8,
       "avg_matches": 0.7456,
       "ge2_rate": 15.17,
-      "samples": 857
+      "samples": 857,
+      "p_adjusted": 0.632333,
+      "evidence": "not_significant"
     },
     {
       "game": "Daily Lotto",
@@ -1054,7 +1348,9 @@
       "best_horizon": 1,
       "avg_matches": 0.6966,
       "ge2_rate": 12.49,
-      "samples": 857
+      "samples": 857,
+      "p_adjusted": 1.0,
+      "evidence": "not_significant"
     },
     {
       "game": "Lotto",
@@ -1062,7 +1358,9 @@
       "best_horizon": 1,
       "avg_matches": 0.5938,
       "ge2_rate": 7.81,
-      "samples": 128
+      "samples": 128,
+      "p_adjusted": 1.0,
+      "evidence": "not_significant"
     },
     {
       "game": "Lotto",
@@ -1070,7 +1368,9 @@
       "best_horizon": 8,
       "avg_matches": 0.6172,
       "ge2_rate": 9.38,
-      "samples": 128
+      "samples": 128,
+      "p_adjusted": 1.0,
+      "evidence": "not_significant"
     },
     {
       "game": "Lotto",
@@ -1078,7 +1378,9 @@
       "best_horizon": 8,
       "avg_matches": 0.7656,
       "ge2_rate": 17.19,
-      "samples": 128
+      "samples": 128,
+      "p_adjusted": 1.0,
+      "evidence": "not_significant"
     },
     {
       "game": "Lotto",
@@ -1086,7 +1388,9 @@
       "best_horizon": 4,
       "avg_matches": 0.7188,
       "ge2_rate": 13.28,
-      "samples": 128
+      "samples": 128,
+      "p_adjusted": 1.0,
+      "evidence": "not_significant"
     }
   ],
   "challengers": {
@@ -1118,7 +1422,13 @@
             "5": 0
           },
           "expected_matches": 0.694444,
-          "lift_vs_expected_pct": 2.68
+          "lift_vs_expected_pct": 2.68,
+          "standard_error": 0.047274,
+          "z_score": 0.3942,
+          "p_value": 0.693421,
+          "p_adjusted": 1.0,
+          "comparisons_adjusted": 10,
+          "evidence": "not_significant"
         }
       },
       "held_out_test": {
@@ -1139,7 +1449,13 @@
             "5": 0
           },
           "expected_matches": 0.694444,
-          "lift_vs_expected_pct": 3.9
+          "lift_vs_expected_pct": 3.9,
+          "standard_error": 0.047274,
+          "z_score": 0.5727,
+          "p_value": 0.56683,
+          "p_adjusted": 1.0,
+          "comparisons_adjusted": 10,
+          "evidence": "not_significant"
         },
         "champion_v1": {
           "samples": 237,
@@ -1156,7 +1472,13 @@
             "5": 0
           },
           "expected_matches": 0.694444,
-          "lift_vs_expected_pct": -3.39
+          "lift_vs_expected_pct": -3.39,
+          "standard_error": 0.047274,
+          "z_score": -0.4983,
+          "p_value": 0.618252,
+          "p_adjusted": 0.618252,
+          "comparisons_adjusted": 1,
+          "evidence": "not_significant"
         },
         "promote": false,
         "reason": "Research-only challenger. Promotion requires a pre-defined evidence threshold and sufficient out-of-sample samples."
@@ -1191,7 +1513,13 @@
             "6": 0
           },
           "expected_matches": 0.692308,
-          "lift_vs_expected_pct": -17.02
+          "lift_vs_expected_pct": -17.02,
+          "standard_error": 0.108411,
+          "z_score": -1.087,
+          "p_value": 0.277047,
+          "p_adjusted": 1.0,
+          "comparisons_adjusted": 10,
+          "evidence": "early"
         }
       },
       "held_out_test": {
@@ -1213,7 +1541,13 @@
             "6": 0
           },
           "expected_matches": 0.692308,
-          "lift_vs_expected_pct": 7.56
+          "lift_vs_expected_pct": 7.56,
+          "standard_error": 0.108411,
+          "z_score": 0.4831,
+          "p_value": 0.629027,
+          "p_adjusted": 1.0,
+          "comparisons_adjusted": 10,
+          "evidence": "early"
         },
         "champion_v1": {
           "samples": 47,
@@ -1231,7 +1565,13 @@
             "6": 0
           },
           "expected_matches": 0.692308,
-          "lift_vs_expected_pct": 7.56
+          "lift_vs_expected_pct": 7.56,
+          "standard_error": 0.108411,
+          "z_score": 0.4831,
+          "p_value": 0.629027,
+          "p_adjusted": 0.629027,
+          "comparisons_adjusted": 1,
+          "evidence": "early"
         },
         "promote": false,
         "reason": "Research-only challenger. Promotion requires a pre-defined evidence threshold and sufficient out-of-sample samples."
@@ -1247,6 +1587,7 @@
     "All backtests are walk-forward: a target draw is never visible when its prediction is generated.",
     "Hold horizons compare refreshing every draw with holding the same deterministic recommendation for 2, 4 or 8 draws.",
     "ROI is intentionally not used as the primary research score because lottery payout variance can dominate small samples.",
-    "Theoretical chance is a research control only; no random tickets are added to the live portfolio."
+    "Theoretical chance is a research control only; no random tickets are added to the live portfolio.",
+    "Walk-forward evidence labels use the hypergeometric match-count variance and a Bonferroni correction across the 16 strategy/horizon comparisons per game; challenger validation is corrected across candidate weight profiles."
   ]
 }
