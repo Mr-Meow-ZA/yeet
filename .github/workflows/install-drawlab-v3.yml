@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - '.github/workflows/install-drawlab-v3.yml'
+      - 'drawlab-sa/scripts/retrospective_v3.py'
 permissions:
   contents: write
 concurrency:
