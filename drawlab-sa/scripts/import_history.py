@@ -11,6 +11,7 @@ from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "historical-results.json"
+RULE_CHANGE_DATE = date(2026, 6, 1)
 TIMEOUT = (6, 18)
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; DrawLabSA-History/2.0; +https://mr-meow-za.github.io/yeet/drawlab-sa/)"
@@ -26,13 +27,15 @@ GAMES = {
         "archive": "https://za.national-lottery.com/lotto/results/{year}-archive",
         "count": 6,
         "max": 52,
+        "legacy_max": 58,
         "weekdays": {2, 5},
     },
     "PowerBall": {
         "archive": "https://za.national-lottery.com/powerball/results/{year}-archive",
         "count": 5,
         "max": 50,
-        "bonus_max": 20,
+        "bonus_max": 16,
+        "legacy_bonus_max": 20,
         "weekdays": {1, 4},
     },
 }
@@ -100,26 +103,45 @@ def element_numbers(element):
     return numbers
 
 
+def limits_for_draw(game, date_str):
+    draw_date = date.fromisoformat(date_str)
+    if game == "Lotto":
+        return (58 if draw_date < RULE_CHANGE_DATE else 52), None
+    if game == "PowerBall":
+        return 50, (20 if draw_date < RULE_CHANGE_DATE else 16)
+    return 36, None
+
+
+def rule_version(game, date_str):
+    draw_date = date.fromisoformat(date_str)
+    if game == "Lotto":
+        return "legacy-6of58" if draw_date < RULE_CHANGE_DATE else "current-6of52"
+    if game == "PowerBall":
+        return "legacy-5of50-pb20" if draw_date < RULE_CHANGE_DATE else "current-5of50-pb16"
+    return "5of36"
+
+
 def build_row(game, date_str, sequence):
     spec = GAMES[game]
     required = spec["count"] + (1 if game in ("Lotto", "PowerBall") else 0)
     if len(sequence) < required:
         return None
 
+    main_max, bonus_max = limits_for_draw(game, date_str)
     main = sequence[: spec["count"]]
     if len(set(main)) != spec["count"]:
         return None
-    if any(not 1 <= number <= spec["max"] for number in main):
+    if any(not 1 <= number <= main_max for number in main):
         return None
 
     bonus = None
     if game == "Lotto":
         bonus = sequence[spec["count"]]
-        if not 1 <= bonus <= spec["max"] or bonus in main:
+        if not 1 <= bonus <= main_max or bonus in main:
             return None
     elif game == "PowerBall":
         bonus = sequence[spec["count"]]
-        if not 1 <= bonus <= spec["bonus_max"]:
+        if bonus_max is None or not 1 <= bonus <= bonus_max:
             return None
 
     return {
@@ -130,7 +152,8 @@ def build_row(game, date_str, sequence):
         "source": draw_url(game, date_str),
         "archive_source": GAMES[game]["archive"].format(year=date_str[:4]),
         "verified": True,
-        "parser_version": "archive-v2",
+        "parser_version": "archive-v3-rule-aware",
+        "rule_version": rule_version(game, date_str),
     }
 
 

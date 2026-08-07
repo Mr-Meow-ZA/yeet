@@ -19,11 +19,12 @@ ROOT = Path(__file__).resolve().parents[1]
 HISTORY_PATH = ROOT / "data" / "historical-results.json"
 CLOUD_PATH = ROOT / "data" / "cloud-state.json"
 OUT_PATH = ROOT / "data" / "research-state.json"
+RULE_CHANGE_DATE = datetime(2026, 6, 1).date()
 
 RULES = {
     "Daily Lotto": {"count": 5, "max": 36, "bonus_max": None},
     "Lotto": {"count": 6, "max": 52, "bonus_max": 52},
-    "PowerBall": {"count": 5, "max": 50, "bonus_max": 20},
+    "PowerBall": {"count": 5, "max": 50, "bonus_max": 16},
 }
 STRATEGIES = ("Hot 6M", "Weighted Historical", "Cold 6M", "Diversified Coverage")
 HORIZONS = (1, 2, 4, 8)
@@ -52,17 +53,23 @@ def load_json(path: Path, default: dict[str, Any]) -> dict[str, Any]:
 def valid_row(row: dict[str, Any], game: str) -> bool:
     rule = RULES[game]
     nums = row.get("numbers")
+    try:
+        draw_date = datetime.fromisoformat(str(row.get("date"))).date()
+    except ValueError:
+        return False
+    main_max = rule["max"]
+    bonus_max = rule.get("bonus_max")
+    if game == "Lotto" and draw_date < RULE_CHANGE_DATE:
+        main_max = 58
+    if game == "PowerBall" and draw_date < RULE_CHANGE_DATE:
+        bonus_max = 20
     if not isinstance(nums, list) or len(nums) != rule["count"] or len(set(nums)) != len(nums):
         return False
-    if any(not isinstance(n, int) or not 1 <= n <= rule["max"] for n in nums):
-        return False
-    try:
-        datetime.fromisoformat(str(row.get("date")))
-    except ValueError:
+    if any(not isinstance(n, int) or not 1 <= n <= main_max for n in nums):
         return False
     if game == "PowerBall":
         bonus = row.get("bonus")
-        if bonus is not None and (not isinstance(bonus, int) or not 1 <= bonus <= 20):
+        if bonus is not None and (not isinstance(bonus, int) or bonus_max is None or not 1 <= bonus <= bonus_max):
             return False
     return True
 
@@ -72,7 +79,12 @@ def game_history(game: str) -> list[dict[str, Any]]:
     cloud = load_json(CLOUD_PATH, {"results": []})
     rows = [r for r in history.get("results", []) + cloud.get("results", []) if r.get("game") == game and valid_row(r, game)]
     dedup = {(r["date"], game): r for r in rows}
-    return sorted(dedup.values(), key=lambda r: r["date"])
+    rows = sorted(dedup.values(), key=lambda r: r["date"])
+    # Lotto changed from 6/58 to 6/52 on 1 June 2026. Do not train the
+    # current model on a different outcome space.
+    if game == "Lotto":
+        rows = [r for r in rows if datetime.fromisoformat(r["date"]).date() >= RULE_CHANGE_DATE]
+    return rows
 
 
 def counts(rows: list[dict[str, Any]], *, days: int | None = None, limit: int | None = None, anchor: str | None = None) -> Counter:
@@ -223,11 +235,26 @@ def chance_baseline(game: str) -> dict[str, float]:
     }
 
 
-def metric(matches: list[int], game: str) -> dict[str, Any]:
+def metric(matches: list[int], game: str, comparisons: int = 1) -> dict[str, Any]:
     samples = len(matches)
     dist = Counter(matches)
     avg = sum(matches) / samples if samples else 0.0
     baseline = chance_baseline(game)
+    expected = baseline["expected_matches"]
+    rule = RULES[game]
+    draw_variance = rule["count"] * (rule["count"] / rule["max"]) * (1 - rule["count"] / rule["max"]) * ((rule["max"] - rule["count"]) / (rule["max"] - 1))
+    standard_error = math.sqrt(draw_variance / samples) if samples else 0.0
+    z_score = (avg - expected) / standard_error if standard_error else 0.0
+    p_value = math.erfc(abs(z_score) / math.sqrt(2)) if samples else 1.0
+    p_adjusted = min(1.0, p_value * max(1, comparisons))
+    if samples < 100:
+        evidence = "early"
+    elif p_adjusted < 0.01:
+        evidence = "strong_above_chance" if avg > expected else "strong_below_chance"
+    elif p_adjusted < 0.05:
+        evidence = "interesting_above_chance" if avg > expected else "interesting_below_chance"
+    else:
+        evidence = "not_significant"
     return {
         "samples": samples,
         "avg_matches": round(avg, 4),
@@ -235,8 +262,14 @@ def metric(matches: list[int], game: str) -> dict[str, Any]:
         "ge3_rate": round(sum(m >= 3 for m in matches) / samples * 100, 2) if samples else 0,
         "best_matches": max(matches, default=0),
         "distribution": {str(k): dist.get(k, 0) for k in range(RULES[game]["count"] + 1)},
-        "expected_matches": baseline["expected_matches"],
-        "lift_vs_expected_pct": round((avg / baseline["expected_matches"] - 1) * 100, 2) if samples and baseline["expected_matches"] else 0,
+        "expected_matches": expected,
+        "lift_vs_expected_pct": round((avg / expected - 1) * 100, 2) if samples and expected else 0,
+        "standard_error": round(standard_error, 6),
+        "z_score": round(z_score, 4),
+        "p_value": round(p_value, 6),
+        "p_adjusted": round(p_adjusted, 6),
+        "comparisons_adjusted": max(1, comparisons),
+        "evidence": evidence,
     }
 
 
@@ -244,7 +277,7 @@ def walk_forward(game: str, rows: list[dict[str, Any]], horizon: int) -> dict[st
     start = MIN_TRAIN[game]
     collected = {s: [] for s in STRATEGIES}
     if len(rows) <= start:
-        return {s: metric([], game) for s in STRATEGIES}
+        return {s: metric([], game, comparisons=16) for s in STRATEGIES}
     idx = start
     while idx < len(rows):
         lines = v1_set(rows[:idx], game)
@@ -252,7 +285,7 @@ def walk_forward(game: str, rows: list[dict[str, Any]], horizon: int) -> dict[st
             for strategy in STRATEGIES:
                 collected[strategy].append(score_line(lines[strategy], draw))
         idx += horizon
-    return {s: metric(collected[s], game) for s in STRATEGIES}
+    return {s: metric(collected[s], game, comparisons=16) for s in STRATEGIES}
 
 
 def evaluate_weight_candidate(game: str, rows: list[dict[str, Any]], weights: dict[str, float], start: int, end: int) -> dict[str, Any]:
@@ -260,7 +293,7 @@ def evaluate_weight_candidate(game: str, rows: list[dict[str, Any]], weights: di
     for idx in range(start, end):
         line = v2_weighted_line(rows[:idx], game, weights)
         hits.append(score_line(line, rows[idx]))
-    return metric(hits, game)
+    return metric(hits, game, comparisons=len(WEIGHT_CANDIDATES))
 
 
 def evaluate_v1_weighted(game: str, rows: list[dict[str, Any]], start: int, end: int) -> dict[str, Any]:
@@ -302,12 +335,18 @@ def train_challenger(game: str, rows: list[dict[str, Any]]) -> dict[str, Any]:
 
 
 def data_quality(game: str, rows: list[dict[str, Any]]) -> dict[str, Any]:
+    scope = "5/36 unchanged"
+    if game == "Lotto":
+        scope = "current 6/52 era from 2026-06-01; legacy 6/58 archived but excluded"
+    elif game == "PowerBall":
+        scope = "5/50 main-number history spans both eras; current PowerBall pool is 1-16"
     return {
         "draws": len(rows),
         "first_draw": rows[0]["date"] if rows else None,
         "last_draw": rows[-1]["date"] if rows else None,
         "status": "usable" if len(rows) >= MIN_TRAIN[game] else "insufficient",
         "minimum_training_draws": MIN_TRAIN[game],
+        "rule_scope": scope,
     }
 
 
@@ -324,7 +363,7 @@ def main() -> None:
             candidates = [r for r in walk_rows if r["game"] == game and r["strategy"] == strategy and r["samples"] > 0]
             if candidates:
                 best = max(candidates, key=lambda r: (r["avg_matches"], r["ge2_rate"], -r["horizon"]))
-                best_hold.append({"game": game, "strategy": strategy, "best_horizon": best["horizon"], "avg_matches": best["avg_matches"], "ge2_rate": best["ge2_rate"], "samples": best["samples"]})
+                best_hold.append({"game": game, "strategy": strategy, "best_horizon": best["horizon"], "avg_matches": best["avg_matches"], "ge2_rate": best["ge2_rate"], "samples": best["samples"], "p_adjusted": best["p_adjusted"], "evidence": best["evidence"]})
 
     output = {
         "schema_version": 1,
@@ -343,6 +382,8 @@ def main() -> None:
             "Hold horizons compare refreshing every draw with holding the same deterministic recommendation for 2, 4 or 8 draws.",
             "ROI is intentionally not used as the primary research score because lottery payout variance can dominate small samples.",
             "Theoretical chance is a research control only; no random tickets are added to the live portfolio.",
+            "Evidence labels use hypergeometric match-count variance and Bonferroni correction across the strategy/hold comparisons; challenger validation is corrected across candidate weight profiles.",
+            "Rule eras are isolated: legacy Lotto 6/58 is archived but never mixed into the current 6/52 predictor; PowerBall main 5/50 history is compatible across eras while special-ball analysis uses the current 1-16 era.",
         ],
     }
     OUT_PATH.write_text(json.dumps(output, indent=2) + "\n")

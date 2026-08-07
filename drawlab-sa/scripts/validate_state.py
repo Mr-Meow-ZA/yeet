@@ -12,11 +12,12 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 STATE_PATH = ROOT / "data" / "cloud-state.json"
 HISTORY_PATH = ROOT / "data" / "historical-results.json"
+RULE_CHANGE_DATE = date(2026, 6, 1)
 
 RULES = {
     "Daily Lotto": {"count": 5, "max": 36, "bonus_max": None},
     "Lotto": {"count": 6, "max": 52, "bonus_max": 52},
-    "PowerBall": {"count": 5, "max": 50, "bonus_max": 20},
+    "PowerBall": {"count": 5, "max": 50, "bonus_max": 16},
 }
 
 
@@ -52,22 +53,29 @@ def parse_iso_datetime(value: Any, context: str) -> datetime:
     return parsed
 
 
-def validate_draw(draw: dict[str, Any], context: str) -> None:
+def validate_draw(draw: dict[str, Any], context: str, historical: bool = False) -> None:
     game = draw.get("game")
     require(game in RULES, f"{context} has unsupported game: {game}")
     rule = RULES[game]
-    parse_iso_date(draw.get("date"), f"{context}.date")
+    draw_date = parse_iso_date(draw.get("date"), f"{context}.date")
+    maximum = rule["max"]
+    bonus_max = rule["bonus_max"]
+    if historical and draw_date < RULE_CHANGE_DATE:
+        if game == "Lotto":
+            maximum = 58
+            bonus_max = 58
+        elif game == "PowerBall":
+            bonus_max = 20
 
     numbers = draw.get("numbers")
     require(isinstance(numbers, list), f"{context}.numbers must be a list")
     require(len(numbers) == rule["count"], f"{context} must contain exactly {rule['count']} numbers")
     require(all(isinstance(number, int) and not isinstance(number, bool) for number in numbers), f"{context}.numbers must contain integers")
     require(len(set(numbers)) == len(numbers), f"{context}.numbers contains duplicates")
-    require(all(1 <= number <= rule["max"] for number in numbers), f"{context}.numbers contains an out-of-range value")
+    require(all(1 <= number <= maximum for number in numbers), f"{context}.numbers contains an out-of-range value")
 
     bonus = draw.get("bonus")
     if bonus is not None:
-        bonus_max = rule["bonus_max"]
         require(bonus_max is not None, f"{context} must not contain a bonus number")
         require(isinstance(bonus, int) and not isinstance(bonus, bool), f"{context}.bonus must be an integer or null")
         require(1 <= bonus <= bonus_max, f"{context}.bonus is out of range")
@@ -113,7 +121,7 @@ def validate_history(history: dict[str, Any]) -> None:
     result_keys: set[tuple[str, str]] = set()
     for index, result in enumerate(results):
         require(isinstance(result, dict), f"historical result[{index}] must be an object")
-        validate_draw(result, f"historical result[{index}]")
+        validate_draw(result, f"historical result[{index}]", historical=True)
         key = (result["date"], result["game"])
         require(key not in result_keys, f"Duplicate historical result for {key[0]} {key[1]}")
         result_keys.add(key)

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07T13:11:03.693481+02:00",
+  "updated_at": "2026-08-07T13:18:51.094809+02:00",
   "status": "ok",
   "virtual": {
     "starting_bankroll": 1000,
@@ -211,7 +211,7 @@
         "bonus_match": false,
         "prize_key": "2",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/06-august-2026",
-        "settled_at": "2026-08-07T13:11:03.693481+02:00"
+        "settled_at": "2026-08-07T13:18:51.094809+02:00"
       },
       {
         "id": "2026-08-06|Daily Lotto|Hot 6M|v1.0",
@@ -239,7 +239,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/06-august-2026",
-        "settled_at": "2026-08-07T13:11:03.693481+02:00"
+        "settled_at": "2026-08-07T13:18:51.094809+02:00"
       },
       {
         "id": "2026-08-06|Daily Lotto|Diversified Coverage|v1.0",
@@ -267,7 +267,7 @@
         "bonus_match": false,
         "prize_key": "0",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/06-august-2026",
-        "settled_at": "2026-08-07T13:11:03.693481+02:00"
+        "settled_at": "2026-08-07T13:18:51.094809+02:00"
       },
       {
         "id": "2026-08-06|Daily Lotto|Cold 6M|v1.0",
@@ -295,7 +295,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/06-august-2026",
-        "settled_at": "2026-08-07T13:11:03.693481+02:00"
+        "settled_at": "2026-08-07T13:18:51.094809+02:00"
       },
       {
         "id": "2026-08-05|Lotto|Weighted Historical",
@@ -321,7 +321,7 @@
         "prize_key": "1",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/lotto/results/05-august-2026",
-        "settled_at": "2026-08-07T13:11:03.693481+02:00"
+        "settled_at": "2026-08-07T13:18:51.094809+02:00"
       },
       {
         "id": "2026-08-05|Lotto|Hot 6M",
@@ -347,7 +347,7 @@
         "prize_key": "3",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/lotto/results/05-august-2026",
-        "settled_at": "2026-08-07T13:11:03.693481+02:00"
+        "settled_at": "2026-08-07T13:18:51.094809+02:00"
       },
       {
         "id": "2026-08-05|Lotto|Diversified Coverage",
@@ -373,7 +373,7 @@
         "prize_key": "0",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/lotto/results/05-august-2026",
-        "settled_at": "2026-08-07T13:11:03.693481+02:00"
+        "settled_at": "2026-08-07T13:18:51.094809+02:00"
       },
       {
         "id": "2026-08-05|Daily Lotto|Weighted Historical",
@@ -398,7 +398,7 @@
         "prize_key": "1",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/05-august-2026",
-        "settled_at": "2026-08-07T13:11:03.693481+02:00"
+        "settled_at": "2026-08-07T13:18:51.094809+02:00"
       },
       {
         "id": "2026-08-05|Daily Lotto|Hot 6M",
@@ -423,7 +423,7 @@
         "prize_key": "2",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/05-august-2026",
-        "settled_at": "2026-08-07T13:11:03.693481+02:00"
+        "settled_at": "2026-08-07T13:18:51.094809+02:00"
       },
       {
         "id": "2026-08-05|Daily Lotto|Diversified Coverage",
@@ -448,7 +448,7 @@
         "prize_key": "0",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/05-august-2026",
-        "settled_at": "2026-08-07T13:11:03.693481+02:00"
+        "settled_at": "2026-08-07T13:18:51.094809+02:00"
       }
     ]
   },
@@ -618,20 +618,33 @@
     "Daily Lotto": {
       "raw": 947,
       "accepted": 947,
+      "model_eligible": 947,
       "rejected": 0,
-      "status": "usable"
+      "status": "usable",
+      "rule_scope": "5/36 unchanged"
     },
     "Lotto": {
-      "raw": 186,
-      "accepted": 186,
+      "raw": 270,
+      "accepted": 270,
+      "model_eligible": 19,
       "rejected": 0,
-      "status": "usable"
+      "status": "usable",
+      "rule_scope": "current 6/52 era from 2026-06-01"
     },
     "PowerBall": {
       "raw": 271,
       "accepted": 271,
+      "model_eligible": 271,
       "rejected": 0,
-      "status": "usable"
+      "status": "usable",
+      "rule_scope": "5/50 main history; current PB 1-16 from 2026-06-01"
     }
+  },
+  "data_policy": {
+    "version": "2.0-rule-aware",
+    "rule_change_date": "2026-06-01",
+    "Lotto": "current model uses 6/52 draws from 2026-06-01 onward",
+    "PowerBall": "main model uses 5/50 history; special ball uses current 1-16 era",
+    "Daily Lotto": "5/36 format unchanged"
   }
 }

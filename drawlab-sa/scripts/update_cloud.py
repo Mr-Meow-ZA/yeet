@@ -18,11 +18,13 @@ TODAY = NOW.date().isoformat()
 ENTRY_OPEN_HOUR = 17
 ENTRY_CUTOFF_HOUR = 20
 HTTP_TIMEOUT = (5, 9)
+RULE_CHANGE_DATE = datetime(2026, 6, 1).date()
+DATA_POLICY_VERSION = "2.0-rule-aware"
 
 RULES = {
     "Daily Lotto": {"count": 5, "max": 36, "days": set(range(7)), "cost": 3},
     "Lotto": {"count": 6, "max": 52, "days": {2, 5}, "cost": 5},
-    "PowerBall": {"count": 5, "max": 50, "days": {1, 4}, "bonus_max": 20, "cost": 5},
+    "PowerBall": {"count": 5, "max": 50, "days": {1, 4}, "bonus_max": 16, "cost": 10},
 }
 SOURCES = {
     "Daily Lotto": [
@@ -113,14 +115,29 @@ def games_for_date(dt):
     return [game for game, rule in RULES.items() if dt.weekday() in rule["days"]]
 
 
+def history_limits(game, date_str):
+    try:
+        draw_date = datetime.fromisoformat(str(date_str)).date()
+    except (TypeError, ValueError):
+        return None, None
+    if game == "Lotto":
+        return (58 if draw_date < RULE_CHANGE_DATE else 52), None
+    if game == "PowerBall":
+        return 50, (20 if draw_date < RULE_CHANGE_DATE else 16)
+    return 36, None
+
+
 def valid_history_row(row, game):
     rule = RULES[game]
     numbers = row.get("numbers")
+    maximum, historical_bonus_max = history_limits(game, row.get("date"))
+    if maximum is None:
+        return False
     if not isinstance(numbers, list) or len(numbers) != rule["count"]:
         return False
     if len(set(numbers)) != len(numbers):
         return False
-    if any(not isinstance(n, int) or not 1 <= n <= rule["max"] for n in numbers):
+    if any(not isinstance(n, int) or not 1 <= n <= maximum for n in numbers):
         return False
     try:
         datetime.fromisoformat(row.get("date", ""))
@@ -128,7 +145,7 @@ def valid_history_row(row, game):
         return False
     if game == "PowerBall":
         bonus = row.get("bonus")
-        if not isinstance(bonus, int) or not 1 <= bonus <= rule["bonus_max"]:
+        if not isinstance(bonus, int) or historical_bonus_max is None or not 1 <= bonus <= historical_bonus_max:
             return False
     return True
 
@@ -153,11 +170,16 @@ def load_valid_history():
         bad_lines = {line for line, count in line_counts.items() if count > 2}
         clean = [row for row in candidate if tuple(row["numbers"]) not in bad_lines]
         accepted.extend(clean)
+        eligible = clean
+        if game == "Lotto":
+            eligible = [row for row in clean if datetime.fromisoformat(row["date"]).date() >= RULE_CHANGE_DATE]
         quality[game] = {
             "raw": sum(1 for row in raw_rows if row.get("game") == game),
             "accepted": len(clean),
+            "model_eligible": len(eligible),
             "rejected": sum(1 for row in raw_rows if row.get("game") == game) - len(clean),
-            "status": "usable" if clean else "unavailable",
+            "status": "usable" if eligible else "unavailable",
+            "rule_scope": "current 6/52 era from 2026-06-01" if game == "Lotto" else ("5/50 main history; current PB 1-16 from 2026-06-01" if game == "PowerBall" else "5/36 unchanged"),
         }
 
     _HISTORY_CACHE = accepted
@@ -173,7 +195,10 @@ def historical_results(state, game):
     ]
     rows.extend(row for row in load_valid_history() if row.get("game") == game)
     dedup = {(row.get("date"), row.get("game")): row for row in rows}
-    return sorted(dedup.values(), key=lambda row: row["date"], reverse=True)
+    rows = sorted(dedup.values(), key=lambda row: row["date"], reverse=True)
+    if game == "Lotto":
+        rows = [row for row in rows if datetime.fromisoformat(row["date"]).date() >= RULE_CHANGE_DATE]
+    return rows
 
 
 def counts_for_window(rows, days=None, draw_limit=None):
@@ -245,6 +270,9 @@ def select_spread(ranked, count, maximum, avoid=None):
 
 
 def bonus_number(rows, strategy, maximum):
+    # The PowerBall pool changed from 1-20 to 1-16 on 1 June 2026.
+    # Main-number history can span both eras, but special-ball ranking must not.
+    rows = [row for row in rows if datetime.fromisoformat(row["date"]).date() >= RULE_CHANGE_DATE]
     counts = Counter(
         row.get("bonus")
         for row in rows
@@ -326,6 +354,13 @@ def ensure_virtual_entries(state):
     tickets = state.setdefault("virtual", {}).setdefault("tickets", [])
     costs = state["virtual"].setdefault("costs", {})
     state["strategy_catalog"] = STRATEGIES
+    state["data_policy"] = {
+        "version": DATA_POLICY_VERSION,
+        "rule_change_date": RULE_CHANGE_DATE.isoformat(),
+        "Lotto": "current model uses 6/52 draws from 2026-06-01 onward",
+        "PowerBall": "main model uses 5/50 history; special ball uses current 1-16 era",
+        "Daily Lotto": "5/36 format unchanged",
+    }
 
     if NOW.hour < ENTRY_OPEN_HOUR or NOW.hour >= ENTRY_CUTOFF_HOUR:
         return
@@ -337,7 +372,7 @@ def ensure_virtual_entries(state):
             for row in state.get("results", [])
         ):
             continue
-        costs.setdefault(game, RULES[game]["cost"])
+        costs[game] = RULES[game]["cost"]
         generated = []
         for strategy in order:
             version = STRATEGIES[strategy]["version"]
@@ -357,6 +392,7 @@ def ensure_virtual_entries(state):
                     "strategy_version": version,
                     "strategy_hypothesis": STRATEGIES[strategy]["hypothesis"],
                     "deterministic": True,
+                    "data_policy_version": DATA_POLICY_VERSION,
                     "numbers": numbers,
                     "bonus": bonus,
                     "cost": float(costs[game]),
