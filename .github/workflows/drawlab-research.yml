@@ -1,0 +1,57 @@
+name: DrawLab Research Engine
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'drawlab-sa/scripts/research_engine.py'
+      - 'drawlab-sa/data/historical-results.json'
+      - '.github/workflows/drawlab-research.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: drawlab-data-writes
+  cancel-in-progress: false
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Validate research engine
+        run: python -m py_compile drawlab-sa/scripts/research_engine.py
+      - name: Run walk-forward research
+        run: python drawlab-sa/scripts/research_engine.py
+      - name: Commit research state safely
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'DrawLab Research Bot'
+          git config user.email 'drawlab-research@users.noreply.github.com'
+
+          for attempt in 1 2 3; do
+            git add drawlab-sa/data/research-state.json
+            if git diff --cached --quiet; then
+              echo 'No research-state changes'
+              exit 0
+            fi
+            git commit -m 'Update DrawLab research state'
+            if git push origin HEAD:master; then
+              echo 'Research state pushed successfully'
+              exit 0
+            fi
+            echo "Push attempt ${attempt} conflicted; rebuilding on current master"
+            git fetch origin master
+            git reset --hard origin/master
+            python drawlab-sa/scripts/research_engine.py
+          done
+          echo 'Unable to push research state after three attempts'
+          exit 1
