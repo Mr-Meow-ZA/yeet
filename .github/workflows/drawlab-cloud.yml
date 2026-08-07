@@ -72,3 +72,17 @@ jobs:
 
           echo 'Unable to push cloud state after three attempts'
           exit 1
+      - name: Synchronize Supabase primary store
+        shell: bash
+        run: |
+          set -euo pipefail
+          sleep 2
+          response="$(curl --fail-with-body --silent --show-error --max-time 90 'https://lnmgieielbqqqvboonzj.supabase.co/functions/v1/drawlab-sync')"
+          echo "$response"
+          python - <<'PY' "$response"
+          import json,sys
+          p=json.loads(sys.argv[1])
+          assert p.get('ok'), p
+          assert (p.get('sync') or {}).get('research_synced'), p
+          print('Supabase synchronized after cloud update')
+          PY
