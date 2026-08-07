@@ -1,0 +1,1252 @@
+{
+  "schema_version": 1,
+  "methodology_version": "2.0",
+  "generated_at": "2026-08-07T10:56:42.442488+00:00",
+  "null_hypothesis": "Lottery draws are treated as random and independent unless out-of-sample evidence shows otherwise.",
+  "live_policy": "The four v1.0 strategies remain frozen champions. Research results do not alter live recommendations automatically.",
+  "feedback_policy": "Played-ticket outcomes are used to evaluate models, not as direct number-level features for future recommendations.",
+  "data_quality": {
+    "Daily Lotto": {
+      "draws": 947,
+      "first_draw": "2024-01-01",
+      "last_draw": "2026-08-06",
+      "status": "usable",
+      "minimum_training_draws": 90
+    },
+    "Lotto": {
+      "draws": 188,
+      "first_draw": "2024-01-03",
+      "last_draw": "2026-08-05",
+      "status": "usable",
+      "minimum_training_draws": 60
+    },
+    "PowerBall": {
+      "draws": 1,
+      "first_draw": "2026-08-04",
+      "last_draw": "2026-08-04",
+      "status": "insufficient",
+      "minimum_training_draws": 60
+    }
+  },
+  "chance_baselines": {
+    "Daily Lotto": {
+      "expected_matches": 0.694444,
+      "ge2_pct": 13.1982,
+      "ge3_pct": 1.2748
+    },
+    "Lotto": {
+      "expected_matches": 0.692308,
+      "ge2_pct": 13.5922,
+      "ge3_pct": 1.5689
+    },
+    "PowerBall": {
+      "expected_matches": 0.5,
+      "ge2_pct": 7.1752,
+      "ge3_pct": 0.4779
+    }
+  },
+  "walk_forward": [
+    {
+      "game": "Daily Lotto",
+      "strategy": "Hot 6M",
+      "horizon": 1,
+      "samples": 857,
+      "avg_matches": 0.7153,
+      "ge2_rate": 13.19,
+      "ge3_rate": 2.68,
+      "best_matches": 3,
+      "distribution": {
+        "0": 380,
+        "1": 364,
+        "2": 90,
+        "3": 23,
+        "4": 0,
+        "5": 0
+      },
+      "expected_matches": 0.694444,
+      "lift_vs_expected_pct": 3.0
+    },
+    {
+      "game": "Daily Lotto",
+      "strategy": "Weighted Historical",
+      "horizon": 1,
+      "samples": 857,
+      "avg_matches": 0.6791,
+      "ge2_rate": 11.2,
+      "ge3_rate": 1.28,
+      "best_matches": 3,
+      "distribution": {
+        "0": 382,
+        "1": 379,
+        "2": 85,
+        "3": 11,
+        "4": 0,
+        "5": 0
+      },
+      "expected_matches": 0.694444,
+      "lift_vs_expected_pct": -2.21
+    },
+    {
+      "game": "Daily Lotto",
+      "strategy": "Cold 6M",
+      "horizon": 1,
+      "samples": 857,
+      "avg_matches": 0.7421,
+      "ge2_rate": 14.94,
+      "ge3_rate": 1.17,
+      "best_matches": 3,
+      "distribution": {
+        "0": 359,
+        "1": 370,
+        "2": 118,
+        "3": 10,
+        "4": 0,
+        "5": 0
+      },
+      "expected_matches": 0.694444,
+      "lift_vs_expected_pct": 6.87
+    },
+    {
+      "game": "Daily Lotto",
+      "strategy": "Diversified Coverage",
+      "horizon": 1,
+      "samples": 857,
+      "avg_matches": 0.6966,
+      "ge2_rate": 12.49,
+      "ge3_rate": 1.05,
+      "best_matches": 4,
+      "distribution": {
+        "0": 377,
+        "1": 373,
+        "2": 98,
+        "3": 8,
+        "4": 1,
+        "5": 0
+      },
+      "expected_matches": 0.694444,
+      "lift_vs_expected_pct": 0.31
+    },
+    {
+      "game": "Daily Lotto",
+      "strategy": "Hot 6M",
+      "horizon": 2,
+      "samples": 857,
+      "avg_matches": 0.7106,
+      "ge2_rate": 13.3,
+      "ge3_rate": 2.8,
+      "best_matches": 4,
+      "distribution": {
+        "0": 387,
+        "1": 356,
+        "2": 90,
+        "3": 23,
+        "4": 1,
+        "5": 0
+      },
+      "expected_matches": 0.694444,
+      "lift_vs_expected_pct": 2.33
+    },
+    {
+      "game": "Daily Lotto",
+      "strategy": "Weighted Historical",
+      "horizon": 2,
+      "samples": 857,
+      "avg_matches": 0.6779,
+      "ge2_rate": 11.67,
+      "ge3_rate": 1.63,
+      "best_matches": 3,
+      "distribution": {
+        "0": 390,
+        "1": 367,
+        "2": 86,
+        "3": 14,
+        "4": 0,
+        "5": 0
+      },
+      "expected_matches": 0.694444,
+      "lift_vs_expected_pct": -2.38
+    },
+    {
+      "game": "Daily Lotto",
+      "strategy": "Cold 6M",
+      "horizon": 2,
+      "samples": 857,
+      "avg_matches": 0.7433,
+      "ge2_rate": 14.94,
+      "ge3_rate": 1.17,
+      "best_matches": 3,
+      "distribution": {
+        "0": 358,
+        "1": 371,
+        "2": 118,
+        "3": 10,
+        "4": 0,
+        "5": 0
+      },
+      "expected_matches": 0.694444,
+      "lift_vs_expected_pct": 7.03
+    },
+    {
+      "game": "Daily Lotto",
+      "strategy": "Diversified Coverage",
+      "horizon": 2,
+      "samples": 857,
+      "avg_matches": 0.6884,
+      "ge2_rate": 12.14,
+      "ge3_rate": 1.17,
+      "best_matches": 3,
+      "distribution": {
+        "0": 381,
+        "1": 372,
+        "2": 94,
+        "3": 10,
+        "4": 0,
+        "5": 0
+      },
+      "expected_matches": 0.694444,
+      "lift_vs_expected_pct": -0.86
+    },
+    {
+      "game": "Daily Lotto",
+      "strategy": "Hot 6M",
+      "horizon": 4,
+      "samples": 857,
+      "avg_matches": 0.7048,
+      "ge2_rate": 13.42,
+      "ge3_rate": 2.92,
+      "best_matches": 4,
+      "distribution": {
+        "0": 394,
+        "1": 348,
+        "2": 90,
+        "3": 24,
+        "4": 1,
+        "5": 0
+      },
+      "expected_matches": 0.694444,
+      "lift_vs_expected_pct": 1.49
+    },
+    {
+      "game": "Daily Lotto",
+      "strategy": "Weighted Historical",
+      "horizon": 4,
+      "samples": 857,
+      "avg_matches": 0.6721,
+      "ge2_rate": 11.9,
+      "ge3_rate": 1.63,
+      "best_matches": 3,
+      "distribution": {
+        "0": 397,
+        "1": 358,
+        "2": 88,
+        "3": 14,
+        "4": 0,
+        "5": 0
+      },
+      "expected_matches": 0.694444,
+      "lift_vs_expected_pct": -3.22
+    },
+    {
+      "game": "Daily Lotto",
+      "strategy": "Cold 6M",
+      "horizon": 4,
+      "samples": 857,
+      "avg_matches": 0.7445,
+      "ge2_rate": 14.82,
+      "ge3_rate": 1.17,
+      "best_matches": 3,
+      "distribution": {
+        "0": 356,
+        "1": 374,
+        "2": 117,
+        "3": 10,
+        "4": 0,
+        "5": 0
+      },
+      "expected_matches": 0.694444,
+      "lift_vs_expected_pct": 7.2
+    },
+    {
+      "game": "Daily Lotto",
+      "strategy": "Diversified Coverage",
+      "horizon": 4,
+      "samples": 857,
+      "avg_matches": 0.6826,
+      "ge2_rate": 11.9,
+      "ge3_rate": 0.82,
+      "best_matches": 3,
+      "distribution": {
+        "0": 381,
+        "1": 374,
+        "2": 95,
+        "3": 7,
+        "4": 0,
+        "5": 0
+      },
+      "expected_matches": 0.694444,
+      "lift_vs_expected_pct": -1.7
+    },
+    {
+      "game": "Daily Lotto",
+      "strategy": "Hot 6M",
+      "horizon": 8,
+      "samples": 857,
+      "avg_matches": 0.6966,
+      "ge2_rate": 13.3,
+      "ge3_rate": 2.57,
+      "best_matches": 4,
+      "distribution": {
+        "0": 397,
+        "1": 346,
+        "2": 92,
+        "3": 21,
+        "4": 1,
+        "5": 0
+      },
+      "expected_matches": 0.694444,
+      "lift_vs_expected_pct": 0.31
+    },
+    {
+      "game": "Daily Lotto",
+      "strategy": "Weighted Historical",
+      "horizon": 8,
+      "samples": 857,
+      "avg_matches": 0.6721,
+      "ge2_rate": 11.67,
+      "ge3_rate": 1.63,
+      "best_matches": 3,
+      "distribution": {
+        "0": 395,
+        "1": 362,
+        "2": 86,
+        "3": 14,
+        "4": 0,
+        "5": 0
+      },
+      "expected_matches": 0.694444,
+      "lift_vs_expected_pct": -3.22
+    },
+    {
+      "game": "Daily Lotto",
+      "strategy": "Cold 6M",
+      "horizon": 8,
+      "samples": 857,
+      "avg_matches": 0.7456,
+      "ge2_rate": 15.17,
+      "ge3_rate": 1.17,
+      "best_matches": 3,
+      "distribution": {
+        "0": 358,
+        "1": 369,
+        "2": 120,
+        "3": 10,
+        "4": 0,
+        "5": 0
+      },
+      "expected_matches": 0.694444,
+      "lift_vs_expected_pct": 7.37
+    },
+    {
+      "game": "Daily Lotto",
+      "strategy": "Diversified Coverage",
+      "horizon": 8,
+      "samples": 857,
+      "avg_matches": 0.6954,
+      "ge2_rate": 12.95,
+      "ge3_rate": 1.05,
+      "best_matches": 4,
+      "distribution": {
+        "0": 382,
+        "1": 364,
+        "2": 102,
+        "3": 8,
+        "4": 1,
+        "5": 0
+      },
+      "expected_matches": 0.694444,
+      "lift_vs_expected_pct": 0.14
+    },
+    {
+      "game": "Lotto",
+      "strategy": "Hot 6M",
+      "horizon": 1,
+      "samples": 128,
+      "avg_matches": 0.5938,
+      "ge2_rate": 7.81,
+      "ge3_rate": 0.0,
+      "best_matches": 2,
+      "distribution": {
+        "0": 62,
+        "1": 56,
+        "2": 10,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0
+      },
+      "expected_matches": 0.692308,
+      "lift_vs_expected_pct": -14.24
+    },
+    {
+      "game": "Lotto",
+      "strategy": "Weighted Historical",
+      "horizon": 1,
+      "samples": 128,
+      "avg_matches": 0.6016,
+      "ge2_rate": 9.38,
+      "ge3_rate": 0.0,
+      "best_matches": 2,
+      "distribution": {
+        "0": 63,
+        "1": 53,
+        "2": 12,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0
+      },
+      "expected_matches": 0.692308,
+      "lift_vs_expected_pct": -13.11
+    },
+    {
+      "game": "Lotto",
+      "strategy": "Cold 6M",
+      "horizon": 1,
+      "samples": 128,
+      "avg_matches": 0.6797,
+      "ge2_rate": 14.84,
+      "ge3_rate": 2.34,
+      "best_matches": 3,
+      "distribution": {
+        "0": 63,
+        "1": 46,
+        "2": 16,
+        "3": 3,
+        "4": 0,
+        "5": 0,
+        "6": 0
+      },
+      "expected_matches": 0.692308,
+      "lift_vs_expected_pct": -1.82
+    },
+    {
+      "game": "Lotto",
+      "strategy": "Diversified Coverage",
+      "horizon": 1,
+      "samples": 128,
+      "avg_matches": 0.6797,
+      "ge2_rate": 10.94,
+      "ge3_rate": 2.34,
+      "best_matches": 3,
+      "distribution": {
+        "0": 58,
+        "1": 56,
+        "2": 11,
+        "3": 3,
+        "4": 0,
+        "5": 0,
+        "6": 0
+      },
+      "expected_matches": 0.692308,
+      "lift_vs_expected_pct": -1.82
+    },
+    {
+      "game": "Lotto",
+      "strategy": "Hot 6M",
+      "horizon": 2,
+      "samples": 128,
+      "avg_matches": 0.5703,
+      "ge2_rate": 8.59,
+      "ge3_rate": 0.78,
+      "best_matches": 3,
+      "distribution": {
+        "0": 67,
+        "1": 50,
+        "2": 10,
+        "3": 1,
+        "4": 0,
+        "5": 0,
+        "6": 0
+      },
+      "expected_matches": 0.692308,
+      "lift_vs_expected_pct": -17.62
+    },
+    {
+      "game": "Lotto",
+      "strategy": "Weighted Historical",
+      "horizon": 2,
+      "samples": 128,
+      "avg_matches": 0.5703,
+      "ge2_rate": 8.59,
+      "ge3_rate": 0.78,
+      "best_matches": 3,
+      "distribution": {
+        "0": 67,
+        "1": 50,
+        "2": 10,
+        "3": 1,
+        "4": 0,
+        "5": 0,
+        "6": 0
+      },
+      "expected_matches": 0.692308,
+      "lift_vs_expected_pct": -17.62
+    },
+    {
+      "game": "Lotto",
+      "strategy": "Cold 6M",
+      "horizon": 2,
+      "samples": 128,
+      "avg_matches": 0.6562,
+      "ge2_rate": 12.5,
+      "ge3_rate": 2.34,
+      "best_matches": 3,
+      "distribution": {
+        "0": 63,
+        "1": 49,
+        "2": 13,
+        "3": 3,
+        "4": 0,
+        "5": 0,
+        "6": 0
+      },
+      "expected_matches": 0.692308,
+      "lift_vs_expected_pct": -5.21
+    },
+    {
+      "game": "Lotto",
+      "strategy": "Diversified Coverage",
+      "horizon": 2,
+      "samples": 128,
+      "avg_matches": 0.6953,
+      "ge2_rate": 13.28,
+      "ge3_rate": 2.34,
+      "best_matches": 3,
+      "distribution": {
+        "0": 59,
+        "1": 52,
+        "2": 14,
+        "3": 3,
+        "4": 0,
+        "5": 0,
+        "6": 0
+      },
+      "expected_matches": 0.692308,
+      "lift_vs_expected_pct": 0.43
+    },
+    {
+      "game": "Lotto",
+      "strategy": "Hot 6M",
+      "horizon": 4,
+      "samples": 128,
+      "avg_matches": 0.5703,
+      "ge2_rate": 9.38,
+      "ge3_rate": 0.78,
+      "best_matches": 3,
+      "distribution": {
+        "0": 68,
+        "1": 48,
+        "2": 11,
+        "3": 1,
+        "4": 0,
+        "5": 0,
+        "6": 0
+      },
+      "expected_matches": 0.692308,
+      "lift_vs_expected_pct": -17.62
+    },
+    {
+      "game": "Lotto",
+      "strategy": "Weighted Historical",
+      "horizon": 4,
+      "samples": 128,
+      "avg_matches": 0.5625,
+      "ge2_rate": 7.03,
+      "ge3_rate": 1.56,
+      "best_matches": 3,
+      "distribution": {
+        "0": 67,
+        "1": 52,
+        "2": 7,
+        "3": 2,
+        "4": 0,
+        "5": 0,
+        "6": 0
+      },
+      "expected_matches": 0.692308,
+      "lift_vs_expected_pct": -18.75
+    },
+    {
+      "game": "Lotto",
+      "strategy": "Cold 6M",
+      "horizon": 4,
+      "samples": 128,
+      "avg_matches": 0.6953,
+      "ge2_rate": 16.41,
+      "ge3_rate": 3.12,
+      "best_matches": 3,
+      "distribution": {
+        "0": 64,
+        "1": 43,
+        "2": 17,
+        "3": 4,
+        "4": 0,
+        "5": 0,
+        "6": 0
+      },
+      "expected_matches": 0.692308,
+      "lift_vs_expected_pct": 0.43
+    },
+    {
+      "game": "Lotto",
+      "strategy": "Diversified Coverage",
+      "horizon": 4,
+      "samples": 128,
+      "avg_matches": 0.7188,
+      "ge2_rate": 13.28,
+      "ge3_rate": 1.56,
+      "best_matches": 3,
+      "distribution": {
+        "0": 55,
+        "1": 56,
+        "2": 15,
+        "3": 2,
+        "4": 0,
+        "5": 0,
+        "6": 0
+      },
+      "expected_matches": 0.692308,
+      "lift_vs_expected_pct": 3.82
+    },
+    {
+      "game": "Lotto",
+      "strategy": "Hot 6M",
+      "horizon": 8,
+      "samples": 128,
+      "avg_matches": 0.5703,
+      "ge2_rate": 9.38,
+      "ge3_rate": 0.78,
+      "best_matches": 3,
+      "distribution": {
+        "0": 68,
+        "1": 48,
+        "2": 11,
+        "3": 1,
+        "4": 0,
+        "5": 0,
+        "6": 0
+      },
+      "expected_matches": 0.692308,
+      "lift_vs_expected_pct": -17.62
+    },
+    {
+      "game": "Lotto",
+      "strategy": "Weighted Historical",
+      "horizon": 8,
+      "samples": 128,
+      "avg_matches": 0.6172,
+      "ge2_rate": 9.38,
+      "ge3_rate": 1.56,
+      "best_matches": 3,
+      "distribution": {
+        "0": 63,
+        "1": 53,
+        "2": 10,
+        "3": 2,
+        "4": 0,
+        "5": 0,
+        "6": 0
+      },
+      "expected_matches": 0.692308,
+      "lift_vs_expected_pct": -10.85
+    },
+    {
+      "game": "Lotto",
+      "strategy": "Cold 6M",
+      "horizon": 8,
+      "samples": 128,
+      "avg_matches": 0.7656,
+      "ge2_rate": 17.19,
+      "ge3_rate": 2.34,
+      "best_matches": 3,
+      "distribution": {
+        "0": 55,
+        "1": 51,
+        "2": 19,
+        "3": 3,
+        "4": 0,
+        "5": 0,
+        "6": 0
+      },
+      "expected_matches": 0.692308,
+      "lift_vs_expected_pct": 10.59
+    },
+    {
+      "game": "Lotto",
+      "strategy": "Diversified Coverage",
+      "horizon": 8,
+      "samples": 128,
+      "avg_matches": 0.6562,
+      "ge2_rate": 11.72,
+      "ge3_rate": 0.78,
+      "best_matches": 3,
+      "distribution": {
+        "0": 60,
+        "1": 53,
+        "2": 14,
+        "3": 1,
+        "4": 0,
+        "5": 0,
+        "6": 0
+      },
+      "expected_matches": 0.692308,
+      "lift_vs_expected_pct": -5.21
+    },
+    {
+      "game": "PowerBall",
+      "strategy": "Hot 6M",
+      "horizon": 1,
+      "samples": 0,
+      "avg_matches": 0.0,
+      "ge2_rate": 0,
+      "ge3_rate": 0,
+      "best_matches": 0,
+      "distribution": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      },
+      "expected_matches": 0.5,
+      "lift_vs_expected_pct": 0
+    },
+    {
+      "game": "PowerBall",
+      "strategy": "Weighted Historical",
+      "horizon": 1,
+      "samples": 0,
+      "avg_matches": 0.0,
+      "ge2_rate": 0,
+      "ge3_rate": 0,
+      "best_matches": 0,
+      "distribution": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      },
+      "expected_matches": 0.5,
+      "lift_vs_expected_pct": 0
+    },
+    {
+      "game": "PowerBall",
+      "strategy": "Cold 6M",
+      "horizon": 1,
+      "samples": 0,
+      "avg_matches": 0.0,
+      "ge2_rate": 0,
+      "ge3_rate": 0,
+      "best_matches": 0,
+      "distribution": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      },
+      "expected_matches": 0.5,
+      "lift_vs_expected_pct": 0
+    },
+    {
+      "game": "PowerBall",
+      "strategy": "Diversified Coverage",
+      "horizon": 1,
+      "samples": 0,
+      "avg_matches": 0.0,
+      "ge2_rate": 0,
+      "ge3_rate": 0,
+      "best_matches": 0,
+      "distribution": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      },
+      "expected_matches": 0.5,
+      "lift_vs_expected_pct": 0
+    },
+    {
+      "game": "PowerBall",
+      "strategy": "Hot 6M",
+      "horizon": 2,
+      "samples": 0,
+      "avg_matches": 0.0,
+      "ge2_rate": 0,
+      "ge3_rate": 0,
+      "best_matches": 0,
+      "distribution": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      },
+      "expected_matches": 0.5,
+      "lift_vs_expected_pct": 0
+    },
+    {
+      "game": "PowerBall",
+      "strategy": "Weighted Historical",
+      "horizon": 2,
+      "samples": 0,
+      "avg_matches": 0.0,
+      "ge2_rate": 0,
+      "ge3_rate": 0,
+      "best_matches": 0,
+      "distribution": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      },
+      "expected_matches": 0.5,
+      "lift_vs_expected_pct": 0
+    },
+    {
+      "game": "PowerBall",
+      "strategy": "Cold 6M",
+      "horizon": 2,
+      "samples": 0,
+      "avg_matches": 0.0,
+      "ge2_rate": 0,
+      "ge3_rate": 0,
+      "best_matches": 0,
+      "distribution": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      },
+      "expected_matches": 0.5,
+      "lift_vs_expected_pct": 0
+    },
+    {
+      "game": "PowerBall",
+      "strategy": "Diversified Coverage",
+      "horizon": 2,
+      "samples": 0,
+      "avg_matches": 0.0,
+      "ge2_rate": 0,
+      "ge3_rate": 0,
+      "best_matches": 0,
+      "distribution": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      },
+      "expected_matches": 0.5,
+      "lift_vs_expected_pct": 0
+    },
+    {
+      "game": "PowerBall",
+      "strategy": "Hot 6M",
+      "horizon": 4,
+      "samples": 0,
+      "avg_matches": 0.0,
+      "ge2_rate": 0,
+      "ge3_rate": 0,
+      "best_matches": 0,
+      "distribution": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      },
+      "expected_matches": 0.5,
+      "lift_vs_expected_pct": 0
+    },
+    {
+      "game": "PowerBall",
+      "strategy": "Weighted Historical",
+      "horizon": 4,
+      "samples": 0,
+      "avg_matches": 0.0,
+      "ge2_rate": 0,
+      "ge3_rate": 0,
+      "best_matches": 0,
+      "distribution": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      },
+      "expected_matches": 0.5,
+      "lift_vs_expected_pct": 0
+    },
+    {
+      "game": "PowerBall",
+      "strategy": "Cold 6M",
+      "horizon": 4,
+      "samples": 0,
+      "avg_matches": 0.0,
+      "ge2_rate": 0,
+      "ge3_rate": 0,
+      "best_matches": 0,
+      "distribution": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      },
+      "expected_matches": 0.5,
+      "lift_vs_expected_pct": 0
+    },
+    {
+      "game": "PowerBall",
+      "strategy": "Diversified Coverage",
+      "horizon": 4,
+      "samples": 0,
+      "avg_matches": 0.0,
+      "ge2_rate": 0,
+      "ge3_rate": 0,
+      "best_matches": 0,
+      "distribution": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      },
+      "expected_matches": 0.5,
+      "lift_vs_expected_pct": 0
+    },
+    {
+      "game": "PowerBall",
+      "strategy": "Hot 6M",
+      "horizon": 8,
+      "samples": 0,
+      "avg_matches": 0.0,
+      "ge2_rate": 0,
+      "ge3_rate": 0,
+      "best_matches": 0,
+      "distribution": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      },
+      "expected_matches": 0.5,
+      "lift_vs_expected_pct": 0
+    },
+    {
+      "game": "PowerBall",
+      "strategy": "Weighted Historical",
+      "horizon": 8,
+      "samples": 0,
+      "avg_matches": 0.0,
+      "ge2_rate": 0,
+      "ge3_rate": 0,
+      "best_matches": 0,
+      "distribution": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      },
+      "expected_matches": 0.5,
+      "lift_vs_expected_pct": 0
+    },
+    {
+      "game": "PowerBall",
+      "strategy": "Cold 6M",
+      "horizon": 8,
+      "samples": 0,
+      "avg_matches": 0.0,
+      "ge2_rate": 0,
+      "ge3_rate": 0,
+      "best_matches": 0,
+      "distribution": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      },
+      "expected_matches": 0.5,
+      "lift_vs_expected_pct": 0
+    },
+    {
+      "game": "PowerBall",
+      "strategy": "Diversified Coverage",
+      "horizon": 8,
+      "samples": 0,
+      "avg_matches": 0.0,
+      "ge2_rate": 0,
+      "ge3_rate": 0,
+      "best_matches": 0,
+      "distribution": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      },
+      "expected_matches": 0.5,
+      "lift_vs_expected_pct": 0
+    }
+  ],
+  "best_hold": [
+    {
+      "game": "Daily Lotto",
+      "strategy": "Hot 6M",
+      "best_horizon": 1,
+      "avg_matches": 0.7153,
+      "ge2_rate": 13.19,
+      "samples": 857
+    },
+    {
+      "game": "Daily Lotto",
+      "strategy": "Weighted Historical",
+      "best_horizon": 1,
+      "avg_matches": 0.6791,
+      "ge2_rate": 11.2,
+      "samples": 857
+    },
+    {
+      "game": "Daily Lotto",
+      "strategy": "Cold 6M",
+      "best_horizon": 8,
+      "avg_matches": 0.7456,
+      "ge2_rate": 15.17,
+      "samples": 857
+    },
+    {
+      "game": "Daily Lotto",
+      "strategy": "Diversified Coverage",
+      "best_horizon": 1,
+      "avg_matches": 0.6966,
+      "ge2_rate": 12.49,
+      "samples": 857
+    },
+    {
+      "game": "Lotto",
+      "strategy": "Hot 6M",
+      "best_horizon": 1,
+      "avg_matches": 0.5938,
+      "ge2_rate": 7.81,
+      "samples": 128
+    },
+    {
+      "game": "Lotto",
+      "strategy": "Weighted Historical",
+      "best_horizon": 8,
+      "avg_matches": 0.6172,
+      "ge2_rate": 9.38,
+      "samples": 128
+    },
+    {
+      "game": "Lotto",
+      "strategy": "Cold 6M",
+      "best_horizon": 8,
+      "avg_matches": 0.7656,
+      "ge2_rate": 17.19,
+      "samples": 128
+    },
+    {
+      "game": "Lotto",
+      "strategy": "Diversified Coverage",
+      "best_horizon": 4,
+      "avg_matches": 0.7188,
+      "ge2_rate": 13.28,
+      "samples": 128
+    }
+  ],
+  "challengers": {
+    "Daily Lotto": {
+      "status": "candidate",
+      "model": "Weighted Historical v2.0 challenger",
+      "weights": {
+        "long": 0.3,
+        "six": 0.25,
+        "recent": 0.15,
+        "gap": 0.15,
+        "pair": 0.15
+      },
+      "validation_window": {
+        "from": "2025-04-19",
+        "to": "2025-12-11",
+        "metrics": {
+          "samples": 237,
+          "avg_matches": 0.7131,
+          "ge2_rate": 11.81,
+          "ge3_rate": 1.69,
+          "best_matches": 3,
+          "distribution": {
+            "0": 100,
+            "1": 109,
+            "2": 24,
+            "3": 4,
+            "4": 0,
+            "5": 0
+          },
+          "expected_matches": 0.694444,
+          "lift_vs_expected_pct": 2.68
+        }
+      },
+      "held_out_test": {
+        "from": "2025-12-12",
+        "to": "2026-08-06",
+        "challenger": {
+          "samples": 237,
+          "avg_matches": 0.7215,
+          "ge2_rate": 11.39,
+          "ge3_rate": 0.84,
+          "best_matches": 3,
+          "distribution": {
+            "0": 95,
+            "1": 115,
+            "2": 25,
+            "3": 2,
+            "4": 0,
+            "5": 0
+          },
+          "expected_matches": 0.694444,
+          "lift_vs_expected_pct": 3.9
+        },
+        "champion_v1": {
+          "samples": 237,
+          "avg_matches": 0.6709,
+          "ge2_rate": 9.28,
+          "ge3_rate": 1.27,
+          "best_matches": 3,
+          "distribution": {
+            "0": 103,
+            "1": 112,
+            "2": 19,
+            "3": 3,
+            "4": 0,
+            "5": 0
+          },
+          "expected_matches": 0.694444,
+          "lift_vs_expected_pct": -3.39
+        },
+        "promote": false,
+        "reason": "Research-only challenger. Promotion requires a pre-defined evidence threshold and sufficient out-of-sample samples."
+      }
+    },
+    "Lotto": {
+      "status": "candidate",
+      "model": "Weighted Historical v2.0 challenger",
+      "weights": {
+        "long": 0.25,
+        "six": 0.3,
+        "recent": 0.15,
+        "gap": 0.15,
+        "pair": 0.15
+      },
+      "validation_window": {
+        "from": "2024-11-27",
+        "to": "2025-05-10",
+        "metrics": {
+          "samples": 47,
+          "avg_matches": 0.5745,
+          "ge2_rate": 10.64,
+          "ge3_rate": 0.0,
+          "best_matches": 2,
+          "distribution": {
+            "0": 25,
+            "1": 17,
+            "2": 5,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0
+          },
+          "expected_matches": 0.692308,
+          "lift_vs_expected_pct": -17.02
+        }
+      },
+      "held_out_test": {
+        "from": "2025-05-14",
+        "to": "2026-08-05",
+        "challenger": {
+          "samples": 47,
+          "avg_matches": 0.7447,
+          "ge2_rate": 12.77,
+          "ge3_rate": 0.0,
+          "best_matches": 2,
+          "distribution": {
+            "0": 18,
+            "1": 23,
+            "2": 6,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0
+          },
+          "expected_matches": 0.692308,
+          "lift_vs_expected_pct": 7.56
+        },
+        "champion_v1": {
+          "samples": 47,
+          "avg_matches": 0.7447,
+          "ge2_rate": 14.89,
+          "ge3_rate": 0.0,
+          "best_matches": 2,
+          "distribution": {
+            "0": 19,
+            "1": 21,
+            "2": 7,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0
+          },
+          "expected_matches": 0.692308,
+          "lift_vs_expected_pct": 7.56
+        },
+        "promote": false,
+        "reason": "Research-only challenger. Promotion requires a pre-defined evidence threshold and sufficient out-of-sample samples."
+      }
+    },
+    "PowerBall": {
+      "status": "insufficient_data",
+      "draws": 1,
+      "minimum_needed": 100
+    }
+  },
+  "notes": [
+    "All backtests are walk-forward: a target draw is never visible when its prediction is generated.",
+    "Hold horizons compare refreshing every draw with holding the same deterministic recommendation for 2, 4 or 8 draws.",
+    "ROI is intentionally not used as the primary research score because lottery payout variance can dominate small samples.",
+    "Theoretical chance is a research control only; no random tickets are added to the live portfolio."
+  ]
+}
