@@ -1,190 +1,14 @@
 {
-  "updated_at": "2026-08-07T13:18:51.094809+02:00",
-  "status": "ok",
+  "updated_at": "2026-08-07T13:22:48.728644+02:00",
+  "status": "partial",
   "virtual": {
     "starting_bankroll": 1000,
     "costs": {
       "Daily Lotto": 3,
       "Lotto": 5,
-      "PowerBall": 5
+      "PowerBall": 10
     },
     "tickets": [
-      {
-        "id": "2026-08-07|PowerBall|Weighted Historical|v1.0",
-        "date": "2026-08-07",
-        "game": "PowerBall",
-        "strategy": "Weighted Historical",
-        "strategy_version": "1.0",
-        "strategy_hypothesis": "A fixed blend of long-term, six-month, momentum and gap signals performs best.",
-        "deterministic": true,
-        "numbers": [
-          10,
-          16,
-          24,
-          34,
-          41
-        ],
-        "bonus": 15,
-        "cost": 5.0,
-        "won": 0,
-        "payout_type": null,
-        "status": "Pending result",
-        "created_at": "2026-08-07T02:55:45.505754+02:00"
-      },
-      {
-        "id": "2026-08-07|PowerBall|Hot 6M|v1.0",
-        "date": "2026-08-07",
-        "game": "PowerBall",
-        "strategy": "Hot 6M",
-        "strategy_version": "1.0",
-        "strategy_hypothesis": "Recent high-frequency numbers persist.",
-        "deterministic": true,
-        "numbers": [
-          1,
-          16,
-          24,
-          34,
-          41
-        ],
-        "bonus": 15,
-        "cost": 5.0,
-        "won": 0,
-        "payout_type": null,
-        "status": "Pending result",
-        "created_at": "2026-08-07T02:55:45.505754+02:00"
-      },
-      {
-        "id": "2026-08-07|PowerBall|Diversified Coverage|v1.0",
-        "date": "2026-08-07",
-        "game": "PowerBall",
-        "strategy": "Diversified Coverage",
-        "strategy_version": "1.0",
-        "strategy_hypothesis": "Structured range coverage with low overlap diversifies the portfolio.",
-        "deterministic": true,
-        "numbers": [
-          2,
-          12,
-          22,
-          32,
-          42
-        ],
-        "bonus": 1,
-        "cost": 5.0,
-        "won": 0,
-        "payout_type": null,
-        "status": "Pending result",
-        "created_at": "2026-08-07T02:55:45.505754+02:00"
-      },
-      {
-        "id": "2026-08-07|PowerBall|Cold 6M|v1.0",
-        "date": "2026-08-07",
-        "game": "PowerBall",
-        "strategy": "Cold 6M",
-        "strategy_version": "1.0",
-        "strategy_hypothesis": "Recently underrepresented numbers revert toward expected frequency.",
-        "deterministic": true,
-        "numbers": [
-          1,
-          11,
-          21,
-          31,
-          41
-        ],
-        "bonus": 1,
-        "cost": 5.0,
-        "won": 0,
-        "payout_type": null,
-        "status": "Pending result",
-        "created_at": "2026-08-07T02:55:45.505754+02:00"
-      },
-      {
-        "id": "2026-08-07|Daily Lotto|Weighted Historical|v1.0",
-        "date": "2026-08-07",
-        "game": "Daily Lotto",
-        "strategy": "Weighted Historical",
-        "strategy_version": "1.0",
-        "strategy_hypothesis": "A fixed blend of long-term, six-month, momentum and gap signals performs best.",
-        "deterministic": true,
-        "numbers": [
-          7,
-          10,
-          16,
-          25,
-          30
-        ],
-        "bonus": null,
-        "cost": 3.0,
-        "won": 0,
-        "payout_type": null,
-        "status": "Pending result",
-        "created_at": "2026-08-07T02:55:45.505754+02:00"
-      },
-      {
-        "id": "2026-08-07|Daily Lotto|Hot 6M|v1.0",
-        "date": "2026-08-07",
-        "game": "Daily Lotto",
-        "strategy": "Hot 6M",
-        "strategy_version": "1.0",
-        "strategy_hypothesis": "Recent high-frequency numbers persist.",
-        "deterministic": true,
-        "numbers": [
-          7,
-          10,
-          16,
-          25,
-          30
-        ],
-        "bonus": null,
-        "cost": 3.0,
-        "won": 0,
-        "payout_type": null,
-        "status": "Pending result",
-        "created_at": "2026-08-07T02:55:45.505754+02:00"
-      },
-      {
-        "id": "2026-08-07|Daily Lotto|Diversified Coverage|v1.0",
-        "date": "2026-08-07",
-        "game": "Daily Lotto",
-        "strategy": "Diversified Coverage",
-        "strategy_version": "1.0",
-        "strategy_hypothesis": "Structured range coverage with low overlap diversifies the portfolio.",
-        "deterministic": true,
-        "numbers": [
-          3,
-          13,
-          19,
-          26,
-          33
-        ],
-        "bonus": null,
-        "cost": 3.0,
-        "won": 0,
-        "payout_type": null,
-        "status": "Pending result",
-        "created_at": "2026-08-07T02:55:45.505754+02:00"
-      },
-      {
-        "id": "2026-08-07|Daily Lotto|Cold 6M|v1.0",
-        "date": "2026-08-07",
-        "game": "Daily Lotto",
-        "strategy": "Cold 6M",
-        "strategy_version": "1.0",
-        "strategy_hypothesis": "Recently underrepresented numbers revert toward expected frequency.",
-        "deterministic": true,
-        "numbers": [
-          2,
-          12,
-          18,
-          27,
-          29
-        ],
-        "bonus": null,
-        "cost": 3.0,
-        "won": 0,
-        "payout_type": null,
-        "status": "Pending result",
-        "created_at": "2026-08-07T02:55:45.505754+02:00"
-      },
       {
         "id": "2026-08-06|Daily Lotto|Weighted Historical|v1.0",
         "date": "2026-08-06",
@@ -211,7 +35,7 @@
         "bonus_match": false,
         "prize_key": "2",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/06-august-2026",
-        "settled_at": "2026-08-07T13:18:51.094809+02:00"
+        "settled_at": "2026-08-07T13:22:48.728644+02:00"
       },
       {
         "id": "2026-08-06|Daily Lotto|Hot 6M|v1.0",
@@ -239,7 +63,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/06-august-2026",
-        "settled_at": "2026-08-07T13:18:51.094809+02:00"
+        "settled_at": "2026-08-07T13:22:48.728644+02:00"
       },
       {
         "id": "2026-08-06|Daily Lotto|Diversified Coverage|v1.0",
@@ -267,7 +91,7 @@
         "bonus_match": false,
         "prize_key": "0",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/06-august-2026",
-        "settled_at": "2026-08-07T13:18:51.094809+02:00"
+        "settled_at": "2026-08-07T13:22:48.728644+02:00"
       },
       {
         "id": "2026-08-06|Daily Lotto|Cold 6M|v1.0",
@@ -295,7 +119,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/06-august-2026",
-        "settled_at": "2026-08-07T13:18:51.094809+02:00"
+        "settled_at": "2026-08-07T13:22:48.728644+02:00"
       },
       {
         "id": "2026-08-05|Lotto|Weighted Historical",
@@ -321,7 +145,7 @@
         "prize_key": "1",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/lotto/results/05-august-2026",
-        "settled_at": "2026-08-07T13:18:51.094809+02:00"
+        "settled_at": "2026-08-07T13:22:48.728644+02:00"
       },
       {
         "id": "2026-08-05|Lotto|Hot 6M",
@@ -347,7 +171,7 @@
         "prize_key": "3",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/lotto/results/05-august-2026",
-        "settled_at": "2026-08-07T13:18:51.094809+02:00"
+        "settled_at": "2026-08-07T13:22:48.728644+02:00"
       },
       {
         "id": "2026-08-05|Lotto|Diversified Coverage",
@@ -373,7 +197,7 @@
         "prize_key": "0",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/lotto/results/05-august-2026",
-        "settled_at": "2026-08-07T13:18:51.094809+02:00"
+        "settled_at": "2026-08-07T13:22:48.728644+02:00"
       },
       {
         "id": "2026-08-05|Daily Lotto|Weighted Historical",
@@ -398,7 +222,7 @@
         "prize_key": "1",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/05-august-2026",
-        "settled_at": "2026-08-07T13:18:51.094809+02:00"
+        "settled_at": "2026-08-07T13:22:48.728644+02:00"
       },
       {
         "id": "2026-08-05|Daily Lotto|Hot 6M",
@@ -423,7 +247,7 @@
         "prize_key": "2",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/05-august-2026",
-        "settled_at": "2026-08-07T13:18:51.094809+02:00"
+        "settled_at": "2026-08-07T13:22:48.728644+02:00"
       },
       {
         "id": "2026-08-05|Daily Lotto|Diversified Coverage",
@@ -448,7 +272,7 @@
         "prize_key": "0",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/05-august-2026",
-        "settled_at": "2026-08-07T13:18:51.094809+02:00"
+        "settled_at": "2026-08-07T13:22:48.728644+02:00"
       }
     ]
   },
@@ -595,7 +419,14 @@
       "payout_source": "https://za.national-lottery.com/lotto/results/01-august-2026"
     }
   ],
-  "errors": [],
+  "errors": [
+    "Daily Lotto: https://za.national-lottery.com/daily-lotto/results: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /daily-lotto/results (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7ff99f280740>, 'Connection to za.national-lottery.com timed out. (connect timeout=5)'))",
+    "Daily Lotto: https://www.lottery.co.za/daily-lotto/results: ConnectTimeout: HTTPSConnectionPool(host='www.lottery.co.za', port=443): Max retries exceeded with url: /daily-lotto/results (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.lottery.co.za', port=443) at 0x7ff99f280aa0>, 'Connection to www.lottery.co.za timed out. (connect timeout=5)'))",
+    "Lotto: https://za.national-lottery.com/lotto/results: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /lotto/results (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7ff99f280e60>, 'Connection to za.national-lottery.com timed out. (connect timeout=5)'))",
+    "Lotto: https://www.lottery.co.za/lotto/results: ConnectTimeout: HTTPSConnectionPool(host='www.lottery.co.za', port=443): Max retries exceeded with url: /lotto/results (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.lottery.co.za', port=443) at 0x7ff99f281280>, 'Connection to www.lottery.co.za timed out. (connect timeout=5)'))",
+    "PowerBall: https://www.powerball.net/southafrica/results: ConnectTimeout: HTTPSConnectionPool(host='www.powerball.net', port=443): Max retries exceeded with url: /southafrica/results (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.powerball.net', port=443) at 0x7ff99f2815b0>, 'Connection to www.powerball.net timed out. (connect timeout=5)'))",
+    "PowerBall: https://za.national-lottery.com/powerball/results: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /powerball/results (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7ff99f281910>, 'Connection to za.national-lottery.com timed out. (connect timeout=5)'))"
+  ],
   "strategy_catalog": {
     "Hot 6M": {
       "version": "1.0",
