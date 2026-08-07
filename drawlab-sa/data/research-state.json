@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "methodology_version": "3.0",
-  "generated_at": "2026-08-07T16:57:54.118831+00:00",
+  "generated_at": "2026-08-07T16:59:18.928616+00:00",
   "null_hypothesis": "Lottery draws are treated as random and independent unless out-of-sample evidence shows otherwise.",
   "live_policy": "The four dynamic v1.0 strategies plus Frozen Alpha v1.0 remain locked live competitors. Research results do not alter them automatically.",
   "feedback_policy": "Played-ticket outcomes are used to evaluate models, not as direct number-level features for future recommendations.",
