@@ -1,0 +1,83 @@
+  return `<article class="card clickable" data-strategy="${esc(r.strategy)}"><div class="card-head"><div><span class="pill ${r.strategy==='Frozen Alpha'?'purple':'green'}">#${i+1} · ${r.strategy==='Frozen Alpha'?'FROZEN':'LIVE'}</span><h3 style="margin-top:9px">${esc(r.strategy)}</h3><p class="sub">${esc(STRATEGY_INFO[r.strategy]?.type||'Strategy')}</p></div><strong class="${cls(r.net)}">${money(r.net)}</strong></div><div class="kpis"><div class="mini"><span>ROI</span><strong class="${cls(r.roi_pct)}">${pct(r.roi_pct)}</strong></div><div class="mini"><span>Best</span><strong>${Number(r.best_matches||0)} match</strong></div><div class="mini"><span>Settled</span><strong>${fmt(r.settled)}</strong></div><div class="mini"><span>Avg match</span><strong>${r.avg_matches??'—'}</strong></div></div></article>`;
+}
+
+function renderPortfolio(){
+  const p=S.portfolio||portfolioFromLeague(S.live_league||[],S.db?.counts);
+  const max=Math.max(Number(p.spend||0),Number(p.won||0),1);
+  $('portfolioPanel').innerHTML = `<div class="portfolio-total"><div><span>NET RESEARCH P/L</span><strong class="${cls(p.net)}">${money(p.net)}</strong></div><span class="pill ${Number(p.roi_pct)>=0?'green':'red'}">ROI ${pct(p.roi_pct)}</span></div><div class="portfolio-bars"><div class="progress-row"><span>Spend</span><div class="track"><i style="width:${Math.max(3,Number(p.spend||0)/max*100)}%"></i></div><b>${money(p.spend)}</b></div><div class="progress-row"><span>Winnings</span><div class="track"><i style="width:${Math.max(3,Number(p.won||0)/max*100)}%"></i></div><b>${money(p.won)}</b></div></div><div class="kpis"><div class="mini"><span>Tickets</span><strong>${fmt(p.tickets)}</strong></div><div class="mini"><span>Settled</span><strong>${fmt(p.settled)}</strong></div><div class="mini"><span>Pending</span><strong>${fmt(p.pending)}</strong></div><div class="mini"><span>Best</span><strong>${p.best_matches||0} matches</strong></div></div>`;
+}
+
+function resultCard(r){
+  const nums=(r.numbers||r.main_numbers||[]);
+  const bonus=r.bonus ?? r.bonus_number;
+  return `<div class="result-card"><div class="result-date"><span>${esc(r.game)}</span><strong>${dateFmt(r.date||r.draw_date)}</strong></div><div class="balls">${nums.map(n=>`<span class="ball">${n}</span>`).join('')}${bonus!=null?`<span class="ball gold">${bonus}</span>`:''}</div><div class="result-source"><span>${esc(r.verification_status||r.payout_type||'verified')}</span><b>${r.payout_divisions!=null?`${r.payout_divisions} payout divisions`:r.payout_type==='exact'?'exact payout':'official result'}</b></div></div>`;
+}
+
+function renderStrategies(){
+  const liveMap=Object.fromEntries((S.live_league||[]).map(x=>[x.strategy,x]));
+  $('strategyCards').innerHTML = STRATEGIES.map(name=>{
+    const info=STRATEGY_INFO[name],r=liveMap[name]||{};
+    return `<article class="card clickable" data-strategy="${esc(name)}"><div class="card-head"><div><span class="pill ${name==='Frozen Alpha'?'purple':'green'}">${esc(info.type)}</span><h3 style="margin-top:9px">${esc(name)} <span class="muted">v1.0</span></h3></div><span class="pill">LOCKED VERSION</span></div><p class="sub" style="margin-top:11px">${esc(info.hypothesis)}</p><div class="kpis"><div class="mini"><span>Refresh</span><strong>${esc(info.refresh)}</strong></div><div class="mini"><span>Settled</span><strong>${fmt(r.settled||0)}</strong></div><div class="mini"><span>Net</span><strong class="${cls(r.net)}">${r.net==null?'—':money(r.net)}</strong></div><div class="mini"><span>Best</span><strong>${r.best_matches||0} match</strong></div></div><button class="btn" style="margin-top:12px" data-strategy="${esc(name)}">Open research profile</button></article>`;
+  }).join('');
+}
+
+function renderLive(){
+  const f=S.frozen||{};
+  $('frozenCards').innerHTML = GAME_ORDER.map(game=>{
+    const l=f.lines?.[game]; if(!l) return '';
+    return `<div class="card"><div class="card-head"><div><span class="pill purple">LOCKED CONTROL</span><h3 style="margin-top:9px">${game}</h3></div><span class="pill">v${esc(f.version||'1.0')}</span></div><div class="balls" style="margin-top:13px">${(l.numbers||[]).map(n=>`<span class="ball">${n}</span>`).join('')}${l.bonus!=null?`<span class="ball gold">${l.bonus}</span>`:''}</div><p class="sub" style="margin-top:11px">Never re-ranked because of wins or losses. Reset only when the legal ticket format itself changes.</p></div>`;
+  }).join('') || '<div class="empty">Frozen Alpha is initializing.</div>';
+
+  const pending=S.pending_tickets||[];
+  $('pendingTable').innerHTML = `<div class="tr header"><div>Strategy / game</div><div>Date</div><div>Numbers</div><div>Cost</div><div>Status</div><div>Version</div></div>` + (pending.length?pending.slice(0,24).map(t=>`<div class="tr"><strong>${esc(t.strategy)}<br><span class="muted">${esc(t.game)}</span></strong><div>${dateFmt(t.date)}</div><div>${esc((t.numbers||[]).join(' · '))}${t.bonus!=null?` + ${t.bonus}`:''}</div><div>${money(t.cost)}</div><div class="warn">${esc(t.status||'Pending')}</div><div>v${esc(t.version||t.strategy_version||'1.0')}</div></div>`).join(''):'<div class="empty">No pending tickets right now.</div>');
+
+  const rows=S.live_league||[];
+  $('liveTable').innerHTML = `<div class="tr header"><div>Strategy</div><div>Settled</div><div>Spend</div><div>Won</div><div>Net</div><div>ROI</div></div>` + rows.map(r=>`<div class="tr"><strong>${esc(r.strategy)}</strong><div>${fmt(r.settled)}</div><div>${money(r.spend)}</div><div>${money(r.won)}</div><div class="${cls(r.net)}">${money(r.net)}</div><div class="${cls(r.roi_pct)}">${pct(r.roi_pct)}</div></div>`).join('');
+}
+
+function renderResearch(){
+  const retro=S.retrospective?.summary||{};
+  const retroGames=GAME_ORDER.filter(g=>retro[g]);
+  $('retroGame').innerHTML=(retroGames.length?retroGames:GAME_ORDER).map(g=>`<option>${g}</option>`).join('');
+  $('retroGame').onchange=()=>renderRetro($('retroGame').value);
+  renderRetro($('retroGame').value);
+
+  const wf=S.research?.walk_forward||[];
+  const holdGames=GAME_ORDER.filter(g=>wf.some(r=>r.game===g));
+  $('holdGame').innerHTML=(holdGames.length?holdGames:GAME_ORDER).map(g=>`<option>${g}</option>`).join('');
+  $('holdGame').onchange=()=>renderHoldMatrix($('holdGame').value);
+  renderHoldMatrix($('holdGame').value);
+
+  const ch=S.research?.challengers||{};
+  $('challengerCards').innerHTML = Object.entries(ch).map(([game,c])=>{
+    const test=c.held_out_test?.challenger,champ=c.held_out_test?.champion_v1;
+    return `<div class="card"><div class="card-head"><div><span class="pill ${c.status==='candidate'?'purple':'amber'}">${esc(String(c.status||'unknown').toUpperCase())}</span><h3 style="margin-top:8px">${esc(game)}</h3></div></div><p class="sub">${esc(c.model||`Needs ${c.minimum_needed||'more'} compatible draws before challenger research.`)}</p>${test?`<div class="kpis"><div class="mini"><span>Challenger avg</span><strong>${test.avg_matches}</strong></div><div class="mini"><span>Champion avg</span><strong>${champ?.avg_matches??'—'}</strong></div><div class="mini"><span>Held-out n</span><strong>${test.samples}</strong></div><div class="mini"><span>Evidence</span><strong>${esc(String(test.evidence).replaceAll('_',' '))}</strong></div></div><p class="sub" style="margin-top:10px">Promotion remains disabled until a pre-declared evidence threshold is met across sufficient out-of-sample data.</p>`:''}</div>`;
+  }).join('') || '<div class="empty">No challenger studies yet.</div>';
+
+  const queue=S.experiment_queue||[];
+  $('experimentQueue').innerHTML = queue.length ? queue.map(q=>`<div class="card queue-card"><div><h3>${esc(q.title)}</h3><p>${esc(q.hypothesis)}</p></div><span class="pill ${q.status==='candidate'?'purple':q.status==='running'?'green':'amber'}">${esc(String(q.status||'proposed').toUpperCase())}</span></div>`).join('') : `<div class="card queue-card"><div><h3>Multi-season retrospective</h3><p>Repeat the same locked methods across more non-overlapping historical periods before interpreting one good season.</p></div><span class="pill amber">PROPOSED</span></div>`;
+}
+
+function renderRetro(game){
+  const rows=S.retrospective?.summary?.[game]||{};
+  $('retroTable').innerHTML = `<div class="tr header"><div>Strategy</div><div>Tickets</div><div>Spend</div><div>Won*</div><div>Net*</div><div>ROI*</div></div>` + Object.entries(rows).map(([name,r])=>`<div class="tr"><strong>${esc(name)}</strong><div>${fmt(r.tickets)}</div><div>${money(r.spend)}</div><div>${money(r.won)}</div><div class="${cls(r.net)}">${money(r.net)}</div><div class="${cls(r.roi_pct)}">${pct(r.roi_pct)}</div></div>`).join('');
+  if(!Object.keys(rows).length) $('retroTable').innerHTML += '<div class="empty">Retrospective state is not available.</div>';
+  const q=S.retrospective?.payout_quality||{};
+  $('retroQuality').innerHTML = `<b>How to read this:</b> predictions and match counts are strict walk-forward results with no future leakage. Historical financial values marked * currently use payout-model estimates unless an archived exact table has been enriched. The live ledger never substitutes estimates when an exact settled payout is available. ${q.exact_draws!=null?`Archive enrichment status: <b>${q.exact_draws}</b> exact draw tables, <b>${q.estimated_draws||0}</b> estimated.`:''}`;
+}
+
+function renderHoldMatrix(game){
+  const all=S.research?.walk_forward||[];
+  const rows=all.filter(r=>r.game===game);
+  const horizons=[1,2,4,8,20,'never'];
+  if(!rows.length){$('holdMatrix').innerHTML='<div class="empty">Hold-policy state is rebuilding.</div>';return;}
+  const bestMap=Object.fromEntries((S.research?.best_hold||[]).filter(r=>r.game===game).map(r=>[r.strategy,String(r.best_horizon)]));
+  let html='<div class="hold-grid"><div class="hold-cell head">Strategy</div>'+horizons.map(h=>`<div class="hold-cell head">${holdLabel(h)}</div>`).join('');
+  for(const strategy of STRATEGIES.filter(s=>s!=='Frozen Alpha')){
+    html+=`<div class="hold-cell strategy">${esc(strategy)}</div>`;
+    for(const h of horizons){
+      const r=rows.find(x=>x.strategy===strategy&&String(x.horizon)===String(h));
+      const best=bestMap[strategy]===String(h);
+      html+=`<div class="hold-cell ${best?'best':''}">${r?`<b>${r.avg_matches}</b><span>${r.ge2_rate}% ≥2 · n=${r.samples}</span>`:'<b>—</b><span>not run</span>'}</div>`;
+    }
+  }
