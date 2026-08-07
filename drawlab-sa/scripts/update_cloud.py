@@ -15,13 +15,14 @@ HISTORY_PATH = ROOT / "data" / "historical-results.json"
 TZ = ZoneInfo("Africa/Johannesburg")
 NOW = datetime.now(TZ)
 TODAY = NOW.date().isoformat()
+ENTRY_OPEN_HOUR = 17
 ENTRY_CUTOFF_HOUR = 20
 HTTP_TIMEOUT = (5, 9)
 
 RULES = {
     "Daily Lotto": {"count": 5, "max": 36, "days": set(range(7)), "cost": 3},
     "Lotto": {"count": 6, "max": 52, "days": {2, 5}, "cost": 5},
-    "PowerBall": {"count": 5, "max": 50, "days": {1, 4}, "bonus_max": 16, "cost": 5},
+    "PowerBall": {"count": 5, "max": 50, "days": {1, 4}, "bonus_max": 20, "cost": 5},
 }
 SOURCES = {
     "Daily Lotto": [
@@ -326,7 +327,7 @@ def ensure_virtual_entries(state):
     costs = state["virtual"].setdefault("costs", {})
     state["strategy_catalog"] = STRATEGIES
 
-    if NOW.hour >= ENTRY_CUTOFF_HOUR:
+    if NOW.hour < ENTRY_OPEN_HOUR or NOW.hour >= ENTRY_CUTOFF_HOUR:
         return
 
     order = ("Hot 6M", "Weighted Historical", "Cold 6M", "Diversified Coverage")

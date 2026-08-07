@@ -16,7 +16,7 @@ HISTORY_PATH = ROOT / "data" / "historical-results.json"
 RULES = {
     "Daily Lotto": {"count": 5, "max": 36, "bonus_max": None},
     "Lotto": {"count": 6, "max": 52, "bonus_max": 52},
-    "PowerBall": {"count": 5, "max": 50, "bonus_max": 16},
+    "PowerBall": {"count": 5, "max": 50, "bonus_max": 20},
 }
 
 
@@ -74,7 +74,7 @@ def validate_draw(draw: dict[str, Any], context: str) -> None:
 
 
 def validate_state(state: dict[str, Any]) -> None:
-    require(state.get("status") in {"initialising", "healthy", "partial", "degraded"}, "cloud-state.json has an unsupported status")
+    require(state.get("status") in {"initialising", "healthy", "ok", "partial", "degraded"}, "cloud-state.json has an unsupported status")
     parse_iso_datetime(state.get("updated_at"), "cloud-state.updated_at")
 
     results = state.get("results", [])
@@ -105,7 +105,7 @@ def validate_state(state: dict[str, Any]) -> None:
 
 
 def validate_history(history: dict[str, Any]) -> None:
-    require(history.get("schema_version") == 1, "Unsupported historical-results schema_version")
+    require(history.get("schema_version") in {1, 2}, "Unsupported historical-results schema_version")
     parse_iso_datetime(history.get("updated_at"), "historical-results.updated_at")
     results = history.get("results")
     require(isinstance(results, list), "historical-results.results must be a list")

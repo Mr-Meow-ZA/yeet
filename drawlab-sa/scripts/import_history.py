@@ -32,7 +32,7 @@ GAMES = {
         "archive": "https://www.powerball.net/southafrica/results/history/{year}",
         "count": 5,
         "max": 50,
-        "bonus_max": 16,
+        "bonus_max": 20,
         "weekdays": {1, 4},
     },
 }
