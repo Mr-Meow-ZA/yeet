@@ -68,6 +68,24 @@ function mergeState(local, db){
   out.db = db || null;
   if(db?.database_status === 'ok'){
     sourceMode = 'database';
+    const rs = db.research;
+    if(rs && typeof rs === 'object'){
+      const walk = Array.isArray(rs.walk_forward) ? rs.walk_forward : (out.research?.walk_forward || []);
+      out.research = {
+        ...(out.research || {}),
+        methodology_version: rs.methodology_version || out.research?.methodology_version,
+        null_hypothesis: rs.null_hypothesis || out.research?.null_hypothesis,
+        live_policy: rs.live_policy || out.research?.live_policy,
+        feedback_policy: rs.feedback_policy || out.research?.feedback_policy,
+        data_quality: rs.data_quality || out.research?.data_quality || {},
+        chance_baselines: rs.chance_baselines || out.research?.chance_baselines || {},
+        walk_forward: walk,
+        horizon1: walk.filter(r => String(r.horizon) === '1'),
+        best_hold: rs.best_hold || out.research?.best_hold || [],
+        challengers: rs.challengers || out.research?.challengers || {},
+        notes: rs.notes || out.research?.notes || []
+      };
+    }
     out.live_league = db.live_league || out.live_league || [];
     out.hall_of_records = db.hall_of_records || out.hall_of_records || [];
     out.recent_results = db.recent_results || out.recent_results || [];
