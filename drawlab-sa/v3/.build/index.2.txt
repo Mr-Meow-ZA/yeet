@@ -1,0 +1,63 @@
+        <div class="panel" id="holdMatrix"></div>
+
+        <div class="split-xl">
+          <section>
+            <div class="section-head compact"><div><span class="kicker">CHALLENGER</span><h2>Champion vs challenger</h2><p>Research cannot promote itself.</p></div></div>
+            <div class="cards" id="challengerCards"></div>
+          </section>
+          <aside>
+            <div class="section-head compact"><div><span class="kicker">QUEUE</span><h2>Experiment queue</h2><p>Ideas stay here until evidence earns a decision.</p></div></div>
+            <div class="cards" id="experimentQueue"></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="view" id="history">
+        <div class="page-intro"><div class="eyebrow">Historical intelligence</div><h2>The factual archive.</h2><p>Coverage, current model scope and rule eras live here. This page describes what happened; it does not turn historical patterns into certainty.</p></div>
+        <div class="section-head"><div><span class="kicker">DATABASE</span><h2>Validated coverage</h2><p>Total archive vs current model-eligible scope.</p></div></div>
+        <div class="cards cols-3" id="historyCards"></div>
+
+        <div class="section-head"><div><span class="kicker">RECENT</span><h2>Official draw tape</h2><p>Newest verified results.</p></div></div>
+        <div class="cards cols-2" id="historyResults"></div>
+
+        <div class="section-head"><div><span class="kicker">RULES</span><h2>Explicit rule eras</h2><p>Incompatible number spaces never get silently mixed.</p></div></div>
+        <div class="panel methods">
+          <div class="method-row"><b>DL</b><div><h3>Daily Lotto · 5/36</h3><p>The current DrawLab historical window uses the same 5/36 main-number space.</p></div></div>
+          <div class="method-row"><b>L</b><div><h3>Lotto · 6/58 → 6/52</h3><p>Legacy 6/58 draws remain archived. Current 6/52 model calculations start at the June 2026 rule boundary rather than blending incompatible spaces.</p></div></div>
+          <div class="method-row"><b>PB</b><div><h3>PowerBall · 5/50, PB pool changed</h3><p>Main 5/50 history remains compatible. The special-ball pool changed from 1–20 to 1–16 and is treated as a separate era.</p></div></div>
+        </div>
+      </section>
+
+      <section class="view" id="records">
+        <div class="page-intro"><div class="eyebrow">Hall of Records</div><h2>The moments worth remembering.</h2><p>A permanent top-20 archive of the strongest live tickets. Historical simulations are deliberately excluded.</p></div>
+        <div class="section-head"><div><span class="kicker">TOP 20</span><h2>Live ticket records</h2><p>Ranked by main-number matches, then prize, then recency.</p></div></div>
+        <div class="record-list" id="recordsList"></div>
+      </section>
+
+      <section class="view" id="methodology">
+        <div class="page-intro"><div class="eyebrow">Data & methodology</div><h2>How DrawLab keeps itself honest.</h2><p>Every valid lottery line has the same base mathematical odds. DrawLab tests decision processes and historical hypotheses; it does not claim that a pattern makes a future line inherently more likely.</p></div>
+
+        <div class="section-head"><div><span class="kicker">CONSTITUTION</span><h2>Research rules</h2><p>These are harder to change than a strategy.</p></div></div>
+        <div class="panel methods" id="principles"></div>
+
+        <div class="section-head"><div><span class="kicker">ARCHITECTURE</span><h2>Production data flow</h2><p>Database-first live state with a reproducible repository fallback.</p></div></div>
+        <div class="cards cols-3" id="architectureCards"></div>
+
+        <div class="section-head"><div><span class="kicker">SYSTEM</span><h2>Research metadata</h2><p>Versioning and synchronization details.</p></div></div>
+        <div class="panel" id="metadataPanel"></div>
+      </section>
+    </main>
+  </div>
+</div>
+
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation"></nav>
+
+<div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+<aside class="drawer" id="strategyDrawer" aria-hidden="true">
+  <button class="drawer-close" id="drawerClose" aria-label="Close strategy profile">×</button>
+  <div id="drawerBody"></div>
+</aside>
+
+<script src="app.js" defer></script>
+</body>
+</html>
