@@ -94,7 +94,10 @@ function mergeState(local, db){
     out.database_history = db.history || [];
     const frozen = dbFrozenToLocal(db.frozen);
     if(frozen) out.frozen = {...(out.frozen||{}),...frozen};
-    out.retrospective = dbRetroToLocal(db.retrospective,out.retrospective);
+    const dbRetro = db.retrospective;
+    out.retrospective = dbRetro && !Array.isArray(dbRetro) && typeof dbRetro === 'object'
+      ? {...(out.retrospective||{}), ...dbRetro}
+      : dbRetroToLocal(dbRetro,out.retrospective);
     out.portfolio = portfolioFromLeague(out.live_league, db.counts);
   } else {
     sourceMode = 'local';
