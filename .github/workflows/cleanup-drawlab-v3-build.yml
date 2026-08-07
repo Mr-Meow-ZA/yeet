@@ -1,0 +1,66 @@
+name: Clean DrawLab v3 build machinery
+
+on:
+  push:
+    paths:
+      - '.github/workflows/cleanup-drawlab-v3-build.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Remove one-time v3 installers and staging files
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f \
+            .github/workflows/install-drawlab-v3.yml \
+            .github/workflows/upgrade-drawlab-research-v3.yml \
+            .github/workflows/promote-drawlab-v3.yml \
+            .github/workflows/patch-drawlab-v3-db-research.yml \
+            drawlab-sa/scripts/upgrade_research_v3.py \
+            drawlab-sa/scripts/patch_v3_db_research.py \
+            drawlab-sa/scripts/install_v3_frontend.py \
+            drawlab-sa/scripts/run_v3_frontend_installer.py \
+            drawlab-sa/scripts/install_v3_live.py \
+            drawlab-sa/scripts/patch_retrospective_rule_eras.py \
+            drawlab-sa/scripts/patch_retrospective_fast_mode.py \
+            drawlab-sa/scripts/install_retrospective_payout_cache.py
+          rm -rf drawlab-sa/v3/.build
+          rm -f .github/workflows/cleanup-drawlab-v3-build.yml
+      - name: Validate permanent production files survived cleanup
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s drawlab-sa/index.html
+          test -s drawlab-sa/v3/app.js
+          test -s drawlab-sa/v3/styles.css
+          test -s drawlab-sa/data/research-state.json
+          test -s .github/workflows/drawlab-cloud.yml
+          test -s .github/workflows/drawlab-research.yml
+          test -s .github/workflows/drawlab-supabase-sync.yml
+          test -s .github/workflows/import-drawlab-history.yml
+          test -s .github/workflows/drawlab-integrity.yml
+          node --check drawlab-sa/v3/app.js
+          python -m py_compile drawlab-sa/scripts/update_cloud.py drawlab-sa/scripts/import_history.py drawlab-sa/scripts/research_engine.py drawlab-sa/scripts/retrospective_v3.py drawlab-sa/scripts/build_v3_state.py drawlab-sa/scripts/validate_state.py
+      - name: Commit cleanup and remove this workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'DrawLab v3 Builder'
+          git config user.email 'drawlab-v3@users.noreply.github.com'
+          git add -A .github/workflows drawlab-sa/scripts drawlab-sa/v3
+          git commit -m 'Remove completed DrawLab v3 build machinery'
+          for attempt in 1 2 3; do
+            if git push origin HEAD:master; then exit 0; fi
+            git fetch origin master
+            git rebase origin/master
+          done
+          exit 1
