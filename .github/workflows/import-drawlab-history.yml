@@ -25,11 +25,21 @@ jobs:
           python-version: '3.12'
       - name: Install dependencies
         run: pip install requests beautifulsoup4
-      - name: Validate importer
-        run: python -m py_compile drawlab-sa/scripts/import_history.py
+      - name: Validate DrawLab engines
+        run: |
+          python -m py_compile drawlab-sa/scripts/import_history.py
+          python -m py_compile drawlab-sa/scripts/research_engine.py
+          python -m py_compile drawlab-sa/scripts/update_cloud.py
+          python -m py_compile drawlab-sa/scripts/validate_state.py
       - name: Import and validate current-format history
         run: python drawlab-sa/scripts/import_history.py --start-year 2024 --end-year 2026
-      - name: Commit validated history safely
+      - name: Rebuild research state from validated history
+        run: python drawlab-sa/scripts/research_engine.py
+      - name: Refresh live cloud state
+        run: python drawlab-sa/scripts/update_cloud.py
+      - name: Validate resulting state
+        run: python drawlab-sa/scripts/validate_state.py
+      - name: Commit validated data safely
         shell: bash
         run: |
           set -euo pipefail
@@ -37,15 +47,15 @@ jobs:
           git config user.email 'drawlab-history@users.noreply.github.com'
 
           for attempt in 1 2 3; do
-            git add drawlab-sa/data/historical-results.json
+            git add drawlab-sa/data/historical-results.json drawlab-sa/data/research-state.json drawlab-sa/data/cloud-state.json
             if git diff --cached --quiet; then
-              echo 'No validated history changes'
+              echo 'No validated data changes'
               exit 0
             fi
 
-            git commit -m 'Import validated DrawLab historical results'
+            git commit -m 'Refresh validated DrawLab history and research'
             if git push origin HEAD:master; then
-              echo 'Historical results pushed successfully'
+              echo 'DrawLab historical and research data pushed successfully'
               exit 0
             fi
 
@@ -53,7 +63,10 @@ jobs:
             git fetch origin master
             git reset --hard origin/master
             python drawlab-sa/scripts/import_history.py --start-year 2024 --end-year 2026
+            python drawlab-sa/scripts/research_engine.py
+            python drawlab-sa/scripts/update_cloud.py
+            python drawlab-sa/scripts/validate_state.py
           done
 
-          echo 'Unable to push historical results after three attempts'
+          echo 'Unable to push validated DrawLab data after three attempts'
           exit 1
