@@ -1,0 +1,36 @@
+name: DrawLab Supabase Sync
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'drawlab-sa/data/cloud-state.json'
+      - 'drawlab-sa/data/historical-results.json'
+      - '.github/workflows/drawlab-supabase-sync.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: drawlab-supabase-sync
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Sync validated repository state to Supabase
+        shell: bash
+        run: |
+          set -euo pipefail
+          response="$(curl --fail-with-body --silent --show-error --max-time 90 \
+            'https://lnmgieielbqqqvboonzj.supabase.co/functions/v1/drawlab-sync')"
+          echo "$response"
+          python - <<'PY' "$response"
+          import json,sys
+          payload=json.loads(sys.argv[1])
+          if not payload.get('ok'):
+              raise SystemExit('DrawLab Supabase sync returned ok=false')
+          print('DrawLab Supabase sync validated')
+          PY
