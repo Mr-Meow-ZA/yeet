@@ -7,6 +7,7 @@ on:
       - 'drawlab-sa/data/cloud-state.json'
       - 'drawlab-sa/data/historical-results.json'
       - 'drawlab-sa/data/research-state.json'
+      - 'drawlab-sa/v3/data/retrospective.json'
       - '.github/workflows/drawlab-supabase-sync.yml'
 
 permissions:
@@ -36,5 +37,7 @@ jobs:
           sync=payload.get('sync') or {}
           if not sync.get('research_synced'):
               raise SystemExit('DrawLab research snapshot was not synchronized')
+          if not sync.get('retrospective_synced'):
+              raise SystemExit('DrawLab retrospective snapshot was not synchronized')
           print('DrawLab Supabase sync validated; methodology',sync.get('research_methodology'))
           PY
