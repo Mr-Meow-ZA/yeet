@@ -1,0 +1,84 @@
+  html+='</div><div class="notice subtle" style="margin-top:13px"><b>Primary score:</b> average main-number matches, then ≥2-match rate. ROI is not used to select a hold policy because one rare payout can dominate a small financial sample. “Never” means generate once at the first eligible target and hold within the compatible rule era.</div>';
+  $('holdMatrix').innerHTML=html;
+}
+
+function renderHistory(){
+  const dbHist=S.database_history||S.db?.history||[];
+  const model=S.research?.data_quality||{};
+  const map=Object.fromEntries(dbHist.map(x=>[x.game,x]));
+  $('historyCards').innerHTML = GAME_ORDER.map(game=>{
+    const total=Number(map[game]?.draws||0), eligible=Number(model[game]?.draws||0), ratio=total?eligible/total*100:0;
+    return `<div class="card"><div class="history-stat"><div><span>TOTAL VERIFIED ARCHIVE</span><strong>${fmt(total||eligible)}</strong></div><span class="pill ${model[game]?.status==='usable'?'green':'amber'}">${esc(String(model[game]?.status||'unknown').toUpperCase())}</span></div><h3 style="margin-top:12px">${game}</h3><p class="sub">${esc(model[game]?.first_draw||map[game]?.first_draw||'—')} → ${esc(model[game]?.last_draw||map[game]?.last_draw||'—')}</p><div class="scope-bar"><i style="width:${Math.max(4,Math.min(100,ratio||100))}%"></i></div><p class="sub">Model-eligible scope: <b>${fmt(eligible)}</b>${total?` of ${fmt(total)} archived draws`:''}. ${esc(model[game]?.rule_scope||'')}</p></div>`;
+  }).join('');
+  const recent=(S.recent_results||[]).slice(0,12);
+  $('historyResults').innerHTML = recent.length ? recent.map(resultCard).join('') : '<div class="empty">No draw tape available.</div>';
+}
+
+function renderRecords(){
+  const rows=S.hall_of_records||[];
+  $('recordsList').innerHTML = rows.length ? rows.map(r=>`<div class="record"><div class="rank">#${r.rank}</div><div><h3>${esc(r.strategy)} · ${esc(r.game)}</h3><p>${dateFmt(r.date)} · ${esc((r.numbers||[]).join(' · '))}${r.bonus!=null?` + ${r.bonus}`:''}</p></div><div class="record-score"><strong>${Number(r.matches||0)} match${Number(r.matches||0)===1?'':'es'}</strong><span>${money(r.won)} · ${esc(r.payout_type||'no payout')}</span></div></div>`).join('') : '<div class="empty">No settled live records yet.</div>';
+}
+
+function renderMethodology(){
+  const descriptions=[
+    'A historical target draw is never visible when its prediction is generated.',
+    'Completed live tickets and research runs remain part of the audit trail.',
+    'A formula change creates a new version rather than rewriting v1.0.',
+    'Wins and losses evaluate strategies; they are not treated as magical feedback for individual numbers.',
+    'Every valid lottery line starts with equal mathematical odds. Random independence is the default explanation.',
+    'A rare prize can distort ROI, so match distributions and evidence thresholds matter too.',
+    'Testing many ideas raises false-discovery risk, so corrected evidence is reported.',
+    'Rule changes create explicit boundaries instead of silently mixing incompatible outcome spaces.',
+    'Missing or questionable source data is withheld rather than fabricated.'
+  ];
+  $('principles').innerHTML=(S.principles||[]).map((p,i)=>`<div class="method-row"><b>${i+1}</b><div><h3>${esc(p)}</h3><p>${esc(descriptions[i]||'')}</p></div></div>`).join('');
+  const db=S.db||{},sync=db.sync||{};
+  $('architectureCards').innerHTML = [
+    ['Supabase / Postgres',`${fmt(db.counts?.draws||0)} draws · ${fmt(db.counts?.tickets||0)} live tickets`,`Primary structured store for draws, tickets, settlements, strategies, frozen portfolios and research runs.`,'green'],
+    ['GitHub audit snapshot','Automatic fallback','Validated JSON snapshots stay reproducible and keep the site usable if the database endpoint is temporarily unavailable.',''],
+    ['Versioned research engine',`Methodology ${esc(S.research?.methodology_version||'—')}`,'Walk-forward simulations, hold-policy tests and challengers run separately from the live experiment.','purple']
+  ].map(([t,b,p,c])=>`<div class="card"><span class="pill ${c}">${b}</span><h3 style="margin-top:10px">${t}</h3><p class="sub">${p}</p></div>`).join('');
+  $('metadataPanel').innerHTML = `<div class="meta-grid"><div class="meta-item"><span>DATABASE SYNC</span><strong>${timeFmt(sync.synced_at)}</strong></div><div class="meta-item"><span>SOURCE UPDATED</span><strong>${timeFmt(sync.source_updated_at||S.cloud_updated_at)}</strong></div><div class="meta-item"><span>ROWS WRITTEN LAST SYNC</span><strong>${fmt(sync.rows_written||0)}</strong></div><div class="meta-item"><span>RESEARCH METHODOLOGY</span><strong>${esc(S.research?.methodology_version||'—')}</strong></div><div class="meta-item"><span>DATA POLICY</span><strong>${esc(S.data_policy?.version||S.frozen?.data_policy_version||'2.0-rule-aware')}</strong></div><div class="meta-item"><span>UI READ SOURCE</span><strong>${sourceMode==='database'?'Supabase primary':'Repository fallback'}</strong></div></div><div class="notice subtle" style="margin-top:13px">DrawLab is a private research project. It can generate lines and paper-track them, but it does not claim to alter the underlying probability of a valid lottery ticket.</div>`;
+}
+
+function openStrategy(name){
+  const info=STRATEGY_INFO[name]; if(!info) return;
+  const live=(S.live_league||[]).find(x=>x.strategy===name)||{};
+  const retro=S.retrospective?.summary||{};
+  const best=S.research?.best_hold||[];
+  const profiles=GAME_ORDER.map(game=>{
+    const rr=retro[game]?.[name];
+    const h=best.find(x=>x.game===game&&x.strategy===name);
+    return `<div class="profile-game"><div class="row"><b>${game}</b><span class="${cls(rr?.roi_pct)}">${rr?`1Y ROI* ${pct(rr.roi_pct)}`:'No 1Y run'}</span></div><div class="row"><span>Retrospective best match</span><b>${rr?.best_matches??'—'}</b></div><div class="row"><span>Best tested hold policy</span><b>${h?holdLabel(h.best_horizon):name==='Frozen Alpha'?'Never':'—'}</b></div></div>`;
+  }).join('');
+  $('drawerBody').innerHTML=`<span class="pill ${name==='Frozen Alpha'?'purple':'green'}">${esc(info.type)} · v1.0</span><h2>${esc(name)}</h2><p class="drawer-lede">${esc(info.hypothesis)}</p><div class="drawer-section"><h3>Method</h3><p class="drawer-lede">${esc(info.method)}</p></div><div class="drawer-section"><h3>Live record</h3><div class="kpis"><div class="mini"><span>Refresh</span><strong>${esc(info.refresh)}</strong></div><div class="mini"><span>Settled</span><strong>${fmt(live.settled||0)}</strong></div><div class="mini"><span>Live ROI</span><strong class="${cls(live.roi_pct)}">${pct(live.roi_pct)}</strong></div><div class="mini"><span>Best live</span><strong>${live.best_matches||0}</strong></div></div></div><div class="drawer-section"><h3>Historical research profile</h3>${profiles}<p class="sub" style="margin-top:10px">* Retrospective financial values may include labelled payout estimates. Match results are generated from historical official draws.</p></div>`;
+  $('drawerBackdrop').hidden=false;
+  $('strategyDrawer').classList.add('open');$('strategyDrawer').setAttribute('aria-hidden','false');
+}
+function closeDrawer(){ $('strategyDrawer').classList.remove('open');$('strategyDrawer').setAttribute('aria-hidden','true');setTimeout(()=>$('drawerBackdrop').hidden=true,180); }
+
+function bindInteractive(){
+  document.body.addEventListener('click',e=>{const target=e.target.closest('[data-strategy]');if(target) openStrategy(target.dataset.strategy);});
+  $('drawerClose').onclick=closeDrawer;$('drawerBackdrop').onclick=closeDrawer;
+  document.addEventListener('keydown',e=>{if(e.key==='Escape') closeDrawer();});
+}
+
+function render(){
+  setHealth();renderOverview();renderStrategies();renderLive();renderResearch();renderHistory();renderRecords();renderMethodology();
+}
+
+async function boot(){
+  setupNav();bindInteractive();
+  let local={},db=null;
+  const results=await Promise.allSettled([fetchJSON(LOCAL_URL,4500),fetchJSON(DB_URL,6000)]);
+  if(results[0].status==='fulfilled') local=results[0].value;
+  if(results[1].status==='fulfilled') db=results[1].value;
+  S=mergeState(local,db);
+  if(!Object.keys(S).length){S={cloud_status:'degraded',research:{},principles:[]};}
+  render();
+  const hash=location.hash.slice(1); if(hash) show(hash);
+  if('serviceWorker' in navigator){ navigator.serviceWorker.register(inV3?'../sw.js':'sw.js').catch(()=>{}); }
+}
+
+boot();
+})();
