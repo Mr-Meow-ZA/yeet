@@ -646,6 +646,7 @@ def recent_enough(date_str, days=14):
 def main():
     state = load_state()
     state["errors"] = []
+    state["warnings"] = []
     state["strategy_catalog"] = STRATEGIES
     load_valid_history()
     state["history_quality"] = _HISTORY_QUALITY
@@ -654,7 +655,7 @@ def main():
 
     for game in RULES:
         result, errors = fetch_latest_result(game)
-        state["errors"].extend(errors)
+        state["warnings"].extend(errors)
         if not result:
             continue
         existing = next(
@@ -679,7 +680,7 @@ def main():
                 {"payouts": payouts, "payout_type": payout_type, "payout_source": source}
             )
             if error:
-                state["errors"].append(f"{game} payout: {error}")
+                state["warnings"].append(f"{game} payout: {error}")
         merge_result(state, result)
 
     pending_exact = [
@@ -694,11 +695,17 @@ def main():
                 {"payouts": payouts, "payout_type": payout_type, "payout_source": source}
             )
         elif error:
-            state["errors"].append(
+            state["warnings"].append(
                 f"{result.get('game')} {result.get('date')} payout: {error}"
             )
 
     settle(state)
+    # Source timeouts are warnings while the draw is not overdue. The late
+    # results run upgrades a genuinely missing same-day result to an error.
+    if NOW.hour >= 22:
+        for game in games_for_date(NOW.date()):
+            if not any(row.get("date") == TODAY and row.get("game") == game for row in state.get("results", [])):
+                state["errors"].append(f"{game}: result is overdue after the late results window")
     state["status"] = "ok" if not state["errors"] else "partial"
     state["results"] = sorted(
         state.get("results", []),
@@ -725,6 +732,7 @@ def main():
                 "estimated_payout_draws": estimated,
                 "history_quality": state.get("history_quality"),
                 "errors": state["errors"][:8],
+                "warnings": state.get("warnings", [])[:8],
             },
             indent=2,
         )
