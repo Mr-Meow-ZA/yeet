@@ -1,0 +1,6 @@
+:root{
+  --bg:#05080d;--bg2:#070c13;--surface:#0b1119;--surface2:#101926;--surface3:#162231;
+  --line:#ffffff12;--line2:#ffffff1e;--text:#f7fafc;--muted:#8290a3;--muted2:#a9b4c2;
+  --green:#54e89c;--red:#ff6f7d;--amber:#f7bd55;--blue:#65a9ff;--purple:#a97cff;
+  --r:20px;--shadow:0 28px 90px #0008;
+}
