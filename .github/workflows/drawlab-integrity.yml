@@ -18,7 +18,7 @@ concurrency:
 
 jobs:
   validate:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
 
     steps:
@@ -36,6 +36,29 @@ jobs:
 
       - name: Validate stored results and tickets
         run: python drawlab-sa/scripts/validate_state.py
+
+      - name: Validate v3 research artifacts
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('drawlab-sa/v3/data')
+          for name in ('frozen-alpha.json','retrospective.json','v3-state.json'):
+              path=root/name
+              assert path.exists() and path.stat().st_size > 2, f'missing {path}'
+              json.loads(path.read_text())
+          state=json.loads((root/'v3-state.json').read_text())
+          assert state.get('schema_version') == 3
+          frozen=json.loads((root/'frozen-alpha.json').read_text())
+          assert frozen.get('locked') is True and len(frozen.get('lines',{})) == 3
+          retro=json.loads((root/'retrospective.json').read_text())
+          assert retro.get('simulation',{}).get('method') == 'strict walk-forward; no future leakage'
+          print('Validated DrawLab v3 artifacts')
+          PY
+          grep -q 'Frozen Alpha' drawlab-sa/scripts/update_cloud.py
+          grep -qi 'Research lab' drawlab-sa/v3/index.html
+          grep -q 'Hall of Records' drawlab-sa/v3/index.html
 
       - name: Check scheduled data freshness
         if: github.event_name == 'schedule'
