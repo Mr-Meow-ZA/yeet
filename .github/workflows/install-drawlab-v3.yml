@@ -1,0 +1,67 @@
+name: Install DrawLab v3
+on:
+  push:
+    paths:
+      - '.github/workflows/install-drawlab-v3.yml'
+permissions:
+  contents: write
+concurrency:
+  group: drawlab-data-writer
+  cancel-in-progress: false
+jobs:
+  install:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+      - name: Compile v3 engines
+        run: |
+          python -m py_compile drawlab-sa/scripts/install_v3_live.py
+          python -m py_compile drawlab-sa/scripts/retrospective_v3.py
+          python -m py_compile drawlab-sa/scripts/build_v3_state.py
+      - name: Initialise frozen live control
+        run: python drawlab-sa/scripts/install_v3_live.py
+      - name: Validate patched live engine
+        run: python -m py_compile drawlab-sa/scripts/update_cloud.py
+      - name: Run one-year retrospective
+        run: python drawlab-sa/scripts/retrospective_v3.py
+      - name: Refresh cloud state
+        run: python drawlab-sa/scripts/update_cloud.py
+      - name: Build v3 read model
+        run: python drawlab-sa/scripts/build_v3_state.py
+      - name: Validate state
+        run: python drawlab-sa/scripts/validate_state.py
+      - name: Validate v3 markers
+        run: |
+          test -s drawlab-sa/v3/data/frozen-alpha.json
+          test -s drawlab-sa/v3/data/retrospective.json
+          test -s drawlab-sa/v3/data/v3-state.json
+          grep -q 'Frozen Alpha' drawlab-sa/scripts/update_cloud.py
+          grep -q 'Research Lab' drawlab-sa/v3/index.html
+          grep -q 'Hall of Records' drawlab-sa/v3/index.html
+      - name: Commit generated v3 state
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'DrawLab v3 Builder'
+          git config user.email 'drawlab-v3@users.noreply.github.com'
+          git add drawlab-sa/scripts/update_cloud.py drawlab-sa/v3/data/frozen-alpha.json drawlab-sa/v3/data/retrospective.json drawlab-sa/v3/data/v3-state.json drawlab-sa/data/cloud-state.json
+          if git diff --cached --quiet; then
+            echo 'No generated changes'
+            exit 0
+          fi
+          git commit -m 'Activate DrawLab v3 live research model'
+          for attempt in 1 2 3; do
+            if git push origin HEAD:master; then exit 0; fi
+            echo "Push conflict, retry $attempt"
+            git fetch origin master
+            git rebase origin/master
+          done
+          exit 1
