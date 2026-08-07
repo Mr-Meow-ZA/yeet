@@ -73,6 +73,8 @@ jobs:
 
           retro=json.loads((root/'retrospective.json').read_text())
           assert retro.get('simulation',{}).get('method') == 'strict walk-forward; no future leakage'
+          assert isinstance(retro.get('summary'),dict) and retro.get('summary')
+          assert isinstance(retro.get('payout_quality'),dict)
 
           research=json.loads(Path('drawlab-sa/data/research-state.json').read_text())
           assert research.get('methodology_version') == '3.0', research.get('methodology_version')
@@ -96,11 +98,12 @@ jobs:
           grep -q '1 · 2 · 4 · 8 · 20 · Never' drawlab-sa/index.html
           grep -q 'drawlab-state' drawlab-sa/v3/app.js
           grep -q 'const rs = db.research' drawlab-sa/v3/app.js
+          grep -q 'const dbRetro = db.retrospective' drawlab-sa/v3/app.js
           grep -q 'Frozen Alpha' drawlab-sa/scripts/update_cloud.py
           ! grep -q '__PLACEHOLDER__' drawlab-sa/v3/styles.css
 
       - name: Verify Supabase read model
-        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        if: github.event_name != 'pull_request'
         shell: bash
         run: |
           set -euo pipefail
@@ -115,6 +118,9 @@ jobs:
           assert research.get('methodology_version') == '3.0', research.get('methodology_version')
           hs={str(r.get('horizon')) for r in research.get('walk_forward',[])}
           assert {'1','2','4','8','20','never'} <= hs, hs
+          retro=p.get('retrospective') or {}
+          assert isinstance(retro.get('summary'),dict) and retro.get('summary'), retro.keys()
+          assert isinstance(retro.get('payout_quality'),dict), retro.keys()
           print('Supabase primary read model is healthy:',counts)
           PY
 
