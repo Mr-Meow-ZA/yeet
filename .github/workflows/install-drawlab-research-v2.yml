@@ -1,0 +1,49 @@
+name: Install DrawLab Research v2
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'drawlab-sa/scripts/apply_research_v2.py'
+      - '.github/workflows/install-drawlab-research-v2.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: drawlab-data-writes
+  cancel-in-progress: false
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Apply Research v2 integration
+        run: python drawlab-sa/scripts/apply_research_v2.py
+      - name: Validate Python
+        run: |
+          python -m py_compile drawlab-sa/scripts/update_cloud.py
+          python -m py_compile drawlab-sa/scripts/import_history.py
+          python -m py_compile drawlab-sa/scripts/validate_state.py
+          python -m py_compile drawlab-sa/scripts/research_engine.py
+      - name: Generate research state
+        run: python drawlab-sa/scripts/research_engine.py
+      - name: Validate stored data
+        run: python drawlab-sa/scripts/validate_state.py
+      - name: Commit integrated app
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'DrawLab Research Installer'
+          git config user.email 'drawlab-research@users.noreply.github.com'
+          git add drawlab-sa/index.html drawlab-sa/scripts/update_cloud.py drawlab-sa/scripts/import_history.py drawlab-sa/scripts/validate_state.py drawlab-sa/data/research-state.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Integrate DrawLab Research Engine v2'
+          git push origin HEAD:master
