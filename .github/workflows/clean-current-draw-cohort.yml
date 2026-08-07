@@ -1,0 +1,45 @@
+name: Clean Current DrawLab Cohort
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'drawlab-sa/scripts/clean_current_draw_cohort.py'
+      - '.github/workflows/clean-current-draw-cohort.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: drawlab-data-writes
+  cancel-in-progress: false
+
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Patch cohort handling
+        run: python drawlab-sa/scripts/clean_current_draw_cohort.py
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+      - name: Validate engine
+        run: python -m py_compile drawlab-sa/scripts/update_cloud.py
+      - name: Clean current pending cohort and refresh state
+        run: python drawlab-sa/scripts/update_cloud.py
+      - name: Validate state
+        run: python drawlab-sa/scripts/validate_state.py
+      - name: Commit clean cohort
+        run: |
+          git config user.name 'DrawLab Research Migration'
+          git config user.email 'drawlab-research@users.noreply.github.com'
+          git add drawlab-sa/scripts/update_cloud.py drawlab-sa/data/cloud-state.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Start clean rule-aware DrawLab cohort'
+          git push origin HEAD:master
