@@ -1,9 +1,9 @@
 {
   "schema_version": 4,
-  "generated_at": "2026-08-07T17:37:43.763162+00:00",
+  "generated_at": "2026-08-07T21:01:57.683710+00:00",
   "platform": "DrawLab v3 Research Platform",
   "cloud_status": "ok",
-  "cloud_updated_at": "2026-08-07T19:37:42.967753+02:00",
+  "cloud_updated_at": "2026-08-07T23:01:56.244019+02:00",
   "history_quality": {
     "Daily Lotto": {
       "raw": 947,
@@ -39,8 +39,8 @@
   },
   "portfolio": {
     "tickets": 20,
-    "settled": 10,
-    "pending": 10,
+    "settled": 20,
+    "pending": 0,
     "spend": 101.0,
     "won": 29.9,
     "net": -71.1,
@@ -51,55 +51,55 @@
     {
       "strategy": "Hot 6M",
       "tickets": 5,
-      "settled": 3,
+      "settled": 5,
       "spend": 24.0,
       "won": 25.1,
       "net": 1.1,
       "roi_pct": 4.58,
-      "avg_matches": 2.0,
+      "avg_matches": 1.4,
       "best_matches": 3,
-      "winning_ticket_rate": 66.67
+      "winning_ticket_rate": 40.0
     },
     {
       "strategy": "Weighted Historical",
       "tickets": 5,
-      "settled": 3,
+      "settled": 5,
       "spend": 24.0,
       "won": 4.8,
       "net": -19.2,
       "roi_pct": -80.0,
-      "avg_matches": 1.333,
-      "best_matches": 2,
-      "winning_ticket_rate": 33.33
-    },
-    {
-      "strategy": "Cold 6M",
-      "tickets": 3,
-      "settled": 1,
-      "spend": 16.0,
-      "won": 0.0,
-      "net": -16.0,
-      "roi_pct": -100.0,
       "avg_matches": 1.0,
-      "best_matches": 1,
-      "winning_ticket_rate": 0.0
+      "best_matches": 2,
+      "winning_ticket_rate": 20.0
     },
     {
       "strategy": "Frozen Alpha",
       "tickets": 2,
-      "settled": 0,
+      "settled": 2,
       "spend": 13.0,
       "won": 0.0,
       "net": -13.0,
       "roi_pct": -100.0,
-      "avg_matches": null,
-      "best_matches": 0,
-      "winning_ticket_rate": null
+      "avg_matches": 0.5,
+      "best_matches": 1,
+      "winning_ticket_rate": 0.0
+    },
+    {
+      "strategy": "Cold 6M",
+      "tickets": 3,
+      "settled": 3,
+      "spend": 16.0,
+      "won": 0.0,
+      "net": -16.0,
+      "roi_pct": -100.0,
+      "avg_matches": 0.667,
+      "best_matches": 1,
+      "winning_ticket_rate": 0.0
     },
     {
       "strategy": "Diversified Coverage",
       "tickets": 5,
-      "settled": 3,
+      "settled": 5,
       "spend": 24.0,
       "won": 0.0,
       "net": -24.0,
@@ -167,6 +167,78 @@
     },
     {
       "rank": 4,
+      "date": "2026-08-07",
+      "game": "PowerBall",
+      "strategy": "Weighted Historical",
+      "version": "1.0",
+      "numbers": [
+        9,
+        13,
+        23,
+        40,
+        47
+      ],
+      "bonus": 11,
+      "matches": 1,
+      "won": 0.0,
+      "payout_type": "exact"
+    },
+    {
+      "rank": 5,
+      "date": "2026-08-07",
+      "game": "PowerBall",
+      "strategy": "Hot 6M",
+      "version": "1.0",
+      "numbers": [
+        5,
+        16,
+        25,
+        40,
+        47
+      ],
+      "bonus": 11,
+      "matches": 1,
+      "won": 0.0,
+      "payout_type": "exact"
+    },
+    {
+      "rank": 6,
+      "date": "2026-08-07",
+      "game": "PowerBall",
+      "strategy": "Frozen Alpha",
+      "version": "1.0",
+      "numbers": [
+        9,
+        13,
+        23,
+        40,
+        47
+      ],
+      "bonus": 11,
+      "matches": 1,
+      "won": 0.0,
+      "payout_type": "exact"
+    },
+    {
+      "rank": 7,
+      "date": "2026-08-07",
+      "game": "Daily Lotto",
+      "strategy": "Cold 6M",
+      "version": "1.0",
+      "numbers": [
+        2,
+        13,
+        18,
+        27,
+        29
+      ],
+      "bonus": null,
+      "matches": 1,
+      "won": 0.0,
+      "payout_type": "exact"
+    },
+    {
+      "rank": 8,
       "date": "2026-08-06",
       "game": "Daily Lotto",
       "strategy": "Hot 6M",
@@ -184,7 +256,7 @@
       "payout_type": "exact"
     },
     {
-      "rank": 5,
+      "rank": 9,
       "date": "2026-08-06",
       "game": "Daily Lotto",
       "strategy": "Cold 6M",
@@ -202,7 +274,7 @@
       "payout_type": "exact"
     },
     {
-      "rank": 6,
+      "rank": 10,
       "date": "2026-08-05",
       "game": "Lotto",
       "strategy": "Weighted Historical",
@@ -221,7 +293,7 @@
       "payout_type": "exact"
     },
     {
-      "rank": 7,
+      "rank": 11,
       "date": "2026-08-05",
       "game": "Daily Lotto",
       "strategy": "Weighted Historical",
@@ -239,7 +311,115 @@
       "payout_type": "exact"
     },
     {
-      "rank": 8,
+      "rank": 12,
+      "date": "2026-08-07",
+      "game": "PowerBall",
+      "strategy": "Diversified Coverage",
+      "version": "1.0",
+      "numbers": [
+        3,
+        14,
+        28,
+        33,
+        44
+      ],
+      "bonus": 2,
+      "matches": 0,
+      "won": 0.0,
+      "payout_type": "exact"
+    },
+    {
+      "rank": 13,
+      "date": "2026-08-07",
+      "game": "PowerBall",
+      "strategy": "Cold 6M",
+      "version": "1.0",
+      "numbers": [
+        7,
+        18,
+        26,
+        35,
+        49
+      ],
+      "bonus": 2,
+      "matches": 0,
+      "won": 0.0,
+      "payout_type": "exact"
+    },
+    {
+      "rank": 14,
+      "date": "2026-08-07",
+      "game": "Daily Lotto",
+      "strategy": "Weighted Historical",
+      "version": "1.0",
+      "numbers": [
+        7,
+        10,
+        16,
+        25,
+        30
+      ],
+      "bonus": null,
+      "matches": 0,
+      "won": 0.0,
+      "payout_type": "exact"
+    },
+    {
+      "rank": 15,
+      "date": "2026-08-07",
+      "game": "Daily Lotto",
+      "strategy": "Hot 6M",
+      "version": "1.0",
+      "numbers": [
+        7,
+        10,
+        16,
+        25,
+        30
+      ],
+      "bonus": null,
+      "matches": 0,
+      "won": 0.0,
+      "payout_type": "exact"
+    },
+    {
+      "rank": 16,
+      "date": "2026-08-07",
+      "game": "Daily Lotto",
+      "strategy": "Frozen Alpha",
+      "version": "1.0",
+      "numbers": [
+        7,
+        10,
+        16,
+        25,
+        30
+      ],
+      "bonus": null,
+      "matches": 0,
+      "won": 0.0,
+      "payout_type": "exact"
+    },
+    {
+      "rank": 17,
+      "date": "2026-08-07",
+      "game": "Daily Lotto",
+      "strategy": "Diversified Coverage",
+      "version": "1.0",
+      "numbers": [
+        3,
+        12,
+        19,
+        26,
+        33
+      ],
+      "bonus": null,
+      "matches": 0,
+      "won": 0.0,
+      "payout_type": "exact"
+    },
+    {
+      "rank": 18,
       "date": "2026-08-06",
       "game": "Daily Lotto",
       "strategy": "Diversified Coverage",
@@ -257,7 +437,7 @@
       "payout_type": "exact"
     },
     {
-      "rank": 9,
+      "rank": 19,
       "date": "2026-08-05",
       "game": "Lotto",
       "strategy": "Diversified Coverage",
@@ -276,7 +456,7 @@
       "payout_type": "exact"
     },
     {
-      "rank": 10,
+      "rank": 20,
       "date": "2026-08-05",
       "game": "Daily Lotto",
       "strategy": "Diversified Coverage",
@@ -295,6 +475,53 @@
     }
   ],
   "recent_results": [
+    {
+      "date": "2026-08-07",
+      "game": "PowerBall",
+      "numbers": [
+        8,
+        22,
+        31,
+        39,
+        40
+      ],
+      "bonus": 5,
+      "source": "https://www.powerball.net/southafrica/results",
+      "payouts": {
+        "5+PB": 6000000.0,
+        "5": 0.0,
+        "4+PB": 34890.0,
+        "4": 1000.0,
+        "3+PB": 250.0,
+        "3": 50.0,
+        "2+PB": 50.0,
+        "1+PB": 10.0,
+        "0+PB": 5.0
+      },
+      "payout_type": "exact",
+      "payout_source": "https://www.powerball.net/southafrica/results/2026-08-07"
+    },
+    {
+      "date": "2026-08-07",
+      "game": "Daily Lotto",
+      "numbers": [
+        2,
+        5,
+        8,
+        14,
+        31
+      ],
+      "bonus": null,
+      "source": "https://za.national-lottery.com/daily-lotto/results",
+      "payouts": {
+        "5": 0.0,
+        "4": 1798.2,
+        "3": 18.4,
+        "2": 4.9
+      },
+      "payout_type": "exact",
+      "payout_source": "https://za.national-lottery.com/daily-lotto/results/07-august-2026"
+    },
     {
       "date": "2026-08-06",
       "game": "Daily Lotto",
@@ -437,238 +664,7 @@
       "payout_source": "https://za.national-lottery.com/lotto/results/01-august-2026"
     }
   ],
-  "pending_tickets": [
-    {
-      "id": "2026-08-07|PowerBall|Weighted Historical|v1.0",
-      "date": "2026-08-07",
-      "game": "PowerBall",
-      "strategy": "Weighted Historical",
-      "strategy_version": "1.0",
-      "strategy_hypothesis": "A fixed blend of long-term, six-month, momentum and gap signals performs best.",
-      "deterministic": true,
-      "data_policy_version": "2.0-rule-aware",
-      "numbers": [
-        9,
-        13,
-        23,
-        40,
-        47
-      ],
-      "bonus": 11,
-      "cost": 10.0,
-      "won": 0,
-      "payout_type": null,
-      "status": "Pending result",
-      "created_at": "2026-08-07T18:41:54.815730+02:00"
-    },
-    {
-      "id": "2026-08-07|PowerBall|Hot 6M|v1.0",
-      "date": "2026-08-07",
-      "game": "PowerBall",
-      "strategy": "Hot 6M",
-      "strategy_version": "1.0",
-      "strategy_hypothesis": "Recent high-frequency numbers persist.",
-      "deterministic": true,
-      "data_policy_version": "2.0-rule-aware",
-      "numbers": [
-        5,
-        16,
-        25,
-        40,
-        47
-      ],
-      "bonus": 11,
-      "cost": 10.0,
-      "won": 0,
-      "payout_type": null,
-      "status": "Pending result",
-      "created_at": "2026-08-07T18:41:54.815730+02:00"
-    },
-    {
-      "id": "2026-08-07|PowerBall|Frozen Alpha|v1.0",
-      "date": "2026-08-07",
-      "game": "PowerBall",
-      "strategy": "Frozen Alpha",
-      "strategy_version": "1.0",
-      "strategy_hypothesis": "A fixed deterministic line provides a permanent control against dynamic refresh strategies.",
-      "deterministic": true,
-      "data_policy_version": "2.0-rule-aware",
-      "numbers": [
-        9,
-        13,
-        23,
-        40,
-        47
-      ],
-      "bonus": 11,
-      "cost": 10.0,
-      "won": 0,
-      "payout_type": null,
-      "status": "Pending result",
-      "created_at": "2026-08-07T18:41:54.815730+02:00"
-    },
-    {
-      "id": "2026-08-07|PowerBall|Diversified Coverage|v1.0",
-      "date": "2026-08-07",
-      "game": "PowerBall",
-      "strategy": "Diversified Coverage",
-      "strategy_version": "1.0",
-      "strategy_hypothesis": "Structured range coverage with low overlap diversifies the portfolio.",
-      "deterministic": true,
-      "data_policy_version": "2.0-rule-aware",
-      "numbers": [
-        3,
-        14,
-        28,
-        33,
-        44
-      ],
-      "bonus": 2,
-      "cost": 10.0,
-      "won": 0,
-      "payout_type": null,
-      "status": "Pending result",
-      "created_at": "2026-08-07T18:41:54.815730+02:00"
-    },
-    {
-      "id": "2026-08-07|PowerBall|Cold 6M|v1.0",
-      "date": "2026-08-07",
-      "game": "PowerBall",
-      "strategy": "Cold 6M",
-      "strategy_version": "1.0",
-      "strategy_hypothesis": "Recently underrepresented numbers revert toward expected frequency.",
-      "deterministic": true,
-      "data_policy_version": "2.0-rule-aware",
-      "numbers": [
-        7,
-        18,
-        26,
-        35,
-        49
-      ],
-      "bonus": 2,
-      "cost": 10.0,
-      "won": 0,
-      "payout_type": null,
-      "status": "Pending result",
-      "created_at": "2026-08-07T18:41:54.815730+02:00"
-    },
-    {
-      "id": "2026-08-07|Daily Lotto|Weighted Historical|v1.0",
-      "date": "2026-08-07",
-      "game": "Daily Lotto",
-      "strategy": "Weighted Historical",
-      "strategy_version": "1.0",
-      "strategy_hypothesis": "A fixed blend of long-term, six-month, momentum and gap signals performs best.",
-      "deterministic": true,
-      "data_policy_version": "2.0-rule-aware",
-      "numbers": [
-        7,
-        10,
-        16,
-        25,
-        30
-      ],
-      "bonus": null,
-      "cost": 3.0,
-      "won": 0,
-      "payout_type": null,
-      "status": "Pending result",
-      "created_at": "2026-08-07T18:41:54.815730+02:00"
-    },
-    {
-      "id": "2026-08-07|Daily Lotto|Hot 6M|v1.0",
-      "date": "2026-08-07",
-      "game": "Daily Lotto",
-      "strategy": "Hot 6M",
-      "strategy_version": "1.0",
-      "strategy_hypothesis": "Recent high-frequency numbers persist.",
-      "deterministic": true,
-      "data_policy_version": "2.0-rule-aware",
-      "numbers": [
-        7,
-        10,
-        16,
-        25,
-        30
-      ],
-      "bonus": null,
-      "cost": 3.0,
-      "won": 0,
-      "payout_type": null,
-      "status": "Pending result",
-      "created_at": "2026-08-07T18:41:54.815730+02:00"
-    },
-    {
-      "id": "2026-08-07|Daily Lotto|Frozen Alpha|v1.0",
-      "date": "2026-08-07",
-      "game": "Daily Lotto",
-      "strategy": "Frozen Alpha",
-      "strategy_version": "1.0",
-      "strategy_hypothesis": "A fixed deterministic line provides a permanent control against dynamic refresh strategies.",
-      "deterministic": true,
-      "data_policy_version": "2.0-rule-aware",
-      "numbers": [
-        7,
-        10,
-        16,
-        25,
-        30
-      ],
-      "bonus": null,
-      "cost": 3.0,
-      "won": 0,
-      "payout_type": null,
-      "status": "Pending result",
-      "created_at": "2026-08-07T18:41:54.815730+02:00"
-    },
-    {
-      "id": "2026-08-07|Daily Lotto|Diversified Coverage|v1.0",
-      "date": "2026-08-07",
-      "game": "Daily Lotto",
-      "strategy": "Diversified Coverage",
-      "strategy_version": "1.0",
-      "strategy_hypothesis": "Structured range coverage with low overlap diversifies the portfolio.",
-      "deterministic": true,
-      "data_policy_version": "2.0-rule-aware",
-      "numbers": [
-        3,
-        12,
-        19,
-        26,
-        33
-      ],
-      "bonus": null,
-      "cost": 3.0,
-      "won": 0,
-      "payout_type": null,
-      "status": "Pending result",
-      "created_at": "2026-08-07T18:41:54.815730+02:00"
-    },
-    {
-      "id": "2026-08-07|Daily Lotto|Cold 6M|v1.0",
-      "date": "2026-08-07",
-      "game": "Daily Lotto",
-      "strategy": "Cold 6M",
-      "strategy_version": "1.0",
-      "strategy_hypothesis": "Recently underrepresented numbers revert toward expected frequency.",
-      "deterministic": true,
-      "data_policy_version": "2.0-rule-aware",
-      "numbers": [
-        2,
-        13,
-        18,
-        27,
-        29
-      ],
-      "bonus": null,
-      "cost": 3.0,
-      "won": 0,
-      "payout_type": null,
-      "status": "Pending result",
-      "created_at": "2026-08-07T18:41:54.815730+02:00"
-    }
-  ],
+  "pending_tickets": [],
   "frozen": {
     "schema_version": 1,
     "name": "Frozen Alpha",
