@@ -5,6 +5,7 @@ on:
     paths:
       - '.github/workflows/promote-drawlab-v3.yml'
       - 'drawlab-sa/scripts/install_v3_frontend.py'
+      - 'drawlab-sa/scripts/run_v3_frontend_installer.py'
 
 permissions:
   contents: write
@@ -25,7 +26,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install production website bundle
-        run: python drawlab-sa/scripts/install_v3_frontend.py
+        run: python drawlab-sa/scripts/run_v3_frontend_installer.py
       - name: Validate production website
         shell: bash
         run: |
@@ -43,7 +44,8 @@ jobs:
           python - <<'PY'
           import json
           json.load(open('drawlab-sa/manifest.webmanifest'))
-          json.load(open('drawlab-sa/v3/data/v3-state.json'))
+          state=json.load(open('drawlab-sa/v3/data/v3-state.json'))
+          assert state.get('schema_version',0) >= 3
           print('DrawLab production shell validated')
           PY
       - name: Commit DrawLab v3 production site
