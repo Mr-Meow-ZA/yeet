@@ -1,24 +1,110 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-08-07T17:37:28.072403+00:00",
+  "updated_at": "2026-08-09T21:05:17.672298+00:00",
   "coverage": {
     "Daily Lotto": {
       "2024": 365,
       "2025": 364,
-      "2026": 218
+      "2026": 221
     },
     "Lotto": {
       "2024": 103,
       "2025": 105,
-      "2026": 62
+      "2026": 63
     },
     "PowerBall": {
       "2024": 105,
       "2025": 104,
-      "2026": 62
+      "2026": 63
     }
   },
   "results": [
+    {
+      "date": "2026-08-09",
+      "game": "Daily Lotto",
+      "numbers": [
+        4,
+        10,
+        12,
+        15,
+        35
+      ],
+      "bonus": null,
+      "source": "https://za.national-lottery.com/daily-lotto/results/09-august-2026",
+      "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v3-rule-aware",
+      "rule_version": "5of36"
+    },
+    {
+      "date": "2026-08-08",
+      "game": "Lotto",
+      "numbers": [
+        7,
+        10,
+        13,
+        18,
+        24,
+        42
+      ],
+      "bonus": 30,
+      "source": "https://za.national-lottery.com/lotto/results/08-august-2026",
+      "archive_source": "https://za.national-lottery.com/lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v3-rule-aware",
+      "rule_version": "current-6of52"
+    },
+    {
+      "date": "2026-08-08",
+      "game": "Daily Lotto",
+      "numbers": [
+        1,
+        14,
+        16,
+        23,
+        27
+      ],
+      "bonus": null,
+      "source": "https://za.national-lottery.com/daily-lotto/results/08-august-2026",
+      "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v3-rule-aware",
+      "rule_version": "5of36"
+    },
+    {
+      "date": "2026-08-07",
+      "game": "PowerBall",
+      "numbers": [
+        8,
+        22,
+        31,
+        39,
+        40
+      ],
+      "bonus": 5,
+      "source": "https://za.national-lottery.com/powerball/results/07-august-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v3-rule-aware",
+      "rule_version": "current-5of50-pb16"
+    },
+    {
+      "date": "2026-08-07",
+      "game": "Daily Lotto",
+      "numbers": [
+        2,
+        5,
+        8,
+        14,
+        31
+      ],
+      "bonus": null,
+      "source": "https://za.national-lottery.com/daily-lotto/results/07-august-2026",
+      "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v3-rule-aware",
+      "rule_version": "5of36"
+    },
     {
       "date": "2026-08-06",
       "game": "Daily Lotto",
@@ -25611,10 +25697,10 @@
         "archive": "https://za.national-lottery.com/daily-lotto/results/2025-archive"
       },
       "2026": {
-        "expected": 219,
-        "parsed": 218,
-        "minimum": 142,
-        "unique_ratio": 0.9954,
+        "expected": 221,
+        "parsed": 221,
+        "minimum": 143,
+        "unique_ratio": 0.9955,
         "largest_duplicate_group": 2,
         "bonus_completeness": 1.0,
         "status": "accepted",
@@ -25643,8 +25729,8 @@
         "archive": "https://za.national-lottery.com/lotto/results/2025-archive"
       },
       "2026": {
-        "expected": 62,
-        "parsed": 62,
+        "expected": 63,
+        "parsed": 63,
         "minimum": 40,
         "unique_ratio": 1.0,
         "largest_duplicate_group": 1,
@@ -25676,7 +25762,7 @@
       },
       "2026": {
         "expected": 63,
-        "parsed": 62,
+        "parsed": 63,
         "minimum": 40,
         "unique_ratio": 1.0,
         "largest_duplicate_group": 1,
