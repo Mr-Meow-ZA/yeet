@@ -1,6 +1,6 @@
 {
-  "schema_version": 5,
-  "generated_at": "2026-08-10T14:14:52.170781+00:00",
+  "schema_version": 6,
+  "generated_at": "2026-08-10T14:30:15.131501+00:00",
   "platform": "DrawLab v3 Research Platform",
   "cloud_status": "ok",
   "cloud_updated_at": "2026-08-10T16:13:00.545677+02:00",
@@ -780,6 +780,12 @@
       }
     },
     "policy": "These lines never change. A ticket is entered on every eligible draw using the era-correct board cost."
+  },
+  "shadow_research": {
+    "updated_at": null,
+    "summary": {},
+    "recent_tickets": [],
+    "policy": "Prospective research only. Shadow tickets are created only from already-locked challengers before the target result exists."
   },
   "research": {
     "methodology_version": "3.0",
@@ -3845,7 +3851,7 @@
   },
   "retrospective": {
     "schema_version": 1,
-    "generated_at": "2026-08-10T14:14:52.120857+00:00",
+    "generated_at": "2026-08-10T14:30:15.083018+00:00",
     "simulation": {
       "start": "2025-08-07",
       "end": "2026-08-06",
