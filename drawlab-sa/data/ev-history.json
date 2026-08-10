@@ -1,16 +1,4303 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-10T16:26:36.048946+00:00",
-  "source_policy": "Exact public result pages; ticket cost is rule-era configured and effective line volume is derived from Total Sales / ticket cost.",
-  "rows": [],
+  "updated_at": "2026-08-10T16:34:57.352651+00:00",
+  "source_policy": "Exact public result pages; newest-first paced cache. Ticket cost is rule-era configured and effective line volume is derived from Total Sales / ticket cost.",
+  "rows": [
+    {
+      "date": "2026-05-05",
+      "game": "PowerBall",
+      "era": "pb-5x50-pb20-r5",
+      "jackpot": 64000000.0,
+      "tickets_sold_reported": 4263803,
+      "total_sales": 21319015.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 5.0,
+      "equivalent_lines": 4263803,
+      "divisions": {
+        "5+PB": {
+          "label": "5 + PowerBall",
+          "payout": 64000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 213055.7,
+          "winners": 2,
+          "pool": 426111.4
+        },
+        "4+PB": {
+          "label": "4 + PowerBall",
+          "payout": 8085.8,
+          "winners": 33,
+          "pool": 266831.4
+        },
+        "4": {
+          "label": "4",
+          "payout": 875.0,
+          "winners": 517,
+          "pool": 452375.0
+        },
+        "3+PB": {
+          "label": "3 + PowerBall",
+          "payout": 384.6,
+          "winners": 1330,
+          "pool": 511518.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 17.6,
+          "winners": 24320,
+          "pool": 428032.0
+        },
+        "2+PB": {
+          "label": "2 + PowerBall",
+          "payout": 19.4,
+          "winners": 16506,
+          "pool": 320216.4
+        },
+        "1+PB": {
+          "label": "1 + PowerBall",
+          "payout": 15.0,
+          "winners": 80844,
+          "pool": 1212660.0
+        },
+        "0+PB": {
+          "label": "0 + PowerBall",
+          "payout": 10.0,
+          "winners": 123661,
+          "pool": 1236610.0
+        }
+      },
+      "source": "https://za.national-lottery.com/powerball/results/05-may-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-05-08",
+      "game": "PowerBall",
+      "era": "pb-5x50-pb20-r5",
+      "jackpot": 72000000.0,
+      "tickets_sold_reported": 4815199,
+      "total_sales": 24075995.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 5.0,
+      "equivalent_lines": 4815199,
+      "divisions": {
+        "5+PB": {
+          "label": "5 + PowerBall",
+          "payout": 72000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 484265.3,
+          "winners": 1,
+          "pool": 484265.3
+        },
+        "4+PB": {
+          "label": "4 + PowerBall",
+          "payout": 11231.4,
+          "winners": 27,
+          "pool": 303247.8
+        },
+        "4": {
+          "label": "4",
+          "payout": 1257.0,
+          "winners": 409,
+          "pool": 514113.0
+        },
+        "3+PB": {
+          "label": "3 + PowerBall",
+          "payout": 584.3,
+          "winners": 995,
+          "pool": 581378.5
+        },
+        "3": {
+          "label": "3",
+          "payout": 26.3,
+          "winners": 18376,
+          "pool": 483288.8
+        },
+        "2+PB": {
+          "label": "2 + PowerBall",
+          "payout": 25.2,
+          "winners": 14429,
+          "pool": 363610.8
+        },
+        "1+PB": {
+          "label": "1 + PowerBall",
+          "payout": 15.0,
+          "winners": 82388,
+          "pool": 1235820.0
+        },
+        "0+PB": {
+          "label": "0 + PowerBall",
+          "payout": 10.0,
+          "winners": 147144,
+          "pool": 1471440.0
+        }
+      },
+      "source": "https://za.national-lottery.com/powerball/results/08-may-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-05-12",
+      "game": "PowerBall",
+      "era": "pb-5x50-pb20-r5",
+      "jackpot": 78000000.0,
+      "tickets_sold_reported": 4291058,
+      "total_sales": 21455290.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 5.0,
+      "equivalent_lines": 4291058,
+      "divisions": {
+        "5+PB": {
+          "label": "5 + PowerBall",
+          "payout": 78000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 436250.6,
+          "winners": 1,
+          "pool": 436250.6
+        },
+        "4+PB": {
+          "label": "4 + PowerBall",
+          "payout": 13008.7,
+          "winners": 21,
+          "pool": 273182.7
+        },
+        "4": {
+          "label": "4",
+          "payout": 1187.5,
+          "winners": 390,
+          "pool": 463125.0
+        },
+        "3+PB": {
+          "label": "3 + PowerBall",
+          "payout": 562.4,
+          "winners": 931,
+          "pool": 523594.4
+        },
+        "3": {
+          "label": "3",
+          "payout": 24.3,
+          "winners": 17933,
+          "pool": 435771.9
+        },
+        "2+PB": {
+          "label": "2 + PowerBall",
+          "payout": 24.9,
+          "winners": 13200,
+          "pool": 328680.0
+        },
+        "1+PB": {
+          "label": "1 + PowerBall",
+          "payout": 15.0,
+          "winners": 72557,
+          "pool": 1088355.0
+        },
+        "0+PB": {
+          "label": "0 + PowerBall",
+          "payout": 10.0,
+          "winners": 123369,
+          "pool": 1233690.0
+        }
+      },
+      "source": "https://za.national-lottery.com/powerball/results/12-may-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-05-15",
+      "game": "PowerBall",
+      "era": "pb-5x50-pb20-r5",
+      "jackpot": 85000000.0,
+      "tickets_sold_reported": 5144462,
+      "total_sales": 25722310.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 5.0,
+      "equivalent_lines": 5144462,
+      "divisions": {
+        "5+PB": {
+          "label": "5 + PowerBall",
+          "payout": 85000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 171248.3,
+          "winners": 3,
+          "pool": 513744.9
+        },
+        "4+PB": {
+          "label": "4 + PowerBall",
+          "payout": 17872.7,
+          "winners": 18,
+          "pool": 321708.6
+        },
+        "4": {
+          "label": "4",
+          "payout": 1077.9,
+          "winners": 506,
+          "pool": 545417.4
+        },
+        "3+PB": {
+          "label": "3 + PowerBall",
+          "payout": 540.0,
+          "winners": 1142,
+          "pool": 616680.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 23.3,
+          "winners": 22065,
+          "pool": 514114.5
+        },
+        "2+PB": {
+          "label": "2 + PowerBall",
+          "payout": 22.4,
+          "winners": 17250,
+          "pool": 386400.0
+        },
+        "1+PB": {
+          "label": "1 + PowerBall",
+          "payout": 15.0,
+          "winners": 93022,
+          "pool": 1395330.0
+        },
+        "0+PB": {
+          "label": "0 + PowerBall",
+          "payout": 10.0,
+          "winners": 156708,
+          "pool": 1567080.0
+        }
+      },
+      "source": "https://za.national-lottery.com/powerball/results/15-may-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-05-19",
+      "game": "PowerBall",
+      "era": "pb-5x50-pb20-r5",
+      "jackpot": 91000000.0,
+      "tickets_sold_reported": 4863576,
+      "total_sales": 24317880.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 5.0,
+      "equivalent_lines": 4863576,
+      "divisions": {
+        "5+PB": {
+          "label": "5 + PowerBall",
+          "payout": 91000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 0.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "4+PB": {
+          "label": "4 + PowerBall",
+          "payout": 32170.9,
+          "winners": 25,
+          "pool": 804272.5
+        },
+        "4": {
+          "label": "4",
+          "payout": 1091.6,
+          "winners": 481,
+          "pool": 525059.6
+        },
+        "3+PB": {
+          "label": "3 + PowerBall",
+          "payout": 576.4,
+          "winners": 1030,
+          "pool": 593692.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 23.7,
+          "winners": 20901,
+          "pool": 495353.7
+        },
+        "2+PB": {
+          "label": "2 + PowerBall",
+          "payout": 23.5,
+          "winners": 15764,
+          "pool": 370454.0
+        },
+        "1+PB": {
+          "label": "1 + PowerBall",
+          "payout": 15.0,
+          "winners": 83089,
+          "pool": 1246335.0
+        },
+        "0+PB": {
+          "label": "0 + PowerBall",
+          "payout": 10.0,
+          "winners": 138332,
+          "pool": 1383320.0
+        }
+      },
+      "source": "https://za.national-lottery.com/powerball/results/19-may-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-05-22",
+      "game": "PowerBall",
+      "era": "pb-5x50-pb20-r5",
+      "jackpot": 100000000.0,
+      "tickets_sold_reported": 6475010,
+      "total_sales": 32375050.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 5.0,
+      "equivalent_lines": 6475010,
+      "divisions": {
+        "5+PB": {
+          "label": "5 + PowerBall",
+          "payout": 100000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 219629.0,
+          "winners": 3,
+          "pool": 658887.0
+        },
+        "4+PB": {
+          "label": "4 + PowerBall",
+          "payout": 13753.2,
+          "winners": 30,
+          "pool": 412596.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 925.3,
+          "winners": 756,
+          "pool": 699526.8
+        },
+        "3+PB": {
+          "label": "3 + PowerBall",
+          "payout": 456.1,
+          "winners": 1734,
+          "pool": 790877.4
+        },
+        "3": {
+          "label": "3",
+          "payout": 20.4,
+          "winners": 32254,
+          "pool": 657981.6
+        },
+        "2+PB": {
+          "label": "2 + PowerBall",
+          "payout": 22.0,
+          "winners": 22569,
+          "pool": 496518.0
+        },
+        "1+PB": {
+          "label": "1 + PowerBall",
+          "payout": 15.0,
+          "winners": 112674,
+          "pool": 1690110.0
+        },
+        "0+PB": {
+          "label": "0 + PowerBall",
+          "payout": 10.0,
+          "winners": 180210,
+          "pool": 1802100.0
+        }
+      },
+      "source": "https://za.national-lottery.com/powerball/results/22-may-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-05-26",
+      "game": "PowerBall",
+      "era": "pb-5x50-pb20-r5",
+      "jackpot": 107000000.0,
+      "tickets_sold_reported": 6511041,
+      "total_sales": 32555205.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 5.0,
+      "equivalent_lines": 6511041,
+      "divisions": {
+        "5+PB": {
+          "label": "5 + PowerBall",
+          "payout": 107000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 331349.1,
+          "winners": 2,
+          "pool": 662698.2
+        },
+        "4+PB": {
+          "label": "4 + PowerBall",
+          "payout": 11215.8,
+          "winners": 37,
+          "pool": 414984.6
+        },
+        "4": {
+          "label": "4",
+          "payout": 1155.3,
+          "winners": 609,
+          "pool": 703577.7
+        },
+        "3+PB": {
+          "label": "3 + PowerBall",
+          "payout": 562.2,
+          "winners": 1415,
+          "pool": 795513.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 24.1,
+          "winners": 27462,
+          "pool": 661834.2
+        },
+        "2+PB": {
+          "label": "2 + PowerBall",
+          "payout": 23.2,
+          "winners": 21453,
+          "pool": 497709.6
+        },
+        "1+PB": {
+          "label": "1 + PowerBall",
+          "payout": 15.0,
+          "winners": 111730,
+          "pool": 1675950.0
+        },
+        "0+PB": {
+          "label": "0 + PowerBall",
+          "payout": 10.0,
+          "winners": 183290,
+          "pool": 1832900.0
+        }
+      },
+      "source": "https://za.national-lottery.com/powerball/results/26-may-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-05-29",
+      "game": "PowerBall",
+      "era": "pb-5x50-pb20-r5",
+      "jackpot": 118000000.0,
+      "tickets_sold_reported": 8018894,
+      "total_sales": 40094470.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 5.0,
+      "equivalent_lines": 8018894,
+      "divisions": {
+        "5+PB": {
+          "label": "5 + PowerBall",
+          "payout": 118000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 405856.8,
+          "winners": 2,
+          "pool": 811713.6
+        },
+        "4+PB": {
+          "label": "4 + PowerBall",
+          "payout": 9076.8,
+          "winners": 56,
+          "pool": 508300.8
+        },
+        "4": {
+          "label": "4",
+          "payout": 996.2,
+          "winners": 865,
+          "pool": 861713.0
+        },
+        "3+PB": {
+          "label": "3 + PowerBall",
+          "payout": 508.0,
+          "winners": 1918,
+          "pool": 974344.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 21.6,
+          "winners": 37679,
+          "pool": 813866.4
+        },
+        "2+PB": {
+          "label": "2 + PowerBall",
+          "payout": 22.0,
+          "winners": 27712,
+          "pool": 609664.0
+        },
+        "1+PB": {
+          "label": "1 + PowerBall",
+          "payout": 15.0,
+          "winners": 142416,
+          "pool": 2136240.0
+        },
+        "0+PB": {
+          "label": "0 + PowerBall",
+          "payout": 10.0,
+          "winners": 227104,
+          "pool": 2271040.0
+        }
+      },
+      "source": "https://za.national-lottery.com/powerball/results/29-may-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-06-02",
+      "game": "PowerBall",
+      "era": "pb-5x50-pb16-r10",
+      "jackpot": 128593394.5,
+      "tickets_sold_reported": 5580016,
+      "total_sales": 27900080.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 10.0,
+      "equivalent_lines": 2790008,
+      "divisions": {
+        "5+PB": {
+          "label": "5 + PowerBall",
+          "payout": 128593394.5,
+          "winners": 1,
+          "pool": 128593394.5
+        },
+        "5": {
+          "label": "5",
+          "payout": 0.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "4+PB": {
+          "label": "4 + PowerBall",
+          "payout": 31983.7,
+          "winners": 22,
+          "pool": 703641.4
+        },
+        "4": {
+          "label": "4",
+          "payout": 2000.0,
+          "winners": 305,
+          "pool": 610000.0
+        },
+        "3+PB": {
+          "label": "3 + PowerBall",
+          "payout": 500.0,
+          "winners": 935,
+          "pool": 467500.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 100.0,
+          "winners": 12435,
+          "pool": 1243500.0
+        },
+        "2+PB": {
+          "label": "2 + PowerBall",
+          "payout": 100.0,
+          "winners": 13171,
+          "pool": 1317100.0
+        },
+        "1+PB": {
+          "label": "1 + PowerBall",
+          "payout": 20.0,
+          "winners": 68807,
+          "pool": 1376140.0
+        },
+        "0+PB": {
+          "label": "0 + PowerBall",
+          "payout": 10.0,
+          "winners": 111756,
+          "pool": 1117560.0
+        }
+      },
+      "source": "https://za.national-lottery.com/powerball/results/02-june-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-06-03",
+      "game": "Lotto",
+      "era": "lotto-6x52-r5",
+      "jackpot": 20000000.0,
+      "tickets_sold_reported": 2009270,
+      "total_sales": 10046350.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 5.0,
+      "equivalent_lines": 2009270,
+      "divisions": {
+        "6": {
+          "label": "6",
+          "payout": 20000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5+B": {
+          "label": "5 + Bonus",
+          "payout": 0.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 44543.3,
+          "winners": 25,
+          "pool": 1113582.5
+        },
+        "4+B": {
+          "label": "4 + Bonus",
+          "payout": 4000.0,
+          "winners": 61,
+          "pool": 244000.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 200.0,
+          "winners": 1417,
+          "pool": 283400.0
+        },
+        "3+B": {
+          "label": "3 + Bonus",
+          "payout": 200.0,
+          "winners": 2018,
+          "pool": 403600.0
+        },
+        "2+B": {
+          "label": "2 + Bonus",
+          "payout": 30.0,
+          "winners": 21451,
+          "pool": 643530.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 20.0,
+          "winners": 28211,
+          "pool": 564220.0
+        }
+      },
+      "source": "https://za.national-lottery.com/lotto/results/03-june-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-06-05",
+      "game": "PowerBall",
+      "era": "pb-5x50-pb16-r10",
+      "jackpot": 7000000.0,
+      "tickets_sold_reported": 5687368,
+      "total_sales": 28436840.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 10.0,
+      "equivalent_lines": 2843684,
+      "divisions": {
+        "5+PB": {
+          "label": "5 + PowerBall",
+          "payout": 7000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 0.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "4+PB": {
+          "label": "4 + PowerBall",
+          "payout": 39721.5,
+          "winners": 20,
+          "pool": 794430.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 2000.0,
+          "winners": 259,
+          "pool": 518000.0
+        },
+        "3+PB": {
+          "label": "3 + PowerBall",
+          "payout": 500.0,
+          "winners": 789,
+          "pool": 394500.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 100.0,
+          "winners": 11408,
+          "pool": 1140800.0
+        },
+        "2+PB": {
+          "label": "2 + PowerBall",
+          "payout": 100.0,
+          "winners": 11052,
+          "pool": 1105200.0
+        },
+        "1+PB": {
+          "label": "1 + PowerBall",
+          "payout": 20.0,
+          "winners": 61187,
+          "pool": 1223740.0
+        },
+        "0+PB": {
+          "label": "0 + PowerBall",
+          "payout": 10.0,
+          "winners": 100917,
+          "pool": 1009170.0
+        }
+      },
+      "source": "https://za.national-lottery.com/powerball/results/05-june-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-06-06",
+      "game": "Lotto",
+      "era": "lotto-6x52-r5",
+      "jackpot": 22000000.0,
+      "tickets_sold_reported": 2568911,
+      "total_sales": 12844555.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 5.0,
+      "equivalent_lines": 2568911,
+      "divisions": {
+        "6": {
+          "label": "6",
+          "payout": 22000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5+B": {
+          "label": "5 + Bonus",
+          "payout": 534729.2,
+          "winners": 1,
+          "pool": 534729.2
+        },
+        "5": {
+          "label": "5",
+          "payout": 23453.0,
+          "winners": 38,
+          "pool": 891214.0
+        },
+        "4+B": {
+          "label": "4 + Bonus",
+          "payout": 4000.0,
+          "winners": 79,
+          "pool": 316000.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 200.0,
+          "winners": 1921,
+          "pool": 384200.0
+        },
+        "3+B": {
+          "label": "3 + Bonus",
+          "payout": 200.0,
+          "winners": 2502,
+          "pool": 500400.0
+        },
+        "2+B": {
+          "label": "2 + Bonus",
+          "payout": 30.0,
+          "winners": 27055,
+          "pool": 811650.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 20.0,
+          "winners": 35836,
+          "pool": 716720.0
+        }
+      },
+      "source": "https://za.national-lottery.com/lotto/results/06-june-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-06-09",
+      "game": "PowerBall",
+      "era": "pb-5x50-pb16-r10",
+      "jackpot": 18000000.0,
+      "tickets_sold_reported": 5228110,
+      "total_sales": 26140550.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 10.0,
+      "equivalent_lines": 2614055,
+      "divisions": {
+        "5+PB": {
+          "label": "5 + PowerBall",
+          "payout": 18000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 0.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "4+PB": {
+          "label": "4 + PowerBall",
+          "payout": 38344.6,
+          "winners": 18,
+          "pool": 690202.8
+        },
+        "4": {
+          "label": "4",
+          "payout": 2000.0,
+          "winners": 341,
+          "pool": 682000.0
+        },
+        "3+PB": {
+          "label": "3 + PowerBall",
+          "payout": 500.0,
+          "winners": 799,
+          "pool": 399500.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 100.0,
+          "winners": 13134,
+          "pool": 1313400.0
+        },
+        "2+PB": {
+          "label": "2 + PowerBall",
+          "payout": 100.0,
+          "winners": 10733,
+          "pool": 1073300.0
+        },
+        "1+PB": {
+          "label": "1 + PowerBall",
+          "payout": 20.0,
+          "winners": 53904,
+          "pool": 1078080.0
+        },
+        "0+PB": {
+          "label": "0 + PowerBall",
+          "payout": 10.0,
+          "winners": 85507,
+          "pool": 855070.0
+        }
+      },
+      "source": "https://za.national-lottery.com/powerball/results/09-june-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-06-10",
+      "game": "Lotto",
+      "era": "lotto-6x52-r5",
+      "jackpot": 25000000.0,
+      "tickets_sold_reported": 2126830,
+      "total_sales": 10634150.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 5.0,
+      "equivalent_lines": 2126830,
+      "divisions": {
+        "6": {
+          "label": "6",
+          "payout": 25000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5+B": {
+          "label": "5 + Bonus",
+          "payout": 0.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 26973.2,
+          "winners": 39,
+          "pool": 1051954.8
+        },
+        "4+B": {
+          "label": "4 + Bonus",
+          "payout": 4000.0,
+          "winners": 88,
+          "pool": 352000.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 200.0,
+          "winners": 1819,
+          "pool": 363800.0
+        },
+        "3+B": {
+          "label": "3 + Bonus",
+          "payout": 200.0,
+          "winners": 2366,
+          "pool": 473200.0
+        },
+        "2+B": {
+          "label": "2 + Bonus",
+          "payout": 30.0,
+          "winners": 25292,
+          "pool": 758760.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 20.0,
+          "winners": 31654,
+          "pool": 633080.0
+        }
+      },
+      "source": "https://za.national-lottery.com/lotto/results/10-june-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-06-12",
+      "game": "PowerBall",
+      "era": "pb-5x50-pb16-r10",
+      "jackpot": 25000000.0,
+      "tickets_sold_reported": 5357752,
+      "total_sales": 26788760.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 10.0,
+      "equivalent_lines": 2678876,
+      "divisions": {
+        "5+PB": {
+          "label": "5 + PowerBall",
+          "payout": 25000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 0.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "4+PB": {
+          "label": "4 + PowerBall",
+          "payout": 39926.9,
+          "winners": 18,
+          "pool": 718684.2
+        },
+        "4": {
+          "label": "4",
+          "payout": 2000.0,
+          "winners": 272,
+          "pool": 544000.0
+        },
+        "3+PB": {
+          "label": "3 + PowerBall",
+          "payout": 500.0,
+          "winners": 811,
+          "pool": 405500.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 100.0,
+          "winners": 12628,
+          "pool": 1262800.0
+        },
+        "2+PB": {
+          "label": "2 + PowerBall",
+          "payout": 100.0,
+          "winners": 11103,
+          "pool": 1110300.0
+        },
+        "1+PB": {
+          "label": "1 + PowerBall",
+          "payout": 20.0,
+          "winners": 57173,
+          "pool": 1143460.0
+        },
+        "0+PB": {
+          "label": "0 + PowerBall",
+          "payout": 10.0,
+          "winners": 94294,
+          "pool": 942940.0
+        }
+      },
+      "source": "https://za.national-lottery.com/powerball/results/12-june-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-06-13",
+      "game": "Lotto",
+      "era": "lotto-6x52-r5",
+      "jackpot": 23555348.5,
+      "tickets_sold_reported": 2349072,
+      "total_sales": 11745360.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 5.0,
+      "equivalent_lines": 2349072,
+      "divisions": {
+        "6": {
+          "label": "6",
+          "payout": 23555348.5,
+          "winners": 1,
+          "pool": 23555348.5
+        },
+        "5+B": {
+          "label": "5 + Bonus",
+          "payout": 0.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 42699.6,
+          "winners": 30,
+          "pool": 1280988.0
+        },
+        "4+B": {
+          "label": "4 + Bonus",
+          "payout": 4000.0,
+          "winners": 81,
+          "pool": 324000.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 200.0,
+          "winners": 1885,
+          "pool": 377000.0
+        },
+        "3+B": {
+          "label": "3 + Bonus",
+          "payout": 200.0,
+          "winners": 2251,
+          "pool": 450200.0
+        },
+        "2+B": {
+          "label": "2 + Bonus",
+          "payout": 30.0,
+          "winners": 23291,
+          "pool": 698730.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 20.0,
+          "winners": 35141,
+          "pool": 702820.0
+        }
+      },
+      "source": "https://za.national-lottery.com/lotto/results/13-june-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-06-16",
+      "game": "PowerBall",
+      "era": "pb-5x50-pb16-r10",
+      "jackpot": 35000000.0,
+      "tickets_sold_reported": 4767600,
+      "total_sales": 23838000.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 10.0,
+      "equivalent_lines": 2383800,
+      "divisions": {
+        "5+PB": {
+          "label": "5 + PowerBall",
+          "payout": 35000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 435165.6,
+          "winners": 1,
+          "pool": 435165.6
+        },
+        "4+PB": {
+          "label": "4 + PowerBall",
+          "payout": 10879.1,
+          "winners": 20,
+          "pool": 217582.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 2000.0,
+          "winners": 211,
+          "pool": 422000.0
+        },
+        "3+PB": {
+          "label": "3 + PowerBall",
+          "payout": 500.0,
+          "winners": 694,
+          "pool": 347000.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 100.0,
+          "winners": 9731,
+          "pool": 973100.0
+        },
+        "2+PB": {
+          "label": "2 + PowerBall",
+          "payout": 100.0,
+          "winners": 9861,
+          "pool": 986100.0
+        },
+        "1+PB": {
+          "label": "1 + PowerBall",
+          "payout": 20.0,
+          "winners": 52961,
+          "pool": 1059220.0
+        },
+        "0+PB": {
+          "label": "0 + PowerBall",
+          "payout": 10.0,
+          "winners": 87882,
+          "pool": 878820.0
+        }
+      },
+      "source": "https://za.national-lottery.com/powerball/results/16-june-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-06-17",
+      "game": "Lotto",
+      "era": "lotto-6x52-r5",
+      "jackpot": 3000000.0,
+      "tickets_sold_reported": 1732644,
+      "total_sales": 8663220.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 5.0,
+      "equivalent_lines": 1732644,
+      "divisions": {
+        "6": {
+          "label": "6",
+          "payout": 3000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5+B": {
+          "label": "5 + Bonus",
+          "payout": 0.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 45656.3,
+          "winners": 21,
+          "pool": 958782.3
+        },
+        "4+B": {
+          "label": "4 + Bonus",
+          "payout": 4000.0,
+          "winners": 68,
+          "pool": 272000.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 200.0,
+          "winners": 1174,
+          "pool": 234800.0
+        },
+        "3+B": {
+          "label": "3 + Bonus",
+          "payout": 200.0,
+          "winners": 1733,
+          "pool": 346600.0
+        },
+        "2+B": {
+          "label": "2 + Bonus",
+          "payout": 30.0,
+          "winners": 18178,
+          "pool": 545340.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 20.0,
+          "winners": 22464,
+          "pool": 449280.0
+        }
+      },
+      "source": "https://za.national-lottery.com/lotto/results/17-june-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-06-19",
+      "game": "PowerBall",
+      "era": "pb-5x50-pb16-r10",
+      "jackpot": 37000000.0,
+      "tickets_sold_reported": 5586186,
+      "total_sales": 27930930.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 10.0,
+      "equivalent_lines": 2793093,
+      "divisions": {
+        "5+PB": {
+          "label": "5 + PowerBall",
+          "payout": 37000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 163959.1,
+          "winners": 3,
+          "pool": 491877.3
+        },
+        "4+PB": {
+          "label": "4 + PowerBall",
+          "payout": 11711.3,
+          "winners": 21,
+          "pool": 245937.3
+        },
+        "4": {
+          "label": "4",
+          "payout": 2000.0,
+          "winners": 266,
+          "pool": 532000.0
+        },
+        "3+PB": {
+          "label": "3 + PowerBall",
+          "payout": 500.0,
+          "winners": 874,
+          "pool": 437000.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 100.0,
+          "winners": 12246,
+          "pool": 1224600.0
+        },
+        "2+PB": {
+          "label": "2 + PowerBall",
+          "payout": 100.0,
+          "winners": 12610,
+          "pool": 1261000.0
+        },
+        "1+PB": {
+          "label": "1 + PowerBall",
+          "payout": 20.0,
+          "winners": 64304,
+          "pool": 1286080.0
+        },
+        "0+PB": {
+          "label": "0 + PowerBall",
+          "payout": 10.0,
+          "winners": 102683,
+          "pool": 1026830.0
+        }
+      },
+      "source": "https://za.national-lottery.com/powerball/results/19-june-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-06-20",
+      "game": "Lotto",
+      "era": "lotto-6x52-r5",
+      "jackpot": 3200000.0,
+      "tickets_sold_reported": 1992237,
+      "total_sales": 9961185.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 5.0,
+      "equivalent_lines": 1992237,
+      "divisions": {
+        "6": {
+          "label": "6",
+          "payout": 3200000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5+B": {
+          "label": "5 + Bonus",
+          "payout": 428278.5,
+          "winners": 1,
+          "pool": 428278.5
+        },
+        "5": {
+          "label": "5",
+          "payout": 27453.7,
+          "winners": 26,
+          "pool": 713796.2
+        },
+        "4+B": {
+          "label": "4 + Bonus",
+          "payout": 4000.0,
+          "winners": 58,
+          "pool": 232000.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 200.0,
+          "winners": 1391,
+          "pool": 278200.0
+        },
+        "3+B": {
+          "label": "3 + Bonus",
+          "payout": 200.0,
+          "winners": 1762,
+          "pool": 352400.0
+        },
+        "2+B": {
+          "label": "2 + Bonus",
+          "payout": 30.0,
+          "winners": 20101,
+          "pool": 603030.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 20.0,
+          "winners": 28008,
+          "pool": 560160.0
+        }
+      },
+      "source": "https://za.national-lottery.com/lotto/results/20-june-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-06-23",
+      "game": "PowerBall",
+      "era": "pb-5x50-pb16-r10",
+      "jackpot": 45000000.0,
+      "tickets_sold_reported": 5040376,
+      "total_sales": 25201880.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 10.0,
+      "equivalent_lines": 2520188,
+      "divisions": {
+        "5+PB": {
+          "label": "5 + PowerBall",
+          "payout": 45000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 0.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "4+PB": {
+          "label": "4 + PowerBall",
+          "payout": 40252.8,
+          "winners": 17,
+          "pool": 684297.6
+        },
+        "4": {
+          "label": "4",
+          "payout": 2000.0,
+          "winners": 228,
+          "pool": 456000.0
+        },
+        "3+PB": {
+          "label": "3 + PowerBall",
+          "payout": 500.0,
+          "winners": 715,
+          "pool": 357500.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 100.0,
+          "winners": 10616,
+          "pool": 1061600.0
+        },
+        "2+PB": {
+          "label": "2 + PowerBall",
+          "payout": 100.0,
+          "winners": 10666,
+          "pool": 1066600.0
+        },
+        "1+PB": {
+          "label": "1 + PowerBall",
+          "payout": 20.0,
+          "winners": 56125,
+          "pool": 1122500.0
+        },
+        "0+PB": {
+          "label": "0 + PowerBall",
+          "payout": 10.0,
+          "winners": 93343,
+          "pool": 933430.0
+        }
+      },
+      "source": "https://za.national-lottery.com/powerball/results/23-june-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-06-24",
+      "game": "Lotto",
+      "era": "lotto-6x52-r5",
+      "jackpot": 5000000.0,
+      "tickets_sold_reported": 1631080,
+      "total_sales": 8155400.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 5.0,
+      "equivalent_lines": 1631080,
+      "divisions": {
+        "6": {
+          "label": "6",
+          "payout": 5000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5+B": {
+          "label": "5 + Bonus",
+          "payout": 0.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 103892.2,
+          "winners": 9,
+          "pool": 935029.8
+        },
+        "4+B": {
+          "label": "4 + Bonus",
+          "payout": 4000.0,
+          "winners": 46,
+          "pool": 184000.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 200.0,
+          "winners": 1118,
+          "pool": 223600.0
+        },
+        "3+B": {
+          "label": "3 + Bonus",
+          "payout": 200.0,
+          "winners": 1629,
+          "pool": 325800.0
+        },
+        "2+B": {
+          "label": "2 + Bonus",
+          "payout": 30.0,
+          "winners": 16845,
+          "pool": 505350.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 20.0,
+          "winners": 20991,
+          "pool": 419820.0
+        }
+      },
+      "source": "https://za.national-lottery.com/lotto/results/24-june-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-06-26",
+      "game": "PowerBall",
+      "era": "pb-5x50-pb16-r10",
+      "jackpot": 52000000.0,
+      "tickets_sold_reported": 6551052,
+      "total_sales": 32755260.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 10.0,
+      "equivalent_lines": 3275526,
+      "divisions": {
+        "5+PB": {
+          "label": "5 + PowerBall",
+          "payout": 52000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 293469.6,
+          "winners": 2,
+          "pool": 586939.2
+        },
+        "4+PB": {
+          "label": "4 + PowerBall",
+          "payout": 13339.5,
+          "winners": 22,
+          "pool": 293469.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 2000.0,
+          "winners": 337,
+          "pool": 674000.0
+        },
+        "3+PB": {
+          "label": "3 + PowerBall",
+          "payout": 500.0,
+          "winners": 979,
+          "pool": 489500.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 100.0,
+          "winners": 13633,
+          "pool": 1363300.0
+        },
+        "2+PB": {
+          "label": "2 + PowerBall",
+          "payout": 100.0,
+          "winners": 13803,
+          "pool": 1380300.0
+        },
+        "1+PB": {
+          "label": "1 + PowerBall",
+          "payout": 20.0,
+          "winners": 73152,
+          "pool": 1463040.0
+        },
+        "0+PB": {
+          "label": "0 + PowerBall",
+          "payout": 10.0,
+          "winners": 122517,
+          "pool": 1225170.0
+        }
+      },
+      "source": "https://za.national-lottery.com/powerball/results/26-june-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-06-27",
+      "game": "Lotto",
+      "era": "lotto-6x52-r5",
+      "jackpot": 7000000.0,
+      "tickets_sold_reported": 2282499,
+      "total_sales": 11412495.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 5.0,
+      "equivalent_lines": 2282499,
+      "divisions": {
+        "6": {
+          "label": "6",
+          "payout": 7000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5+B": {
+          "label": "5 + Bonus",
+          "payout": 0.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 79859.3,
+          "winners": 17,
+          "pool": 1357608.1
+        },
+        "4+B": {
+          "label": "4 + Bonus",
+          "payout": 4000.0,
+          "winners": 71,
+          "pool": 284000.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 200.0,
+          "winners": 1437,
+          "pool": 287400.0
+        },
+        "3+B": {
+          "label": "3 + Bonus",
+          "payout": 200.0,
+          "winners": 1924,
+          "pool": 384800.0
+        },
+        "2+B": {
+          "label": "2 + Bonus",
+          "payout": 30.0,
+          "winners": 22148,
+          "pool": 664440.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 20.0,
+          "winners": 28873,
+          "pool": 577460.0
+        }
+      },
+      "source": "https://za.national-lottery.com/lotto/results/27-june-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-06-30",
+      "game": "PowerBall",
+      "era": "pb-5x50-pb16-r10",
+      "jackpot": 61000000.0,
+      "tickets_sold_reported": 6411974,
+      "total_sales": 32059870.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 10.0,
+      "equivalent_lines": 3205987,
+      "divisions": {
+        "5+PB": {
+          "label": "5 + PowerBall",
+          "payout": 61000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 0.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "4+PB": {
+          "label": "4 + PowerBall",
+          "payout": 32682.4,
+          "winners": 28,
+          "pool": 915107.2
+        },
+        "4": {
+          "label": "4",
+          "payout": 2000.0,
+          "winners": 255,
+          "pool": 510000.0
+        },
+        "3+PB": {
+          "label": "3 + PowerBall",
+          "payout": 500.0,
+          "winners": 856,
+          "pool": 428000.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 100.0,
+          "winners": 12835,
+          "pool": 1283500.0
+        },
+        "2+PB": {
+          "label": "2 + PowerBall",
+          "payout": 100.0,
+          "winners": 11888,
+          "pool": 1188800.0
+        },
+        "1+PB": {
+          "label": "1 + PowerBall",
+          "payout": 20.0,
+          "winners": 66346,
+          "pool": 1326920.0
+        },
+        "0+PB": {
+          "label": "0 + PowerBall",
+          "payout": 10.0,
+          "winners": 112485,
+          "pool": 1124850.0
+        }
+      },
+      "source": "https://za.national-lottery.com/powerball/results/30-june-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-01",
+      "game": "Lotto",
+      "era": "lotto-6x52-r5",
+      "jackpot": 10000000.0,
+      "tickets_sold_reported": 2107748,
+      "total_sales": 10538740.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 5.0,
+      "equivalent_lines": 2107748,
+      "divisions": {
+        "6": {
+          "label": "6",
+          "payout": 10000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5+B": {
+          "label": "5 + Bonus",
+          "payout": 0.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 44568.8,
+          "winners": 26,
+          "pool": 1158788.8
+        },
+        "4+B": {
+          "label": "4 + Bonus",
+          "payout": 4000.0,
+          "winners": 69,
+          "pool": 276000.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 200.0,
+          "winners": 1630,
+          "pool": 326000.0
+        },
+        "3+B": {
+          "label": "3 + Bonus",
+          "payout": 200.0,
+          "winners": 1939,
+          "pool": 387800.0
+        },
+        "2+B": {
+          "label": "2 + Bonus",
+          "payout": 30.0,
+          "winners": 22029,
+          "pool": 660870.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 20.0,
+          "winners": 30817,
+          "pool": 616340.0
+        }
+      },
+      "source": "https://za.national-lottery.com/lotto/results/01-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-03",
+      "game": "PowerBall",
+      "era": "pb-5x50-pb16-r10",
+      "jackpot": 69520478.3,
+      "tickets_sold_reported": 6011030,
+      "total_sales": 30055150.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 10.0,
+      "equivalent_lines": 3005515,
+      "divisions": {
+        "5+PB": {
+          "label": "5 + PowerBall",
+          "payout": 69520478.3,
+          "winners": 1,
+          "pool": 69520478.3
+        },
+        "5": {
+          "label": "5",
+          "payout": 267318.1,
+          "winners": 2,
+          "pool": 534636.2
+        },
+        "4+PB": {
+          "label": "4 + PowerBall",
+          "payout": 12729.4,
+          "winners": 21,
+          "pool": 267317.4
+        },
+        "4": {
+          "label": "4",
+          "payout": 2000.0,
+          "winners": 391,
+          "pool": 782000.0
+        },
+        "3+PB": {
+          "label": "3 + PowerBall",
+          "payout": 500.0,
+          "winners": 889,
+          "pool": 444500.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 100.0,
+          "winners": 14324,
+          "pool": 1432400.0
+        },
+        "2+PB": {
+          "label": "2 + PowerBall",
+          "payout": 100.0,
+          "winners": 11900,
+          "pool": 1190000.0
+        },
+        "1+PB": {
+          "label": "1 + PowerBall",
+          "payout": 20.0,
+          "winners": 62481,
+          "pool": 1249620.0
+        },
+        "0+PB": {
+          "label": "0 + PowerBall",
+          "payout": 10.0,
+          "winners": 101845,
+          "pool": 1018450.0
+        }
+      },
+      "source": "https://za.national-lottery.com/powerball/results/03-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-04",
+      "game": "Lotto",
+      "era": "lotto-6x52-r5",
+      "jackpot": 12000000.0,
+      "tickets_sold_reported": 2555062,
+      "total_sales": 12775310.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 5.0,
+      "equivalent_lines": 2555062,
+      "divisions": {
+        "6": {
+          "label": "6",
+          "payout": 12000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5+B": {
+          "label": "5 + Bonus",
+          "payout": 0.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 46231.2,
+          "winners": 30,
+          "pool": 1386936.0
+        },
+        "4+B": {
+          "label": "4 + Bonus",
+          "payout": 4000.0,
+          "winners": 86,
+          "pool": 344000.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 200.0,
+          "winners": 1709,
+          "pool": 341800.0
+        },
+        "3+B": {
+          "label": "3 + Bonus",
+          "payout": 200.0,
+          "winners": 2761,
+          "pool": 552200.0
+        },
+        "2+B": {
+          "label": "2 + Bonus",
+          "payout": 30.0,
+          "winners": 28748,
+          "pool": 862440.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 20.0,
+          "winners": 34606,
+          "pool": 692120.0
+        }
+      },
+      "source": "https://za.national-lottery.com/lotto/results/04-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-07",
+      "game": "PowerBall",
+      "era": "pb-5x50-pb16-r10",
+      "jackpot": 7000000.0,
+      "tickets_sold_reported": 3851648,
+      "total_sales": 19258240.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 10.0,
+      "equivalent_lines": 1925824,
+      "divisions": {
+        "5+PB": {
+          "label": "5 + PowerBall",
+          "payout": 7000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 343102.8,
+          "winners": 1,
+          "pool": 343102.8
+        },
+        "4+PB": {
+          "label": "4 + PowerBall",
+          "payout": 10721.9,
+          "winners": 16,
+          "pool": 171550.4
+        },
+        "4": {
+          "label": "4",
+          "payout": 2000.0,
+          "winners": 173,
+          "pool": 346000.0
+        },
+        "3+PB": {
+          "label": "3 + PowerBall",
+          "payout": 500.0,
+          "winners": 609,
+          "pool": 304500.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 100.0,
+          "winners": 8355,
+          "pool": 835500.0
+        },
+        "2+PB": {
+          "label": "2 + PowerBall",
+          "payout": 100.0,
+          "winners": 8440,
+          "pool": 844000.0
+        },
+        "1+PB": {
+          "label": "1 + PowerBall",
+          "payout": 20.0,
+          "winners": 43562,
+          "pool": 871240.0
+        },
+        "0+PB": {
+          "label": "0 + PowerBall",
+          "payout": 10.0,
+          "winners": 70950,
+          "pool": 709500.0
+        }
+      },
+      "source": "https://za.national-lottery.com/powerball/results/07-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-08",
+      "game": "Lotto",
+      "era": "lotto-6x52-r5",
+      "jackpot": 14000000.0,
+      "tickets_sold_reported": 2253210,
+      "total_sales": 11266050.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 5.0,
+      "equivalent_lines": 2253210,
+      "divisions": {
+        "6": {
+          "label": "6",
+          "payout": 14000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5+B": {
+          "label": "5 + Bonus",
+          "payout": 445278.6,
+          "winners": 1,
+          "pool": 445278.6
+        },
+        "5": {
+          "label": "5",
+          "payout": 17669.7,
+          "winners": 42,
+          "pool": 742127.4
+        },
+        "4+B": {
+          "label": "4 + Bonus",
+          "payout": 4000.0,
+          "winners": 71,
+          "pool": 284000.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 200.0,
+          "winners": 1770,
+          "pool": 354000.0
+        },
+        "3+B": {
+          "label": "3 + Bonus",
+          "payout": 200.0,
+          "winners": 2658,
+          "pool": 531600.0
+        },
+        "2+B": {
+          "label": "2 + Bonus",
+          "payout": 30.0,
+          "winners": 23182,
+          "pool": 695460.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 20.0,
+          "winners": 34339,
+          "pool": 686780.0
+        }
+      },
+      "source": "https://za.national-lottery.com/lotto/results/08-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-10",
+      "game": "PowerBall",
+      "era": "pb-5x50-pb16-r10",
+      "jackpot": 14000000.0,
+      "tickets_sold_reported": 4397222,
+      "total_sales": 21986110.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 10.0,
+      "equivalent_lines": 2198611,
+      "divisions": {
+        "5+PB": {
+          "label": "5 + PowerBall",
+          "payout": 14000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 96727.7,
+          "winners": 4,
+          "pool": 386910.8
+        },
+        "4+PB": {
+          "label": "4 + PowerBall",
+          "payout": 21495.0,
+          "winners": 9,
+          "pool": 193455.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 2000.0,
+          "winners": 241,
+          "pool": 482000.0
+        },
+        "3+PB": {
+          "label": "3 + PowerBall",
+          "payout": 500.0,
+          "winners": 695,
+          "pool": 347500.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 100.0,
+          "winners": 10414,
+          "pool": 1041400.0
+        },
+        "2+PB": {
+          "label": "2 + PowerBall",
+          "payout": 100.0,
+          "winners": 9430,
+          "pool": 943000.0
+        },
+        "1+PB": {
+          "label": "1 + PowerBall",
+          "payout": 20.0,
+          "winners": 48315,
+          "pool": 966300.0
+        },
+        "0+PB": {
+          "label": "0 + PowerBall",
+          "payout": 10.0,
+          "winners": 76434,
+          "pool": 764340.0
+        }
+      },
+      "source": "https://za.national-lottery.com/powerball/results/10-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-11",
+      "game": "Lotto",
+      "era": "lotto-6x52-r5",
+      "jackpot": 15000000.0,
+      "tickets_sold_reported": 2469367,
+      "total_sales": 12346835.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 5.0,
+      "equivalent_lines": 2469367,
+      "divisions": {
+        "6": {
+          "label": "6",
+          "payout": 15000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5+B": {
+          "label": "5 + Bonus",
+          "payout": 535958.8,
+          "winners": 1,
+          "pool": 535958.8
+        },
+        "5": {
+          "label": "5",
+          "payout": 34356.3,
+          "winners": 26,
+          "pool": 893263.8
+        },
+        "4+B": {
+          "label": "4 + Bonus",
+          "payout": 4000.0,
+          "winners": 70,
+          "pool": 280000.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 200.0,
+          "winners": 1805,
+          "pool": 361000.0
+        },
+        "3+B": {
+          "label": "3 + Bonus",
+          "payout": 200.0,
+          "winners": 2173,
+          "pool": 434600.0
+        },
+        "2+B": {
+          "label": "2 + Bonus",
+          "payout": 30.0,
+          "winners": 24281,
+          "pool": 728430.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 20.0,
+          "winners": 33643,
+          "pool": 672860.0
+        }
+      },
+      "source": "https://za.national-lottery.com/lotto/results/11-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-13",
+      "game": "Daily Lotto",
+      "era": "daily-5x36-r3",
+      "jackpot": 372794.6,
+      "tickets_sold_reported": 731594,
+      "total_sales": 2194782.0,
+      "observed_sales_unit": 3.0,
+      "ticket_cost": 3.0,
+      "equivalent_lines": 731594,
+      "divisions": {
+        "5": {
+          "label": "5",
+          "payout": 372794.6,
+          "winners": 1,
+          "pool": 372794.6
+        },
+        "4": {
+          "label": "4",
+          "payout": 352.6,
+          "winners": 302,
+          "pool": 106485.2
+        },
+        "3": {
+          "label": "3",
+          "payout": 19.1,
+          "winners": 8353,
+          "pool": 159542.3
+        },
+        "2": {
+          "label": "2",
+          "payout": 5.0,
+          "winners": 84008,
+          "pool": 420040.0
+        }
+      },
+      "source": "https://za.national-lottery.com/daily-lotto/results/13-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-14",
+      "game": "Daily Lotto",
+      "era": "daily-5x36-r3",
+      "jackpot": 429146.9,
+      "tickets_sold_reported": 842183,
+      "total_sales": 2526549.0,
+      "observed_sales_unit": 3.0,
+      "ticket_cost": 3.0,
+      "equivalent_lines": 842183,
+      "divisions": {
+        "5": {
+          "label": "5",
+          "payout": 61306.7,
+          "winners": 7,
+          "pool": 429146.9
+        },
+        "4": {
+          "label": "4",
+          "payout": 317.6,
+          "winners": 386,
+          "pool": 122593.6
+        },
+        "3": {
+          "label": "3",
+          "payout": 16.9,
+          "winners": 10848,
+          "pool": 183331.2
+        },
+        "2": {
+          "label": "2",
+          "payout": 4.7,
+          "winners": 103190,
+          "pool": 484993.0
+        }
+      },
+      "source": "https://za.national-lottery.com/daily-lotto/results/14-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-14",
+      "game": "PowerBall",
+      "era": "pb-5x50-pb16-r10",
+      "jackpot": 18000000.0,
+      "tickets_sold_reported": 3920310,
+      "total_sales": 19601550.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 10.0,
+      "equivalent_lines": 1960155,
+      "divisions": {
+        "5+PB": {
+          "label": "5 + PowerBall",
+          "payout": 18000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 0.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "4+PB": {
+          "label": "4 + PowerBall",
+          "payout": 49764.2,
+          "winners": 11,
+          "pool": 547406.2
+        },
+        "4": {
+          "label": "4",
+          "payout": 2000.0,
+          "winners": 183,
+          "pool": 366000.0
+        },
+        "3+PB": {
+          "label": "3 + PowerBall",
+          "payout": 500.0,
+          "winners": 511,
+          "pool": 255500.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 100.0,
+          "winners": 8347,
+          "pool": 834700.0
+        },
+        "2+PB": {
+          "label": "2 + PowerBall",
+          "payout": 100.0,
+          "winners": 7762,
+          "pool": 776200.0
+        },
+        "1+PB": {
+          "label": "1 + PowerBall",
+          "payout": 20.0,
+          "winners": 40995,
+          "pool": 819900.0
+        },
+        "0+PB": {
+          "label": "0 + PowerBall",
+          "payout": 10.0,
+          "winners": 66618,
+          "pool": 666180.0
+        }
+      },
+      "source": "https://za.national-lottery.com/powerball/results/14-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-15",
+      "game": "Daily Lotto",
+      "era": "daily-5x36-r3",
+      "jackpot": 424302.5,
+      "tickets_sold_reported": 832676,
+      "total_sales": 2498028.0,
+      "observed_sales_unit": 3.0,
+      "ticket_cost": 3.0,
+      "equivalent_lines": 832676,
+      "divisions": {
+        "5": {
+          "label": "5",
+          "payout": 424302.5,
+          "winners": 1,
+          "pool": 424302.5
+        },
+        "4": {
+          "label": "4",
+          "payout": 394.8,
+          "winners": 307,
+          "pool": 121203.6
+        },
+        "3": {
+          "label": "3",
+          "payout": 18.4,
+          "winners": 9850,
+          "pool": 181240.0
+        },
+        "2": {
+          "label": "2",
+          "payout": 4.9,
+          "winners": 98927,
+          "pool": 484742.3
+        }
+      },
+      "source": "https://za.national-lottery.com/daily-lotto/results/15-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-15",
+      "game": "Lotto",
+      "era": "lotto-6x52-r5",
+      "jackpot": 17000000.0,
+      "tickets_sold_reported": 2163931,
+      "total_sales": 10819655.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 5.0,
+      "equivalent_lines": 2163931,
+      "divisions": {
+        "6": {
+          "label": "6",
+          "payout": 17000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5+B": {
+          "label": "5 + Bonus",
+          "payout": 0.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 42440.7,
+          "winners": 29,
+          "pool": 1230780.3
+        },
+        "4+B": {
+          "label": "4 + Bonus",
+          "payout": 4000.0,
+          "winners": 66,
+          "pool": 264000.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 200.0,
+          "winners": 1930,
+          "pool": 386000.0
+        },
+        "3+B": {
+          "label": "3 + Bonus",
+          "payout": 200.0,
+          "winners": 1861,
+          "pool": 372200.0
+        },
+        "2+B": {
+          "label": "2 + Bonus",
+          "payout": 30.0,
+          "winners": 20832,
+          "pool": 624960.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 20.0,
+          "winners": 28876,
+          "pool": 577520.0
+        }
+      },
+      "source": "https://za.national-lottery.com/lotto/results/15-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-16",
+      "game": "Daily Lotto",
+      "era": "daily-5x36-r3",
+      "jackpot": 426832.0,
+      "tickets_sold_reported": 837640,
+      "total_sales": 2512920.0,
+      "observed_sales_unit": 3.0,
+      "ticket_cost": 3.0,
+      "equivalent_lines": 837640,
+      "divisions": {
+        "5": {
+          "label": "5",
+          "payout": 426832.0,
+          "winners": 1,
+          "pool": 426832.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 358.6,
+          "winners": 340,
+          "pool": 121924.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 17.9,
+          "winners": 10209,
+          "pool": 182741.1
+        },
+        "2": {
+          "label": "2",
+          "payout": 5.0,
+          "winners": 97230,
+          "pool": 486150.0
+        }
+      },
+      "source": "https://za.national-lottery.com/daily-lotto/results/16-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-17",
+      "game": "Daily Lotto",
+      "era": "daily-5x36-r3",
+      "jackpot": 494726.5,
+      "tickets_sold_reported": 970881,
+      "total_sales": 2912643.0,
+      "observed_sales_unit": 3.0,
+      "ticket_cost": 3.0,
+      "equivalent_lines": 970881,
+      "divisions": {
+        "5": {
+          "label": "5",
+          "payout": 98945.3,
+          "winners": 5,
+          "pool": 494726.5
+        },
+        "4": {
+          "label": "4",
+          "payout": 357.8,
+          "winners": 395,
+          "pool": 141331.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 17.4,
+          "winners": 12154,
+          "pool": 211479.6
+        },
+        "2": {
+          "label": "2",
+          "payout": 4.8,
+          "winners": 116393,
+          "pool": 558686.4
+        }
+      },
+      "source": "https://za.national-lottery.com/daily-lotto/results/17-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-17",
+      "game": "PowerBall",
+      "era": "pb-5x50-pb16-r10",
+      "jackpot": 23000000.0,
+      "tickets_sold_reported": 4539018,
+      "total_sales": 22695090.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 10.0,
+      "equivalent_lines": 2269509,
+      "divisions": {
+        "5+PB": {
+          "label": "5 + PowerBall",
+          "payout": 23000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 0.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "4+PB": {
+          "label": "4 + PowerBall",
+          "payout": 40670.3,
+          "winners": 16,
+          "pool": 650724.8
+        },
+        "4": {
+          "label": "4",
+          "payout": 2000.0,
+          "winners": 200,
+          "pool": 400000.0
+        },
+        "3+PB": {
+          "label": "3 + PowerBall",
+          "payout": 500.0,
+          "winners": 564,
+          "pool": 282000.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 100.0,
+          "winners": 8901,
+          "pool": 890100.0
+        },
+        "2+PB": {
+          "label": "2 + PowerBall",
+          "payout": 100.0,
+          "winners": 8488,
+          "pool": 848800.0
+        },
+        "1+PB": {
+          "label": "1 + PowerBall",
+          "payout": 20.0,
+          "winners": 45901,
+          "pool": 918020.0
+        },
+        "0+PB": {
+          "label": "0 + PowerBall",
+          "payout": 10.0,
+          "winners": 77834,
+          "pool": 778340.0
+        }
+      },
+      "source": "https://za.national-lottery.com/powerball/results/17-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-18",
+      "game": "Daily Lotto",
+      "era": "daily-5x36-r3",
+      "jackpot": 401949.4,
+      "tickets_sold_reported": 788809,
+      "total_sales": 2366427.0,
+      "observed_sales_unit": 3.0,
+      "ticket_cost": 3.0,
+      "equivalent_lines": 788809,
+      "divisions": {
+        "5": {
+          "label": "5",
+          "payout": 401949.4,
+          "winners": 1,
+          "pool": 401949.4
+        },
+        "4": {
+          "label": "4",
+          "payout": 307.0,
+          "winners": 374,
+          "pool": 114818.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 18.0,
+          "winners": 9532,
+          "pool": 171576.0
+        },
+        "2": {
+          "label": "2",
+          "payout": 4.8,
+          "winners": 93786,
+          "pool": 450172.8
+        }
+      },
+      "source": "https://za.national-lottery.com/daily-lotto/results/18-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-18",
+      "game": "Lotto",
+      "era": "lotto-6x52-r5",
+      "jackpot": 19000000.0,
+      "tickets_sold_reported": 2430310,
+      "total_sales": 12151550.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 5.0,
+      "equivalent_lines": 2430310,
+      "divisions": {
+        "6": {
+          "label": "6",
+          "payout": 19000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5+B": {
+          "label": "5 + Bonus",
+          "payout": 0.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 36929.1,
+          "winners": 38,
+          "pool": 1403305.8
+        },
+        "4+B": {
+          "label": "4 + Bonus",
+          "payout": 4000.0,
+          "winners": 85,
+          "pool": 340000.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 200.0,
+          "winners": 1599,
+          "pool": 319800.0
+        },
+        "3+B": {
+          "label": "3 + Bonus",
+          "payout": 200.0,
+          "winners": 2150,
+          "pool": 430000.0
+        },
+        "2+B": {
+          "label": "2 + Bonus",
+          "payout": 30.0,
+          "winners": 24773,
+          "pool": 743190.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 20.0,
+          "winners": 30650,
+          "pool": 613000.0
+        }
+      },
+      "source": "https://za.national-lottery.com/lotto/results/18-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-19",
+      "game": "Daily Lotto",
+      "era": "daily-5x36-r3",
+      "jackpot": 288220.1,
+      "tickets_sold_reported": 565620,
+      "total_sales": 1696860.0,
+      "observed_sales_unit": 3.0,
+      "ticket_cost": 3.0,
+      "equivalent_lines": 565620,
+      "divisions": {
+        "5": {
+          "label": "5",
+          "payout": 288220.1,
+          "winners": 1,
+          "pool": 288220.1
+        },
+        "4": {
+          "label": "4",
+          "payout": 364.3,
+          "winners": 226,
+          "pool": 82331.8
+        },
+        "3": {
+          "label": "3",
+          "payout": 17.9,
+          "winners": 6896,
+          "pool": 123438.4
+        },
+        "2": {
+          "label": "2",
+          "payout": 4.9,
+          "winners": 66690,
+          "pool": 326781.0
+        }
+      },
+      "source": "https://za.national-lottery.com/daily-lotto/results/19-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-20",
+      "game": "Daily Lotto",
+      "era": "daily-5x36-r3",
+      "jackpot": 356279.1,
+      "tickets_sold_reported": 699183,
+      "total_sales": 2097549.0,
+      "observed_sales_unit": 3.0,
+      "ticket_cost": 3.0,
+      "equivalent_lines": 699183,
+      "divisions": {
+        "5": {
+          "label": "5",
+          "payout": 356279.1,
+          "winners": 1,
+          "pool": 356279.1
+        },
+        "4": {
+          "label": "4",
+          "payout": 290.8,
+          "winners": 350,
+          "pool": 101780.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 17.5,
+          "winners": 8679,
+          "pool": 151882.5
+        },
+        "2": {
+          "label": "2",
+          "payout": 4.8,
+          "winners": 83245,
+          "pool": 399576.0
+        }
+      },
+      "source": "https://za.national-lottery.com/daily-lotto/results/20-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-21",
+      "game": "Daily Lotto",
+      "era": "daily-5x36-r3",
+      "jackpot": 409332.0,
+      "tickets_sold_reported": 803297,
+      "total_sales": 2409891.0,
+      "observed_sales_unit": 3.0,
+      "ticket_cost": 3.0,
+      "equivalent_lines": 803297,
+      "divisions": {
+        "5": {
+          "label": "5",
+          "payout": 102333.0,
+          "winners": 4,
+          "pool": 409332.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 465.9,
+          "winners": 251,
+          "pool": 116940.9
+        },
+        "3": {
+          "label": "3",
+          "payout": 18.7,
+          "winners": 9355,
+          "pool": 174938.5
+        },
+        "2": {
+          "label": "2",
+          "payout": 4.9,
+          "winners": 95115,
+          "pool": 466063.5
+        }
+      },
+      "source": "https://za.national-lottery.com/daily-lotto/results/21-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-21",
+      "game": "PowerBall",
+      "era": "pb-5x50-pb16-r10",
+      "jackpot": 30000000.0,
+      "tickets_sold_reported": 3920474,
+      "total_sales": 19602370.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 10.0,
+      "equivalent_lines": 1960237,
+      "divisions": {
+        "5+PB": {
+          "label": "5 + PowerBall",
+          "payout": 30000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 353932.5,
+          "winners": 1,
+          "pool": 353932.5
+        },
+        "4+PB": {
+          "label": "4 + PowerBall",
+          "payout": 17696.6,
+          "winners": 10,
+          "pool": 176966.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 2000.0,
+          "winners": 178,
+          "pool": 356000.0
+        },
+        "3+PB": {
+          "label": "3 + PowerBall",
+          "payout": 500.0,
+          "winners": 563,
+          "pool": 281500.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 100.0,
+          "winners": 7827,
+          "pool": 782700.0
+        },
+        "2+PB": {
+          "label": "2 + PowerBall",
+          "payout": 100.0,
+          "winners": 8491,
+          "pool": 849100.0
+        },
+        "1+PB": {
+          "label": "1 + PowerBall",
+          "payout": 20.0,
+          "winners": 43600,
+          "pool": 872000.0
+        },
+        "0+PB": {
+          "label": "0 + PowerBall",
+          "payout": 10.0,
+          "winners": 76101,
+          "pool": 761010.0
+        }
+      },
+      "source": "https://za.national-lottery.com/powerball/results/21-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-22",
+      "game": "Daily Lotto",
+      "era": "daily-5x36-r3",
+      "jackpot": 392476.0,
+      "tickets_sold_reported": 770218,
+      "total_sales": 2310654.0,
+      "observed_sales_unit": 3.0,
+      "ticket_cost": 3.0,
+      "equivalent_lines": 770218,
+      "divisions": {
+        "5": {
+          "label": "5",
+          "payout": 196238.0,
+          "winners": 2,
+          "pool": 392476.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 334.7,
+          "winners": 335,
+          "pool": 112124.5
+        },
+        "3": {
+          "label": "3",
+          "payout": 16.8,
+          "winners": 9953,
+          "pool": 167210.4
+        },
+        "2": {
+          "label": "2",
+          "payout": 4.8,
+          "winners": 92256,
+          "pool": 442828.8
+        }
+      },
+      "source": "https://za.national-lottery.com/daily-lotto/results/22-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-22",
+      "game": "Lotto",
+      "era": "lotto-6x52-r5",
+      "jackpot": 20082438.9,
+      "tickets_sold_reported": 2082929,
+      "total_sales": 10414645.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 5.0,
+      "equivalent_lines": 2082929,
+      "divisions": {
+        "6": {
+          "label": "6",
+          "payout": 20082438.9,
+          "winners": 1,
+          "pool": 20082438.9
+        },
+        "5+B": {
+          "label": "5 + Bonus",
+          "payout": 0.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 38656.3,
+          "winners": 31,
+          "pool": 1198345.3
+        },
+        "4+B": {
+          "label": "4 + Bonus",
+          "payout": 4000.0,
+          "winners": 55,
+          "pool": 220000.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 200.0,
+          "winners": 1396,
+          "pool": 279200.0
+        },
+        "3+B": {
+          "label": "3 + Bonus",
+          "payout": 200.0,
+          "winners": 2058,
+          "pool": 411600.0
+        },
+        "2+B": {
+          "label": "2 + Bonus",
+          "payout": 30.0,
+          "winners": 21843,
+          "pool": 655290.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 20.0,
+          "winners": 27061,
+          "pool": 541220.0
+        }
+      },
+      "source": "https://za.national-lottery.com/lotto/results/22-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-23",
+      "game": "Daily Lotto",
+      "era": "daily-5x36-r3",
+      "jackpot": 419342.4,
+      "tickets_sold_reported": 822942,
+      "total_sales": 2468826.0,
+      "observed_sales_unit": 3.0,
+      "ticket_cost": 3.0,
+      "equivalent_lines": 822942,
+      "divisions": {
+        "5": {
+          "label": "5",
+          "payout": 209671.2,
+          "winners": 2,
+          "pool": 419342.4
+        },
+        "4": {
+          "label": "4",
+          "payout": 329.1,
+          "winners": 364,
+          "pool": 119792.4
+        },
+        "3": {
+          "label": "3",
+          "payout": 17.0,
+          "winners": 10520,
+          "pool": 178840.0
+        },
+        "2": {
+          "label": "2",
+          "payout": 4.8,
+          "winners": 98228,
+          "pool": 471494.4
+        }
+      },
+      "source": "https://za.national-lottery.com/daily-lotto/results/23-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-24",
+      "game": "Daily Lotto",
+      "era": "daily-5x36-r3",
+      "jackpot": 541120.8,
+      "tickets_sold_reported": 1061927,
+      "total_sales": 3185781.0,
+      "observed_sales_unit": 3.0,
+      "ticket_cost": 3.0,
+      "equivalent_lines": 1061927,
+      "divisions": {
+        "5": {
+          "label": "5",
+          "payout": 90186.8,
+          "winners": 6,
+          "pool": 541120.8
+        },
+        "4": {
+          "label": "4",
+          "payout": 346.6,
+          "winners": 446,
+          "pool": 154583.6
+        },
+        "3": {
+          "label": "3",
+          "payout": 17.3,
+          "winners": 13401,
+          "pool": 231837.3
+        },
+        "2": {
+          "label": "2",
+          "payout": 4.8,
+          "winners": 126369,
+          "pool": 606571.2
+        }
+      },
+      "source": "https://za.national-lottery.com/daily-lotto/results/24-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-24",
+      "game": "PowerBall",
+      "era": "pb-5x50-pb16-r10",
+      "jackpot": 36000000.0,
+      "tickets_sold_reported": 4957968,
+      "total_sales": 24789840.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 10.0,
+      "equivalent_lines": 2478984,
+      "divisions": {
+        "5+PB": {
+          "label": "5 + PowerBall",
+          "payout": 36000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 452065.2,
+          "winners": 1,
+          "pool": 452065.2
+        },
+        "4+PB": {
+          "label": "4 + PowerBall",
+          "payout": 16145.1,
+          "winners": 14,
+          "pool": 226031.4
+        },
+        "4": {
+          "label": "4",
+          "payout": 2000.0,
+          "winners": 286,
+          "pool": 572000.0
+        },
+        "3+PB": {
+          "label": "3 + PowerBall",
+          "payout": 500.0,
+          "winners": 717,
+          "pool": 358500.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 100.0,
+          "winners": 11618,
+          "pool": 1161800.0
+        },
+        "2+PB": {
+          "label": "2 + PowerBall",
+          "payout": 100.0,
+          "winners": 9618,
+          "pool": 961800.0
+        },
+        "1+PB": {
+          "label": "1 + PowerBall",
+          "payout": 20.0,
+          "winners": 50064,
+          "pool": 1001280.0
+        },
+        "0+PB": {
+          "label": "0 + PowerBall",
+          "payout": 10.0,
+          "winners": 80512,
+          "pool": 805120.0
+        }
+      },
+      "source": "https://za.national-lottery.com/powerball/results/24-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-25",
+      "game": "Daily Lotto",
+      "era": "daily-5x36-r3",
+      "jackpot": 490078.0,
+      "tickets_sold_reported": 961758,
+      "total_sales": 2885274.0,
+      "observed_sales_unit": 3.0,
+      "ticket_cost": 3.0,
+      "equivalent_lines": 961758,
+      "divisions": {
+        "5": {
+          "label": "5",
+          "payout": 122519.5,
+          "winners": 4,
+          "pool": 490078.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 366.5,
+          "winners": 382,
+          "pool": 140003.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 18.2,
+          "winners": 11505,
+          "pool": 209391.0
+        },
+        "2": {
+          "label": "2",
+          "payout": 4.9,
+          "winners": 112596,
+          "pool": 551720.4
+        }
+      },
+      "source": "https://za.national-lottery.com/daily-lotto/results/25-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-25",
+      "game": "Lotto",
+      "era": "lotto-6x52-r5",
+      "jackpot": 2000000.0,
+      "tickets_sold_reported": 2238376,
+      "total_sales": 11191880.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 5.0,
+      "equivalent_lines": 2238376,
+      "divisions": {
+        "6": {
+          "label": "6",
+          "payout": 2000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5+B": {
+          "label": "5 + Bonus",
+          "payout": 0.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 58782.8,
+          "winners": 21,
+          "pool": 1234438.8
+        },
+        "4+B": {
+          "label": "4 + Bonus",
+          "payout": 4000.0,
+          "winners": 70,
+          "pool": 280000.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 200.0,
+          "winners": 1594,
+          "pool": 318800.0
+        },
+        "3+B": {
+          "label": "3 + Bonus",
+          "payout": 200.0,
+          "winners": 2192,
+          "pool": 438400.0
+        },
+        "2+B": {
+          "label": "2 + Bonus",
+          "payout": 30.0,
+          "winners": 24500,
+          "pool": 735000.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 20.0,
+          "winners": 31286,
+          "pool": 625720.0
+        }
+      },
+      "source": "https://za.national-lottery.com/lotto/results/25-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-26",
+      "game": "Daily Lotto",
+      "era": "daily-5x36-r3",
+      "jackpot": 328333.1,
+      "tickets_sold_reported": 644340,
+      "total_sales": 1933020.0,
+      "observed_sales_unit": 3.0,
+      "ticket_cost": 3.0,
+      "equivalent_lines": 644340,
+      "divisions": {
+        "5": {
+          "label": "5",
+          "payout": 328333.1,
+          "winners": 1,
+          "pool": 328333.1
+        },
+        "4": {
+          "label": "4",
+          "payout": 367.8,
+          "winners": 255,
+          "pool": 93789.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 16.6,
+          "winners": 8436,
+          "pool": 140037.6
+        },
+        "2": {
+          "label": "2",
+          "payout": 4.7,
+          "winners": 79270,
+          "pool": 372569.0
+        }
+      },
+      "source": "https://za.national-lottery.com/daily-lotto/results/26-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-27",
+      "game": "Daily Lotto",
+      "era": "daily-5x36-r3",
+      "jackpot": 425709.4,
+      "tickets_sold_reported": 835437,
+      "total_sales": 2506311.0,
+      "observed_sales_unit": 3.0,
+      "ticket_cost": 3.0,
+      "equivalent_lines": 835437,
+      "divisions": {
+        "5": {
+          "label": "5",
+          "payout": 212854.7,
+          "winners": 2,
+          "pool": 425709.4
+        },
+        "4": {
+          "label": "4",
+          "payout": 354.6,
+          "winners": 343,
+          "pool": 121627.8
+        },
+        "3": {
+          "label": "3",
+          "payout": 17.8,
+          "winners": 10193,
+          "pool": 181435.4
+        },
+        "2": {
+          "label": "2",
+          "payout": 4.8,
+          "winners": 99714,
+          "pool": 478627.2
+        }
+      },
+      "source": "https://za.national-lottery.com/daily-lotto/results/27-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-28",
+      "game": "Daily Lotto",
+      "era": "daily-5x36-r3",
+      "jackpot": 493517.2,
+      "tickets_sold_reported": 968507,
+      "total_sales": 2905521.0,
+      "observed_sales_unit": 3.0,
+      "ticket_cost": 3.0,
+      "equivalent_lines": 968507,
+      "divisions": {
+        "5": {
+          "label": "5",
+          "payout": 123379.3,
+          "winners": 4,
+          "pool": 493517.2
+        },
+        "4": {
+          "label": "4",
+          "payout": 348.1,
+          "winners": 405,
+          "pool": 140980.5
+        },
+        "3": {
+          "label": "3",
+          "payout": 17.9,
+          "winners": 11812,
+          "pool": 211434.8
+        },
+        "2": {
+          "label": "2",
+          "payout": 4.9,
+          "winners": 113596,
+          "pool": 556620.4
+        }
+      },
+      "source": "https://za.national-lottery.com/daily-lotto/results/28-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-28",
+      "game": "PowerBall",
+      "era": "pb-5x50-pb16-r10",
+      "jackpot": 45000000.0,
+      "tickets_sold_reported": 5013902,
+      "total_sales": 25069510.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 10.0,
+      "equivalent_lines": 2506951,
+      "divisions": {
+        "5+PB": {
+          "label": "5 + PowerBall",
+          "payout": 45000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 228238.9,
+          "winners": 2,
+          "pool": 456477.8
+        },
+        "4+PB": {
+          "label": "4 + PowerBall",
+          "payout": 10868.5,
+          "winners": 21,
+          "pool": 228238.5
+        },
+        "4": {
+          "label": "4",
+          "payout": 2000.0,
+          "winners": 261,
+          "pool": 522000.0
+        },
+        "3+PB": {
+          "label": "3 + PowerBall",
+          "payout": 500.0,
+          "winners": 727,
+          "pool": 363500.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 100.0,
+          "winners": 11001,
+          "pool": 1100100.0
+        },
+        "2+PB": {
+          "label": "2 + PowerBall",
+          "payout": 100.0,
+          "winners": 10178,
+          "pool": 1017800.0
+        },
+        "1+PB": {
+          "label": "1 + PowerBall",
+          "payout": 20.0,
+          "winners": 53059,
+          "pool": 1061180.0
+        },
+        "0+PB": {
+          "label": "0 + PowerBall",
+          "payout": 10.0,
+          "winners": 86221,
+          "pool": 862210.0
+        }
+      },
+      "source": "https://za.national-lottery.com/powerball/results/28-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-29",
+      "game": "Daily Lotto",
+      "era": "daily-5x36-r3",
+      "jackpot": 457177.6,
+      "tickets_sold_reported": 897192,
+      "total_sales": 2691576.0,
+      "observed_sales_unit": 3.0,
+      "ticket_cost": 3.0,
+      "equivalent_lines": 897192,
+      "divisions": {
+        "5": {
+          "label": "5",
+          "payout": 228588.8,
+          "winners": 2,
+          "pool": 457177.6
+        },
+        "4": {
+          "label": "4",
+          "payout": 353.9,
+          "winners": 369,
+          "pool": 130589.1
+        },
+        "3": {
+          "label": "3",
+          "payout": 17.4,
+          "winners": 11245,
+          "pool": 195663.0
+        },
+        "2": {
+          "label": "2",
+          "payout": 4.7,
+          "winners": 110256,
+          "pool": 518203.2
+        }
+      },
+      "source": "https://za.national-lottery.com/daily-lotto/results/29-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-29",
+      "game": "Lotto",
+      "era": "lotto-6x52-r5",
+      "jackpot": 4000000.0,
+      "tickets_sold_reported": 1952586,
+      "total_sales": 9762930.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 5.0,
+      "equivalent_lines": 1952586,
+      "divisions": {
+        "6": {
+          "label": "6",
+          "payout": 4000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5+B": {
+          "label": "5 + Bonus",
+          "payout": 0.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 62219.9,
+          "winners": 18,
+          "pool": 1119958.2
+        },
+        "4+B": {
+          "label": "4 + Bonus",
+          "payout": 4000.0,
+          "winners": 65,
+          "pool": 260000.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 200.0,
+          "winners": 1328,
+          "pool": 265600.0
+        },
+        "3+B": {
+          "label": "3 + Bonus",
+          "payout": 200.0,
+          "winners": 1824,
+          "pool": 364800.0
+        },
+        "2+B": {
+          "label": "2 + Bonus",
+          "payout": 30.0,
+          "winners": 18960,
+          "pool": 568800.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 20.0,
+          "winners": 26237,
+          "pool": 524740.0
+        }
+      },
+      "source": "https://za.national-lottery.com/lotto/results/29-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-30",
+      "game": "Daily Lotto",
+      "era": "daily-5x36-r3",
+      "jackpot": 459455.6,
+      "tickets_sold_reported": 901663,
+      "total_sales": 2704989.0,
+      "observed_sales_unit": 3.0,
+      "ticket_cost": 3.0,
+      "equivalent_lines": 901663,
+      "divisions": {
+        "5": {
+          "label": "5",
+          "payout": 114863.9,
+          "winners": 4,
+          "pool": 459455.6
+        },
+        "4": {
+          "label": "4",
+          "payout": 320.9,
+          "winners": 409,
+          "pool": 131248.1
+        },
+        "3": {
+          "label": "3",
+          "payout": 17.0,
+          "winners": 11561,
+          "pool": 196537.0
+        },
+        "2": {
+          "label": "2",
+          "payout": 4.8,
+          "winners": 107897,
+          "pool": 517905.6
+        }
+      },
+      "source": "https://za.national-lottery.com/daily-lotto/results/30-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-31",
+      "game": "Daily Lotto",
+      "era": "daily-5x36-r3",
+      "jackpot": 582709.8,
+      "tickets_sold_reported": 1143544,
+      "total_sales": 3430632.0,
+      "observed_sales_unit": 3.0,
+      "ticket_cost": 3.0,
+      "equivalent_lines": 1143544,
+      "divisions": {
+        "5": {
+          "label": "5",
+          "payout": 194236.6,
+          "winners": 3,
+          "pool": 582709.8
+        },
+        "4": {
+          "label": "4",
+          "payout": 361.9,
+          "winners": 460,
+          "pool": 166474.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 17.5,
+          "winners": 14206,
+          "pool": 248605.0
+        },
+        "2": {
+          "label": "2",
+          "payout": 4.9,
+          "winners": 135570,
+          "pool": 664293.0
+        }
+      },
+      "source": "https://za.national-lottery.com/daily-lotto/results/31-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-07-31",
+      "game": "PowerBall",
+      "era": "pb-5x50-pb16-r10",
+      "jackpot": 52000000.0,
+      "tickets_sold_reported": 5988432,
+      "total_sales": 29942160.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 10.0,
+      "equivalent_lines": 2994216,
+      "divisions": {
+        "5+PB": {
+          "label": "5 + PowerBall",
+          "payout": 52000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 545941.8,
+          "winners": 1,
+          "pool": 545941.8
+        },
+        "4+PB": {
+          "label": "4 + PowerBall",
+          "payout": 10918.8,
+          "winners": 25,
+          "pool": 272970.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 2000.0,
+          "winners": 272,
+          "pool": 544000.0
+        },
+        "3+PB": {
+          "label": "3 + PowerBall",
+          "payout": 500.0,
+          "winners": 827,
+          "pool": 413500.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 100.0,
+          "winners": 11985,
+          "pool": 1198500.0
+        },
+        "2+PB": {
+          "label": "2 + PowerBall",
+          "payout": 100.0,
+          "winners": 12171,
+          "pool": 1217100.0
+        },
+        "1+PB": {
+          "label": "1 + PowerBall",
+          "payout": 20.0,
+          "winners": 68118,
+          "pool": 1362360.0
+        },
+        "0+PB": {
+          "label": "0 + PowerBall",
+          "payout": 10.0,
+          "winners": 113659,
+          "pool": 1136590.0
+        }
+      },
+      "source": "https://za.national-lottery.com/powerball/results/31-july-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-08-01",
+      "game": "Daily Lotto",
+      "era": "daily-5x36-r3",
+      "jackpot": 490663.0,
+      "tickets_sold_reported": 962906,
+      "total_sales": 2888718.0,
+      "observed_sales_unit": 3.0,
+      "ticket_cost": 3.0,
+      "equivalent_lines": 962906,
+      "divisions": {
+        "5": {
+          "label": "5",
+          "payout": 245331.5,
+          "winners": 2,
+          "pool": 490663.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 320.0,
+          "winners": 438,
+          "pool": 140160.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 18.4,
+          "winners": 11402,
+          "pool": 209796.8
+        },
+        "2": {
+          "label": "2",
+          "payout": 4.9,
+          "winners": 112320,
+          "pool": 550368.0
+        }
+      },
+      "source": "https://za.national-lottery.com/daily-lotto/results/01-august-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-08-01",
+      "game": "Lotto",
+      "era": "lotto-6x52-r5",
+      "jackpot": 5500000.0,
+      "tickets_sold_reported": 2403992,
+      "total_sales": 12019960.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 5.0,
+      "equivalent_lines": 2403992,
+      "divisions": {
+        "6": {
+          "label": "6",
+          "payout": 5500000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5+B": {
+          "label": "5 + Bonus",
+          "payout": 0.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 33643.9,
+          "winners": 39,
+          "pool": 1312112.1
+        },
+        "4+B": {
+          "label": "4 + Bonus",
+          "payout": 4000.0,
+          "winners": 69,
+          "pool": 276000.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 200.0,
+          "winners": 1725,
+          "pool": 345000.0
+        },
+        "3+B": {
+          "label": "3 + Bonus",
+          "payout": 200.0,
+          "winners": 2482,
+          "pool": 496400.0
+        },
+        "2+B": {
+          "label": "2 + Bonus",
+          "payout": 30.0,
+          "winners": 27112,
+          "pool": 813360.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 20.0,
+          "winners": 33937,
+          "pool": 678740.0
+        }
+      },
+      "source": "https://za.national-lottery.com/lotto/results/01-august-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-08-02",
+      "game": "Daily Lotto",
+      "era": "daily-5x36-r3",
+      "jackpot": 338440.8,
+      "tickets_sold_reported": 664176,
+      "total_sales": 1992528.0,
+      "observed_sales_unit": 3.0,
+      "ticket_cost": 3.0,
+      "equivalent_lines": 664176,
+      "divisions": {
+        "5": {
+          "label": "5",
+          "payout": 112813.6,
+          "winners": 3,
+          "pool": 338440.8
+        },
+        "4": {
+          "label": "4",
+          "payout": 298.4,
+          "winners": 324,
+          "pool": 96681.6
+        },
+        "3": {
+          "label": "3",
+          "payout": 17.4,
+          "winners": 8317,
+          "pool": 144715.8
+        },
+        "2": {
+          "label": "2",
+          "payout": 4.9,
+          "winners": 77962,
+          "pool": 382013.8
+        }
+      },
+      "source": "https://za.national-lottery.com/daily-lotto/results/02-august-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-08-03",
+      "game": "Daily Lotto",
+      "era": "daily-5x36-r3",
+      "jackpot": 421565.6,
+      "tickets_sold_reported": 827305,
+      "total_sales": 2481915.0,
+      "observed_sales_unit": 3.0,
+      "ticket_cost": 3.0,
+      "equivalent_lines": 827305,
+      "divisions": {
+        "5": {
+          "label": "5",
+          "payout": 421565.6,
+          "winners": 1,
+          "pool": 421565.6
+        },
+        "4": {
+          "label": "4",
+          "payout": 389.7,
+          "winners": 309,
+          "pool": 120417.3
+        },
+        "3": {
+          "label": "3",
+          "payout": 18.6,
+          "winners": 9693,
+          "pool": 180289.8
+        },
+        "2": {
+          "label": "2",
+          "payout": 4.9,
+          "winners": 96755,
+          "pool": 474099.5
+        }
+      },
+      "source": "https://za.national-lottery.com/daily-lotto/results/03-august-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-08-04",
+      "game": "Daily Lotto",
+      "era": "daily-5x36-r3",
+      "jackpot": 516394.8,
+      "tickets_sold_reported": 1013404,
+      "total_sales": 3040212.0,
+      "observed_sales_unit": 3.0,
+      "ticket_cost": 3.0,
+      "equivalent_lines": 1013404,
+      "divisions": {
+        "5": {
+          "label": "5",
+          "payout": 86065.8,
+          "winners": 6,
+          "pool": 516394.8
+        },
+        "4": {
+          "label": "4",
+          "payout": 391.3,
+          "winners": 377,
+          "pool": 147520.1
+        },
+        "3": {
+          "label": "3",
+          "payout": 18.4,
+          "winners": 11981,
+          "pool": 220450.4
+        },
+        "2": {
+          "label": "2",
+          "payout": 4.9,
+          "winners": 118846,
+          "pool": 582345.4
+        }
+      },
+      "source": "https://za.national-lottery.com/daily-lotto/results/04-august-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-08-04",
+      "game": "PowerBall",
+      "era": "pb-5x50-pb16-r10",
+      "jackpot": 60000000.0,
+      "tickets_sold_reported": 5265410,
+      "total_sales": 26327050.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 10.0,
+      "equivalent_lines": 2632705,
+      "divisions": {
+        "5+PB": {
+          "label": "5 + PowerBall",
+          "payout": 60000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 0.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "4+PB": {
+          "label": "4 + PowerBall",
+          "payout": 23769.1,
+          "winners": 30,
+          "pool": 713073.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 2000.0,
+          "winners": 301,
+          "pool": 602000.0
+        },
+        "3+PB": {
+          "label": "3 + PowerBall",
+          "payout": 500.0,
+          "winners": 795,
+          "pool": 397500.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 100.0,
+          "winners": 12105,
+          "pool": 1210500.0
+        },
+        "2+PB": {
+          "label": "2 + PowerBall",
+          "payout": 100.0,
+          "winners": 10348,
+          "pool": 1034800.0
+        },
+        "1+PB": {
+          "label": "1 + PowerBall",
+          "payout": 20.0,
+          "winners": 54326,
+          "pool": 1086520.0
+        },
+        "0+PB": {
+          "label": "0 + PowerBall",
+          "payout": 10.0,
+          "winners": 90915,
+          "pool": 909150.0
+        }
+      },
+      "source": "https://za.national-lottery.com/powerball/results/04-august-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-08-05",
+      "game": "Daily Lotto",
+      "era": "daily-5x36-r3",
+      "jackpot": 486291.6,
+      "tickets_sold_reported": 954327,
+      "total_sales": 2862981.0,
+      "observed_sales_unit": 3.0,
+      "ticket_cost": 3.0,
+      "equivalent_lines": 954327,
+      "divisions": {
+        "5": {
+          "label": "5",
+          "payout": 162097.2,
+          "winners": 3,
+          "pool": 486291.6
+        },
+        "4": {
+          "label": "4",
+          "payout": 321.6,
+          "winners": 432,
+          "pool": 138931.2
+        },
+        "3": {
+          "label": "3",
+          "payout": 18.1,
+          "winners": 11481,
+          "pool": 207806.1
+        },
+        "2": {
+          "label": "2",
+          "payout": 5.1,
+          "winners": 108957,
+          "pool": 555680.7
+        }
+      },
+      "source": "https://za.national-lottery.com/daily-lotto/results/05-august-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-08-05",
+      "game": "Lotto",
+      "era": "lotto-6x52-r5",
+      "jackpot": 7500000.0,
+      "tickets_sold_reported": 2117614,
+      "total_sales": 10588070.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 5.0,
+      "equivalent_lines": 2117614,
+      "divisions": {
+        "6": {
+          "label": "6",
+          "payout": 7500000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5+B": {
+          "label": "5 + Bonus",
+          "payout": 0.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 45505.7,
+          "winners": 24,
+          "pool": 1092136.8
+        },
+        "4+B": {
+          "label": "4 + Bonus",
+          "payout": 4000.0,
+          "winners": 91,
+          "pool": 364000.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 200.0,
+          "winners": 1606,
+          "pool": 321200.0
+        },
+        "3+B": {
+          "label": "3 + Bonus",
+          "payout": 200.0,
+          "winners": 2259,
+          "pool": 451800.0
+        },
+        "2+B": {
+          "label": "2 + Bonus",
+          "payout": 30.0,
+          "winners": 24379,
+          "pool": 731370.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 20.0,
+          "winners": 29472,
+          "pool": 589440.0
+        }
+      },
+      "source": "https://za.national-lottery.com/lotto/results/05-august-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-08-06",
+      "game": "Daily Lotto",
+      "era": "daily-5x36-r3",
+      "jackpot": 0.0,
+      "tickets_sold_reported": 931782,
+      "total_sales": 2795346.0,
+      "observed_sales_unit": 3.0,
+      "ticket_cost": 3.0,
+      "equivalent_lines": 931782,
+      "divisions": {
+        "5": {
+          "label": "5",
+          "payout": 0.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 1593.8,
+          "winners": 383,
+          "pool": 610425.4
+        },
+        "3": {
+          "label": "3",
+          "payout": 17.6,
+          "winners": 11505,
+          "pool": 202488.0
+        },
+        "2": {
+          "label": "2",
+          "payout": 4.8,
+          "winners": 111618,
+          "pool": 535766.4
+        }
+      },
+      "source": "https://za.national-lottery.com/daily-lotto/results/06-august-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-08-07",
+      "game": "Daily Lotto",
+      "era": "daily-5x36-r3",
+      "jackpot": 0.0,
+      "tickets_sold_reported": 1037501,
+      "total_sales": 3112503.0,
+      "observed_sales_unit": 3.0,
+      "ticket_cost": 3.0,
+      "equivalent_lines": 1037501,
+      "divisions": {
+        "5": {
+          "label": "5",
+          "payout": 0.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 1798.2,
+          "winners": 378,
+          "pool": 679719.6
+        },
+        "3": {
+          "label": "3",
+          "payout": 18.4,
+          "winners": 12270,
+          "pool": 225768.0
+        },
+        "2": {
+          "label": "2",
+          "payout": 4.9,
+          "winners": 122557,
+          "pool": 600529.3
+        }
+      },
+      "source": "https://za.national-lottery.com/daily-lotto/results/07-august-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-08-07",
+      "game": "PowerBall",
+      "era": "pb-5x50-pb16-r10",
+      "jackpot": 67000000.0,
+      "tickets_sold_reported": 5366836,
+      "total_sales": 26834180.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 10.0,
+      "equivalent_lines": 2683418,
+      "divisions": {
+        "5+PB": {
+          "label": "5 + PowerBall",
+          "payout": 67000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5": {
+          "label": "5",
+          "payout": 250439.7,
+          "winners": 2,
+          "pool": 500879.4
+        },
+        "4+PB": {
+          "label": "4 + PowerBall",
+          "payout": 13913.3,
+          "winners": 18,
+          "pool": 250439.4
+        },
+        "4": {
+          "label": "4",
+          "payout": 2000.0,
+          "winners": 255,
+          "pool": 510000.0
+        },
+        "3+PB": {
+          "label": "3 + PowerBall",
+          "payout": 500.0,
+          "winners": 697,
+          "pool": 348500.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 100.0,
+          "winners": 11109,
+          "pool": 1110900.0
+        },
+        "2+PB": {
+          "label": "2 + PowerBall",
+          "payout": 100.0,
+          "winners": 10387,
+          "pool": 1038700.0
+        },
+        "1+PB": {
+          "label": "1 + PowerBall",
+          "payout": 20.0,
+          "winners": 56292,
+          "pool": 1125840.0
+        },
+        "0+PB": {
+          "label": "0 + PowerBall",
+          "payout": 10.0,
+          "winners": 93516,
+          "pool": 935160.0
+        }
+      },
+      "source": "https://za.national-lottery.com/powerball/results/07-august-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-08-08",
+      "game": "Daily Lotto",
+      "era": "daily-5x36-r3",
+      "jackpot": 439923.0,
+      "tickets_sold_reported": 863331,
+      "total_sales": 2589993.0,
+      "observed_sales_unit": 3.0,
+      "ticket_cost": 3.0,
+      "equivalent_lines": 863331,
+      "divisions": {
+        "5": {
+          "label": "5",
+          "payout": 146641.0,
+          "winners": 3,
+          "pool": 439923.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 376.3,
+          "winners": 334,
+          "pool": 125684.2
+        },
+        "3": {
+          "label": "3",
+          "payout": 18.9,
+          "winners": 9947,
+          "pool": 187998.3
+        },
+        "2": {
+          "label": "2",
+          "payout": 4.9,
+          "winners": 101017,
+          "pool": 494983.3
+        }
+      },
+      "source": "https://za.national-lottery.com/daily-lotto/results/08-august-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-08-08",
+      "game": "Lotto",
+      "era": "lotto-6x52-r5",
+      "jackpot": 9000000.0,
+      "tickets_sold_reported": 2289935,
+      "total_sales": 11449675.0,
+      "observed_sales_unit": 5.0,
+      "ticket_cost": 5.0,
+      "equivalent_lines": 2289935,
+      "divisions": {
+        "6": {
+          "label": "6",
+          "payout": 9000000.0,
+          "winners": 0,
+          "pool": 0.0
+        },
+        "5+B": {
+          "label": "5 + Bonus",
+          "payout": 214665.8,
+          "winners": 2,
+          "pool": 429331.6
+        },
+        "5": {
+          "label": "5",
+          "payout": 19876.4,
+          "winners": 36,
+          "pool": 715550.4
+        },
+        "4+B": {
+          "label": "4 + Bonus",
+          "payout": 4000.0,
+          "winners": 97,
+          "pool": 388000.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 200.0,
+          "winners": 1926,
+          "pool": 385200.0
+        },
+        "3+B": {
+          "label": "3 + Bonus",
+          "payout": 200.0,
+          "winners": 2554,
+          "pool": 510800.0
+        },
+        "2+B": {
+          "label": "2 + Bonus",
+          "payout": 30.0,
+          "winners": 25005,
+          "pool": 750150.0
+        },
+        "3": {
+          "label": "3",
+          "payout": 20.0,
+          "winners": 35699,
+          "pool": 713980.0
+        }
+      },
+      "source": "https://za.national-lottery.com/lotto/results/08-august-2026",
+      "quality": "exact_archive"
+    },
+    {
+      "date": "2026-08-09",
+      "game": "Daily Lotto",
+      "era": "daily-5x36-r3",
+      "jackpot": 302676.0,
+      "tickets_sold_reported": 593989,
+      "total_sales": 1781967.0,
+      "observed_sales_unit": 3.0,
+      "ticket_cost": 3.0,
+      "equivalent_lines": 593989,
+      "divisions": {
+        "5": {
+          "label": "5",
+          "payout": 151338.0,
+          "winners": 2,
+          "pool": 302676.0
+        },
+        "4": {
+          "label": "4",
+          "payout": 361.8,
+          "winners": 239,
+          "pool": 86470.2
+        },
+        "3": {
+          "label": "3",
+          "payout": 17.3,
+          "winners": 7478,
+          "pool": 129369.4
+        },
+        "2": {
+          "label": "2",
+          "payout": 4.8,
+          "winners": 71451,
+          "pool": 342964.8
+        }
+      },
+      "source": "https://za.national-lottery.com/daily-lotto/results/09-august-2026",
+      "quality": "exact_archive"
+    }
+  ],
   "coverage": {
-    "Daily Lotto": 0,
-    "Lotto": 0,
-    "PowerBall": 0
+    "Daily Lotto": 28,
+    "Lotto": 20,
+    "PowerBall": 28
   },
   "refresh": {
-    "requested": 307,
-    "fetched": 0,
-    "failed": 307
+    "requested": 76,
+    "fetched": 76,
+    "failed": 0,
+    "per_game_cap": 28,
+    "workers": 1
   }
 }

@@ -18,6 +18,7 @@ import json
 import math
 import re
 import statistics
+import time
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date, datetime, timedelta, timezone
@@ -187,12 +188,23 @@ def parse_economics_page(game: str, draw_date: str, html: str, url: str) -> dict
 
 def fetch_economics(game: str, draw_date: str) -> dict[str, Any] | None:
     url = result_url(game, draw_date)
-    try:
-        r = SESSION.get(url, timeout=HTTP_TIMEOUT)
-        r.raise_for_status()
-        return parse_economics_page(game, draw_date, r.text, url)
-    except Exception:
-        return None
+    for attempt in range(3):
+        # The archive throttles bursty crawlers. A deliberate pause keeps the
+        # research cache polite and reproducible; normal cloud runs do not use
+        # this historical fetch path.
+        time.sleep(0.75)
+        try:
+            r = SESSION.get(url, timeout=HTTP_TIMEOUT)
+            if r.status_code in {403, 429, 500, 502, 503, 504}:
+                time.sleep(2.0 * (attempt + 1))
+                continue
+            r.raise_for_status()
+            parsed = parse_economics_page(game, draw_date, r.text, url)
+            if parsed:
+                return parsed
+        except Exception:
+            time.sleep(1.0 * (attempt + 1))
+    return None
 
 
 def combined_results() -> list[dict[str, Any]]:
@@ -212,9 +224,13 @@ def refresh_history(max_workers: int = 6) -> dict[str, Any]:
     existing = load_json(CACHE_PATH, {"schema_version": 1, "rows": []})
     cached = {(r.get("date"), r.get("game")): r for r in existing.get("rows", []) if r.get("quality") == "exact_archive"}
     results = combined_results()
-    targets: list[tuple[str, str]] = []
     today = NOW.date()
-    for row in results:
+    candidates: dict[str, list[tuple[str, str]]] = defaultdict(list)
+
+    # Work newest-first so the current rule era becomes useful immediately.
+    # Limit each refresh to a small batch; future weekly runs gradually deepen
+    # the exact economics archive without hammering the source.
+    for row in reversed(results):
         game, draw_date = row.get("game"), row.get("date")
         if game not in RULES or not draw_date:
             continue
@@ -227,11 +243,20 @@ def refresh_history(max_workers: int = 6) -> dict[str, Any]:
             continue
         key = (draw_date, game)
         if key not in cached:
-            targets.append(key)
+            candidates[game].append(key)
+
+    per_game_cap = 28
+    targets: list[tuple[str, str]] = []
+    for game in RULES:
+        targets.extend(candidates.get(game, [])[:per_game_cap])
+
     fetched = 0
     failed = 0
+    # A single worker is intentional. The source accepts ordinary sequential
+    # traffic but throttles aggressive parallel crawls.
+    worker_count = 1
     if targets:
-        with ThreadPoolExecutor(max_workers=max_workers) as pool:
+        with ThreadPoolExecutor(max_workers=worker_count) as pool:
             future_map = {pool.submit(fetch_economics, game, draw_date): (draw_date, game) for draw_date, game in targets}
             for fut in as_completed(future_map):
                 key = future_map[fut]
@@ -248,10 +273,10 @@ def refresh_history(max_workers: int = 6) -> dict[str, Any]:
     output = {
         "schema_version": 1,
         "updated_at": datetime.now(timezone.utc).isoformat(),
-        "source_policy": "Exact public result pages; ticket cost is rule-era configured and effective line volume is derived from Total Sales / ticket cost.",
+        "source_policy": "Exact public result pages; newest-first paced cache. Ticket cost is rule-era configured and effective line volume is derived from Total Sales / ticket cost.",
         "rows": rows,
         "coverage": {game: sum(r.get("game") == game for r in rows) for game in RULES},
-        "refresh": {"requested": len(targets), "fetched": fetched, "failed": failed},
+        "refresh": {"requested": len(targets), "fetched": fetched, "failed": failed, "per_game_cap": per_game_cap, "workers": worker_count},
     }
     save_json(CACHE_PATH, output)
     return output
@@ -496,13 +521,20 @@ def parse_current_jackpots(html: str) -> dict[str, float]:
 
 
 def fetch_current_jackpots() -> tuple[dict[str, float], str | None]:
-    try:
-        r = SESSION.get(RESULTS_URL, timeout=HTTP_TIMEOUT)
-        r.raise_for_status()
-        jackpots = parse_current_jackpots(r.text)
-        return jackpots, RESULTS_URL if jackpots else None
-    except Exception:
-        return {}, None
+    for attempt in range(3):
+        try:
+            r = SESSION.get(RESULTS_URL, timeout=HTTP_TIMEOUT)
+            if r.status_code in {403, 429, 500, 502, 503, 504}:
+                time.sleep(2.0 * (attempt + 1))
+                continue
+            r.raise_for_status()
+            jackpots = parse_current_jackpots(r.text)
+            if jackpots:
+                return jackpots, RESULTS_URL
+        except Exception:
+            pass
+        time.sleep(1.5 * (attempt + 1))
+    return {}, None
 
 
 def prior_rows(cache_rows: list[dict[str, Any]], game: str, before: date | None = None, target: date | None = None) -> list[dict[str, Any]]:
