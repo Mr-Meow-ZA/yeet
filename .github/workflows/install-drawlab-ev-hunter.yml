@@ -29,14 +29,17 @@ jobs:
           python-version: '3.12'
       - name: Install dependencies
         run: pip install requests beautifulsoup4
+      - name: Apply validated paced-cache patch
+        run: python drawlab-sa/scripts/patch_ev_rate_once.py
       - name: Validate EV engine and UI
         run: |
           python -m py_compile drawlab-sa/scripts/ev_hunter.py drawlab-sa/scripts/build_v3_state.py
           node --check drawlab-sa/v3/ev.js
+          grep -q 'per_game_cap = 28' drawlab-sa/scripts/ev_hunter.py
           grep -q 'id="evCards"' drawlab-sa/index.html
           grep -q 'EV Hunter' drawlab-sa/index.html
       - name: Build exact economics cache and EV state
-        run: python drawlab-sa/scripts/ev_hunter.py --refresh-history --workers 8
+        run: python drawlab-sa/scripts/ev_hunter.py --refresh-history --workers 1
       - name: Rebuild v3 read model
         run: python drawlab-sa/scripts/build_v3_state.py
       - name: Validate generated EV research
@@ -58,14 +61,17 @@ jobs:
           assert (v3.get('ev_hunter') or {}).get('model_version') == 'EV Hunter v1.0'
           print('EV Hunter validated:', coverage)
           PY
-      - name: Commit EV state and remove installer
+      - name: Commit EV engine and research state safely
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'DrawLab Research Bot'
           git config user.email 'drawlab-research@users.noreply.github.com'
-          rm .github/workflows/install-drawlab-ev-hunter.yml
-          git add drawlab-sa/data/ev-history.json drawlab-sa/data/ev-state.json drawlab-sa/v3/data/v3-state.json .github/workflows/install-drawlab-ev-hunter.yml
+          git add drawlab-sa/scripts/ev_hunter.py drawlab-sa/data/ev-history.json drawlab-sa/data/ev-state.json drawlab-sa/v3/data/v3-state.json
+          if git diff --cached --quiet; then
+            echo 'No EV changes'
+            exit 0
+          fi
           git commit -m 'Publish DrawLab EV Hunter research state'
           for attempt in 1 2 3; do
             if git push origin HEAD:master; then
