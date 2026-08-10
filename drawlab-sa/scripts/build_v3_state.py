@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CLOUD = ROOT / 'data' / 'cloud-state.json'
 RESEARCH = ROOT / 'data' / 'research-state.json'
 SHADOW = ROOT / 'data' / 'shadow-state.json'
+EV = ROOT / 'data' / 'ev-state.json'
 FROZEN = ROOT / 'v3' / 'data' / 'frozen-alpha.json'
 RETRO = ROOT / 'v3' / 'data' / 'retrospective.json'
 OUT = ROOT / 'v3' / 'data' / 'v3-state.json'
@@ -26,6 +27,7 @@ def main() -> None:
     cloud = load(CLOUD, {'virtual': {'tickets': []}, 'results': []})
     research = load(RESEARCH, {})
     shadow = load(SHADOW, {'tickets': [], 'summary': {}})
+    ev = load(EV, {})
     frozen = load(FROZEN, {})
     retro = load(RETRO, {})
     tickets = list(cloud.get('virtual', {}).get('tickets', []))
@@ -113,7 +115,7 @@ def main() -> None:
     )[:30]
 
     payload = {
-        'schema_version': 6,
+        'schema_version': 7,
         'generated_at': datetime.now(timezone.utc).isoformat(),
         'platform': 'DrawLab v3 Research Platform',
         'cloud_status': cloud.get('status'),
@@ -132,6 +134,7 @@ def main() -> None:
             'recent_tickets': shadow.get('tickets', [])[:20],
             'policy': shadow.get('policy'),
         },
+        'ev_hunter': ev,
         'research': {
             'methodology_version': research.get('methodology_version'),
             'null_hypothesis': research.get('null_hypothesis'),
@@ -168,6 +171,7 @@ def main() -> None:
         'research_rows': len(wf),
         'discovery_games': len((research.get('strategy_discovery') or {}).get('games', {})),
         'shadow_tickets': len(shadow.get('tickets', [])),
+        'ev_shadow_tickets': len(ev.get('shadow_tickets', [])) if isinstance(ev, dict) else 0,
         'cloud_status': cloud.get('status'),
     }, indent=2))
 
