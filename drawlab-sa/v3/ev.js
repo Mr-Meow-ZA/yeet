@@ -29,9 +29,9 @@ function decisionPill(decision){
 
 function balls(line){
   if(!line?.numbers?.length) return '<span class="muted">—</span>';
-  const main=line.numbers.map(n=>`<span class="match-ball">${n}</span>`).join('');
-  const bonus=line.bonus!=null?`<span class="match-ball bonus">${line.bonus}</span>`:'';
-  return `<div class="ball-row">${main}${bonus}</div>`;
+  const main=line.numbers.map(n=>`<span class="ball">${n}</span>`).join('');
+  const bonus=line.bonus!=null?`<span class="ball gold">${line.bonus}</span>`:'';
+  return `<div class="balls" style="margin-top:9px">${main}${bonus}</div>`;
 }
 
 function currentCard(game,row){
