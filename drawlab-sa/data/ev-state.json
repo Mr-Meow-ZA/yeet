@@ -1,132 +1,166 @@
 {
-  "schema_version": 1,
-  "model_version": "EV Hunter v1.0",
-  "updated_at": "2026-08-10T21:21:53.988341+00:00",
-  "purpose": "Selective expected-value research. This model changes when to participate and how to reduce sharing risk; it does not predict winning numbers.",
+  "schema_version": 2,
+  "model_version": "EV Hunter v2.0",
+  "updated_at": "2026-08-10T23:07:40.188615+00:00",
+  "purpose": "Selective expected-value research based on prize mechanics, sales demand and sharing risk. It changes when to participate, not the probability of the draw.",
   "current": {
     "Daily Lotto": {
+      "ticket_cost": 3.0,
+      "advertised_jackpot": 400000.0,
+      "jackpot_role": "display_only; Daily Lotto top pool is sales-funded and rolls down rather than rolling over",
+      "predicted_line_volume": 894952,
+      "risk_line_volume": 1018579,
+      "sales_model_samples": 28,
+      "prize_pool_rate": 0.5,
+      "prize_pool_estimate": 1342428.0,
+      "structural_components": {
+        "5": 0.4761,
+        "4": 0.1989,
+        "3": 0.225,
+        "2": 0.6
+      },
+      "expected_return": 1.5,
+      "conservative_return": 1.5,
+      "expected_roi_pct": -50.0,
+      "conservative_roi_pct": -50.0,
+      "ev_ratio": 0.5,
+      "break_even_jackpot": null,
+      "decision": "SKIP",
+      "mechanic": "50% of sales funds four pari-mutuel divisions; if Match 5 has no winner its allocation rolls down to Match 4. Jackpot size is therefore not treated as an external rollover asset.",
       "draw_date": "2026-08-11",
       "jackpot_source": "https://za.national-lottery.com/results",
-      "ticket_cost": 3.0,
-      "ticket_cost_source": "rule_era_verified",
-      "advertised_jackpot": 400000.0,
-      "predicted_line_volume": 784983,
-      "sales_model_samples": 26,
-      "expected_other_jackpot_winners_uniform": 2.082227,
-      "expected_jackpot_share_fraction_uniform": 0.42039,
-      "lower_tier_ev": 0.9509,
-      "jackpot_ev_uniform": 0.446,
-      "expected_return": 1.3969,
-      "expected_roi_pct": -53.44,
-      "ev_ratio": 0.4656,
-      "decision": "SKIP",
-      "economics_samples": 28,
-      "payout_model": {
-        "4": 356.2,
-        "3": 17.85,
-        "2": 4.9
-      },
-      "conservative_policy": "Anti-crowd sharing uplift is excluded from the EV gate; uniform ticket selection is used for jackpot sharing.",
       "anti_crowd_line": {
         "numbers": [
-          3,
-          7,
-          18,
+          24,
+          26,
           32,
-          36
+          33,
+          34
         ],
         "bonus": null,
-        "crowding_score": 1.5,
-        "model": "anti-crowd-v1",
-        "meaning": "Lower heuristic crowding is intended to reduce prize-sharing risk only; it does not change draw odds."
+        "crowding_score": 0.632,
+        "crowd_model": "behavioral_prior_v1",
+        "estimated_crowding_multiplier": null,
+        "meaning": "Ranks equal-probability legal lines for expected sharing risk only. The EV gate gives this line zero predictive or crowd-uplift credit."
       },
-      "break_even_jackpot": 6858000.0
+      "crowding_credit_in_gate": 0.0
     },
     "Lotto": {
-      "draw_date": "2026-08-12",
-      "jackpot_source": "https://za.national-lottery.com/results",
       "ticket_cost": 5.0,
-      "ticket_cost_source": "rule_era_verified",
       "advertised_jackpot": 11000000.0,
-      "predicted_line_volume": 2171981,
+      "predicted_line_volume": 2045307,
+      "risk_line_volume": 2218810,
       "sales_model_samples": 20,
-      "expected_other_jackpot_winners_uniform": 0.106687,
-      "expected_jackpot_share_fraction_uniform": 0.948504,
-      "lower_tier_ev": 1.7613,
-      "jackpot_ev_uniform": 0.5125,
-      "expected_return": 2.2738,
-      "expected_roi_pct": -54.52,
-      "ev_ratio": 0.4548,
-      "decision": "SKIP",
-      "economics_samples": 20,
-      "payout_model": {
-        "5": 42570.15,
+      "variable_pool_rate_median": 0.276897,
+      "variable_pool_rate_conservative": 0.272346,
+      "variable_pool_rate_samples": 20,
+      "fixed_prizes": {
         "4+B": 4000.0,
         "4": 200.0,
         "3+B": 200.0,
         "2+B": 30.0,
-        "3": 20.0,
-        "5+B": 445278.6
+        "3": 20.0
       },
-      "conservative_policy": "Anti-crowd sharing uplift is excluded from the EV gate; uniform ticket selection is used for jackpot sharing.",
+      "variable_allocations": {
+        "6": 0.6,
+        "5+B": 0.15,
+        "5": 0.25
+      },
+      "structural_components": {
+        "6": 0.5141,
+        "4+B": 0.1326,
+        "4": 0.1459,
+        "3+B": 0.1945,
+        "2+B": 0.3137,
+        "3": 0.2788,
+        "5+B": 0.094,
+        "5": 0.3461
+      },
+      "expected_return": 2.0197,
+      "conservative_return": 2.0159,
+      "expected_roi_pct": -59.61,
+      "conservative_roi_pct": -59.68,
+      "ev_ratio": 0.4032,
+      "decision": "SKIP",
+      "mechanic": "Fixed lower prizes are valued exactly from the current rules; top variable divisions use exact historical pool accounting. The jackpot is valued at the advertised draw amount with collision risk.",
+      "break_even_jackpot": 75544000.0,
+      "draw_date": "2026-08-12",
+      "jackpot_source": "https://za.national-lottery.com/results",
       "anti_crowd_line": {
         "numbers": [
-          12,
           34,
-          36,
           40,
+          42,
           47,
-          51
+          48,
+          50
         ],
         "bonus": null,
-        "crowding_score": 0.596667,
-        "model": "anti-crowd-v1",
-        "meaning": "Lower heuristic crowding is intended to reduce prize-sharing risk only; it does not change draw odds."
+        "crowding_score": -0.104885,
+        "crowd_model": "behavioral_prior_v1",
+        "estimated_crowding_multiplier": null,
+        "meaning": "Ranks equal-probability legal lines for expected sharing risk only. The EV gate gives this line zero predictive or crowd-uplift credit."
       },
-      "break_even_jackpot": 70862000.0
+      "crowding_credit_in_gate": 0.0
     },
     "PowerBall": {
-      "draw_date": "2026-08-11",
-      "jackpot_source": "https://za.national-lottery.com/results",
       "ticket_cost": 10.0,
-      "ticket_cost_source": "rule_era_verified",
       "advertised_jackpot": 73000000.0,
-      "predicted_line_volume": 2809818,
+      "predicted_line_volume": 2631387,
+      "risk_line_volume": 2909169,
       "sales_model_samples": 20,
-      "expected_other_jackpot_winners_uniform": 0.082885,
-      "expected_jackpot_share_fraction_uniform": 0.959679,
-      "lower_tier_ev": 2.2616,
-      "jackpot_ev_uniform": 2.0666,
-      "expected_return": 4.3281,
-      "expected_roi_pct": -56.72,
-      "ev_ratio": 0.4328,
-      "decision": "SKIP",
-      "economics_samples": 20,
-      "payout_model": {
-        "4+PB": 19595.8,
+      "variable_pool_rate_median": 0.301321,
+      "variable_pool_rate_conservative": 0.296817,
+      "variable_pool_rate_samples": 20,
+      "fixed_prizes": {
         "4": 2000.0,
         "3+PB": 500.0,
         "3": 100.0,
         "2+PB": 100.0,
         "1+PB": 20.0,
-        "0+PB": 10.0,
-        "5": 293469.6
+        "0+PB": 10.0
       },
-      "conservative_policy": "Anti-crowd sharing uplift is excluded from the EV gate; uniform ticket selection is used for jackpot sharing.",
+      "variable_allocations": {
+        "5+PB": 0.91,
+        "5": 0.06,
+        "4+PB": 0.03
+      },
+      "structural_components": {
+        "5+PB": 2.0719,
+        "4": 0.1991,
+        "3+PB": 0.146,
+        "3": 0.4381,
+        "2+PB": 0.4186,
+        "1+PB": 0.4395,
+        "0+PB": 0.3604,
+        "5": 0.1244,
+        "4+PB": 0.0904
+      },
+      "expected_return": 4.2884,
+      "conservative_return": 4.2832,
+      "expected_roi_pct": -57.12,
+      "conservative_roi_pct": -57.17,
+      "ev_ratio": 0.4283,
+      "decision": "SKIP",
+      "mechanic": "Fixed lower prizes are valued exactly from the current rules; top variable divisions use exact historical pool accounting. The jackpot is valued at the advertised draw amount with collision risk.",
+      "break_even_jackpot": 276874000.0,
+      "draw_date": "2026-08-11",
+      "jackpot_source": "https://za.national-lottery.com/results",
       "anti_crowd_line": {
         "numbers": [
-          32,
-          34,
-          38,
+          37,
+          42,
+          45,
           46,
-          49
+          47
         ],
-        "bonus": 13,
-        "crowding_score": 0.168,
-        "model": "anti-crowd-v1",
-        "meaning": "Lower heuristic crowding is intended to reduce prize-sharing risk only; it does not change draw odds."
+        "bonus": 1,
+        "crowding_score": -0.1842,
+        "crowd_model": "behavioral_prior_v1",
+        "estimated_crowding_multiplier": null,
+        "meaning": "Ranks equal-probability legal lines for expected sharing risk only. The EV gate gives this line zero predictive or crowd-uplift credit."
       },
-      "break_even_jackpot": 279220000.0
+      "crowding_credit_in_gate": 0.0
     }
   },
   "historical_backtest": {
@@ -137,7 +171,7 @@
       "net": 0.0,
       "roi_pct": null,
       "decisions": [],
-      "interpretation": "Historical target jackpot was public pre-draw information; payout and winning numbers are used only after the entry decision for settlement."
+      "interpretation": "Entry decisions use only earlier economics. Historical anti-crowd lines use a fixed literature-informed prior, not the empirical crowd model, preventing future-data leakage."
     },
     "Lotto": {
       "entries": 0,
@@ -146,7 +180,7 @@
       "net": 0.0,
       "roi_pct": null,
       "decisions": [],
-      "interpretation": "Historical target jackpot was public pre-draw information; payout and winning numbers are used only after the entry decision for settlement."
+      "interpretation": "Entry decisions use only earlier economics. Historical anti-crowd lines use a fixed literature-informed prior, not the empirical crowd model, preventing future-data leakage."
     },
     "PowerBall": {
       "entries": 0,
@@ -155,7 +189,7 @@
       "net": 0.0,
       "roi_pct": null,
       "decisions": [],
-      "interpretation": "Historical target jackpot was public pre-draw information; payout and winning numbers are used only after the entry decision for settlement."
+      "interpretation": "Entry decisions use only earlier economics. Historical anti-crowd lines use a fixed literature-informed prior, not the empirical crowd model, preventing future-data leakage."
     }
   },
   "shadow_tickets": [],
@@ -174,6 +208,20 @@
     {
       "date": "2026-08-12",
       "game": "Lotto",
+      "model_version": "EV Hunter v2.0",
+      "recorded_at": "2026-08-11T01:07:39.571751+02:00",
+      "decision": "SKIP",
+      "ev_ratio": 0.4032,
+      "expected_roi_pct": -59.61,
+      "conservative_roi_pct": -59.68,
+      "advertised_jackpot": 11000000.0,
+      "break_even_jackpot": 75544000.0,
+      "ticket_cost": 5.0,
+      "source": "https://za.national-lottery.com/results"
+    },
+    {
+      "date": "2026-08-12",
+      "game": "Lotto",
       "recorded_at": "2026-08-10T18:24:52.803624+02:00",
       "decision": "SOURCE_UNAVAILABLE",
       "ev_ratio": null,
@@ -186,6 +234,20 @@
     {
       "date": "2026-08-11",
       "game": "PowerBall",
+      "model_version": "EV Hunter v2.0",
+      "recorded_at": "2026-08-11T01:07:39.571751+02:00",
+      "decision": "SKIP",
+      "ev_ratio": 0.4283,
+      "expected_roi_pct": -57.12,
+      "conservative_roi_pct": -57.17,
+      "advertised_jackpot": 73000000.0,
+      "break_even_jackpot": 276874000.0,
+      "ticket_cost": 10.0,
+      "source": "https://za.national-lottery.com/results"
+    },
+    {
+      "date": "2026-08-11",
+      "game": "PowerBall",
       "recorded_at": "2026-08-10T18:24:52.803624+02:00",
       "decision": "SOURCE_UNAVAILABLE",
       "ev_ratio": null,
@@ -194,6 +256,20 @@
       "break_even_jackpot": null,
       "ticket_cost": 10.0,
       "source": null
+    },
+    {
+      "date": "2026-08-11",
+      "game": "Daily Lotto",
+      "model_version": "EV Hunter v2.0",
+      "recorded_at": "2026-08-11T01:07:39.571751+02:00",
+      "decision": "SKIP",
+      "ev_ratio": 0.5,
+      "expected_roi_pct": -50.0,
+      "conservative_roi_pct": -50.0,
+      "advertised_jackpot": 400000.0,
+      "break_even_jackpot": null,
+      "ticket_cost": 3.0,
+      "source": "https://za.national-lottery.com/results"
     },
     {
       "date": "2026-08-10",
@@ -209,18 +285,20 @@
     }
   ],
   "methodology": {
-    "gate": "ENTER only when modelled expected return >= 1.02x ticket cost and economics sample minimum is met.",
-    "sharing": "Jackpot split risk uses a Poisson collision model under uniform other-ticket selection. This is deliberately conservative for anti-crowd lines.",
-    "anti_crowd": "Deterministic heuristic penalizes birthday-heavy and simple patterned combinations. It changes expected sharing only, never draw probability; no sharing uplift is credited in the gate.",
-    "payouts": "Lower-tier payout estimates are medians of positive exact archived per-winner payouts available before the target draw.",
-    "sales": "Equivalent line volume is derived from historical Total Sales divided by the verified rule-era ticket cost, then forecast from prior jackpot observations with conservative clamps.",
-    "historical_test": "Each historical entry decision uses the target jackpot but only earlier economics to estimate payout and sales behavior; result and target payout table are used only for settlement."
+    "gate": "ENTER only when conservative structural expected return >= 1.02x ticket cost. Crowd-model uplift is always zero in the gate.",
+    "daily_lotto": "50% sales-funded pari-mutuel pool with explicit Match-5-to-Match-4 rolldown; no independent rollover jackpot threshold.",
+    "lotto": "Current fixed lower prizes are exact rules. The top three divisions use 60/15/25 variable-pool allocations, with the advertised jackpot valued separately as the accumulated top prize.",
+    "powerball": "Current fixed lower prizes are exact rules. The top three divisions use 91/6/3 variable-pool allocations, with the advertised jackpot valued separately as the accumulated top prize.",
+    "sales": "Rule-era log-demand model with weekday and month-end residual factors. A higher-volume risk estimate is used for conservative prize-sharing calculations.",
+    "crowding": "Crowd Model v1 may rank equal-probability lines. No estimated sharing advantage is monetized in the entry decision until prospective evidence supports it.",
+    "historical_test": "Historical entries use only earlier economics and a fixed behavioural-prior anti-crowd line, preventing leakage from the empirical crowd model."
   },
   "cache_coverage": {
     "Daily Lotto": 28,
     "Lotto": 20,
     "PowerBall": 28
   },
+  "crowd_model_version": null,
   "sources": [
     "https://za.national-lottery.com/results",
     "https://za.national-lottery.com/<game>/results/<date>"
