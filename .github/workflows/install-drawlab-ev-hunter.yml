@@ -1,0 +1,77 @@
+name: Install DrawLab EV Hunter
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/install-drawlab-ev-hunter.yml'
+      - 'drawlab-sa/scripts/ev_hunter.py'
+      - 'drawlab-sa/v3/ev.js'
+      - 'drawlab-sa/index.html'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: drawlab-data-writes
+  cancel-in-progress: false
+
+jobs:
+  install:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+      - name: Validate EV engine and UI
+        run: |
+          python -m py_compile drawlab-sa/scripts/ev_hunter.py drawlab-sa/scripts/build_v3_state.py
+          node --check drawlab-sa/v3/ev.js
+          grep -q 'id="evCards"' drawlab-sa/index.html
+          grep -q 'EV Hunter' drawlab-sa/index.html
+      - name: Build exact economics cache and EV state
+        run: python drawlab-sa/scripts/ev_hunter.py --refresh-history --workers 8
+      - name: Rebuild v3 read model
+        run: python drawlab-sa/scripts/build_v3_state.py
+      - name: Validate generated EV research
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          history=json.loads(Path('drawlab-sa/data/ev-history.json').read_text())
+          state=json.loads(Path('drawlab-sa/data/ev-state.json').read_text())
+          v3=json.loads(Path('drawlab-sa/v3/data/v3-state.json').read_text())
+          assert state.get('model_version') == 'EV Hunter v1.0', state.get('model_version')
+          assert {'Daily Lotto','Lotto','PowerBall'} <= set((state.get('current') or {}).keys())
+          coverage=history.get('coverage') or {}
+          assert coverage.get('Daily Lotto',0) >= 10, coverage
+          assert coverage.get('Lotto',0) >= 5, coverage
+          assert coverage.get('PowerBall',0) >= 5, coverage
+          assert v3.get('schema_version',0) >= 7
+          assert (v3.get('ev_hunter') or {}).get('model_version') == 'EV Hunter v1.0'
+          print('EV Hunter validated:', coverage)
+          PY
+      - name: Commit EV state and remove installer
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'DrawLab Research Bot'
+          git config user.email 'drawlab-research@users.noreply.github.com'
+          rm .github/workflows/install-drawlab-ev-hunter.yml
+          git add drawlab-sa/data/ev-history.json drawlab-sa/data/ev-state.json drawlab-sa/v3/data/v3-state.json .github/workflows/install-drawlab-ev-hunter.yml
+          git commit -m 'Publish DrawLab EV Hunter research state'
+          for attempt in 1 2 3; do
+            if git push origin HEAD:master; then
+              exit 0
+            fi
+            git fetch origin master
+            git rebase origin/master
+          done
+          exit 1
