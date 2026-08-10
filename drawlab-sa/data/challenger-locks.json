@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "locked_at": "2026-08-10",
+  "policy": "Research-only challengers are frozen before prospective confirmation. Future results may evaluate a lock but never rewrite its formula or parameters.",
+  "locks": [
+    {
+      "id": "powerball-frequency-reversion-30-v0.1",
+      "game": "PowerBall",
+      "name": "Frequency Reversion 30",
+      "version": "0.1",
+      "family": "Frequency Reversion",
+      "status": "shadow",
+      "locked_on": "2026-08-10",
+      "confirmation_after": "2026-08-10",
+      "refresh_policy_draws": 1,
+      "params": {
+        "window": 30,
+        "gap_weight": 0.3
+      },
+      "hypothesis": "Tests whether short-window frequency underrepresentation plus a modest draw-gap component shows repeatable PowerBall main-number match lift on genuinely future draws.",
+      "selection_evidence": {
+        "validation_avg_matches": 0.6438,
+        "held_out_avg_matches": 0.5844,
+        "held_out_chance_expected": 0.5,
+        "held_out_best_v1": "Cold 6M",
+        "held_out_best_v1_avg_matches": 0.5714,
+        "held_out_samples": 77,
+        "promotion_ready": false
+      },
+      "notes": "This is not a live strategy and not a claim of predictive advantage. It is frozen solely to create a new prospective confirmation sample."
+    }
+  ]
+}
