@@ -111,7 +111,7 @@ def main() -> None:
     )[:30]
 
     payload = {
-        'schema_version': 4,
+        'schema_version': 5,
         'generated_at': datetime.now(timezone.utc).isoformat(),
         'platform': 'DrawLab v3 Research Platform',
         'cloud_status': cloud.get('status'),
@@ -135,6 +135,7 @@ def main() -> None:
             'walk_forward': wf,
             'best_hold': research.get('best_hold', []),
             'challengers': research.get('challengers', {}),
+            'strategy_discovery': research.get('strategy_discovery', {}),
             'notes': research.get('notes', []),
         },
         'retrospective': retro,
@@ -157,6 +158,7 @@ def main() -> None:
         'records': len(records),
         'pending': portfolio['pending'],
         'research_rows': len(wf),
+        'discovery_games': len((research.get('strategy_discovery') or {}).get('games', {})),
         'cloud_status': cloud.get('status'),
     }, indent=2))
 
