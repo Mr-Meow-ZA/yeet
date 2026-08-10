@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "model_version": "EV Hunter v1.0",
-  "updated_at": "2026-08-10T17:26:10.108496+00:00",
+  "updated_at": "2026-08-10T21:04:20.113325+00:00",
   "purpose": "Selective expected-value research. This model changes when to participate and how to reduce sharing risk; it does not predict winning numbers.",
   "current": {
     "Daily Lotto": {
-      "draw_date": "2026-08-10",
+      "draw_date": "2026-08-11",
       "jackpot_source": "https://za.national-lottery.com/results",
       "ticket_cost": 3.0,
       "ticket_cost_source": "rule_era_verified",
@@ -29,10 +29,10 @@
       "conservative_policy": "Anti-crowd sharing uplift is excluded from the EV gate; uniform ticket selection is used for jackpot sharing.",
       "anti_crowd_line": {
         "numbers": [
+          3,
           7,
-          19,
-          24,
-          33,
+          18,
+          32,
           36
         ],
         "bonus": null,
