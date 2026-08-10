@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - 'drawlab-sa/scripts/research_engine.py'
+      - 'drawlab-sa/scripts/strategy_discovery.py'
       - 'drawlab-sa/scripts/retrospective_v3.py'
       - 'drawlab-sa/scripts/build_v3_state.py'
       - 'drawlab-sa/data/historical-results.json'
@@ -20,7 +21,7 @@ concurrency:
 jobs:
   research:
     runs-on: ubuntu-24.04
-    timeout-minutes: 12
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v7
         with:
@@ -33,10 +34,13 @@ jobs:
       - name: Validate research engines
         run: |
           python -m py_compile drawlab-sa/scripts/research_engine.py
+          python -m py_compile drawlab-sa/scripts/strategy_discovery.py
           python -m py_compile drawlab-sa/scripts/retrospective_v3.py
           python -m py_compile drawlab-sa/scripts/build_v3_state.py
       - name: Run walk-forward research
         run: python drawlab-sa/scripts/research_engine.py
+      - name: Search challenger strategy families
+        run: python drawlab-sa/scripts/strategy_discovery.py
       - name: Run one-year retrospective
         run: python drawlab-sa/scripts/retrospective_v3.py
       - name: Rebuild v3 read model
@@ -63,6 +67,7 @@ jobs:
             git fetch origin master
             git reset --hard origin/master
             python drawlab-sa/scripts/research_engine.py
+            python drawlab-sa/scripts/strategy_discovery.py
             python drawlab-sa/scripts/retrospective_v3.py
             python drawlab-sa/scripts/build_v3_state.py
           done
@@ -79,6 +84,7 @@ jobs:
           import json,sys
           p=json.loads(sys.argv[1])
           assert p.get('ok'), p
-          assert (p.get('sync') or {}).get('research_synced'), p
+          sync=p.get('sync') or {}
+          assert sync.get('research_synced'), p
           print('Supabase synchronized after research refresh')
           PY
