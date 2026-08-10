@@ -103,7 +103,7 @@
       </section>
 
       <section class="view" id="research">
-        <div class="page-intro"><div class="eyebrow">Research Lab</div><h2>Pretend it was a year ago.</h2><p>Every historical target is generated using only earlier draws. The system then reveals the real result and scores the line. No future leakage, no retrospective editing.</p></div>
+        <div class="page-intro"><div class="eyebrow">Research Lab</div><h2>Separate the draw, the crowd and the economics.</h2><p>Every historical target is generated using only earlier information. Draw prediction, player-choice crowding and expected-value research are evaluated separately so one type of signal can never masquerade as another.</p></div>
 
         <div class="section-head"><div><span class="kicker">OUT-OF-SAMPLE</span><h2>One-year retrospective</h2><p>7 Aug 2025 → 6 Aug 2026. Match behaviour is factual; historical rand returns remain clearly marked when estimated.</p></div><select id="retroGame" class="select" aria-label="Retrospective game"></select></div>
         <div class="panel table-panel"><div class="table" id="retroTable"></div><div class="notice subtle" id="retroQuality"></div></div>
@@ -111,16 +111,16 @@
         <div class="section-head"><div><span class="kicker">REFRESH POLICY</span><h2>1 · 2 · 4 · 8 · 20 · Never</h2><p>Does refreshing a deterministic recommendation help, or is persistence just as good?</p></div><select id="holdGame" class="select" aria-label="Hold policy game"></select></div>
         <div class="panel" id="holdMatrix"></div>
 
-        <div class="section-head"><div><span class="kicker">EXPECTED VALUE</span><h2>EV Hunter</h2><p>Instead of asking which numbers are more likely, this model asks whether the economics of a draw justify entering at all.</p></div></div>
-        <div class="notice subtle" id="evMeta">Loading EV model…</div>
+        <div class="section-head"><div><span class="kicker">EXPECTED VALUE</span><h2>EV Hunter v2</h2><p>Structural prize accounting asks whether the economics of a draw justify entering at all. Equal-probability lines are ranked for sharing risk only after that decision.</p></div></div>
+        <div class="notice subtle" id="evMeta">Loading structural EV model…</div>
         <div class="cards cols-3" id="evCards"></div>
         <div class="split-xl">
           <section>
-            <div class="section-head compact"><div><span class="kicker">HISTORICAL GATE</span><h2>Selective-entry backtest</h2><p>Historical jackpots decide whether to enter; results are revealed only after the decision.</p></div></div>
+            <div class="section-head compact"><div><span class="kicker">HISTORICAL GATE</span><h2>Selective-entry backtest</h2><p>Historical economics decide whether to enter; winning numbers and payouts are revealed only after the decision.</p></div></div>
             <div class="panel" id="evBacktest"></div>
           </section>
           <aside>
-            <div class="section-head compact"><div><span class="kicker">PROSPECTIVE</span><h2>EV shadow portfolio</h2><p>Only draws that cross the conservative EV gate generate a research entry.</p></div></div>
+            <div class="section-head compact"><div><span class="kicker">PROSPECTIVE</span><h2>EV shadow portfolio</h2><p>Only draws that cross the conservative structural EV gate generate a research entry.</p></div></div>
             <div class="panel" id="evShadow"></div>
           </aside>
         </div>
@@ -188,6 +188,7 @@
 </aside>
 
 <script src="v3/app.js" defer></script>
+<script src="v3/research-v2.js" defer></script>
 <script src="v3/discovery.js" defer></script>
 <script src="v3/ev.js" defer></script>
 </body>
