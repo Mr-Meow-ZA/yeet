@@ -45,6 +45,7 @@ jobs:
             drawlab-sa/scripts/update_cloud.py \
             drawlab-sa/scripts/import_history.py \
             drawlab-sa/scripts/research_engine.py \
+            drawlab-sa/scripts/strategy_discovery.py \
             drawlab-sa/scripts/retrospective_v3.py \
             drawlab-sa/scripts/build_v3_state.py \
             drawlab-sa/scripts/validate_state.py
@@ -65,7 +66,7 @@ jobs:
               json.loads(path.read_text())
 
           state=json.loads((root/'v3-state.json').read_text())
-          assert state.get('schema_version',0) >= 4, state.get('schema_version')
+          assert state.get('schema_version',0) >= 5, state.get('schema_version')
           assert state.get('cloud_status') == 'ok', state.get('cloud_status')
 
           frozen=json.loads((root/'frozen-alpha.json').read_text())
@@ -81,7 +82,10 @@ jobs:
           horizons={str(r.get('horizon')) for r in research.get('walk_forward',[])}
           assert {'1','2','4','8','20','never'} <= horizons, horizons
           assert len(research.get('walk_forward',[])) >= 72
-          print('Validated DrawLab v3 state, retrospective and hold-policy research')
+          discovery=research.get('strategy_discovery') or {}
+          assert discovery.get('candidate_count',0) >= 20, discovery
+          assert {'Daily Lotto','Lotto','PowerBall'} <= set((discovery.get('games') or {}).keys())
+          print('Validated DrawLab v3 state, retrospective, hold-policy and strategy-discovery research')
           PY
 
       - name: Validate production website
@@ -89,14 +93,19 @@ jobs:
         run: |
           set -euo pipefail
           node --check drawlab-sa/v3/app.js
+          node --check drawlab-sa/v3/discovery.js
           test -s drawlab-sa/index.html
           test -s drawlab-sa/legacy/index.html
           test -s drawlab-sa/v3/styles.css
+          test -s drawlab-sa/v3/discovery.js
           test -s drawlab-sa/manifest.webmanifest
           test -s drawlab-sa/sw.js
           grep -q 'Research the process' drawlab-sa/index.html
           grep -q '1 · 2 · 4 · 8 · 20 · Never' drawlab-sa/index.html
+          grep -q 'id="discoveryCards"' drawlab-sa/index.html
           grep -q 'drawlab-state' drawlab-sa/v3/app.js
+          grep -q 'drawlab-state' drawlab-sa/v3/discovery.js
+          grep -q 'strategy_discovery' drawlab-sa/v3/discovery.js
           grep -q 'const rs = db.research' drawlab-sa/v3/app.js
           grep -q 'const dbRetro = db.retrospective' drawlab-sa/v3/app.js
           grep -q 'Frozen Alpha' drawlab-sa/scripts/update_cloud.py
@@ -118,10 +127,13 @@ jobs:
           assert research.get('methodology_version') == '3.0', research.get('methodology_version')
           hs={str(r.get('horizon')) for r in research.get('walk_forward',[])}
           assert {'1','2','4','8','20','never'} <= hs, hs
+          discovery=research.get('strategy_discovery') or {}
+          assert discovery.get('candidate_count',0) >= 20, discovery
+          assert {'Daily Lotto','Lotto','PowerBall'} <= set((discovery.get('games') or {}).keys())
           retro=p.get('retrospective') or {}
           assert isinstance(retro.get('summary'),dict) and retro.get('summary'), retro.keys()
           assert isinstance(retro.get('payout_quality'),dict), retro.keys()
-          print('Supabase primary read model is healthy:',counts)
+          print('Supabase primary read model is healthy:',counts,'discovery candidates',discovery.get('candidate_count'))
           PY
 
       - name: Check scheduled data freshness
