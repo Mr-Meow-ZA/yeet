@@ -11,7 +11,6 @@ on:
       - 'drawlab-sa/data/ev-state.json'
       - 'drawlab-sa/data/challenger-locks.json'
       - 'drawlab-sa/v3/data/retrospective.json'
-      - 'drawlab-sa/scripts/sync_supabase.sh'
       - '.github/workflows/drawlab-supabase-sync.yml'
 
 permissions:
@@ -26,11 +25,26 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v7
-      - name: Validate authenticated sync client
-        run: bash -n drawlab-sa/scripts/sync_supabase.sh
       - name: Sync validated repository state to Supabase
-        if: github.ref == 'refs/heads/master'
-        env:
-          DRAWLAB_SYNC_TOKEN: ${{ secrets.DRAWLAB_SYNC_TOKEN }}
-        run: bash drawlab-sa/scripts/sync_supabase.sh
+        shell: bash
+        run: |
+          set -euo pipefail
+          response="$(curl --fail-with-body --silent --show-error --max-time 90 \
+            'https://lnmgieielbqqqvboonzj.supabase.co/functions/v1/drawlab-sync')"
+          echo "$response"
+          python - <<'PY' "$response"
+          import json,sys
+          payload=json.loads(sys.argv[1])
+          if not payload.get('ok'):
+              raise SystemExit('DrawLab Supabase sync returned ok=false')
+          sync=payload.get('sync') or {}
+          if not sync.get('research_synced'):
+              raise SystemExit('DrawLab research snapshot was not synchronized')
+          if not sync.get('retrospective_synced'):
+              raise SystemExit('DrawLab retrospective snapshot was not synchronized')
+          if not sync.get('shadow_synced'):
+              raise SystemExit('DrawLab prospective shadow snapshot was not synchronized')
+          if not sync.get('ev_synced'):
+              raise SystemExit('DrawLab EV Hunter snapshot was not synchronized')
+          print('DrawLab Supabase sync validated; methodology',sync.get('research_methodology'),'shadow',sync.get('shadow_synced'),'EV',sync.get('ev_synced'))
+          PY
