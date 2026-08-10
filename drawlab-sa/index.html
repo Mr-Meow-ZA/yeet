@@ -111,6 +111,10 @@
         <div class="section-head"><div><span class="kicker">REFRESH POLICY</span><h2>1 · 2 · 4 · 8 · 20 · Never</h2><p>Does refreshing a deterministic recommendation help, or is persistence just as good?</p></div><select id="holdGame" class="select" aria-label="Hold policy game"></select></div>
         <div class="panel" id="holdMatrix"></div>
 
+        <div class="section-head"><div><span class="kicker">DISCOVERY</span><h2>Historical strategy search</h2><p>We search pre-declared challenger families on validation data, then open a later untouched test window only after the candidate is fixed.</p></div></div>
+        <div class="notice subtle" id="discoveryMeta">Loading strategy discovery…</div>
+        <div class="cards cols-3" id="discoveryCards"></div>
+
         <div class="split-xl">
           <section>
             <div class="section-head compact"><div><span class="kicker">CHALLENGER</span><h2>Champion vs challenger</h2><p>Research cannot promote itself.</p></div></div>
@@ -170,5 +174,6 @@
 </aside>
 
 <script src="v3/app.js" defer></script>
+<script src="v3/discovery.js" defer></script>
 </body>
 </html>
