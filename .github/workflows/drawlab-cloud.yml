@@ -11,10 +11,13 @@ on:
     paths:
       - 'drawlab-sa/scripts/update_cloud.py'
       - 'drawlab-sa/scripts/shadow_tracker.py'
-      - 'drawlab-sa/scripts/ev_hunter.py'
+      - 'drawlab-sa/scripts/ev_hunter_v2.py'
+      - 'drawlab-sa/scripts/crowd_model.py'
       - 'drawlab-sa/scripts/build_v3_state.py'
       - 'drawlab-sa/data/challenger-locks.json'
       - 'drawlab-sa/data/ev-history.json'
+      - 'drawlab-sa/data/crowd-state.json'
+      - 'drawlab-sa/data/integrity-state.json'
       - 'drawlab-sa/v3/data/frozen-alpha.json'
       - 'drawlab-sa/data/historical-results.json'
       - '.github/workflows/drawlab-cloud.yml'
@@ -44,14 +47,17 @@ jobs:
           python -m py_compile drawlab-sa/scripts/update_cloud.py
           python -m py_compile drawlab-sa/scripts/shadow_tracker.py
           python -m py_compile drawlab-sa/scripts/ev_hunter.py
+          python -m py_compile drawlab-sa/scripts/ev_hunter_v2.py
+          python -m py_compile drawlab-sa/scripts/crowd_model.py
           python -m py_compile drawlab-sa/scripts/build_v3_state.py
       - name: Update virtual ledger and results
         run: python drawlab-sa/scripts/update_cloud.py
       - name: Update prospective challenger shadow ledger
         run: python drawlab-sa/scripts/shadow_tracker.py
-      - name: Update selective EV research
-        # Historical economics live in the paced research cache; cloud runs only reassess the current market.
-        run: python drawlab-sa/scripts/ev_hunter.py
+      - name: Reassess structural EV research
+        # Historical economics and crowd calibration are refreshed by the research job.
+        # The cloud cycle only evaluates the current market and prospective EV shadow ledger.
+        run: python drawlab-sa/scripts/ev_hunter_v2.py
       - name: Rebuild v3 read model
         run: python drawlab-sa/scripts/build_v3_state.py
       - name: Commit cloud, shadow, EV and v3 state safely
@@ -68,7 +74,7 @@ jobs:
               exit 0
             fi
 
-            git commit -m 'Update DrawLab cloud, shadow, EV and v3 state'
+            git commit -m 'Update DrawLab cloud, shadow, EV v2 and v3 state'
             if git push origin HEAD:master; then
               echo 'Cloud, shadow, EV and v3 state pushed successfully'
               exit 0
@@ -79,7 +85,7 @@ jobs:
             git reset --hard origin/master
             python drawlab-sa/scripts/update_cloud.py
             python drawlab-sa/scripts/shadow_tracker.py
-            python drawlab-sa/scripts/ev_hunter.py
+            python drawlab-sa/scripts/ev_hunter_v2.py
             python drawlab-sa/scripts/build_v3_state.py
           done
 
