@@ -46,7 +46,7 @@ jobs:
       - name: Run one-year retrospective
         run: python drawlab-sa/scripts/retrospective_v3.py
       - name: Refresh exact EV economics and selective-entry research
-        run: python drawlab-sa/scripts/ev_hunter.py --refresh-history --workers 6
+        run: python drawlab-sa/scripts/ev_hunter.py --refresh-history --workers 1
       - name: Rebuild v3 read model
         run: python drawlab-sa/scripts/build_v3_state.py
       - name: Commit research, EV and v3 state safely
@@ -73,7 +73,7 @@ jobs:
             python drawlab-sa/scripts/research_engine.py
             python drawlab-sa/scripts/strategy_discovery.py
             python drawlab-sa/scripts/retrospective_v3.py
-            python drawlab-sa/scripts/ev_hunter.py --refresh-history --workers 6
+            python drawlab-sa/scripts/ev_hunter.py --refresh-history --workers 1
             python drawlab-sa/scripts/build_v3_state.py
           done
           echo 'Unable to push research state after three attempts'
