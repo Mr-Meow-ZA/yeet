@@ -13,6 +13,7 @@ on:
       - 'drawlab-sa/scripts/shadow_tracker.py'
       - 'drawlab-sa/scripts/ev_hunter.py'
       - 'drawlab-sa/scripts/build_v3_state.py'
+      - 'drawlab-sa/scripts/sync_supabase.sh'
       - 'drawlab-sa/data/challenger-locks.json'
       - 'drawlab-sa/data/ev-history.json'
       - 'drawlab-sa/v3/data/frozen-alpha.json'
@@ -45,6 +46,7 @@ jobs:
           python -m py_compile drawlab-sa/scripts/shadow_tracker.py
           python -m py_compile drawlab-sa/scripts/ev_hunter.py
           python -m py_compile drawlab-sa/scripts/build_v3_state.py
+          bash -n drawlab-sa/scripts/sync_supabase.sh
       - name: Update virtual ledger and results
         run: python drawlab-sa/scripts/update_cloud.py
       - name: Update prospective challenger shadow ledger
@@ -86,18 +88,9 @@ jobs:
           echo 'Unable to push cloud state after three attempts'
           exit 1
       - name: Synchronize Supabase primary store
-        shell: bash
+        if: github.ref == 'refs/heads/master'
+        env:
+          DRAWLAB_SYNC_TOKEN: ${{ secrets.DRAWLAB_SYNC_TOKEN }}
         run: |
-          set -euo pipefail
           sleep 2
-          response="$(curl --fail-with-body --silent --show-error --max-time 90 'https://lnmgieielbqqqvboonzj.supabase.co/functions/v1/drawlab-sync')"
-          echo "$response"
-          python - <<'PY' "$response"
-          import json,sys
-          p=json.loads(sys.argv[1])
-          assert p.get('ok'), p
-          sync=p.get('sync') or {}
-          assert sync.get('research_synced'), p
-          assert sync.get('ev_synced'), p
-          print('Supabase synchronized after cloud update')
-          PY
+          bash drawlab-sa/scripts/sync_supabase.sh
