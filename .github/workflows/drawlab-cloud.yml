@@ -50,6 +50,7 @@ jobs:
       - name: Update prospective challenger shadow ledger
         run: python drawlab-sa/scripts/shadow_tracker.py
       - name: Update selective EV research
+        # Historical economics live in the paced research cache; cloud runs only reassess the current market.
         run: python drawlab-sa/scripts/ev_hunter.py
       - name: Rebuild v3 read model
         run: python drawlab-sa/scripts/build_v3_state.py
