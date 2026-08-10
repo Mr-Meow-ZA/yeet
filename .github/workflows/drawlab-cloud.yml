@@ -10,7 +10,9 @@ on:
   push:
     paths:
       - 'drawlab-sa/scripts/update_cloud.py'
+      - 'drawlab-sa/scripts/shadow_tracker.py'
       - 'drawlab-sa/scripts/build_v3_state.py'
+      - 'drawlab-sa/data/challenger-locks.json'
       - 'drawlab-sa/v3/data/frozen-alpha.json'
       - 'drawlab-sa/data/historical-results.json'
       - '.github/workflows/drawlab-cloud.yml'
@@ -38,12 +40,15 @@ jobs:
       - name: Validate cloud and v3 engines
         run: |
           python -m py_compile drawlab-sa/scripts/update_cloud.py
+          python -m py_compile drawlab-sa/scripts/shadow_tracker.py
           python -m py_compile drawlab-sa/scripts/build_v3_state.py
       - name: Update virtual ledger and results
         run: python drawlab-sa/scripts/update_cloud.py
+      - name: Update prospective challenger shadow ledger
+        run: python drawlab-sa/scripts/shadow_tracker.py
       - name: Rebuild v3 read model
         run: python drawlab-sa/scripts/build_v3_state.py
-      - name: Commit cloud and v3 state safely
+      - name: Commit cloud, shadow and v3 state safely
         shell: bash
         run: |
           set -euo pipefail
@@ -51,15 +56,15 @@ jobs:
           git config user.email 'drawlab-bot@users.noreply.github.com'
 
           for attempt in 1 2 3; do
-            git add drawlab-sa/data/cloud-state.json drawlab-sa/v3/data/v3-state.json
+            git add drawlab-sa/data/cloud-state.json drawlab-sa/data/shadow-state.json drawlab-sa/v3/data/v3-state.json
             if git diff --cached --quiet; then
-              echo 'No cloud/v3 state changes'
+              echo 'No cloud/shadow/v3 state changes'
               exit 0
             fi
 
-            git commit -m 'Update DrawLab cloud and v3 state'
+            git commit -m 'Update DrawLab cloud, shadow and v3 state'
             if git push origin HEAD:master; then
-              echo 'Cloud and v3 state pushed successfully'
+              echo 'Cloud, shadow and v3 state pushed successfully'
               exit 0
             fi
 
@@ -67,6 +72,7 @@ jobs:
             git fetch origin master
             git reset --hard origin/master
             python drawlab-sa/scripts/update_cloud.py
+            python drawlab-sa/scripts/shadow_tracker.py
             python drawlab-sa/scripts/build_v3_state.py
           done
 
