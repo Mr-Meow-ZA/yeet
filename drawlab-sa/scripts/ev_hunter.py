@@ -222,6 +222,30 @@ def combined_results() -> list[dict[str, Any]]:
 
 def refresh_history(max_workers: int = 6) -> dict[str, Any]:
     existing = load_json(CACHE_PATH, {"schema_version": 1, "rows": []})
+    existing_coverage = existing.get("coverage") or {}
+    try:
+        refreshed_at = datetime.fromisoformat(str(existing.get("updated_at", "")).replace("Z", "+00:00"))
+        if refreshed_at.tzinfo is None:
+            refreshed_at = refreshed_at.replace(tzinfo=timezone.utc)
+    except Exception:
+        refreshed_at = None
+    cache_is_useful = (
+        existing_coverage.get("Daily Lotto", 0) >= 10
+        and existing_coverage.get("Lotto", 0) >= 5
+        and existing_coverage.get("PowerBall", 0) >= 5
+    )
+    if refreshed_at and cache_is_useful and datetime.now(timezone.utc) - refreshed_at < timedelta(hours=6):
+        # Repository pushes can fan out into several workflows. Do not recrawl
+        # the public archive repeatedly within the same deployment window.
+        existing["refresh"] = {
+            "requested": 0,
+            "fetched": 0,
+            "failed": 0,
+            "skipped": "fresh_cache",
+            "fresh_for_hours": 6,
+        }
+        return existing
+
     cached = {(r.get("date"), r.get("game")): r for r in existing.get("rows", []) if r.get("quality") == "exact_archive"}
     results = combined_results()
     today = NOW.date()
