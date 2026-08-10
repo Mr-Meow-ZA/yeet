@@ -47,6 +47,7 @@ jobs:
             drawlab-sa/scripts/research_engine.py \
             drawlab-sa/scripts/strategy_discovery.py \
             drawlab-sa/scripts/shadow_tracker.py \
+            drawlab-sa/scripts/ev_hunter.py \
             drawlab-sa/scripts/retrospective_v3.py \
             drawlab-sa/scripts/build_v3_state.py \
             drawlab-sa/scripts/validate_state.py
@@ -67,7 +68,7 @@ jobs:
               json.loads(path.read_text())
 
           state=json.loads((root/'v3-state.json').read_text())
-          assert state.get('schema_version',0) >= 6, state.get('schema_version')
+          assert state.get('schema_version',0) >= 7, state.get('schema_version')
           assert state.get('cloud_status') == 'ok', state.get('cloud_status')
           assert isinstance(state.get('shadow_research'),dict)
 
@@ -95,7 +96,19 @@ jobs:
           assert shadow.get('schema_version') == 1 and isinstance(shadow.get('tickets'),list)
           summary=shadow.get('summary') or {}
           assert (summary.get('powerball-frequency-reversion-30-v0.1') or {}).get('status') == 'shadow'
-          print('Validated DrawLab v3 state, discovery and prospective shadow research')
+
+          ev_history=json.loads(Path('drawlab-sa/data/ev-history.json').read_text())
+          ev=json.loads(Path('drawlab-sa/data/ev-state.json').read_text())
+          coverage=ev_history.get('coverage') or {}
+          assert coverage.get('Daily Lotto',0) >= 10, coverage
+          assert coverage.get('Lotto',0) >= 5, coverage
+          assert coverage.get('PowerBall',0) >= 5, coverage
+          assert ev.get('model_version') == 'EV Hunter v1.0', ev.get('model_version')
+          assert {'Daily Lotto','Lotto','PowerBall'} <= set((ev.get('current') or {}).keys())
+          assert isinstance(ev.get('historical_backtest'),dict)
+          assert isinstance(ev.get('shadow_tickets'),list)
+          assert (state.get('ev_hunter') or {}).get('model_version') == 'EV Hunter v1.0'
+          print('Validated DrawLab v3 state, discovery, shadow research and EV Hunter:',coverage)
           PY
 
       - name: Validate production website
@@ -104,17 +117,22 @@ jobs:
           set -euo pipefail
           node --check drawlab-sa/v3/app.js
           node --check drawlab-sa/v3/discovery.js
+          node --check drawlab-sa/v3/ev.js
           test -s drawlab-sa/index.html
           test -s drawlab-sa/legacy/index.html
           test -s drawlab-sa/v3/styles.css
           test -s drawlab-sa/v3/discovery.js
+          test -s drawlab-sa/v3/ev.js
           test -s drawlab-sa/manifest.webmanifest
           test -s drawlab-sa/sw.js
           grep -q 'Research the process' drawlab-sa/index.html
           grep -q '1 · 2 · 4 · 8 · 20 · Never' drawlab-sa/index.html
           grep -q 'id="discoveryCards"' drawlab-sa/index.html
+          grep -q 'id="evCards"' drawlab-sa/index.html
+          grep -q 'EV Hunter' drawlab-sa/index.html
           grep -q 'drawlab-state' drawlab-sa/v3/app.js
           grep -q 'drawlab-state' drawlab-sa/v3/discovery.js
+          grep -q 'drawlab-state' drawlab-sa/v3/ev.js
           grep -q 'strategy_discovery' drawlab-sa/v3/discovery.js
           grep -q 'const rs = db.research' drawlab-sa/v3/app.js
           grep -q 'const dbRetro = db.retrospective' drawlab-sa/v3/app.js
@@ -146,7 +164,10 @@ jobs:
           retro=p.get('retrospective') or {}
           assert isinstance(retro.get('summary'),dict) and retro.get('summary'), retro.keys()
           assert isinstance(retro.get('payout_quality'),dict), retro.keys()
-          print('Supabase primary read model is healthy:',counts,'discovery candidates',discovery.get('candidate_count'),'shadow locks',len(summary))
+          ev=p.get('ev_hunter') or {}
+          assert ev.get('model_version') == 'EV Hunter v1.0', ev.get('model_version')
+          assert {'Daily Lotto','Lotto','PowerBall'} <= set((ev.get('current') or {}).keys()), ev.keys()
+          print('Supabase primary read model is healthy:',counts,'discovery candidates',discovery.get('candidate_count'),'shadow locks',len(summary),'EV',ev.get('model_version'))
           PY
 
       - name: Check scheduled data freshness
