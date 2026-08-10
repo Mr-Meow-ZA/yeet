@@ -46,6 +46,7 @@ jobs:
             drawlab-sa/scripts/import_history.py \
             drawlab-sa/scripts/research_engine.py \
             drawlab-sa/scripts/strategy_discovery.py \
+            drawlab-sa/scripts/shadow_tracker.py \
             drawlab-sa/scripts/retrospective_v3.py \
             drawlab-sa/scripts/build_v3_state.py \
             drawlab-sa/scripts/validate_state.py
@@ -66,8 +67,9 @@ jobs:
               json.loads(path.read_text())
 
           state=json.loads((root/'v3-state.json').read_text())
-          assert state.get('schema_version',0) >= 5, state.get('schema_version')
+          assert state.get('schema_version',0) >= 6, state.get('schema_version')
           assert state.get('cloud_status') == 'ok', state.get('cloud_status')
+          assert isinstance(state.get('shadow_research'),dict)
 
           frozen=json.loads((root/'frozen-alpha.json').read_text())
           assert frozen.get('locked') is True and len(frozen.get('lines',{})) == 3
@@ -85,7 +87,13 @@ jobs:
           discovery=research.get('strategy_discovery') or {}
           assert discovery.get('candidate_count',0) >= 20, discovery
           assert {'Daily Lotto','Lotto','PowerBall'} <= set((discovery.get('games') or {}).keys())
-          print('Validated DrawLab v3 state, retrospective, hold-policy and strategy-discovery research')
+
+          locks=json.loads(Path('drawlab-sa/data/challenger-locks.json').read_text())
+          lock_rows=locks.get('locks') or []
+          assert any(x.get('id')=='powerball-frequency-reversion-30-v0.1' and x.get('status')=='shadow' for x in lock_rows)
+          shadow=json.loads(Path('drawlab-sa/data/shadow-state.json').read_text())
+          assert shadow.get('schema_version') == 1 and isinstance(shadow.get('tickets'),list)
+          print('Validated DrawLab v3 state, discovery and prospective shadow research')
           PY
 
       - name: Validate production website
