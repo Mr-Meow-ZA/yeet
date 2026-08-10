@@ -9,6 +9,7 @@ on:
       - 'drawlab-sa/scripts/retrospective_v3.py'
       - 'drawlab-sa/scripts/ev_hunter.py'
       - 'drawlab-sa/scripts/build_v3_state.py'
+      - 'drawlab-sa/scripts/sync_supabase.sh'
       - 'drawlab-sa/data/historical-results.json'
       - '.github/workflows/drawlab-research.yml'
 
@@ -39,6 +40,7 @@ jobs:
           python -m py_compile drawlab-sa/scripts/retrospective_v3.py
           python -m py_compile drawlab-sa/scripts/ev_hunter.py
           python -m py_compile drawlab-sa/scripts/build_v3_state.py
+          bash -n drawlab-sa/scripts/sync_supabase.sh
       - name: Run walk-forward research
         run: python drawlab-sa/scripts/research_engine.py
       - name: Search challenger strategy families
@@ -51,6 +53,7 @@ jobs:
       - name: Rebuild v3 read model
         run: python drawlab-sa/scripts/build_v3_state.py
       - name: Commit research, EV and v3 state safely
+        if: github.ref == 'refs/heads/master'
         shell: bash
         run: |
           set -euo pipefail
@@ -80,18 +83,9 @@ jobs:
           echo 'Unable to push research state after three attempts'
           exit 1
       - name: Synchronize Supabase primary store
-        shell: bash
+        if: github.ref == 'refs/heads/master'
+        env:
+          DRAWLAB_SYNC_TOKEN: ${{ secrets.DRAWLAB_SYNC_TOKEN }}
         run: |
-          set -euo pipefail
           sleep 2
-          response="$(curl --fail-with-body --silent --show-error --max-time 90 'https://lnmgieielbqqqvboonzj.supabase.co/functions/v1/drawlab-sync')"
-          echo "$response"
-          python - <<'PY' "$response"
-          import json,sys
-          p=json.loads(sys.argv[1])
-          assert p.get('ok'), p
-          sync=p.get('sync') or {}
-          assert sync.get('research_synced'), p
-          assert sync.get('ev_synced'), p
-          print('Supabase synchronized after research refresh')
-          PY
+          bash drawlab-sa/scripts/sync_supabase.sh

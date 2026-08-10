@@ -7,6 +7,7 @@ on:
   push:
     paths:
       - 'drawlab-sa/scripts/import_history.py'
+      - 'drawlab-sa/scripts/sync_supabase.sh'
       - '.github/workflows/import-drawlab-history.yml'
 
 permissions:
@@ -43,6 +44,7 @@ jobs:
           python -m py_compile drawlab-sa/scripts/update_cloud.py
           python -m py_compile drawlab-sa/scripts/build_v3_state.py
           python -m py_compile drawlab-sa/scripts/validate_state.py
+          bash -n drawlab-sa/scripts/sync_supabase.sh
       - name: Import and validate history
         run: python drawlab-sa/scripts/import_history.py --start-year 2024 --end-year "$DRAWLAB_END_YEAR"
       - name: Rebuild walk-forward research
@@ -56,6 +58,7 @@ jobs:
       - name: Validate resulting state
         run: python drawlab-sa/scripts/validate_state.py
       - name: Commit validated data safely
+        if: github.ref == 'refs/heads/master'
         shell: bash
         run: |
           set -euo pipefail
@@ -91,16 +94,9 @@ jobs:
             python drawlab-sa/scripts/validate_state.py
           done
       - name: Synchronize Supabase primary store
-        shell: bash
+        if: github.ref == 'refs/heads/master'
+        env:
+          DRAWLAB_SYNC_TOKEN: ${{ secrets.DRAWLAB_SYNC_TOKEN }}
         run: |
-          set -euo pipefail
           sleep 2
-          response="$(curl --fail-with-body --silent --show-error --max-time 90 'https://lnmgieielbqqqvboonzj.supabase.co/functions/v1/drawlab-sync')"
-          echo "$response"
-          python - <<'PY' "$response"
-          import json,sys
-          p=json.loads(sys.argv[1])
-          assert p.get('ok'), p
-          assert (p.get('sync') or {}).get('research_synced'), p
-          print('Supabase synchronized after history refresh')
-          PY
+          bash drawlab-sa/scripts/sync_supabase.sh
