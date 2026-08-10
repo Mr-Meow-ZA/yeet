@@ -93,6 +93,8 @@ jobs:
           assert any(x.get('id')=='powerball-frequency-reversion-30-v0.1' and x.get('status')=='shadow' for x in lock_rows)
           shadow=json.loads(Path('drawlab-sa/data/shadow-state.json').read_text())
           assert shadow.get('schema_version') == 1 and isinstance(shadow.get('tickets'),list)
+          summary=shadow.get('summary') or {}
+          assert (summary.get('powerball-frequency-reversion-30-v0.1') or {}).get('status') == 'shadow'
           print('Validated DrawLab v3 state, discovery and prospective shadow research')
           PY
 
@@ -138,10 +140,13 @@ jobs:
           discovery=research.get('strategy_discovery') or {}
           assert discovery.get('candidate_count',0) >= 20, discovery
           assert {'Daily Lotto','Lotto','PowerBall'} <= set((discovery.get('games') or {}).keys())
+          shadow=p.get('shadow_research') or {}
+          summary=shadow.get('summary') or {}
+          assert (summary.get('powerball-frequency-reversion-30-v0.1') or {}).get('status') == 'shadow', summary
           retro=p.get('retrospective') or {}
           assert isinstance(retro.get('summary'),dict) and retro.get('summary'), retro.keys()
           assert isinstance(retro.get('payout_quality'),dict), retro.keys()
-          print('Supabase primary read model is healthy:',counts,'discovery candidates',discovery.get('candidate_count'))
+          print('Supabase primary read model is healthy:',counts,'discovery candidates',discovery.get('candidate_count'),'shadow locks',len(summary))
           PY
 
       - name: Check scheduled data freshness
