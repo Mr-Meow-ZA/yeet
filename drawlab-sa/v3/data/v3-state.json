@@ -1,9 +1,9 @@
 {
-  "schema_version": 4,
-  "generated_at": "2026-08-10T14:10:23.992725+00:00",
+  "schema_version": 5,
+  "generated_at": "2026-08-10T14:13:30.871720+00:00",
   "platform": "DrawLab v3 Research Platform",
   "cloud_status": "ok",
-  "cloud_updated_at": "2026-08-09T23:05:32.285369+02:00",
+  "cloud_updated_at": "2026-08-10T16:13:00.545677+02:00",
   "history_quality": {
     "Daily Lotto": {
       "raw": 950,
@@ -3313,6 +3313,526 @@
           "reason": "Research-only challenger. Promotion requires a pre-defined evidence threshold and sufficient out-of-sample samples."
         }
       }
+    },
+    "strategy_discovery": {
+      "methodology_version": "1.0",
+      "candidate_count": 26,
+      "candidate_families": [
+        "EWMA Momentum",
+        "Frequency Reversion",
+        "Gap Hazard",
+        "Transition Response",
+        "Trend"
+      ],
+      "selection_rule": "Select on validation stability and main-number matches; judge exactly once on later untouched draws.",
+      "promotion_rule": "Never auto-promote. Promotion requires sufficient held-out samples, multiple-testing-adjusted evidence above chance, and improvement over the best locked v1 comparator.",
+      "games": {
+        "Daily Lotto": {
+          "status": "no_improvement",
+          "candidate_count": 26,
+          "selected": {
+            "id": "trend_momentum_32_160",
+            "name": "Trend Momentum 32/160",
+            "family": "Trend",
+            "params": {
+              "fast": 32,
+              "slow": 160,
+              "direction": 1
+            }
+          },
+          "development_window": {
+            "from": "2024-01-01",
+            "to": "2025-03-03",
+            "draws_available_before_validation": 427
+          },
+          "validation_window": {
+            "from": "2025-03-04",
+            "to": "2025-11-15",
+            "selected_metrics": {
+              "samples": 257,
+              "avg_matches": 0.8054,
+              "ge2_rate": 18.29,
+              "ge3_rate": 1.17,
+              "best_matches": 3,
+              "distribution": {
+                "0": 100,
+                "1": 110,
+                "2": 44,
+                "3": 3,
+                "4": 0,
+                "5": 0
+              },
+              "expected_matches": 0.694444,
+              "lift_vs_expected_pct": 15.98,
+              "standard_error": 0.045397,
+              "z_score": 2.4452,
+              "p_value": 0.014479,
+              "p_adjusted": 0.376445,
+              "comparisons_adjusted": 26,
+              "evidence": "not_significant"
+            }
+          },
+          "held_out_test": {
+            "from": "2025-11-16",
+            "to": "2026-08-09",
+            "candidate": {
+              "samples": 266,
+              "avg_matches": 0.6992,
+              "ge2_rate": 14.29,
+              "ge3_rate": 0.75,
+              "best_matches": 3,
+              "distribution": {
+                "0": 120,
+                "1": 108,
+                "2": 36,
+                "3": 2,
+                "4": 0,
+                "5": 0
+              },
+              "expected_matches": 0.694444,
+              "lift_vs_expected_pct": 0.69,
+              "standard_error": 0.044623,
+              "z_score": 0.1077,
+              "p_value": 0.914264,
+              "p_adjusted": 1.0,
+              "comparisons_adjusted": 26,
+              "evidence": "not_significant"
+            },
+            "best_current_v1": {
+              "strategy": "Diversified Coverage",
+              "samples": 266,
+              "avg_matches": 0.7632,
+              "ge2_rate": 16.17,
+              "ge3_rate": 1.5,
+              "best_matches": 3,
+              "distribution": {
+                "0": 110,
+                "1": 113,
+                "2": 39,
+                "3": 4,
+                "4": 0,
+                "5": 0
+              },
+              "expected_matches": 0.694444,
+              "lift_vs_expected_pct": 9.89,
+              "standard_error": 0.044623,
+              "z_score": 1.5399,
+              "p_value": 0.123587,
+              "p_adjusted": 0.123587,
+              "comparisons_adjusted": 1,
+              "evidence": "not_significant"
+            },
+            "all_current_v1": {
+              "Hot 6M": {
+                "samples": 266,
+                "avg_matches": 0.688,
+                "ge2_rate": 11.65,
+                "ge3_rate": 2.26,
+                "best_matches": 3,
+                "distribution": {
+                  "0": 120,
+                  "1": 115,
+                  "2": 25,
+                  "3": 6,
+                  "4": 0,
+                  "5": 0
+                },
+                "expected_matches": 0.694444,
+                "lift_vs_expected_pct": -0.93,
+                "standard_error": 0.044623,
+                "z_score": -0.1451,
+                "p_value": 0.884644,
+                "p_adjusted": 0.884644,
+                "comparisons_adjusted": 1,
+                "evidence": "not_significant"
+              },
+              "Weighted Historical": {
+                "samples": 266,
+                "avg_matches": 0.6654,
+                "ge2_rate": 8.65,
+                "ge3_rate": 1.13,
+                "best_matches": 3,
+                "distribution": {
+                  "0": 115,
+                  "1": 128,
+                  "2": 20,
+                  "3": 3,
+                  "4": 0,
+                  "5": 0
+                },
+                "expected_matches": 0.694444,
+                "lift_vs_expected_pct": -4.18,
+                "standard_error": 0.044623,
+                "z_score": -0.6506,
+                "p_value": 0.515319,
+                "p_adjusted": 0.515319,
+                "comparisons_adjusted": 1,
+                "evidence": "not_significant"
+              },
+              "Cold 6M": {
+                "samples": 266,
+                "avg_matches": 0.6955,
+                "ge2_rate": 13.91,
+                "ge3_rate": 0.75,
+                "best_matches": 3,
+                "distribution": {
+                  "0": 120,
+                  "1": 109,
+                  "2": 35,
+                  "3": 2,
+                  "4": 0,
+                  "5": 0
+                },
+                "expected_matches": 0.694444,
+                "lift_vs_expected_pct": 0.15,
+                "standard_error": 0.044623,
+                "z_score": 0.0234,
+                "p_value": 0.981321,
+                "p_adjusted": 0.981321,
+                "comparisons_adjusted": 1,
+                "evidence": "not_significant"
+              },
+              "Diversified Coverage": {
+                "samples": 266,
+                "avg_matches": 0.7632,
+                "ge2_rate": 16.17,
+                "ge3_rate": 1.5,
+                "best_matches": 3,
+                "distribution": {
+                  "0": 110,
+                  "1": 113,
+                  "2": 39,
+                  "3": 4,
+                  "4": 0,
+                  "5": 0
+                },
+                "expected_matches": 0.694444,
+                "lift_vs_expected_pct": 9.89,
+                "standard_error": 0.044623,
+                "z_score": 1.5399,
+                "p_value": 0.123587,
+                "p_adjusted": 0.123587,
+                "comparisons_adjusted": 1,
+                "evidence": "not_significant"
+              }
+            },
+            "delta_avg_matches_vs_best_v1": -0.064,
+            "delta_avg_matches_vs_chance": 0.0048,
+            "promotion_ready": false
+          },
+          "validation_leaderboard": [
+            {
+              "rank": 1,
+              "id": "trend_momentum_32_160",
+              "name": "Trend Momentum 32/160",
+              "family": "Trend",
+              "objective": 0.796093,
+              "avg_matches": 0.8054,
+              "ge2_rate": 18.29,
+              "evidence": "not_significant"
+            },
+            {
+              "rank": 2,
+              "id": "frequency_reversion_w180_g50",
+              "name": "Frequency Reversion 180 strong gap",
+              "family": "Frequency Reversion",
+              "objective": 0.756214,
+              "avg_matches": 0.7626,
+              "ge2_rate": 15.56,
+              "evidence": "not_significant"
+            },
+            {
+              "rank": 3,
+              "id": "frequency_reversion_w120_g50",
+              "name": "Frequency Reversion 120 strong gap",
+              "family": "Frequency Reversion",
+              "objective": 0.753772,
+              "avg_matches": 0.7704,
+              "ge2_rate": 19.07,
+              "evidence": "not_significant"
+            },
+            {
+              "rank": 4,
+              "id": "frequency_reversion_w60_g50",
+              "name": "Frequency Reversion 60 strong gap",
+              "family": "Frequency Reversion",
+              "objective": 0.747534,
+              "avg_matches": 0.751,
+              "ge2_rate": 17.51,
+              "evidence": "not_significant"
+            },
+            {
+              "rank": 5,
+              "id": "trend_momentum_8_40",
+              "name": "Trend Momentum 8/40",
+              "family": "Trend",
+              "objective": 0.746523,
+              "avg_matches": 0.7471,
+              "ge2_rate": 15.18,
+              "evidence": "not_significant"
+            }
+          ],
+          "interpretation": "A candidate is selected only on the validation window. The later hold-out window is then opened once. No live strategy is changed automatically, even if a challenger looks better."
+        },
+        "Lotto": {
+          "status": "insufficient_data",
+          "draws": 20,
+          "minimum_needed": 140,
+          "reason": "Not enough compatible-rule draws for train/validation/test discovery."
+        },
+        "PowerBall": {
+          "status": "promising_unproven",
+          "candidate_count": 26,
+          "selected": {
+            "id": "frequency_reversion_w30_g30",
+            "name": "Frequency Reversion 30",
+            "family": "Frequency Reversion",
+            "params": {
+              "window": 30,
+              "gap_weight": 0.3
+            }
+          },
+          "development_window": {
+            "from": "2024-01-02",
+            "to": "2025-02-28",
+            "draws_available_before_validation": 122
+          },
+          "validation_window": {
+            "from": "2025-03-04",
+            "to": "2025-11-11",
+            "selected_metrics": {
+              "samples": 73,
+              "avg_matches": 0.6438,
+              "ge2_rate": 15.07,
+              "ge3_rate": 0.0,
+              "best_matches": 2,
+              "distribution": {
+                "0": 37,
+                "1": 25,
+                "2": 11,
+                "3": 0,
+                "4": 0,
+                "5": 0
+              },
+              "expected_matches": 0.5,
+              "lift_vs_expected_pct": 28.77,
+              "standard_error": 0.075241,
+              "z_score": 1.9117,
+              "p_value": 0.055918,
+              "p_adjusted": 1.0,
+              "comparisons_adjusted": 26,
+              "evidence": "early"
+            }
+          },
+          "held_out_test": {
+            "from": "2025-11-14",
+            "to": "2026-08-07",
+            "candidate": {
+              "samples": 77,
+              "avg_matches": 0.5844,
+              "ge2_rate": 10.39,
+              "ge3_rate": 0.0,
+              "best_matches": 2,
+              "distribution": {
+                "0": 40,
+                "1": 29,
+                "2": 8,
+                "3": 0,
+                "4": 0,
+                "5": 0
+              },
+              "expected_matches": 0.5,
+              "lift_vs_expected_pct": 16.88,
+              "standard_error": 0.07326,
+              "z_score": 1.1523,
+              "p_value": 0.249211,
+              "p_adjusted": 1.0,
+              "comparisons_adjusted": 26,
+              "evidence": "early"
+            },
+            "best_current_v1": {
+              "strategy": "Cold 6M",
+              "samples": 77,
+              "avg_matches": 0.5714,
+              "ge2_rate": 9.09,
+              "ge3_rate": 0.0,
+              "best_matches": 2,
+              "distribution": {
+                "0": 40,
+                "1": 30,
+                "2": 7,
+                "3": 0,
+                "4": 0,
+                "5": 0
+              },
+              "expected_matches": 0.5,
+              "lift_vs_expected_pct": 14.29,
+              "standard_error": 0.07326,
+              "z_score": 0.975,
+              "p_value": 0.329562,
+              "p_adjusted": 0.329562,
+              "comparisons_adjusted": 1,
+              "evidence": "early"
+            },
+            "all_current_v1": {
+              "Hot 6M": {
+                "samples": 77,
+                "avg_matches": 0.3766,
+                "ge2_rate": 3.9,
+                "ge3_rate": 0.0,
+                "best_matches": 2,
+                "distribution": {
+                  "0": 51,
+                  "1": 23,
+                  "2": 3,
+                  "3": 0,
+                  "4": 0,
+                  "5": 0
+                },
+                "expected_matches": 0.5,
+                "lift_vs_expected_pct": -24.68,
+                "standard_error": 0.07326,
+                "z_score": -1.6841,
+                "p_value": 0.092165,
+                "p_adjusted": 0.092165,
+                "comparisons_adjusted": 1,
+                "evidence": "early"
+              },
+              "Weighted Historical": {
+                "samples": 77,
+                "avg_matches": 0.4026,
+                "ge2_rate": 5.19,
+                "ge3_rate": 0.0,
+                "best_matches": 2,
+                "distribution": {
+                  "0": 50,
+                  "1": 23,
+                  "2": 4,
+                  "3": 0,
+                  "4": 0,
+                  "5": 0
+                },
+                "expected_matches": 0.5,
+                "lift_vs_expected_pct": -19.48,
+                "standard_error": 0.07326,
+                "z_score": -1.3295,
+                "p_value": 0.18367,
+                "p_adjusted": 0.18367,
+                "comparisons_adjusted": 1,
+                "evidence": "early"
+              },
+              "Cold 6M": {
+                "samples": 77,
+                "avg_matches": 0.5714,
+                "ge2_rate": 9.09,
+                "ge3_rate": 0.0,
+                "best_matches": 2,
+                "distribution": {
+                  "0": 40,
+                  "1": 30,
+                  "2": 7,
+                  "3": 0,
+                  "4": 0,
+                  "5": 0
+                },
+                "expected_matches": 0.5,
+                "lift_vs_expected_pct": 14.29,
+                "standard_error": 0.07326,
+                "z_score": 0.975,
+                "p_value": 0.329562,
+                "p_adjusted": 0.329562,
+                "comparisons_adjusted": 1,
+                "evidence": "early"
+              },
+              "Diversified Coverage": {
+                "samples": 77,
+                "avg_matches": 0.4416,
+                "ge2_rate": 5.19,
+                "ge3_rate": 0.0,
+                "best_matches": 2,
+                "distribution": {
+                  "0": 47,
+                  "1": 26,
+                  "2": 4,
+                  "3": 0,
+                  "4": 0,
+                  "5": 0
+                },
+                "expected_matches": 0.5,
+                "lift_vs_expected_pct": -11.69,
+                "standard_error": 0.07326,
+                "z_score": -0.7977,
+                "p_value": 0.425031,
+                "p_adjusted": 0.425031,
+                "comparisons_adjusted": 1,
+                "evidence": "early"
+              }
+            },
+            "delta_avg_matches_vs_best_v1": 0.013,
+            "delta_avg_matches_vs_chance": 0.0844,
+            "promotion_ready": false
+          },
+          "validation_leaderboard": [
+            {
+              "rank": 1,
+              "id": "frequency_reversion_w30_g30",
+              "name": "Frequency Reversion 30",
+              "family": "Frequency Reversion",
+              "objective": 0.604622,
+              "avg_matches": 0.6438,
+              "ge2_rate": 15.07,
+              "evidence": "early"
+            },
+            {
+              "rank": 2,
+              "id": "trend_reversion_16_80",
+              "name": "Trend Reversion 16/80",
+              "family": "Trend",
+              "objective": 0.576967,
+              "avg_matches": 0.589,
+              "ge2_rate": 8.22,
+              "evidence": "early"
+            },
+            {
+              "rank": 3,
+              "id": "frequency_reversion_w30_g50",
+              "name": "Frequency Reversion 30 strong gap",
+              "family": "Frequency Reversion",
+              "objective": 0.549968,
+              "avg_matches": 0.589,
+              "ge2_rate": 10.96,
+              "evidence": "early"
+            },
+            {
+              "rank": 4,
+              "id": "frequency_reversion_w180_g50",
+              "name": "Frequency Reversion 180 strong gap",
+              "family": "Frequency Reversion",
+              "objective": 0.536188,
+              "avg_matches": 0.5616,
+              "ge2_rate": 12.33,
+              "evidence": "early"
+            },
+            {
+              "rank": 5,
+              "id": "ewma_momentum_h8_g15",
+              "name": "EWMA Momentum h8 + gap",
+              "family": "EWMA Momentum",
+              "objective": 0.532663,
+              "avg_matches": 0.5342,
+              "ge2_rate": 6.85,
+              "evidence": "early"
+            }
+          ],
+          "interpretation": "A candidate is selected only on the validation window. The later hold-out window is then opened once. No live strategy is changed automatically, even if a challenger looks better."
+        }
+      },
+      "notes": [
+        "Candidate families are pre-declared before the held-out test is inspected.",
+        "The search optimizes main-number match behaviour, not retrospective jackpot ROI.",
+        "Every candidate still has the same base mathematical lottery odds as any other valid line.",
+        "Current-format Lotto remains data-limited and is not optimized using incompatible legacy 6/58 outcomes."
+      ]
     },
     "notes": [
       "All backtests are walk-forward: a target draw is never visible when its prediction is generated.",
