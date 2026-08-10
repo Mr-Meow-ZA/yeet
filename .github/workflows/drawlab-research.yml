@@ -46,6 +46,7 @@ jobs:
       - name: Run one-year retrospective
         run: python drawlab-sa/scripts/retrospective_v3.py
       - name: Refresh exact EV economics and selective-entry research
+        # The engine reuses a validated cache refreshed within the last six hours.
         run: python drawlab-sa/scripts/ev_hunter.py --refresh-history --workers 1
       - name: Rebuild v3 read model
         run: python drawlab-sa/scripts/build_v3_state.py
