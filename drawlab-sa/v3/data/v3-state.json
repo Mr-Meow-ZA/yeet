@@ -1,9 +1,9 @@
 {
   "schema_version": 7,
-  "generated_at": "2026-08-10T16:21:38.450123+00:00",
+  "generated_at": "2026-08-10T16:24:53.503065+00:00",
   "platform": "DrawLab v3 Research Platform",
   "cloud_status": "ok",
-  "cloud_updated_at": "2026-08-10T18:21:37.570719+02:00",
+  "cloud_updated_at": "2026-08-10T18:24:50.834241+02:00",
   "history_quality": {
     "Daily Lotto": {
       "raw": 950,
@@ -488,7 +488,7 @@
         35
       ],
       "bonus": null,
-      "source": "https://za.national-lottery.com/daily-lotto/results",
+      "source": "https://www.lottery.co.za/daily-lotto/results",
       "payouts": {
         "5": 151338.0,
         "4": 361.8,
@@ -510,7 +510,7 @@
         42
       ],
       "bonus": 30,
-      "source": "https://za.national-lottery.com/lotto/results",
+      "source": "https://www.lottery.co.za/lotto/results",
       "payouts": {
         "6": 9000000.0,
         "5+B": 214665.8,
@@ -898,7 +898,7 @@
     "policy": "These lines never change. A ticket is entered on every eligible draw using the era-correct board cost."
   },
   "shadow_research": {
-    "updated_at": "2026-08-10T16:21:38.400316+00:00",
+    "updated_at": "2026-08-10T16:24:52.631621+00:00",
     "summary": {
       "powerball-frequency-reversion-30-v0.1": {
         "challenger_id": "powerball-frequency-reversion-30-v0.1",
@@ -920,7 +920,183 @@
     "recent_tickets": [],
     "policy": "Prospective research only. Shadow tickets are created only from already-locked challengers before the target result exists."
   },
-  "ev_hunter": {},
+  "ev_hunter": {
+    "schema_version": 1,
+    "model_version": "EV Hunter v1.0",
+    "updated_at": "2026-08-10T16:24:53.431159+00:00",
+    "purpose": "Selective expected-value research. This model changes when to participate and how to reduce sharing risk; it does not predict winning numbers.",
+    "current": {
+      "Daily Lotto": {
+        "draw_date": "2026-08-10",
+        "decision": "SOURCE_UNAVAILABLE",
+        "ticket_cost": 3.0,
+        "ticket_cost_source": "rule_era_verified",
+        "advertised_jackpot": null,
+        "expected_return": null,
+        "expected_roi_pct": null,
+        "break_even_jackpot": null,
+        "jackpot_source": null,
+        "anti_crowd_line": {
+          "numbers": [
+            7,
+            19,
+            24,
+            33,
+            36
+          ],
+          "bonus": null,
+          "crowding_score": 1.5,
+          "model": "anti-crowd-v1",
+          "meaning": "Lower heuristic crowding is intended to reduce prize-sharing risk only; it does not change draw odds."
+        }
+      },
+      "Lotto": {
+        "draw_date": "2026-08-12",
+        "decision": "SOURCE_UNAVAILABLE",
+        "ticket_cost": 5.0,
+        "ticket_cost_source": "rule_era_verified",
+        "advertised_jackpot": null,
+        "expected_return": null,
+        "expected_roi_pct": null,
+        "break_even_jackpot": null,
+        "jackpot_source": null,
+        "anti_crowd_line": {
+          "numbers": [
+            12,
+            34,
+            36,
+            40,
+            47,
+            51
+          ],
+          "bonus": null,
+          "crowding_score": 0.596667,
+          "model": "anti-crowd-v1",
+          "meaning": "Lower heuristic crowding is intended to reduce prize-sharing risk only; it does not change draw odds."
+        }
+      },
+      "PowerBall": {
+        "draw_date": "2026-08-11",
+        "decision": "SOURCE_UNAVAILABLE",
+        "ticket_cost": 10.0,
+        "ticket_cost_source": "rule_era_verified",
+        "advertised_jackpot": null,
+        "expected_return": null,
+        "expected_roi_pct": null,
+        "break_even_jackpot": null,
+        "jackpot_source": null,
+        "anti_crowd_line": {
+          "numbers": [
+            32,
+            34,
+            38,
+            46,
+            49
+          ],
+          "bonus": 13,
+          "crowding_score": 0.168,
+          "model": "anti-crowd-v1",
+          "meaning": "Lower heuristic crowding is intended to reduce prize-sharing risk only; it does not change draw odds."
+        }
+      }
+    },
+    "historical_backtest": {
+      "Daily Lotto": {
+        "entries": 0,
+        "spend": 0.0,
+        "won": 0.0,
+        "net": 0.0,
+        "roi_pct": null,
+        "decisions": [],
+        "interpretation": "Historical target jackpot was public pre-draw information; payout and winning numbers are used only after the entry decision for settlement."
+      },
+      "Lotto": {
+        "entries": 0,
+        "spend": 0.0,
+        "won": 0.0,
+        "net": 0.0,
+        "roi_pct": null,
+        "decisions": [],
+        "interpretation": "Historical target jackpot was public pre-draw information; payout and winning numbers are used only after the entry decision for settlement."
+      },
+      "PowerBall": {
+        "entries": 0,
+        "spend": 0.0,
+        "won": 0.0,
+        "net": 0.0,
+        "roi_pct": null,
+        "decisions": [],
+        "interpretation": "Historical target jackpot was public pre-draw information; payout and winning numbers are used only after the entry decision for settlement."
+      }
+    },
+    "shadow_tickets": [],
+    "shadow_summary": {
+      "tickets": 0,
+      "settled": 0,
+      "pending": 0,
+      "spend": 0,
+      "won": 0,
+      "net": 0,
+      "roi_pct": null,
+      "created_now": 0,
+      "settled_now": 0
+    },
+    "decisions": [
+      {
+        "date": "2026-08-12",
+        "game": "Lotto",
+        "recorded_at": "2026-08-10T18:24:52.803624+02:00",
+        "decision": "SOURCE_UNAVAILABLE",
+        "ev_ratio": null,
+        "expected_roi_pct": null,
+        "advertised_jackpot": null,
+        "break_even_jackpot": null,
+        "ticket_cost": 5.0,
+        "source": null
+      },
+      {
+        "date": "2026-08-11",
+        "game": "PowerBall",
+        "recorded_at": "2026-08-10T18:24:52.803624+02:00",
+        "decision": "SOURCE_UNAVAILABLE",
+        "ev_ratio": null,
+        "expected_roi_pct": null,
+        "advertised_jackpot": null,
+        "break_even_jackpot": null,
+        "ticket_cost": 10.0,
+        "source": null
+      },
+      {
+        "date": "2026-08-10",
+        "game": "Daily Lotto",
+        "recorded_at": "2026-08-10T18:24:52.803624+02:00",
+        "decision": "SOURCE_UNAVAILABLE",
+        "ev_ratio": null,
+        "expected_roi_pct": null,
+        "advertised_jackpot": null,
+        "break_even_jackpot": null,
+        "ticket_cost": 3.0,
+        "source": null
+      }
+    ],
+    "methodology": {
+      "gate": "ENTER only when modelled expected return >= 1.02x ticket cost and economics sample minimum is met.",
+      "sharing": "Jackpot split risk uses a Poisson collision model under uniform other-ticket selection. This is deliberately conservative for anti-crowd lines.",
+      "anti_crowd": "Deterministic heuristic penalizes birthday-heavy and simple patterned combinations. It changes expected sharing only, never draw probability; no sharing uplift is credited in the gate.",
+      "payouts": "Lower-tier payout estimates are medians of positive exact archived per-winner payouts available before the target draw.",
+      "sales": "Equivalent line volume is derived from historical Total Sales divided by the verified rule-era ticket cost, then forecast from prior jackpot observations with conservative clamps.",
+      "historical_test": "Each historical entry decision uses the target jackpot but only earlier economics to estimate payout and sales behavior; result and target payout table are used only for settlement."
+    },
+    "cache_coverage": {
+      "Daily Lotto": 0,
+      "Lotto": 0,
+      "PowerBall": 33
+    },
+    "sources": [
+      "https://za.national-lottery.com/results",
+      "https://za.national-lottery.com/<game>/results/<date>"
+    ]
+  },
   "research": {
     "methodology_version": "3.0",
     "null_hypothesis": "Lottery draws are treated as random and independent unless out-of-sample evidence shows otherwise.",
