@@ -1,0 +1,87 @@
+#!/usr/bin/env python3
+from pathlib import Path
+
+index = Path('drawlab-sa/index.html')
+html = index.read_text()
+anchor = '''        <div class="split-xl">\n          <section>\n            <div class="section-head compact"><div><span class="kicker">CHALLENGER</span><h2>Champion vs challenger</h2>'''
+if 'id="discoveryCards"' not in html:
+    block = '''        <div class="section-head"><div><span class="kicker">DISCOVERY</span><h2>Historical strategy search</h2><p>Pre-declared challenger families are selected on validation data, then judged once on untouched later draws.</p></div></div>\n        <div class="cards cols-3" id="discoveryCards"></div>\n\n'''
+    if anchor not in html:
+        raise SystemExit('index discovery insertion anchor missing')
+    html = html.replace(anchor, block + anchor, 1)
+    index.write_text(html)
+
+app = Path('drawlab-sa/v3/app.js')
+js = app.read_text()
+old = """        challengers: rs.challengers || out.research?.challengers || {},\n        notes: rs.notes || out.research?.notes || []"""
+new = """        challengers: rs.challengers || out.research?.challengers || {},\n        strategy_discovery: rs.strategy_discovery || out.research?.strategy_discovery || {},\n        notes: rs.notes || out.research?.notes || []"""
+if 'strategy_discovery: rs.strategy_discovery' not in js:
+    if old not in js:
+        raise SystemExit('app merge anchor missing')
+    js = js.replace(old, new, 1)
+
+call_anchor = """  renderHoldMatrix($('holdGame').value);\n\n  const ch=S.research?.challengers||{};"""
+call_new = """  renderHoldMatrix($('holdGame').value);\n  renderDiscovery();\n\n  const ch=S.research?.challengers||{};"""
+if 'renderDiscovery();' not in js:
+    if call_anchor not in js:
+        raise SystemExit('render discovery call anchor missing')
+    js = js.replace(call_anchor, call_new, 1)
+
+fn_anchor = 'function renderRetro(game){'
+if 'function renderDiscovery(){' not in js:
+    fn = r'''function renderDiscovery(){
+  const d=S.research?.strategy_discovery||{};
+  const games=d.games||{};
+  const cards=GAME_ORDER.map(game=>{
+    const r=games[game]||{};
+    if(r.status==='insufficient_data'){
+      return `<article class="card"><div class="card-head"><div><span class="pill amber">WAITING FOR DATA</span><h3 style="margin-top:9px">${game}</h3></div></div><p class="sub" style="margin-top:11px">${esc(r.reason||'Not enough compatible-rule draws yet.')}</p><div class="kpis"><div class="mini"><span>Compatible draws</span><strong>${fmt(r.draws||0)}</strong></div><div class="mini"><span>Minimum target</span><strong>${fmt(r.minimum_needed||0)}</strong></div></div></article>`;
+    }
+    const c=r.selected||{}, test=r.held_out_test||{}, cm=test.candidate||{}, base=test.best_current_v1||{};
+    const delta=Number(test.delta_avg_matches_vs_best_v1||0);
+    const status=r.status==='promotion_candidate'?'PROMOTION CANDIDATE':r.status==='promising_unproven'?'PROMISING · UNPROVEN':r.status==='early_promising'?'EARLY SIGNAL':'NO IMPROVEMENT';
+    const pill=r.status==='promotion_candidate'?'green':r.status==='promising_unproven'||r.status==='early_promising'?'purple':'';
+    return `<article class="card"><div class="card-head"><div><span class="pill ${pill}">${status}</span><h3 style="margin-top:9px">${game}</h3><p class="sub">${esc(c.name||'No selected challenger')}</p></div><span class="pill">${esc(c.family||'research')}</span></div><div class="kpis"><div class="mini"><span>Held-out avg</span><strong>${cm.avg_matches??'—'}</strong></div><div class="mini"><span>Best current v1</span><strong>${base.avg_matches??'—'}</strong></div><div class="mini"><span>Delta</span><strong class="${cls(delta)}">${delta>0?'+':''}${delta.toFixed(4)}</strong></div><div class="mini"><span>Test draws</span><strong>${fmt(cm.samples||0)}</strong></div></div><p class="sub" style="margin-top:11px">Chance expectation: <b>${cm.expected_matches??'—'}</b>. Adjusted evidence: <b>${esc(String(cm.evidence||'unknown').replaceAll('_',' '))}</b>. No challenger is promoted automatically.</p></article>`;
+  }).join('');
+  $('discoveryCards').innerHTML = cards || '<div class="empty">Strategy discovery is preparing.</div>';
+}
+
+'''
+    if fn_anchor not in js:
+        raise SystemExit('render function insertion anchor missing')
+    js = js.replace(fn_anchor, fn + fn_anchor, 1)
+app.write_text(js)
+
+integrity = Path('.github/workflows/drawlab-integrity.yml')
+y = integrity.read_text()
+if 'drawlab-sa/scripts/strategy_discovery.py' not in y:
+    marker = """            drawlab-sa/scripts/research_engine.py \\
+            drawlab-sa/scripts/retrospective_v3.py"""
+    repl = """            drawlab-sa/scripts/research_engine.py \\
+            drawlab-sa/scripts/strategy_discovery.py \\
+            drawlab-sa/scripts/retrospective_v3.py"""
+    if marker not in y:
+        raise SystemExit('integrity compile anchor missing')
+    y = y.replace(marker, repl, 1)
+y = y.replace("assert state.get('schema_version',0) >= 4, state.get('schema_version')", "assert state.get('schema_version',0) >= 5, state.get('schema_version')")
+if "grep -q 'strategy_discovery' drawlab-sa/v3/app.js" not in y:
+    marker = "          grep -q 'const rs = db.research' drawlab-sa/v3/app.js\n"
+    repl = marker + "          grep -q 'strategy_discovery' drawlab-sa/v3/app.js\n"
+    if marker not in y:
+        raise SystemExit('integrity app grep anchor missing')
+    y = y.replace(marker, repl, 1)
+if "discovery.get('candidate_count',0)" not in y:
+    marker = """          hs={str(r.get('horizon')) for r in research.get('walk_forward',[])}
+          assert {'1','2','4','8','20','never'} <= hs, hs
+          retro=p.get('retrospective') or {}"""
+    repl = """          hs={str(r.get('horizon')) for r in research.get('walk_forward',[])}
+          assert {'1','2','4','8','20','never'} <= hs, hs
+          discovery=research.get('strategy_discovery') or {}
+          assert discovery.get('candidate_count',0) >= 20, discovery
+          retro=p.get('retrospective') or {}"""
+    if marker not in y:
+        raise SystemExit('integrity endpoint anchor missing')
+    y = y.replace(marker, repl, 1)
+integrity.write_text(y)
+
+print('DrawLab discovery UI patch applied')
