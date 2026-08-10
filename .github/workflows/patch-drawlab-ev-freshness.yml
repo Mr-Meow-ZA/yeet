@@ -1,0 +1,45 @@
+name: Patch DrawLab EV Cache Freshness
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/patch-drawlab-ev-freshness.yml'
+      - 'drawlab-sa/scripts/patch_ev_freshness_once.py'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: drawlab-code-maintenance
+  cancel-in-progress: false
+
+jobs:
+  patch:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Apply freshness guard
+        run: python drawlab-sa/scripts/patch_ev_freshness_once.py
+      - name: Validate engine
+        run: |
+          python -m py_compile drawlab-sa/scripts/ev_hunter.py
+          grep -q 'skipped.*fresh_cache' drawlab-sa/scripts/ev_hunter.py
+          grep -q 'fresh_for_hours' drawlab-sa/scripts/ev_hunter.py
+      - name: Commit engine and remove patch helper
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm drawlab-sa/scripts/patch_ev_freshness_once.py
+          git config user.name 'DrawLab Research Bot'
+          git config user.email 'drawlab-research@users.noreply.github.com'
+          git add drawlab-sa/scripts/ev_hunter.py drawlab-sa/scripts/patch_ev_freshness_once.py
+          git commit -m 'Avoid redundant DrawLab EV archive crawls'
+          for attempt in 1 2 3; do
+            if git push origin HEAD:master; then exit 0; fi
+            git pull --rebase origin master
+          done
+          exit 1
