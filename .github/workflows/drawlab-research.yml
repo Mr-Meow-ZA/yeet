@@ -8,6 +8,9 @@ on:
       - 'drawlab-sa/scripts/strategy_discovery.py'
       - 'drawlab-sa/scripts/retrospective_v3.py'
       - 'drawlab-sa/scripts/ev_hunter.py'
+      - 'drawlab-sa/scripts/ev_hunter_v2.py'
+      - 'drawlab-sa/scripts/crowd_model.py'
+      - 'drawlab-sa/scripts/draw_integrity.py'
       - 'drawlab-sa/scripts/build_v3_state.py'
       - 'drawlab-sa/data/historical-results.json'
       - '.github/workflows/drawlab-research.yml'
@@ -22,7 +25,7 @@ concurrency:
 jobs:
   research:
     runs-on: ubuntu-24.04
-    timeout-minutes: 25
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v7
         with:
@@ -38,19 +41,51 @@ jobs:
           python -m py_compile drawlab-sa/scripts/strategy_discovery.py
           python -m py_compile drawlab-sa/scripts/retrospective_v3.py
           python -m py_compile drawlab-sa/scripts/ev_hunter.py
+          python -m py_compile drawlab-sa/scripts/ev_hunter_v2.py
+          python -m py_compile drawlab-sa/scripts/crowd_model.py
+          python -m py_compile drawlab-sa/scripts/draw_integrity.py
           python -m py_compile drawlab-sa/scripts/build_v3_state.py
-      - name: Run walk-forward research
+      - name: Run walk-forward draw-prediction research
         run: python drawlab-sa/scripts/research_engine.py
       - name: Search challenger strategy families
         run: python drawlab-sa/scripts/strategy_discovery.py
       - name: Run one-year retrospective
         run: python drawlab-sa/scripts/retrospective_v3.py
-      - name: Refresh exact EV economics and selective-entry research
-        # The engine reuses a validated cache refreshed within the last six hours.
-        run: python drawlab-sa/scripts/ev_hunter.py --refresh-history --workers 1
+      - name: Refresh exact draw economics
+        # ev_hunter_v2 delegates the paced archive crawl to the stable v1 parser,
+        # then replaces the state with structural v2 economics below.
+        run: python drawlab-sa/scripts/ev_hunter_v2.py --refresh-history --workers 1
+      - name: Fit empirical player crowding model
+        run: python drawlab-sa/scripts/crowd_model.py
+      - name: Run draw integrity auditor
+        run: python drawlab-sa/scripts/draw_integrity.py
+      - name: Rebuild EV Hunter v2 with latest crowd model
+        run: python drawlab-sa/scripts/ev_hunter_v2.py
       - name: Rebuild v3 read model
         run: python drawlab-sa/scripts/build_v3_state.py
-      - name: Commit research, EV and v3 state safely
+      - name: Validate generated research layers
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('drawlab-sa/data')
+          ev=json.loads((root/'ev-state.json').read_text())
+          crowd=json.loads((root/'crowd-state.json').read_text())
+          integrity=json.loads((root/'integrity-state.json').read_text())
+          v3=json.loads(Path('drawlab-sa/v3/data/v3-state.json').read_text())
+          assert ev.get('model_version') == 'EV Hunter v2.0', ev.get('model_version')
+          assert set(ev.get('current',{})) == {'Daily Lotto','Lotto','PowerBall'}
+          assert 'break_even_jackpot' in ev['current']['Daily Lotto'] and ev['current']['Daily Lotto']['break_even_jackpot'] is None
+          assert crowd.get('model_version') == 'Crowd Model v1.0'
+          assert integrity.get('model_version') == 'Draw Integrity Auditor v1.0'
+          assert v3.get('ev_hunter',{}).get('model_version') == 'EV Hunter v2.0'
+          assert v3.get('crowd_model',{}).get('model_version') == 'Crowd Model v1.0'
+          assert v3.get('integrity_audit',{}).get('model_version') == 'Draw Integrity Auditor v1.0'
+          print('All DrawLab research layers validated')
+          PY
+      - name: Commit research layers safely
         shell: bash
         run: |
           set -euo pipefail
@@ -58,14 +93,14 @@ jobs:
           git config user.email 'drawlab-research@users.noreply.github.com'
 
           for attempt in 1 2 3; do
-            git add drawlab-sa/data/research-state.json drawlab-sa/data/ev-history.json drawlab-sa/data/ev-state.json drawlab-sa/v3/data/retrospective.json drawlab-sa/v3/data/v3-state.json
+            git add drawlab-sa/data/research-state.json drawlab-sa/data/ev-history.json drawlab-sa/data/ev-state.json drawlab-sa/data/crowd-state.json drawlab-sa/data/integrity-state.json drawlab-sa/v3/data/retrospective.json drawlab-sa/v3/data/v3-state.json
             if git diff --cached --quiet; then
               echo 'No research-state changes'
               exit 0
             fi
-            git commit -m 'Update DrawLab research, EV and v3 state'
+            git commit -m 'Update DrawLab structural research state'
             if git push origin HEAD:master; then
-              echo 'Research, EV and v3 state pushed successfully'
+              echo 'Research layers pushed successfully'
               exit 0
             fi
             echo "Push attempt ${attempt} conflicted; rebuilding on current master"
@@ -74,7 +109,10 @@ jobs:
             python drawlab-sa/scripts/research_engine.py
             python drawlab-sa/scripts/strategy_discovery.py
             python drawlab-sa/scripts/retrospective_v3.py
-            python drawlab-sa/scripts/ev_hunter.py --refresh-history --workers 1
+            python drawlab-sa/scripts/ev_hunter_v2.py --refresh-history --workers 1
+            python drawlab-sa/scripts/crowd_model.py
+            python drawlab-sa/scripts/draw_integrity.py
+            python drawlab-sa/scripts/ev_hunter_v2.py
             python drawlab-sa/scripts/build_v3_state.py
           done
           echo 'Unable to push research state after three attempts'
