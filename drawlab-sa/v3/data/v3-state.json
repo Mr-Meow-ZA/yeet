@@ -1,6 +1,6 @@
 {
   "schema_version": 7,
-  "generated_at": "2026-08-10T16:24:53.503065+00:00",
+  "generated_at": "2026-08-10T16:26:36.379406+00:00",
   "platform": "DrawLab v3 Research Platform",
   "cloud_status": "ok",
   "cloud_updated_at": "2026-08-10T18:24:50.834241+02:00",
@@ -923,7 +923,7 @@
   "ev_hunter": {
     "schema_version": 1,
     "model_version": "EV Hunter v1.0",
-    "updated_at": "2026-08-10T16:24:53.431159+00:00",
+    "updated_at": "2026-08-10T16:26:36.322433+00:00",
     "purpose": "Selective expected-value research. This model changes when to participate and how to reduce sharing risk; it does not predict winning numbers.",
     "current": {
       "Daily Lotto": {
@@ -1090,7 +1090,7 @@
     "cache_coverage": {
       "Daily Lotto": 0,
       "Lotto": 0,
-      "PowerBall": 33
+      "PowerBall": 0
     },
     "sources": [
       "https://za.national-lottery.com/results",
@@ -4161,7 +4161,7 @@
   },
   "retrospective": {
     "schema_version": 1,
-    "generated_at": "2026-08-10T14:30:15.083018+00:00",
+    "generated_at": "2026-08-10T16:26:28.132760+00:00",
     "simulation": {
       "start": "2025-08-07",
       "end": "2026-08-06",

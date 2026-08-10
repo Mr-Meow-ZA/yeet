@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-08-10T16:26:36.048946+00:00",
+  "source_policy": "Exact public result pages; ticket cost is rule-era configured and effective line volume is derived from Total Sales / ticket cost.",
+  "rows": [],
+  "coverage": {
+    "Daily Lotto": 0,
+    "Lotto": 0,
+    "PowerBall": 0
+  },
+  "refresh": {
+    "requested": 307,
+    "fetched": 0,
+    "failed": 307
+  }
+}
