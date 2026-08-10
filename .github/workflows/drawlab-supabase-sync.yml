@@ -8,6 +8,7 @@ on:
       - 'drawlab-sa/data/historical-results.json'
       - 'drawlab-sa/data/research-state.json'
       - 'drawlab-sa/data/shadow-state.json'
+      - 'drawlab-sa/data/ev-state.json'
       - 'drawlab-sa/data/challenger-locks.json'
       - 'drawlab-sa/v3/data/retrospective.json'
       - '.github/workflows/drawlab-supabase-sync.yml'
@@ -43,5 +44,7 @@ jobs:
               raise SystemExit('DrawLab retrospective snapshot was not synchronized')
           if not sync.get('shadow_synced'):
               raise SystemExit('DrawLab prospective shadow snapshot was not synchronized')
-          print('DrawLab Supabase sync validated; methodology',sync.get('research_methodology'),'shadow',sync.get('shadow_synced'))
+          if not sync.get('ev_synced'):
+              raise SystemExit('DrawLab EV Hunter snapshot was not synchronized')
+          print('DrawLab Supabase sync validated; methodology',sync.get('research_methodology'),'shadow',sync.get('shadow_synced'),'EV',sync.get('ev_synced'))
           PY
