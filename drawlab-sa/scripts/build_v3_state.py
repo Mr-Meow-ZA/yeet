@@ -11,6 +11,8 @@ CLOUD = ROOT / 'data' / 'cloud-state.json'
 RESEARCH = ROOT / 'data' / 'research-state.json'
 SHADOW = ROOT / 'data' / 'shadow-state.json'
 EV = ROOT / 'data' / 'ev-state.json'
+CROWD = ROOT / 'data' / 'crowd-state.json'
+INTEGRITY = ROOT / 'data' / 'integrity-state.json'
 FROZEN = ROOT / 'v3' / 'data' / 'frozen-alpha.json'
 RETRO = ROOT / 'v3' / 'data' / 'retrospective.json'
 OUT = ROOT / 'v3' / 'data' / 'v3-state.json'
@@ -28,6 +30,8 @@ def main() -> None:
     research = load(RESEARCH, {})
     shadow = load(SHADOW, {'tickets': [], 'summary': {}})
     ev = load(EV, {})
+    crowd = load(CROWD, {})
+    integrity = load(INTEGRITY, {})
     frozen = load(FROZEN, {})
     retro = load(RETRO, {})
     tickets = list(cloud.get('virtual', {}).get('tickets', []))
@@ -115,9 +119,15 @@ def main() -> None:
     )[:30]
 
     payload = {
-        'schema_version': 7,
+        'schema_version': 8,
         'generated_at': datetime.now(timezone.utc).isoformat(),
         'platform': 'DrawLab v3 Research Platform',
+        'research_architecture': {
+            'draw_prediction': 'Historical-number strategies remain frozen controls unless prospective evidence beats chance after correction.',
+            'player_behaviour': 'Crowd Model estimates how human ticket choices affect sharing risk; it never changes draw probability.',
+            'economics': 'EV Hunter decides whether a draw is economically attractive from prize mechanics, sales demand and collision risk.',
+            'integrity': 'Draw Integrity Auditor tests the random/independent null before any anomaly is treated as potentially meaningful.',
+        },
         'cloud_status': cloud.get('status'),
         'cloud_updated_at': cloud.get('updated_at'),
         'history_quality': cloud.get('history_quality', {}),
@@ -135,6 +145,8 @@ def main() -> None:
             'policy': shadow.get('policy'),
         },
         'ev_hunter': ev,
+        'crowd_model': crowd,
+        'integrity_audit': integrity,
         'research': {
             'methodology_version': research.get('methodology_version'),
             'null_hypothesis': research.get('null_hypothesis'),
@@ -154,11 +166,12 @@ def main() -> None:
             'No future leakage',
             'Immutable historical predictions',
             'Version every algorithm',
+            'Separate draw prediction, player behaviour and prize economics',
             'Live results evaluate models but do not directly reward or punish individual numbers',
             'Randomness is the null hypothesis',
             'ROI alone does not establish predictive ability',
             'Adjust for multiple testing',
-            'Respect rule eras',
+            'Respect rule eras and prize-mechanic changes',
             'Exclude questionable data rather than inventing it',
         ],
     }
@@ -172,6 +185,8 @@ def main() -> None:
         'discovery_games': len((research.get('strategy_discovery') or {}).get('games', {})),
         'shadow_tickets': len(shadow.get('tickets', [])),
         'ev_shadow_tickets': len(ev.get('shadow_tickets', [])) if isinstance(ev, dict) else 0,
+        'crowd_games': len((crowd.get('games') or {})) if isinstance(crowd, dict) else 0,
+        'integrity_games': len((integrity.get('games') or {})) if isinstance(integrity, dict) else 0,
         'cloud_status': cloud.get('status'),
     }, indent=2))
 
