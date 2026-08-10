@@ -1,7 +1,24 @@
 {
   "schema_version": 1,
-  "updated_at": null,
+  "updated_at": "2026-08-10T14:31:42.763979+00:00",
   "tickets": [],
-  "summary": {},
+  "summary": {
+    "powerball-frequency-reversion-30-v0.1": {
+      "challenger_id": "powerball-frequency-reversion-30-v0.1",
+      "name": "Frequency Reversion 30",
+      "game": "PowerBall",
+      "status": "shadow",
+      "locked_on": "2026-08-10",
+      "tickets": 0,
+      "settled": 0,
+      "pending": 0,
+      "avg_matches": null,
+      "ge2_rate": null,
+      "ge3_rate": null,
+      "best_matches": null,
+      "distribution": {},
+      "confirmation_note": "Prospective only; no result in this sample was available when its shadow line was created."
+    }
+  },
   "policy": "Prospective research only. Shadow tickets are created only from already-locked challengers before the target result exists."
 }

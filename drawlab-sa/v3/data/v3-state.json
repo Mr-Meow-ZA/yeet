@@ -1,9 +1,9 @@
 {
   "schema_version": 6,
-  "generated_at": "2026-08-10T14:30:15.131501+00:00",
+  "generated_at": "2026-08-10T14:31:42.796432+00:00",
   "platform": "DrawLab v3 Research Platform",
   "cloud_status": "ok",
-  "cloud_updated_at": "2026-08-10T16:13:00.545677+02:00",
+  "cloud_updated_at": "2026-08-10T16:31:12.476070+02:00",
   "history_quality": {
     "Daily Lotto": {
       "raw": 950,
@@ -782,8 +782,25 @@
     "policy": "These lines never change. A ticket is entered on every eligible draw using the era-correct board cost."
   },
   "shadow_research": {
-    "updated_at": null,
-    "summary": {},
+    "updated_at": "2026-08-10T14:31:42.763979+00:00",
+    "summary": {
+      "powerball-frequency-reversion-30-v0.1": {
+        "challenger_id": "powerball-frequency-reversion-30-v0.1",
+        "name": "Frequency Reversion 30",
+        "game": "PowerBall",
+        "status": "shadow",
+        "locked_on": "2026-08-10",
+        "tickets": 0,
+        "settled": 0,
+        "pending": 0,
+        "avg_matches": null,
+        "ge2_rate": null,
+        "ge3_rate": null,
+        "best_matches": null,
+        "distribution": {},
+        "confirmation_note": "Prospective only; no result in this sample was available when its shadow line was created."
+      }
+    },
     "recent_tickets": [],
     "policy": "Prospective research only. Shadow tickets are created only from already-locked challengers before the target result exists."
   },
