@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "model_version": "EV Hunter v2.0",
-  "updated_at": "2026-08-11T04:36:36.276729+00:00",
+  "updated_at": "2026-08-11T16:47:17.832223+00:00",
   "purpose": "Selective expected-value research based on prize mechanics, sales demand and sharing risk. It changes when to participate, not the probability of the draw.",
   "current": {
     "Daily Lotto": {
