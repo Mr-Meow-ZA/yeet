@@ -133,3 +133,5 @@ jobs:
           assert sync.get('ev_synced'), p
           print('Supabase synchronized after research refresh')
           PY
+
+# v4 workspace validation trigger
