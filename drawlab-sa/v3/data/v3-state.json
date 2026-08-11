@@ -1,6 +1,6 @@
 {
   "schema_version": 8,
-  "generated_at": "2026-08-10T23:07:40.319796+00:00",
+  "generated_at": "2026-08-11T04:36:36.536531+00:00",
   "platform": "DrawLab v3 Research Platform",
   "research_architecture": {
     "draw_prediction": "Historical-number strategies remain frozen controls unless prospective evidence beats chance after correction.",
@@ -834,21 +834,21 @@
   "ev_hunter": {
     "schema_version": 2,
     "model_version": "EV Hunter v2.0",
-    "updated_at": "2026-08-10T23:07:40.188615+00:00",
+    "updated_at": "2026-08-11T04:36:36.276729+00:00",
     "purpose": "Selective expected-value research based on prize mechanics, sales demand and sharing risk. It changes when to participate, not the probability of the draw.",
     "current": {
       "Daily Lotto": {
         "ticket_cost": 3.0,
         "advertised_jackpot": 400000.0,
         "jackpot_role": "display_only; Daily Lotto top pool is sales-funded and rolls down rather than rolling over",
-        "predicted_line_volume": 894952,
-        "risk_line_volume": 1018579,
-        "sales_model_samples": 28,
+        "predicted_line_volume": 862097,
+        "risk_line_volume": 986086,
+        "sales_model_samples": 56,
         "prize_pool_rate": 0.5,
-        "prize_pool_estimate": 1342428.0,
+        "prize_pool_estimate": 1293145.5,
         "structural_components": {
-          "5": 0.4761,
-          "4": 0.1989,
+          "5": 0.4717,
+          "4": 0.2033,
           "3": 0.225,
           "2": 0.6
         },
@@ -1127,18 +1127,309 @@
       "historical_test": "Historical entries use only earlier economics and a fixed behavioural-prior anti-crowd line, preventing leakage from the empirical crowd model."
     },
     "cache_coverage": {
-      "Daily Lotto": 28,
+      "Daily Lotto": 56,
       "Lotto": 20,
-      "PowerBall": 28
+      "PowerBall": 56
     },
-    "crowd_model_version": null,
+    "crowd_model_version": "Crowd Model v1.0",
     "sources": [
       "https://za.national-lottery.com/results",
       "https://za.national-lottery.com/<game>/results/<date>"
     ]
   },
-  "crowd_model": {},
-  "integrity_audit": {},
+  "crowd_model": {
+    "schema_version": 1,
+    "model_version": "Crowd Model v1.0",
+    "generated_at": "2026-08-11T04:36:35.511578+00:00",
+    "purpose": "Estimate player-choice crowding from South African ticket sales and winner counts; never used as evidence that a line is more likely to be drawn.",
+    "games": {
+      "Daily Lotto": {
+        "status": "exploratory",
+        "samples": 56,
+        "train_samples": 42,
+        "holdout_samples": 14,
+        "holdout_rmse": 0.01855,
+        "baseline_rmse": 0.02039,
+        "holdout_improvement_pct": 9.0,
+        "holdout_mae_improvement_pct": 8.65,
+        "target": "log(observed prize winners / uniform-choice expected prize winners)",
+        "model": {
+          "intercept": 0.00202012,
+          "coefficients": {
+            "birthday_share": -0.00206562,
+            "lucky7": 0.01492953,
+            "round_share": -0.00115529,
+            "consecutive_rate": -0.00094738,
+            "same_last_digit_rate": -0.00039164,
+            "span_norm": -0.00729244,
+            "sum_norm": -0.00874149,
+            "odd_imbalance": -0.00184616,
+            "progression_rate": 0.00344061,
+            "repeat_prev": -0.00305772
+          },
+          "means": {
+            "birthday_share": 0.88571429,
+            "lucky7": 0.19047619,
+            "round_share": 0.18095238,
+            "consecutive_rate": 0.13690476,
+            "same_last_digit_rate": 0.07619048,
+            "span_norm": 0.66666667,
+            "sum_norm": 0.49021164,
+            "odd_imbalance": 0.40952381,
+            "progression_rate": 0.11904762,
+            "repeat_prev": 0.11428571
+          },
+          "stds": {
+            "birthday_share": 0.14068028,
+            "lucky7": 0.39743662,
+            "round_share": 0.16415058,
+            "consecutive_rate": 0.16749937,
+            "same_last_digit_rate": 0.06172134,
+            "span_norm": 0.16057054,
+            "sum_norm": 0.11907635,
+            "odd_imbalance": 0.28267841,
+            "progression_rate": 0.19228238,
+            "repeat_prev": 0.11805627
+          }
+        },
+        "largest_effects": [
+          {
+            "feature": "lucky7",
+            "coefficient": 0.01493,
+            "direction": "more_crowded"
+          },
+          {
+            "feature": "sum_norm",
+            "coefficient": -0.00874,
+            "direction": "less_crowded"
+          },
+          {
+            "feature": "span_norm",
+            "coefficient": -0.00729,
+            "direction": "less_crowded"
+          },
+          {
+            "feature": "progression_rate",
+            "coefficient": 0.00344,
+            "direction": "more_crowded"
+          },
+          {
+            "feature": "repeat_prev",
+            "coefficient": -0.00306,
+            "direction": "less_crowded"
+          }
+        ],
+        "interpretation": "A positive coefficient means the feature was associated with more prize-winning tickets than uniform player choice would predict. This is player-behaviour research, not draw prediction."
+      },
+      "Lotto": {
+        "status": "insufficient_data",
+        "samples": 20,
+        "minimum": 24
+      },
+      "PowerBall": {
+        "status": "exploratory",
+        "samples": 56,
+        "train_samples": 42,
+        "holdout_samples": 14,
+        "holdout_rmse": 0.03282,
+        "baseline_rmse": 0.04145,
+        "holdout_improvement_pct": 20.84,
+        "holdout_mae_improvement_pct": 22.12,
+        "target": "log(observed prize winners / uniform-choice expected prize winners)",
+        "model": {
+          "intercept": -0.00952753,
+          "coefficients": {
+            "birthday_share": 0.00464227,
+            "lucky7": -0.00228122,
+            "round_share": 0.00667836,
+            "consecutive_rate": 0.01087119,
+            "same_last_digit_rate": 0.00146613,
+            "span_norm": -0.00252469,
+            "sum_norm": -0.00203859,
+            "odd_imbalance": 0.00340075,
+            "progression_rate": -0.00620143,
+            "repeat_prev": -6.804e-05
+          },
+          "means": {
+            "birthday_share": 0.68571429,
+            "lucky7": 0.02380952,
+            "round_share": 0.22380952,
+            "consecutive_rate": 0.0952381,
+            "same_last_digit_rate": 0.08333333,
+            "span_norm": 0.65428571,
+            "sum_norm": 0.49,
+            "odd_imbalance": 0.41904762,
+            "progression_rate": 0.11904762,
+            "repeat_prev": 0.07142857
+          },
+          "stds": {
+            "birthday_share": 0.21250128,
+            "lucky7": 0.15430335,
+            "round_share": 0.1664691,
+            "consecutive_rate": 0.13471267,
+            "same_last_digit_rate": 0.05372317,
+            "span_norm": 0.18763149,
+            "sum_norm": 0.1174435,
+            "odd_imbalance": 0.2370943,
+            "progression_rate": 0.17763012,
+            "repeat_prev": 0.11536943
+          }
+        },
+        "largest_effects": [
+          {
+            "feature": "consecutive_rate",
+            "coefficient": 0.01087,
+            "direction": "more_crowded"
+          },
+          {
+            "feature": "round_share",
+            "coefficient": 0.00668,
+            "direction": "more_crowded"
+          },
+          {
+            "feature": "progression_rate",
+            "coefficient": -0.0062,
+            "direction": "less_crowded"
+          },
+          {
+            "feature": "birthday_share",
+            "coefficient": 0.00464,
+            "direction": "more_crowded"
+          },
+          {
+            "feature": "odd_imbalance",
+            "coefficient": 0.0034,
+            "direction": "more_crowded"
+          }
+        ],
+        "interpretation": "A positive coefficient means the feature was associated with more prize-winning tickets than uniform player choice would predict. This is player-behaviour research, not draw prediction."
+      }
+    },
+    "feature_policy": [
+      "birthday_share",
+      "lucky7",
+      "round_share",
+      "consecutive_rate",
+      "same_last_digit_rate",
+      "span_norm",
+      "sum_norm",
+      "odd_imbalance",
+      "progression_rate",
+      "repeat_prev"
+    ],
+    "use_policy": "Empirical crowd scores may rank equal-probability lines for prize-sharing research. No crowding uplift is credited to the EV entry gate until separately confirmed prospectively."
+  },
+  "integrity_audit": {
+    "schema_version": 1,
+    "model_version": "Draw Integrity Auditor v1.0",
+    "generated_at": "2026-08-11T04:36:35.575086+00:00",
+    "null_hypothesis": "Draws are random and independent within each compatible rule era.",
+    "overall_status": "consistent_with_randomness",
+    "games": {
+      "Daily Lotto": {
+        "status": "consistent_with_randomness",
+        "draws": 951,
+        "first_draw": "2024-01-01",
+        "last_draw": "2026-08-10",
+        "frequency": {
+          "expected_per_number": 132.083,
+          "most_extreme_number": 19,
+          "observed": 112,
+          "z_score": -1.8831,
+          "p_raw": 0.05968164,
+          "p_adjusted": 1.0,
+          "comparisons": 36
+        },
+        "pairs": {
+          "expected_per_pair": 15.0952,
+          "most_extreme_pair": [
+            10,
+            32
+          ],
+          "observed": 27,
+          "z_score": 3.0887,
+          "p_raw": 0.0020103706,
+          "p_adjusted": 1.0,
+          "comparisons": 630
+        },
+        "serial_overlap": {
+          "samples": 950,
+          "expected_overlap": 0.694444,
+          "observed_overlap": 0.681053,
+          "z_score": -0.5672,
+          "p_value": 0.57060512
+        },
+        "duplicates": {
+          "observed_duplicate_pairs": 2,
+          "expected_duplicate_pairs": 1.19823498,
+          "p_value": 0.3367347
+        },
+        "powerball_special": null,
+        "minimum_adjusted_p": 0.3367347,
+        "interpretation": "Passing these tests does not prove perfect randomness; it means this archive does not currently show a corrected anomaly large enough to reject the random/independent null on these predeclared diagnostics."
+      },
+      "Lotto": {
+        "status": "insufficient_data",
+        "draws": 20,
+        "minimum": 60,
+        "rule_scope": "current legal number space only"
+      },
+      "PowerBall": {
+        "status": "consistent_with_randomness",
+        "draws": 272,
+        "first_draw": "2024-01-02",
+        "last_draw": "2026-08-07",
+        "frequency": {
+          "expected_per_number": 27.2,
+          "most_extreme_number": 7,
+          "observed": 15,
+          "z_score": -2.4658,
+          "p_raw": 0.01367157,
+          "p_adjusted": 0.68357856,
+          "comparisons": 50
+        },
+        "pairs": {
+          "expected_per_pair": 2.2204,
+          "most_extreme_pair": [
+            2,
+            10
+          ],
+          "observed": 7,
+          "z_score": 3.2207,
+          "p_raw": 0.0012786458,
+          "p_adjusted": 1.0,
+          "comparisons": 1225
+        },
+        "serial_overlap": {
+          "samples": 271,
+          "expected_overlap": 0.5,
+          "observed_overlap": 0.472325,
+          "z_score": -0.7087,
+          "p_value": 0.47851096
+        },
+        "duplicates": {
+          "observed_duplicate_pairs": 0,
+          "expected_duplicate_pairs": 0.01739508,
+          "p_value": 1.0
+        },
+        "powerball_special": {
+          "status": "insufficient_data",
+          "samples": 20,
+          "minimum": 30
+        },
+        "minimum_adjusted_p": 0.47851096,
+        "interpretation": "Passing these tests does not prove perfect randomness; it means this archive does not currently show a corrected anomaly large enough to reject the random/independent null on these predeclared diagnostics."
+      }
+    },
+    "tests": [
+      "individual-number frequency",
+      "pair frequency",
+      "consecutive-draw overlap",
+      "exact-line duplicates",
+      "current PowerBall special-ball frequency"
+    ],
+    "policy": "No integrity result automatically changes live recommendations. Any flagged anomaly requires independent verification, source-quality checks and prospective confirmation."
+  },
   "research": {
     "methodology_version": "3.0",
     "null_hypothesis": "Lottery draws are treated as random and independent unless out-of-sample evidence shows otherwise.",
@@ -4203,7 +4494,7 @@
   },
   "retrospective": {
     "schema_version": 1,
-    "generated_at": "2026-08-10T21:20:18.281250+00:00",
+    "generated_at": "2026-08-11T04:35:46.629568+00:00",
     "simulation": {
       "start": "2025-08-07",
       "end": "2026-08-06",
