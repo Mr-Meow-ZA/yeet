@@ -4,192 +4,161 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#05080d">
-  <meta name="description" content="DrawLab SA — private deterministic lottery research platform.">
+  <meta name="description" content="DrawLab SA — private lottery research platform.">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>DrawLab SA — Research Platform</title>
-  <link rel="manifest" href="manifest.webmanifest" data-root-manifest>
+  <title>DrawLab SA — Research Terminal</title>
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="v3/icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="v3/styles.css">
+  <link rel="stylesheet" href="v3/styles-v4.css">
 </head>
 <body>
-<div class="app-shell">
+<div class="shell">
   <aside class="rail">
     <div class="brand">
       <div class="brand-mark">DL</div>
-      <div><span>PRIVATE RESEARCH PLATFORM</span><strong>DrawLab SA</strong></div>
+      <div><span>PRIVATE RESEARCH TERMINAL</span><strong>DrawLab SA</strong></div>
     </div>
-    <nav class="nav" id="desktopNav" aria-label="Primary navigation"></nav>
-    <div class="rail-card">
-      <div class="dot-row"><i class="dot"></i><b id="railHealth">Research system</b></div>
-      <p id="railHealthSub">Loading validated state…</p>
-    </div>
+    <div class="nav-label">WORKSPACE</div>
+    <nav class="side-nav" id="sideNav" aria-label="Primary navigation"></nav>
+    <div class="rail-status" id="railStatus"><b>Loading research system…</b><span>Checking database and audit snapshots.</span></div>
   </aside>
 
-  <div class="main-wrap">
+  <div class="main">
     <header class="topbar">
-      <div>
-        <h1 id="viewTitle">Overview</h1>
-        <p id="updatedLabel">Loading research state…</p>
-      </div>
-      <div class="top-actions">
-        <span class="source-chip" id="sourceChip">SYNCING</span>
-        <span class="health-chip" id="healthChip"><i></i><span>CHECKING</span></span>
-      </div>
+      <div><h1 id="pageTitle">Dashboard</h1><p id="pageSub">Today, portfolio and latest evidence</p></div>
+      <div class="top-actions"><span class="source-chip" id="sourceChip">SYNCING</span><span class="health" id="healthChip"><i></i>CHECKING</span></div>
     </header>
 
-    <main>
-      <section class="view active" id="overview">
-        <div class="hero">
-          <div class="hero-copy">
-            <div class="eyebrow">DrawLab v3</div>
-            <h2>Research the process.<br>Never pretend randomness owes us anything.</h2>
-            <p>DrawLab tracks deterministic strategies before real draws, compares them with frozen controls, replays history without future leakage and keeps every version auditable.</p>
-            <div class="hero-actions">
-              <button class="btn primary" data-goto="research">Open Research Lab</button>
-              <button class="btn" data-goto="live">View Live Experiments</button>
-            </div>
-          </div>
-          <div class="evidence-card">
-            <span class="label">CURRENT SCIENTIFIC POSITION</span>
-            <strong id="evidenceHero">No proven edge</strong>
-            <p id="evidenceSub">Loading evidence…</p>
-            <div class="evidence-rule"><span>Null hypothesis</span><b>Draws are random & independent</b></div>
-          </div>
+    <main class="content">
+      <section class="view active" id="dashboard">
+        <div class="page-hero">
+          <div><span class="eyebrow">DrawLab v4 workspace</span><h2>One terminal for the draw, the crowd and the economics.</h2><p>The original number strategies remain locked research controls. New work focuses on three separate questions: is the draw behaving randomly, how do people choose numbers, and is any upcoming draw economically attractive enough to enter?</p></div>
+          <div class="hero-verdict"><span>CURRENT SCIENTIFIC POSITION</span><strong id="heroVerdict">Loading evidence…</strong><p id="heroCopy">Building the latest research view.</p></div>
         </div>
 
-        <div class="section-head"><div><span class="kicker">SYSTEM</span><h2>Research status</h2><p>The whole platform in one glance.</p></div></div>
-        <div class="metrics metrics-5" id="overviewMetrics"></div>
+        <div class="section-head"><div><span class="eyebrow">SYSTEM</span><h2>Research status</h2><p>The entire platform in five numbers.</p></div><span id="updated" class="muted"></span></div>
+        <div class="metrics" id="dashboardMetrics"></div>
 
-        <div class="split-xl">
+        <div class="section-head"><div><span class="eyebrow">TODAY</span><h2>Should we enter?</h2><p>EV Hunter is allowed to say skip. A line is only relevant after the economics pass.</p></div><button class="text-btn" data-goto="market">Open Market →</button></div>
+        <div class="grid-3" id="todayDecisions"></div>
+
+        <div class="grid-2">
           <section>
-            <div class="section-head compact"><div><span class="kicker">LIVE</span><h2>Strategy league</h2><p>Only genuine pre-draw entries.</p></div><button class="link-btn" data-goto="strategies">All strategies →</button></div>
-            <div class="cards cols-2" id="leagueCards"></div>
+            <div class="section-head compact"><div><span class="eyebrow">LIVE</span><h2>Strategy league</h2><p>Only genuine pre-draw paper entries.</p></div><button class="text-btn" data-goto="live">Open Live →</button></div>
+            <div class="panel" id="dashboardLeague"></div>
           </section>
           <aside>
-            <div class="section-head compact"><div><span class="kicker">PORTFOLIO</span><h2>Paper account</h2><p>Research spend and settlement.</p></div></div>
-            <div class="panel" id="portfolioPanel"></div>
+            <div class="section-head compact"><div><span class="eyebrow">RESEARCH NOTE</span><h2>What matters now</h2><p>Signal, not story.</p></div></div>
+            <div class="panel insight" id="dashboardInsight"></div>
           </aside>
         </div>
 
-        <div class="split-xl">
-          <section>
-            <div class="section-head compact"><div><span class="kicker">OFFICIAL</span><h2>Recent results</h2><p>Latest verified draws in the archive.</p></div><button class="link-btn" data-goto="history">Open history →</button></div>
-            <div class="cards" id="recentOverview"></div>
-          </section>
-          <aside>
-            <div class="section-head compact"><div><span class="kicker">RESEARCH NOTE</span><h2>Latest insight</h2><p>Interesting is not the same as significant.</p></div></div>
-            <div class="notice" id="latestInsight"></div>
-          </aside>
-        </div>
-      </section>
-
-      <section class="view" id="strategies">
-        <div class="page-intro"><div class="eyebrow">Strategy architecture</div><h2>Five live competitors.<br>One clean experiment.</h2><p>The four original deterministic models remain dynamic. Frozen Alpha is the permanent control. A formula change creates a new version; it never rewrites the old one.</p></div>
-        <div class="section-head"><div><span class="kicker">CHAMPIONS</span><h2>Live strategy catalog</h2><p>Click a model to open its research profile.</p></div></div>
-        <div class="cards cols-2" id="strategyCards"></div>
+        <div class="section-head"><div><span class="eyebrow">OFFICIAL</span><h2>Recent draw tape</h2><p>Newest verified results from the archive.</p></div><button class="text-btn" data-goto="archive">Open Archive →</button></div>
+        <div class="panel" id="dashboardResults"></div>
       </section>
 
       <section class="view" id="live">
-        <div class="page-intro"><div class="eyebrow">Live experiments</div><h2>What DrawLab actually entered.</h2><p>Historical simulations do not appear here. This is the clean forward-looking ledger: created before draw time, then settled against official results.</p></div>
-        <div class="section-head"><div><span class="kicker">CONTROL</span><h2>Frozen Alpha</h2><p>Locked within the legal rule era. Wins and losses never cause a refresh.</p></div></div>
-        <div class="cards cols-3" id="frozenCards"></div>
+        <div class="page-hero">
+          <div><span class="eyebrow">Forward-only ledger</span><h2>What DrawLab actually entered.</h2><p>No historical simulation appears here. These tickets were created before draw close, locked, then settled against official results.</p></div>
+          <div class="hero-verdict"><span>PENDING NOW</span><strong id="pendingCount">0</strong><p>Open live research tickets awaiting settlement.</p></div>
+        </div>
 
-        <div class="section-head"><div><span class="kicker">OPEN</span><h2>Current entries</h2><p>Pending live tickets, grouped by the latest draw dates.</p></div></div>
-        <div class="panel table-panel"><div class="table" id="pendingTable"></div></div>
+        <div class="section-head"><div><span class="eyebrow">OPEN</span><h2>Current entries</h2><p>Numbers, cost, strategy and draw date.</p></div></div>
+        <div class="panel" id="pendingList"></div>
 
-        <div class="section-head"><div><span class="kicker">PERFORMANCE</span><h2>Live league ledger</h2><p>Spend includes pending entries; winnings are settled amounts only.</p></div></div>
-        <div class="panel table-panel"><div class="table" id="liveTable"></div></div>
+        <div class="section-head"><div><span class="eyebrow">CONTROL</span><h2>Frozen Alpha</h2><p>The permanent “never change the numbers” experiment.</p></div></div>
+        <div class="cards-3" id="frozenGrid"></div>
+
+        <div class="section-head"><div><span class="eyebrow">PERFORMANCE</span><h2>Live league ledger</h2><p>Paper spend, exact settlements and cumulative ROI.</p></div></div>
+        <div class="panel table"><div id="liveLeague"></div></div>
+      </section>
+
+      <section class="view" id="models">
+        <div class="page-hero">
+          <div><span class="eyebrow">Model registry</span><h2>Know what every model is actually trying to do.</h2><p>Prediction, portfolio construction, player behaviour and expected value are different problems. DrawLab keeps them separate so a good result in one layer never gets misrepresented as evidence in another.</p></div>
+          <div class="hero-verdict"><span>GOVERNANCE</span><strong>Versioned & immutable</strong><p>A formula change creates a new version. Old predictions and results are never rewritten.</p></div>
+        </div>
+
+        <div class="section-head"><div><span class="eyebrow">LIVE CONTROLS</span><h2>The original five</h2><p>Long-running evidence, not promises.</p></div></div>
+        <div class="cards-2" id="liveModelGrid"></div>
+
+        <div class="section-head"><div><span class="eyebrow">CHALLENGERS</span><h2>Models trying to earn promotion</h2><p>Selected on earlier data, judged on untouched data, then frozen prospectively.</p></div></div>
+        <div class="cards-3" id="challengerGrid"></div>
+
+        <div class="section-head"><div><span class="eyebrow">ARCHITECTURE</span><h2>Four model roles</h2><p>The clean separation that keeps DrawLab scientifically useful.</p></div></div>
+        <div class="panel methods" id="modelArchitecture"></div>
+      </section>
+
+      <section class="view" id="market">
+        <div class="page-hero">
+          <div><span class="eyebrow">Market / expected value</span><h2>The main question is no longer “what numbers?”</h2><p>First ask whether the draw is worth entering at all. Only then use player-choice research to reduce expected prize sharing. Equal-probability lines remain equal-probability lines.</p></div>
+          <div class="hero-verdict"><span>ENTRY RULE</span><strong>Economics first</strong><p>A low-sharing combination can improve value conditional on winning, but it cannot rescue a negative-EV draw.</p></div>
+        </div>
+
+        <div class="section-head"><div><span class="eyebrow">EV HUNTER v2</span><h2>Current market screen</h2><p>Structural prize mechanics, demand and collision risk.</p></div></div>
+        <div class="cards-3" id="marketCards"></div>
+
+        <div class="section-head"><div><span class="eyebrow">PLAYER BEHAVIOUR</span><h2>Crowd Model v1</h2><p>Empirical South African winner-count research, not “lucky number” folklore.</p></div></div>
+        <div class="cards-3" id="crowdGrid"></div>
+
+        <div class="grid-2">
+          <section><div class="section-head compact"><div><span class="eyebrow">PROSPECTIVE</span><h2>EV shadow portfolio</h2><p>Only qualifying draws generate entries.</p></div></div><div class="panel" id="marketShadow"></div></section>
+          <aside><div class="section-head compact"><div><span class="eyebrow">METHOD</span><h2>How the gate works</h2><p>Why “skip” is often the correct answer.</p></div></div><div class="panel" id="evMethod"></div></aside>
+        </div>
       </section>
 
       <section class="view" id="research">
-        <div class="page-intro"><div class="eyebrow">Research Lab</div><h2>Separate the draw, the crowd and the economics.</h2><p>Every historical target is generated using only earlier information. Draw prediction, player-choice crowding and expected-value research are evaluated separately so one type of signal can never masquerade as another.</p></div>
+        <div class="page-hero">
+          <div><span class="eyebrow">Evidence lab</span><h2>Try hard to disprove ourselves.</h2><p>Walk-forward simulation, multiple-testing correction, rule-era boundaries and prospectively frozen challengers matter more than finding an attractive backtest.</p></div>
+          <div class="hero-verdict"><span>NULL HYPOTHESIS</span><strong>Random & independent</strong><p>Historical structure only earns attention if it survives out-of-sample testing and correction.</p></div>
+        </div>
 
-        <div class="section-head"><div><span class="kicker">OUT-OF-SAMPLE</span><h2>One-year retrospective</h2><p>7 Aug 2025 → 6 Aug 2026. Match behaviour is factual; historical rand returns remain clearly marked when estimated.</p></div><select id="retroGame" class="select" aria-label="Retrospective game"></select></div>
-        <div class="panel table-panel"><div class="table" id="retroTable"></div><div class="notice subtle" id="retroQuality"></div></div>
+        <div class="section-head"><div><span class="eyebrow">DRAW INTEGRITY</span><h2>Does the archive look random?</h2><p>Frequency, pairs and serial-overlap diagnostics with multiple-testing correction.</p></div></div>
+        <div class="cards-3" id="integrityGrid"></div>
 
-        <div class="section-head"><div><span class="kicker">REFRESH POLICY</span><h2>1 · 2 · 4 · 8 · 20 · Never</h2><p>Does refreshing a deterministic recommendation help, or is persistence just as good?</p></div><select id="holdGame" class="select" aria-label="Hold policy game"></select></div>
+        <div class="section-head"><div><span class="eyebrow">RETROSPECTIVE</span><h2>If DrawLab existed a year earlier</h2><p>Strict walk-forward replay: generate first, reveal the real draw afterward.</p></div><select id="retroGame"></select></div>
+        <div class="panel table"><div id="retroTable"></div><div class="notice"><b>Financial note:</b> match behaviour is the stronger research measure where old payout tables remain incomplete. Historical ROI stays secondary until exact payout enrichment is complete.</div></div>
+
+        <div class="section-head"><div><span class="eyebrow">PERSISTENCE</span><h2>1 · 2 · 4 · 8 · 20 · Never</h2><p>Does refreshing a deterministic line help, or does holding it perform similarly?</p></div><select id="holdGame"></select></div>
         <div class="panel" id="holdMatrix"></div>
 
-        <div class="section-head"><div><span class="kicker">EXPECTED VALUE</span><h2>EV Hunter v2</h2><p>Structural prize accounting asks whether the economics of a draw justify entering at all. Equal-probability lines are ranked for sharing risk only after that decision.</p></div></div>
-        <div class="notice subtle" id="evMeta">Loading structural EV model…</div>
-        <div class="cards cols-3" id="evCards"></div>
-        <div class="split-xl">
+        <div class="section-head"><div><span class="eyebrow">QUEUE</span><h2>Experiment queue</h2><p>Ideas stay separate from production until evidence earns a decision.</p></div></div>
+        <div class="panel" id="experimentQueue"></div>
+      </section>
+
+      <section class="view" id="archive">
+        <div class="page-hero">
+          <div><span class="eyebrow">Archive / records</span><h2>The factual memory of DrawLab.</h2><p>Verified draw history, rule eras, the Hall of Records and methodology live together here. This is the audit trail behind every chart and conclusion elsewhere in the site.</p></div>
+          <div class="hero-verdict"><span>DATA POLICY</span><strong>Withhold bad data</strong><p>Questionable or incompatible rows are excluded rather than silently “fixed” to make a model work.</p></div>
+        </div>
+
+        <div class="section-head"><div><span class="eyebrow">DATABASE</span><h2>Validated coverage</h2><p>Total archive and current model-eligible scope.</p></div></div>
+        <div class="cards-3" id="historyGrid"></div>
+
+        <div class="archive-grid">
           <section>
-            <div class="section-head compact"><div><span class="kicker">HISTORICAL GATE</span><h2>Selective-entry backtest</h2><p>Historical economics decide whether to enter; winning numbers and payouts are revealed only after the decision.</p></div></div>
-            <div class="panel" id="evBacktest"></div>
+            <div class="section-head compact"><div><span class="eyebrow">DRAW TAPE</span><h2>Latest official results</h2><p>Newest verified records.</p></div></div>
+            <div class="panel" id="archiveResults"></div>
           </section>
-          <aside>
-            <div class="section-head compact"><div><span class="kicker">PROSPECTIVE</span><h2>EV shadow portfolio</h2><p>Only draws that cross the conservative structural EV gate generate a research entry.</p></div></div>
-            <div class="panel" id="evShadow"></div>
+          <aside class="stack">
+            <div><div class="section-head compact"><div><span class="eyebrow">HALL OF RECORDS</span><h2>Top live tickets</h2><p>Simulation results excluded.</p></div></div><div class="panel" id="records"></div></div>
           </aside>
         </div>
 
-        <div class="section-head"><div><span class="kicker">DISCOVERY</span><h2>Historical strategy search</h2><p>We search pre-declared challenger families on validation data, then open a later untouched test window only after the candidate is fixed.</p></div></div>
-        <div class="notice subtle" id="discoveryMeta">Loading strategy discovery…</div>
-        <div class="cards cols-3" id="discoveryCards"></div>
-
-        <div class="split-xl">
-          <section>
-            <div class="section-head compact"><div><span class="kicker">CHALLENGER</span><h2>Champion vs challenger</h2><p>Research cannot promote itself.</p></div></div>
-            <div class="cards" id="challengerCards"></div>
-          </section>
-          <aside>
-            <div class="section-head compact"><div><span class="kicker">QUEUE</span><h2>Experiment queue</h2><p>Ideas stay here until evidence earns a decision.</p></div></div>
-            <div class="cards" id="experimentQueue"></div>
-          </aside>
+        <div class="grid-2">
+          <section><div class="section-head"><div><span class="eyebrow">RULE ERAS</span><h2>Never mix incompatible lotteries</h2><p>Rule changes are explicit model boundaries.</p></div></div><div class="panel methods" id="ruleEras"></div></section>
+          <aside><div class="section-head"><div><span class="eyebrow">METHODOLOGY</span><h2>Research constitution</h2><p>The rules DrawLab applies to itself.</p></div></div><div class="panel methods" id="methodology"></div></aside>
         </div>
-      </section>
-
-      <section class="view" id="history">
-        <div class="page-intro"><div class="eyebrow">Historical intelligence</div><h2>The factual archive.</h2><p>Coverage, current model scope and rule eras live here. This page describes what happened; it does not turn historical patterns into certainty.</p></div>
-        <div class="section-head"><div><span class="kicker">DATABASE</span><h2>Validated coverage</h2><p>Total archive vs current model-eligible scope.</p></div></div>
-        <div class="cards cols-3" id="historyCards"></div>
-
-        <div class="section-head"><div><span class="kicker">RECENT</span><h2>Official draw tape</h2><p>Newest verified results.</p></div></div>
-        <div class="cards cols-2" id="historyResults"></div>
-
-        <div class="section-head"><div><span class="kicker">RULES</span><h2>Explicit rule eras</h2><p>Incompatible number spaces never get silently mixed.</p></div></div>
-        <div class="panel methods">
-          <div class="method-row"><b>DL</b><div><h3>Daily Lotto · 5/36</h3><p>The current DrawLab historical window uses the same 5/36 main-number space.</p></div></div>
-          <div class="method-row"><b>L</b><div><h3>Lotto · 6/58 → 6/52</h3><p>Legacy 6/58 draws remain archived. Current 6/52 model calculations start at the June 2026 rule boundary rather than blending incompatible spaces.</p></div></div>
-          <div class="method-row"><b>PB</b><div><h3>PowerBall · 5/50, PB pool changed</h3><p>Main 5/50 history remains compatible. The special-ball pool changed from 1–20 to 1–16 and is treated as a separate era.</p></div></div>
-        </div>
-      </section>
-
-      <section class="view" id="records">
-        <div class="page-intro"><div class="eyebrow">Hall of Records</div><h2>The moments worth remembering.</h2><p>A permanent top-20 archive of the strongest live tickets. Historical simulations are deliberately excluded.</p></div>
-        <div class="section-head"><div><span class="kicker">TOP 20</span><h2>Live ticket records</h2><p>Ranked by main-number matches, then prize, then recency.</p></div></div>
-        <div class="record-list" id="recordsList"></div>
-      </section>
-
-      <section class="view" id="methodology">
-        <div class="page-intro"><div class="eyebrow">Data & methodology</div><h2>How DrawLab keeps itself honest.</h2><p>Every valid lottery line has the same base mathematical odds. DrawLab tests decision processes and historical hypotheses; it does not claim that a pattern makes a future line inherently more likely.</p></div>
-
-        <div class="section-head"><div><span class="kicker">CONSTITUTION</span><h2>Research rules</h2><p>These are harder to change than a strategy.</p></div></div>
-        <div class="panel methods" id="principles"></div>
-
-        <div class="section-head"><div><span class="kicker">ARCHITECTURE</span><h2>Production data flow</h2><p>Database-first live state with a reproducible repository fallback.</p></div></div>
-        <div class="cards cols-3" id="architectureCards"></div>
-
-        <div class="section-head"><div><span class="kicker">SYSTEM</span><h2>Research metadata</h2><p>Versioning and synchronization details.</p></div></div>
-        <div class="panel" id="metadataPanel"></div>
       </section>
     </main>
   </div>
 </div>
 
 <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation"></nav>
+<div class="drawer-backdrop" id="drawerBackdrop"></div>
+<aside class="drawer" id="drawer" aria-hidden="true"><button class="drawer-close" id="drawerClose" aria-label="Close">×</button><div id="drawerBody"></div></aside>
 
-<div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
-<aside class="drawer" id="strategyDrawer" aria-hidden="true">
-  <button class="drawer-close" id="drawerClose" aria-label="Close strategy profile">×</button>
-  <div id="drawerBody"></div>
-</aside>
-
-<script src="v3/app.js" defer></script>
-<script src="v3/research-v2.js" defer></script>
-<script src="v3/discovery.js" defer></script>
-<script src="v3/ev.js" defer></script>
+<script src="v3/app-v4.js" defer></script>
 </body>
 </html>
