@@ -110,7 +110,7 @@ jobs:
           grep -q 'drawlab-state' drawlab-sa/v3/app-v4.js
           grep -q 'EV Hunter v2' drawlab-sa/index.html
           grep -q 'Crowd Model v1' drawlab-sa/index.html
-          grep -q 'Draw integrity' drawlab-sa/index.html
+          grep -q 'DRAW INTEGRITY' drawlab-sa/index.html
           grep -q 'drawlab-v4-shell-1' drawlab-sa/sw.js
       - name: Verify Supabase read model
         if: github.event_name != 'pull_request'
