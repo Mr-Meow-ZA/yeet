@@ -1,7 +1,30 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-13T21:05:54.959413+00:00",
+  "updated_at": "2026-08-14T16:40:22.135145+00:00",
   "tickets": [
+    {
+      "id": "2026-08-14|PowerBall|powerball-frequency-reversion-30-v0.1",
+      "date": "2026-08-14",
+      "game": "PowerBall",
+      "challenger_id": "powerball-frequency-reversion-30-v0.1",
+      "challenger": "Frequency Reversion 30",
+      "challenger_version": "0.1",
+      "numbers": [
+        7,
+        18,
+        28,
+        35,
+        49
+      ],
+      "bonus": null,
+      "refresh_policy_draws": 1,
+      "deterministic": true,
+      "research_only": true,
+      "locked_on": "2026-08-10",
+      "history_cutoff": "2026-08-11",
+      "status": "Pending result",
+      "created_at": "2026-08-14T16:40:22.131401+00:00"
+    },
     {
       "id": "2026-08-11|PowerBall|powerball-frequency-reversion-30-v0.1",
       "date": "2026-08-11",
@@ -44,9 +67,9 @@
       "game": "PowerBall",
       "status": "shadow",
       "locked_on": "2026-08-10",
-      "tickets": 1,
+      "tickets": 2,
       "settled": 1,
-      "pending": 0,
+      "pending": 1,
       "avg_matches": 0.0,
       "ge2_rate": 0.0,
       "ge3_rate": 0.0,

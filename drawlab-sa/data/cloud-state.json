@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-13T23:05:53.721076+02:00",
+  "updated_at": "2026-08-14T18:40:21.085936+02:00",
   "status": "ok",
   "virtual": {
     "starting_bankroll": 1000,
@@ -9,6 +9,236 @@
       "PowerBall": 10
     },
     "tickets": [
+      {
+        "id": "2026-08-14|PowerBall|Weighted Historical|v1.0",
+        "date": "2026-08-14",
+        "game": "PowerBall",
+        "strategy": "Weighted Historical",
+        "strategy_version": "1.0",
+        "strategy_hypothesis": "A fixed blend of long-term, six-month, momentum and gap signals performs best.",
+        "deterministic": true,
+        "data_policy_version": "2.0-rule-aware",
+        "numbers": [
+          5,
+          13,
+          22,
+          40,
+          43
+        ],
+        "bonus": 11,
+        "cost": 10.0,
+        "won": 0,
+        "payout_type": null,
+        "status": "Pending result",
+        "created_at": "2026-08-14T18:40:21.085936+02:00"
+      },
+      {
+        "id": "2026-08-14|PowerBall|Hot 6M|v1.0",
+        "date": "2026-08-14",
+        "game": "PowerBall",
+        "strategy": "Hot 6M",
+        "strategy_version": "1.0",
+        "strategy_hypothesis": "Recent high-frequency numbers persist.",
+        "deterministic": true,
+        "data_policy_version": "2.0-rule-aware",
+        "numbers": [
+          5,
+          16,
+          25,
+          40,
+          47
+        ],
+        "bonus": 11,
+        "cost": 10.0,
+        "won": 0,
+        "payout_type": null,
+        "status": "Pending result",
+        "created_at": "2026-08-14T18:40:21.085936+02:00"
+      },
+      {
+        "id": "2026-08-14|PowerBall|Frozen Alpha|v1.0",
+        "date": "2026-08-14",
+        "game": "PowerBall",
+        "strategy": "Frozen Alpha",
+        "strategy_version": "1.0",
+        "strategy_hypothesis": "A fixed deterministic line provides a permanent control against dynamic refresh strategies.",
+        "deterministic": true,
+        "data_policy_version": "2.0-rule-aware",
+        "numbers": [
+          9,
+          13,
+          23,
+          40,
+          47
+        ],
+        "bonus": 11,
+        "cost": 10.0,
+        "won": 0,
+        "payout_type": null,
+        "status": "Pending result",
+        "created_at": "2026-08-14T18:40:21.085936+02:00"
+      },
+      {
+        "id": "2026-08-14|PowerBall|Diversified Coverage|v1.0",
+        "date": "2026-08-14",
+        "game": "PowerBall",
+        "strategy": "Diversified Coverage",
+        "strategy_version": "1.0",
+        "strategy_hypothesis": "Structured range coverage with low overlap diversifies the portfolio.",
+        "deterministic": true,
+        "data_policy_version": "2.0-rule-aware",
+        "numbers": [
+          4,
+          20,
+          28,
+          33,
+          44
+        ],
+        "bonus": 2,
+        "cost": 10.0,
+        "won": 0,
+        "payout_type": null,
+        "status": "Pending result",
+        "created_at": "2026-08-14T18:40:21.085936+02:00"
+      },
+      {
+        "id": "2026-08-14|PowerBall|Cold 6M|v1.0",
+        "date": "2026-08-14",
+        "game": "PowerBall",
+        "strategy": "Cold 6M",
+        "strategy_version": "1.0",
+        "strategy_hypothesis": "Recently underrepresented numbers revert toward expected frequency.",
+        "deterministic": true,
+        "data_policy_version": "2.0-rule-aware",
+        "numbers": [
+          7,
+          18,
+          21,
+          35,
+          49
+        ],
+        "bonus": 2,
+        "cost": 10.0,
+        "won": 0,
+        "payout_type": null,
+        "status": "Pending result",
+        "created_at": "2026-08-14T18:40:21.085936+02:00"
+      },
+      {
+        "id": "2026-08-14|Daily Lotto|Weighted Historical|v1.0",
+        "date": "2026-08-14",
+        "game": "Daily Lotto",
+        "strategy": "Weighted Historical",
+        "strategy_version": "1.0",
+        "strategy_hypothesis": "A fixed blend of long-term, six-month, momentum and gap signals performs best.",
+        "deterministic": true,
+        "data_policy_version": "2.0-rule-aware",
+        "numbers": [
+          4,
+          14,
+          16,
+          25,
+          30
+        ],
+        "bonus": null,
+        "cost": 3.0,
+        "won": 0,
+        "payout_type": null,
+        "status": "Pending result",
+        "created_at": "2026-08-14T18:40:21.085936+02:00"
+      },
+      {
+        "id": "2026-08-14|Daily Lotto|Hot 6M|v1.0",
+        "date": "2026-08-14",
+        "game": "Daily Lotto",
+        "strategy": "Hot 6M",
+        "strategy_version": "1.0",
+        "strategy_hypothesis": "Recent high-frequency numbers persist.",
+        "deterministic": true,
+        "data_policy_version": "2.0-rule-aware",
+        "numbers": [
+          4,
+          10,
+          16,
+          25,
+          31
+        ],
+        "bonus": null,
+        "cost": 3.0,
+        "won": 0,
+        "payout_type": null,
+        "status": "Pending result",
+        "created_at": "2026-08-14T18:40:21.085936+02:00"
+      },
+      {
+        "id": "2026-08-14|Daily Lotto|Frozen Alpha|v1.0",
+        "date": "2026-08-14",
+        "game": "Daily Lotto",
+        "strategy": "Frozen Alpha",
+        "strategy_version": "1.0",
+        "strategy_hypothesis": "A fixed deterministic line provides a permanent control against dynamic refresh strategies.",
+        "deterministic": true,
+        "data_policy_version": "2.0-rule-aware",
+        "numbers": [
+          7,
+          10,
+          16,
+          25,
+          30
+        ],
+        "bonus": null,
+        "cost": 3.0,
+        "won": 0,
+        "payout_type": null,
+        "status": "Pending result",
+        "created_at": "2026-08-14T18:40:21.085936+02:00"
+      },
+      {
+        "id": "2026-08-14|Daily Lotto|Diversified Coverage|v1.0",
+        "date": "2026-08-14",
+        "game": "Daily Lotto",
+        "strategy": "Diversified Coverage",
+        "strategy_version": "1.0",
+        "strategy_hypothesis": "Structured range coverage with low overlap diversifies the portfolio.",
+        "deterministic": true,
+        "data_policy_version": "2.0-rule-aware",
+        "numbers": [
+          3,
+          11,
+          19,
+          22,
+          29
+        ],
+        "bonus": null,
+        "cost": 3.0,
+        "won": 0,
+        "payout_type": null,
+        "status": "Pending result",
+        "created_at": "2026-08-14T18:40:21.085936+02:00"
+      },
+      {
+        "id": "2026-08-14|Daily Lotto|Cold 6M|v1.0",
+        "date": "2026-08-14",
+        "game": "Daily Lotto",
+        "strategy": "Cold 6M",
+        "strategy_version": "1.0",
+        "strategy_hypothesis": "Recently underrepresented numbers revert toward expected frequency.",
+        "deterministic": true,
+        "data_policy_version": "2.0-rule-aware",
+        "numbers": [
+          2,
+          13,
+          18,
+          27,
+          33
+        ],
+        "bonus": null,
+        "cost": 3.0,
+        "won": 0,
+        "payout_type": null,
+        "status": "Pending result",
+        "created_at": "2026-08-14T18:40:21.085936+02:00"
+      },
       {
         "id": "2026-08-13|Daily Lotto|Weighted Historical|v1.0",
         "date": "2026-08-13",
@@ -36,7 +266,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/13-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-13|Daily Lotto|Hot 6M|v1.0",
@@ -65,7 +295,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/13-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-13|Daily Lotto|Frozen Alpha|v1.0",
@@ -94,7 +324,7 @@
         "bonus_match": false,
         "prize_key": "0",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/13-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-13|Daily Lotto|Diversified Coverage|v1.0",
@@ -123,7 +353,7 @@
         "bonus_match": false,
         "prize_key": "2",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/13-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-13|Daily Lotto|Cold 6M|v1.0",
@@ -152,7 +382,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/13-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-12|Lotto|Weighted Historical|v1.0",
@@ -182,7 +412,7 @@
         "bonus_match": false,
         "prize_key": "0",
         "payout_source": "https://za.national-lottery.com/lotto/results/12-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-12|Lotto|Hot 6M|v1.0",
@@ -212,7 +442,7 @@
         "bonus_match": false,
         "prize_key": "0",
         "payout_source": "https://za.national-lottery.com/lotto/results/12-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-12|Lotto|Frozen Alpha|v1.0",
@@ -242,7 +472,7 @@
         "bonus_match": false,
         "prize_key": "0",
         "payout_source": "https://za.national-lottery.com/lotto/results/12-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-12|Lotto|Diversified Coverage|v1.0",
@@ -272,7 +502,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/lotto/results/12-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-12|Lotto|Cold 6M|v1.0",
@@ -302,7 +532,7 @@
         "bonus_match": false,
         "prize_key": "2",
         "payout_source": "https://za.national-lottery.com/lotto/results/12-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-12|Daily Lotto|Weighted Historical|v1.0",
@@ -331,7 +561,7 @@
         "bonus_match": false,
         "prize_key": "2",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/12-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-12|Daily Lotto|Hot 6M|v1.0",
@@ -360,7 +590,7 @@
         "bonus_match": false,
         "prize_key": "2",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/12-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-12|Daily Lotto|Frozen Alpha|v1.0",
@@ -389,7 +619,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/12-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-12|Daily Lotto|Diversified Coverage|v1.0",
@@ -418,7 +648,7 @@
         "bonus_match": false,
         "prize_key": "0",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/12-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-12|Daily Lotto|Cold 6M|v1.0",
@@ -447,7 +677,7 @@
         "bonus_match": false,
         "prize_key": "2",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/12-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-11|PowerBall|Weighted Historical|v1.0",
@@ -476,7 +706,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://www.powerball.net/southafrica/results/2026-08-11",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-11|PowerBall|Hot 6M|v1.0",
@@ -505,7 +735,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://www.powerball.net/southafrica/results/2026-08-11",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-11|PowerBall|Frozen Alpha|v1.0",
@@ -534,7 +764,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://www.powerball.net/southafrica/results/2026-08-11",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-11|PowerBall|Diversified Coverage|v1.0",
@@ -563,7 +793,7 @@
         "bonus_match": false,
         "prize_key": "3",
         "payout_source": "https://www.powerball.net/southafrica/results/2026-08-11",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-11|PowerBall|Cold 6M|v1.0",
@@ -592,7 +822,7 @@
         "bonus_match": false,
         "prize_key": "0",
         "payout_source": "https://www.powerball.net/southafrica/results/2026-08-11",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-11|Daily Lotto|Weighted Historical|v1.0",
@@ -621,7 +851,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/11-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-11|Daily Lotto|Hot 6M|v1.0",
@@ -650,7 +880,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/11-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-11|Daily Lotto|Frozen Alpha|v1.0",
@@ -679,7 +909,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/11-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-11|Daily Lotto|Diversified Coverage|v1.0",
@@ -708,7 +938,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/11-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-11|Daily Lotto|Cold 6M|v1.0",
@@ -737,7 +967,7 @@
         "bonus_match": false,
         "prize_key": "0",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/11-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-10|Daily Lotto|Weighted Historical|v1.0",
@@ -766,7 +996,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/10-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-10|Daily Lotto|Hot 6M|v1.0",
@@ -795,7 +1025,7 @@
         "bonus_match": false,
         "prize_key": "0",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/10-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-10|Daily Lotto|Frozen Alpha|v1.0",
@@ -824,7 +1054,7 @@
         "bonus_match": false,
         "prize_key": "0",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/10-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-10|Daily Lotto|Diversified Coverage|v1.0",
@@ -853,7 +1083,7 @@
         "bonus_match": false,
         "prize_key": "0",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/10-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-10|Daily Lotto|Cold 6M|v1.0",
@@ -882,7 +1112,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/10-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-09|Daily Lotto|Weighted Historical|v1.0",
@@ -911,7 +1141,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/09-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-09|Daily Lotto|Hot 6M|v1.0",
@@ -940,7 +1170,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/09-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-09|Daily Lotto|Frozen Alpha|v1.0",
@@ -969,7 +1199,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/09-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-09|Daily Lotto|Diversified Coverage|v1.0",
@@ -998,7 +1228,7 @@
         "bonus_match": false,
         "prize_key": "2",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/09-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-09|Daily Lotto|Cold 6M|v1.0",
@@ -1027,7 +1257,7 @@
         "bonus_match": false,
         "prize_key": "0",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/09-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-08|Lotto|Weighted Historical|v1.0",
@@ -1057,7 +1287,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/lotto/results/08-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-08|Lotto|Hot 6M|v1.0",
@@ -1087,7 +1317,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/lotto/results/08-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-08|Lotto|Frozen Alpha|v1.0",
@@ -1117,7 +1347,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/lotto/results/08-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-08|Lotto|Diversified Coverage|v1.0",
@@ -1147,7 +1377,7 @@
         "bonus_match": false,
         "prize_key": "0",
         "payout_source": "https://za.national-lottery.com/lotto/results/08-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-08|Lotto|Cold 6M|v1.0",
@@ -1177,7 +1407,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/lotto/results/08-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-08|Daily Lotto|Weighted Historical|v1.0",
@@ -1206,7 +1436,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/08-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-08|Daily Lotto|Hot 6M|v1.0",
@@ -1235,7 +1465,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/08-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-08|Daily Lotto|Frozen Alpha|v1.0",
@@ -1264,7 +1494,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/08-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-08|Daily Lotto|Diversified Coverage|v1.0",
@@ -1293,7 +1523,7 @@
         "bonus_match": false,
         "prize_key": "0",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/08-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-08|Daily Lotto|Cold 6M|v1.0",
@@ -1322,7 +1552,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/08-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-07|PowerBall|Weighted Historical|v1.0",
@@ -1351,7 +1581,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://www.powerball.net/southafrica/results/2026-08-07",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-07|PowerBall|Hot 6M|v1.0",
@@ -1380,7 +1610,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://www.powerball.net/southafrica/results/2026-08-07",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-07|PowerBall|Frozen Alpha|v1.0",
@@ -1409,7 +1639,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://www.powerball.net/southafrica/results/2026-08-07",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-07|PowerBall|Diversified Coverage|v1.0",
@@ -1438,7 +1668,7 @@
         "bonus_match": false,
         "prize_key": "0",
         "payout_source": "https://www.powerball.net/southafrica/results/2026-08-07",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-07|PowerBall|Cold 6M|v1.0",
@@ -1467,7 +1697,7 @@
         "bonus_match": false,
         "prize_key": "0",
         "payout_source": "https://www.powerball.net/southafrica/results/2026-08-07",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-07|Daily Lotto|Weighted Historical|v1.0",
@@ -1496,7 +1726,7 @@
         "bonus_match": false,
         "prize_key": "0",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/07-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-07|Daily Lotto|Hot 6M|v1.0",
@@ -1525,7 +1755,7 @@
         "bonus_match": false,
         "prize_key": "0",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/07-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-07|Daily Lotto|Frozen Alpha|v1.0",
@@ -1554,7 +1784,7 @@
         "bonus_match": false,
         "prize_key": "0",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/07-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-07|Daily Lotto|Diversified Coverage|v1.0",
@@ -1583,7 +1813,7 @@
         "bonus_match": false,
         "prize_key": "0",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/07-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-07|Daily Lotto|Cold 6M|v1.0",
@@ -1612,7 +1842,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/07-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-06|Daily Lotto|Weighted Historical|v1.0",
@@ -1640,7 +1870,7 @@
         "bonus_match": false,
         "prize_key": "2",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/06-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-06|Daily Lotto|Hot 6M|v1.0",
@@ -1668,7 +1898,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/06-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-06|Daily Lotto|Diversified Coverage|v1.0",
@@ -1696,7 +1926,7 @@
         "bonus_match": false,
         "prize_key": "0",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/06-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-06|Daily Lotto|Cold 6M|v1.0",
@@ -1724,7 +1954,7 @@
         "bonus_match": false,
         "prize_key": "1",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/06-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-05|Lotto|Weighted Historical",
@@ -1750,7 +1980,7 @@
         "prize_key": "1",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/lotto/results/05-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-05|Lotto|Hot 6M",
@@ -1776,7 +2006,7 @@
         "prize_key": "3",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/lotto/results/05-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-05|Lotto|Diversified Coverage",
@@ -1802,7 +2032,7 @@
         "prize_key": "0",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/lotto/results/05-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-05|Daily Lotto|Weighted Historical",
@@ -1827,7 +2057,7 @@
         "prize_key": "1",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/05-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-05|Daily Lotto|Hot 6M",
@@ -1852,7 +2082,7 @@
         "prize_key": "2",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/05-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       },
       {
         "id": "2026-08-05|Daily Lotto|Diversified Coverage",
@@ -1877,7 +2107,7 @@
         "prize_key": "0",
         "payout_type": "exact",
         "payout_source": "https://za.national-lottery.com/daily-lotto/results/05-august-2026",
-        "settled_at": "2026-08-13T23:05:53.721076+02:00"
+        "settled_at": "2026-08-14T18:40:21.085936+02:00"
       }
     ]
   },
