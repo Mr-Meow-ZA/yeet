@@ -1,6 +1,6 @@
 {
   "schema_version": 8,
-  "generated_at": "2026-08-19T20:48:53.940986+00:00",
+  "generated_at": "2026-08-20T16:23:15.863045+00:00",
   "platform": "DrawLab v3 Research Platform",
   "research_architecture": {
     "draw_prediction": "Historical-number strategies remain frozen controls unless prospective evidence beats chance after correction.",
@@ -8,8 +8,8 @@
     "economics": "EV Hunter decides whether a draw is economically attractive from prize mechanics, sales demand and collision risk.",
     "integrity": "Draw Integrity Auditor tests the random/independent null before any anomaly is treated as potentially meaningful."
   },
-  "cloud_status": "partial",
-  "cloud_updated_at": "2026-08-19T22:47:58.425424+02:00",
+  "cloud_status": "ok",
+  "cloud_updated_at": "2026-08-20T18:22:20.743568+02:00",
   "history_quality": {
     "Daily Lotto": {
       "raw": 956,
@@ -44,71 +44,71 @@
     "Daily Lotto": "5/36 format unchanged"
   },
   "portfolio": {
-    "tickets": 115,
+    "tickets": 120,
     "settled": 95,
-    "pending": 20,
-    "spend": 531.0,
+    "pending": 25,
+    "spend": 546.0,
     "won": 121.0,
-    "net": -410.0,
-    "roi_pct": -77.21,
+    "net": -425.0,
+    "roi_pct": -77.84,
     "best_matches": 3
   },
   "live_league": [
     {
       "strategy": "Diversified Coverage",
-      "tickets": 24,
+      "tickets": 25,
       "settled": 20,
-      "spend": 110.0,
+      "spend": 113.0,
       "won": 59.6,
-      "net": -50.4,
-      "roi_pct": -45.82,
+      "net": -53.4,
+      "roi_pct": -47.26,
       "avg_matches": 0.55,
       "best_matches": 3,
       "winning_ticket_rate": 15.0
     },
     {
       "strategy": "Hot 6M",
-      "tickets": 24,
+      "tickets": 25,
       "settled": 20,
-      "spend": 110.0,
+      "spend": 113.0,
       "won": 29.9,
-      "net": -80.1,
-      "roi_pct": -72.82,
+      "net": -83.1,
+      "roi_pct": -73.54,
       "avg_matches": 0.9,
       "best_matches": 3,
       "winning_ticket_rate": 15.0
     },
     {
       "strategy": "Cold 6M",
-      "tickets": 22,
+      "tickets": 23,
       "settled": 18,
-      "spend": 102.0,
+      "spend": 105.0,
       "won": 21.9,
-      "net": -80.1,
-      "roi_pct": -78.53,
+      "net": -83.1,
+      "roi_pct": -79.14,
       "avg_matches": 0.833,
       "best_matches": 3,
       "winning_ticket_rate": 11.11
     },
     {
       "strategy": "Weighted Historical",
-      "tickets": 24,
+      "tickets": 25,
       "settled": 20,
-      "spend": 110.0,
+      "spend": 113.0,
       "won": 9.6,
-      "net": -100.4,
-      "roi_pct": -91.27,
+      "net": -103.4,
+      "roi_pct": -91.5,
       "avg_matches": 0.85,
       "best_matches": 2,
       "winning_ticket_rate": 10.0
     },
     {
       "strategy": "Frozen Alpha",
-      "tickets": 21,
+      "tickets": 22,
       "settled": 17,
-      "spend": 99.0,
+      "spend": 102.0,
       "won": 0.0,
-      "net": -99.0,
+      "net": -102.0,
       "roi_pct": -100.0,
       "avg_matches": 0.529,
       "best_matches": 1,
@@ -892,6 +892,121 @@
   ],
   "pending_tickets": [
     {
+      "id": "2026-08-20|Daily Lotto|Weighted Historical|v1.0",
+      "date": "2026-08-20",
+      "game": "Daily Lotto",
+      "strategy": "Weighted Historical",
+      "strategy_version": "1.0",
+      "strategy_hypothesis": "A fixed blend of long-term, six-month, momentum and gap signals performs best.",
+      "deterministic": true,
+      "data_policy_version": "2.0-rule-aware",
+      "numbers": [
+        4,
+        10,
+        16,
+        25,
+        31
+      ],
+      "bonus": null,
+      "cost": 3.0,
+      "won": 0,
+      "payout_type": null,
+      "status": "Pending result",
+      "created_at": "2026-08-20T18:22:20.743568+02:00"
+    },
+    {
+      "id": "2026-08-20|Daily Lotto|Hot 6M|v1.0",
+      "date": "2026-08-20",
+      "game": "Daily Lotto",
+      "strategy": "Hot 6M",
+      "strategy_version": "1.0",
+      "strategy_hypothesis": "Recent high-frequency numbers persist.",
+      "deterministic": true,
+      "data_policy_version": "2.0-rule-aware",
+      "numbers": [
+        4,
+        10,
+        16,
+        25,
+        31
+      ],
+      "bonus": null,
+      "cost": 3.0,
+      "won": 0,
+      "payout_type": null,
+      "status": "Pending result",
+      "created_at": "2026-08-20T18:22:20.743568+02:00"
+    },
+    {
+      "id": "2026-08-20|Daily Lotto|Frozen Alpha|v1.0",
+      "date": "2026-08-20",
+      "game": "Daily Lotto",
+      "strategy": "Frozen Alpha",
+      "strategy_version": "1.0",
+      "strategy_hypothesis": "A fixed deterministic line provides a permanent control against dynamic refresh strategies.",
+      "deterministic": true,
+      "data_policy_version": "2.0-rule-aware",
+      "numbers": [
+        7,
+        10,
+        16,
+        25,
+        30
+      ],
+      "bonus": null,
+      "cost": 3.0,
+      "won": 0,
+      "payout_type": null,
+      "status": "Pending result",
+      "created_at": "2026-08-20T18:22:20.743568+02:00"
+    },
+    {
+      "id": "2026-08-20|Daily Lotto|Diversified Coverage|v1.0",
+      "date": "2026-08-20",
+      "game": "Daily Lotto",
+      "strategy": "Diversified Coverage",
+      "strategy_version": "1.0",
+      "strategy_hypothesis": "Structured range coverage with low overlap diversifies the portfolio.",
+      "deterministic": true,
+      "data_policy_version": "2.0-rule-aware",
+      "numbers": [
+        2,
+        13,
+        17,
+        22,
+        33
+      ],
+      "bonus": null,
+      "cost": 3.0,
+      "won": 0,
+      "payout_type": null,
+      "status": "Pending result",
+      "created_at": "2026-08-20T18:22:20.743568+02:00"
+    },
+    {
+      "id": "2026-08-20|Daily Lotto|Cold 6M|v1.0",
+      "date": "2026-08-20",
+      "game": "Daily Lotto",
+      "strategy": "Cold 6M",
+      "strategy_version": "1.0",
+      "strategy_hypothesis": "Recently underrepresented numbers revert toward expected frequency.",
+      "deterministic": true,
+      "data_policy_version": "2.0-rule-aware",
+      "numbers": [
+        3,
+        11,
+        18,
+        27,
+        29
+      ],
+      "bonus": null,
+      "cost": 3.0,
+      "won": 0,
+      "payout_type": null,
+      "status": "Pending result",
+      "created_at": "2026-08-20T18:22:20.743568+02:00"
+    },
+    {
       "id": "2026-08-19|Lotto|Weighted Historical|v1.0",
       "date": "2026-08-19",
       "game": "Lotto",
@@ -1404,7 +1519,7 @@
     "policy": "These lines never change. A ticket is entered on every eligible draw using the era-correct board cost."
   },
   "shadow_research": {
-    "updated_at": "2026-08-19T20:48:29.109159+00:00",
+    "updated_at": "2026-08-20T16:22:51.171563+00:00",
     "summary": {
       "powerball-frequency-reversion-30-v0.1": {
         "challenger_id": "powerball-frequency-reversion-30-v0.1",
@@ -1523,7 +1638,7 @@
   "ev_hunter": {
     "schema_version": 2,
     "model_version": "EV Hunter v2.0",
-    "updated_at": "2026-08-19T20:48:53.666358+00:00",
+    "updated_at": "2026-08-20T16:23:15.609735+00:00",
     "purpose": "Selective expected-value research based on prize mechanics, sales demand and sharing risk. It changes when to participate, not the probability of the draw.",
     "current": {
       "Daily Lotto": {
@@ -1668,6 +1783,20 @@
     },
     "decisions": [
       {
+        "date": "2026-08-22",
+        "game": "Lotto",
+        "model_version": "EV Hunter v2.0",
+        "recorded_at": "2026-08-20T18:22:51.379910+02:00",
+        "decision": "SOURCE_UNAVAILABLE",
+        "ev_ratio": null,
+        "expected_roi_pct": null,
+        "conservative_roi_pct": null,
+        "advertised_jackpot": null,
+        "break_even_jackpot": null,
+        "ticket_cost": 5.0,
+        "source": null
+      },
+      {
         "date": "2026-08-21",
         "game": "PowerBall",
         "model_version": "EV Hunter v2.0",
@@ -1679,6 +1808,20 @@
         "advertised_jackpot": null,
         "break_even_jackpot": null,
         "ticket_cost": 10.0,
+        "source": null
+      },
+      {
+        "date": "2026-08-20",
+        "game": "Daily Lotto",
+        "model_version": "EV Hunter v2.0",
+        "recorded_at": "2026-08-20T18:22:51.379910+02:00",
+        "decision": "SKIP",
+        "ev_ratio": 0.5,
+        "expected_roi_pct": -50.0,
+        "conservative_roi_pct": -50.0,
+        "advertised_jackpot": null,
+        "break_even_jackpot": null,
+        "ticket_cost": 3.0,
         "source": null
       },
       {

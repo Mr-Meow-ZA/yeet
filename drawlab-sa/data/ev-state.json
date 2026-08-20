@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "model_version": "EV Hunter v2.0",
-  "updated_at": "2026-08-19T20:48:53.666358+00:00",
+  "updated_at": "2026-08-20T16:23:15.609735+00:00",
   "purpose": "Selective expected-value research based on prize mechanics, sales demand and sharing risk. It changes when to participate, not the probability of the draw.",
   "current": {
     "Daily Lotto": {
@@ -146,6 +146,20 @@
   },
   "decisions": [
     {
+      "date": "2026-08-22",
+      "game": "Lotto",
+      "model_version": "EV Hunter v2.0",
+      "recorded_at": "2026-08-20T18:22:51.379910+02:00",
+      "decision": "SOURCE_UNAVAILABLE",
+      "ev_ratio": null,
+      "expected_roi_pct": null,
+      "conservative_roi_pct": null,
+      "advertised_jackpot": null,
+      "break_even_jackpot": null,
+      "ticket_cost": 5.0,
+      "source": null
+    },
+    {
       "date": "2026-08-21",
       "game": "PowerBall",
       "model_version": "EV Hunter v2.0",
@@ -157,6 +171,20 @@
       "advertised_jackpot": null,
       "break_even_jackpot": null,
       "ticket_cost": 10.0,
+      "source": null
+    },
+    {
+      "date": "2026-08-20",
+      "game": "Daily Lotto",
+      "model_version": "EV Hunter v2.0",
+      "recorded_at": "2026-08-20T18:22:51.379910+02:00",
+      "decision": "SKIP",
+      "ev_ratio": 0.5,
+      "expected_roi_pct": -50.0,
+      "conservative_roi_pct": -50.0,
+      "advertised_jackpot": null,
+      "break_even_jackpot": null,
+      "ticket_cost": 3.0,
       "source": null
     },
     {
