@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-08-16T20:53:36.511541+00:00",
+  "updated_at": "2026-08-23T20:55:05.170857+00:00",
   "coverage": {
     "Daily Lotto": {
       "2024": 365,
@@ -25844,103 +25844,68 @@
       "rule_version": "5of36"
     }
   ],
-  "errors": [],
-  "status": "ok",
+  "errors": [
+    "Daily Lotto 2024: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /daily-lotto/results/2024-archive (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7f37705d0c50>, 'Connection to za.national-lottery.com timed out. (connect timeout=6)'))",
+    "Daily Lotto 2025: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /daily-lotto/results/2025-archive (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7f37704c6c00>, 'Connection to za.national-lottery.com timed out. (connect timeout=6)'))",
+    "Daily Lotto 2026: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /daily-lotto/results/2026-archive (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7f37702b6270>, 'Connection to za.national-lottery.com timed out. (connect timeout=6)'))",
+    "Lotto 2024: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /lotto/results/2024-archive (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7f37702b6600>, 'Connection to za.national-lottery.com timed out. (connect timeout=6)'))",
+    "Lotto 2025: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /lotto/results/2025-archive (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7f37702b6990>, 'Connection to za.national-lottery.com timed out. (connect timeout=6)'))",
+    "Lotto 2026: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /lotto/results/2026-archive (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7f37702b6d20>, 'Connection to za.national-lottery.com timed out. (connect timeout=6)'))",
+    "PowerBall 2024: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /powerball/results/2024-archive (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7f37702b70b0>, 'Connection to za.national-lottery.com timed out. (connect timeout=6)'))",
+    "PowerBall 2025: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /powerball/results/2025-archive (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7f37702b7320>, 'Connection to za.national-lottery.com timed out. (connect timeout=6)'))",
+    "PowerBall 2026: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /powerball/results/2026-archive (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7f37702b7740>, 'Connection to za.national-lottery.com timed out. (connect timeout=6)'))"
+  ],
+  "status": "unavailable",
   "quality": {
     "Daily Lotto": {
       "2024": {
-        "expected": 366,
-        "parsed": 365,
-        "minimum": 237,
-        "unique_ratio": 1.0,
-        "largest_duplicate_group": 1,
-        "bonus_completeness": 1.0,
-        "status": "accepted",
-        "archive": "https://za.national-lottery.com/daily-lotto/results/2024-archive"
+        "status": "source-error",
+        "parsed": 0,
+        "preserved": 365
       },
       "2025": {
-        "expected": 365,
-        "parsed": 364,
-        "minimum": 237,
-        "unique_ratio": 0.9973,
-        "largest_duplicate_group": 2,
-        "bonus_completeness": 1.0,
-        "status": "accepted",
-        "archive": "https://za.national-lottery.com/daily-lotto/results/2025-archive"
+        "status": "source-error",
+        "parsed": 0,
+        "preserved": 364
       },
       "2026": {
-        "expected": 228,
-        "parsed": 227,
-        "minimum": 148,
-        "unique_ratio": 0.9956,
-        "largest_duplicate_group": 2,
-        "bonus_completeness": 1.0,
-        "status": "accepted",
-        "archive": "https://za.national-lottery.com/daily-lotto/results/2026-archive"
+        "status": "source-error",
+        "parsed": 0,
+        "preserved": 227
       }
     },
     "Lotto": {
       "2024": {
-        "expected": 104,
-        "parsed": 103,
-        "minimum": 67,
-        "unique_ratio": 1.0,
-        "largest_duplicate_group": 1,
-        "bonus_completeness": 1.0,
-        "status": "accepted",
-        "archive": "https://za.national-lottery.com/lotto/results/2024-archive"
+        "status": "source-error",
+        "parsed": 0,
+        "preserved": 103
       },
       "2025": {
-        "expected": 105,
-        "parsed": 105,
-        "minimum": 68,
-        "unique_ratio": 1.0,
-        "largest_duplicate_group": 1,
-        "bonus_completeness": 1.0,
-        "status": "accepted",
-        "archive": "https://za.national-lottery.com/lotto/results/2025-archive"
+        "status": "source-error",
+        "parsed": 0,
+        "preserved": 105
       },
       "2026": {
-        "expected": 65,
-        "parsed": 65,
-        "minimum": 42,
-        "unique_ratio": 1.0,
-        "largest_duplicate_group": 1,
-        "bonus_completeness": 1.0,
-        "status": "accepted",
-        "archive": "https://za.national-lottery.com/lotto/results/2026-archive"
+        "status": "source-error",
+        "parsed": 0,
+        "preserved": 65
       }
     },
     "PowerBall": {
       "2024": {
-        "expected": 105,
-        "parsed": 105,
-        "minimum": 68,
-        "unique_ratio": 1.0,
-        "largest_duplicate_group": 1,
-        "bonus_completeness": 1.0,
-        "status": "accepted",
-        "archive": "https://za.national-lottery.com/powerball/results/2024-archive"
+        "status": "source-error",
+        "parsed": 0,
+        "preserved": 105
       },
       "2025": {
-        "expected": 104,
-        "parsed": 104,
-        "minimum": 67,
-        "unique_ratio": 1.0,
-        "largest_duplicate_group": 1,
-        "bonus_completeness": 1.0,
-        "status": "accepted",
-        "archive": "https://za.national-lottery.com/powerball/results/2025-archive"
+        "status": "source-error",
+        "parsed": 0,
+        "preserved": 104
       },
       "2026": {
-        "expected": 65,
-        "parsed": 65,
-        "minimum": 42,
-        "unique_ratio": 1.0,
-        "largest_duplicate_group": 1,
-        "bonus_completeness": 1.0,
-        "status": "accepted",
-        "archive": "https://za.national-lottery.com/powerball/results/2026-archive"
+        "status": "source-error",
+        "parsed": 0,
+        "preserved": 65
       }
     }
   }
