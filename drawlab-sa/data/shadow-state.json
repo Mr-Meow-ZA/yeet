@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-25T16:25:11.701229+00:00",
+  "updated_at": "2026-08-25T20:48:45.800071+00:00",
   "tickets": [
     {
       "id": "2026-08-25|PowerBall|powerball-frequency-reversion-30-v0.1",
@@ -22,8 +22,19 @@
       "research_only": true,
       "locked_on": "2026-08-10",
       "history_cutoff": "2026-08-21",
-      "status": "Pending result",
-      "created_at": "2026-08-25T16:25:11.696095+00:00"
+      "status": "Settled",
+      "created_at": "2026-08-25T16:25:11.696095+00:00",
+      "matches": 0,
+      "settled_at": "2026-08-25T20:48:45.800052+00:00",
+      "result_numbers": [
+        5,
+        34,
+        39,
+        43,
+        45
+      ],
+      "result_bonus": 1,
+      "result_source": "https://www.powerball.net/southafrica/results"
     },
     {
       "id": "2026-08-21|PowerBall|powerball-frequency-reversion-30-v0.1",
@@ -170,14 +181,14 @@
       "status": "shadow",
       "locked_on": "2026-08-10",
       "tickets": 5,
-      "settled": 4,
-      "pending": 1,
-      "avg_matches": 0.75,
-      "ge2_rate": 25.0,
+      "settled": 5,
+      "pending": 0,
+      "avg_matches": 0.6,
+      "ge2_rate": 20.0,
       "ge3_rate": 0.0,
       "best_matches": 2,
       "distribution": {
-        "0": 2,
+        "0": 3,
         "1": 1,
         "2": 1
       },
