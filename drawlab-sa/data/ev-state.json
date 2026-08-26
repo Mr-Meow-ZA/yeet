@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "model_version": "EV Hunter v2.0",
-  "updated_at": "2026-08-25T20:48:46.570669+00:00",
+  "updated_at": "2026-08-26T16:41:43.118847+00:00",
   "purpose": "Selective expected-value research based on prize mechanics, sales demand and sharing risk. It changes when to participate, not the probability of the draw.",
   "current": {
     "Daily Lotto": {
@@ -206,6 +206,20 @@
   },
   "decisions": [
     {
+      "date": "2026-08-28",
+      "game": "PowerBall",
+      "model_version": "EV Hunter v2.0",
+      "recorded_at": "2026-08-26T18:41:42.626423+02:00",
+      "decision": "SKIP",
+      "ev_ratio": 0.2562,
+      "expected_roi_pct": -74.39,
+      "conservative_roi_pct": -74.38,
+      "advertised_jackpot": 12000000.0,
+      "break_even_jackpot": 280699000.0,
+      "ticket_cost": 10.0,
+      "source": "https://za.national-lottery.com/results"
+    },
+    {
       "date": "2026-08-26",
       "game": "Lotto",
       "model_version": "EV Hunter v2.0",
@@ -217,6 +231,20 @@
       "advertised_jackpot": 18000000.0,
       "break_even_jackpot": 75604000.0,
       "ticket_cost": 5.0,
+      "source": "https://za.national-lottery.com/results"
+    },
+    {
+      "date": "2026-08-26",
+      "game": "Daily Lotto",
+      "model_version": "EV Hunter v2.0",
+      "recorded_at": "2026-08-26T18:41:42.626423+02:00",
+      "decision": "SKIP",
+      "ev_ratio": 0.5,
+      "expected_roi_pct": -50.0,
+      "conservative_roi_pct": -50.0,
+      "advertised_jackpot": 500000.0,
+      "break_even_jackpot": null,
+      "ticket_cost": 3.0,
       "source": "https://za.national-lottery.com/results"
     },
     {
