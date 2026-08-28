@@ -1,6 +1,6 @@
 {
   "schema_version": 8,
-  "generated_at": "2026-08-28T00:40:32.266516+00:00",
+  "generated_at": "2026-08-28T04:22:44.504308+00:00",
   "platform": "DrawLab v3 Research Platform",
   "research_architecture": {
     "draw_prediction": "Historical-number strategies remain frozen controls unless prospective evidence beats chance after correction.",
@@ -9,7 +9,7 @@
     "integrity": "Draw Integrity Auditor tests the random/independent null before any anomaly is treated as potentially meaningful."
   },
   "cloud_status": "ok",
-  "cloud_updated_at": "2026-08-28T02:40:29.706016+02:00",
+  "cloud_updated_at": "2026-08-28T06:22:42.866658+02:00",
   "history_quality": {
     "Daily Lotto": {
       "raw": 956,
@@ -1296,7 +1296,7 @@
     "policy": "These lines never change. A ticket is entered on every eligible draw using the era-correct board cost."
   },
   "shadow_research": {
-    "updated_at": "2026-08-28T00:40:31.085854+00:00",
+    "updated_at": "2026-08-28T04:22:43.584803+00:00",
     "summary": {
       "powerball-frequency-reversion-30-v0.1": {
         "challenger_id": "powerball-frequency-reversion-30-v0.1",
@@ -1496,7 +1496,7 @@
   "ev_hunter": {
     "schema_version": 2,
     "model_version": "EV Hunter v2.0",
-    "updated_at": "2026-08-28T00:40:31.987642+00:00",
+    "updated_at": "2026-08-28T04:22:44.255589+00:00",
     "purpose": "Selective expected-value research based on prize mechanics, sales demand and sharing risk. It changes when to participate, not the probability of the draw.",
     "current": {
       "Daily Lotto": {
