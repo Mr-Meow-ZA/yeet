@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "model_version": "EV Hunter v2.0",
-  "updated_at": "2026-08-31T21:13:10.025701+00:00",
+  "updated_at": "2026-08-31T23:53:27.608364+00:00",
   "purpose": "Selective expected-value research based on prize mechanics, sales demand and sharing risk. It changes when to participate, not the probability of the draw.",
   "current": {
     "Daily Lotto": {
@@ -231,6 +231,20 @@
       "advertised_jackpot": 20000000.0,
       "break_even_jackpot": 278598000.0,
       "ticket_cost": 10.0,
+      "source": "https://za.national-lottery.com/results"
+    },
+    {
+      "date": "2026-09-01",
+      "game": "Daily Lotto",
+      "model_version": "EV Hunter v2.0",
+      "recorded_at": "2026-09-01T01:53:26.903299+02:00",
+      "decision": "SKIP",
+      "ev_ratio": 0.5,
+      "expected_roi_pct": -50.0,
+      "conservative_roi_pct": -50.0,
+      "advertised_jackpot": 460000.0,
+      "break_even_jackpot": null,
+      "ticket_cost": 3.0,
       "source": "https://za.national-lottery.com/results"
     },
     {
