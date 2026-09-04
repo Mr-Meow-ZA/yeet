@@ -1,6 +1,6 @@
 {
   "schema_version": 8,
-  "generated_at": "2026-09-04T18:42:29.653977+00:00",
+  "generated_at": "2026-09-04T22:23:12.182856+00:00",
   "platform": "DrawLab v3 Research Platform",
   "research_architecture": {
     "draw_prediction": "Historical-number strategies remain frozen controls unless prospective evidence beats chance after correction.",
@@ -9,7 +9,7 @@
     "integrity": "Draw Integrity Auditor tests the random/independent null before any anomaly is treated as potentially meaningful."
   },
   "cloud_status": "ok",
-  "cloud_updated_at": "2026-09-04T20:42:27.520881+02:00",
+  "cloud_updated_at": "2026-09-05T00:23:09.557359+02:00",
   "history_quality": {
     "Daily Lotto": {
       "raw": 971,
@@ -484,6 +484,53 @@
   ],
   "recent_results": [
     {
+      "date": "2026-09-04",
+      "game": "PowerBall",
+      "numbers": [
+        4,
+        7,
+        27,
+        38,
+        50
+      ],
+      "bonus": 10,
+      "source": "https://www.powerball.net/southafrica/results",
+      "payouts": {
+        "5+PB": 3000000.0,
+        "5": 0.0,
+        "4+PB": 21687.0,
+        "4": 1000.0,
+        "3+PB": 250.0,
+        "3": 50.0,
+        "2+PB": 50.0,
+        "1+PB": 10.0,
+        "0+PB": 5.0
+      },
+      "payout_type": "exact",
+      "payout_source": "https://www.powerball.net/southafrica/results/2026-09-04"
+    },
+    {
+      "date": "2026-09-04",
+      "game": "Daily Lotto",
+      "numbers": [
+        8,
+        12,
+        30,
+        31,
+        35
+      ],
+      "bonus": null,
+      "source": "https://za.national-lottery.com/daily-lotto/results",
+      "payouts": {
+        "5": 143238.4,
+        "4": 401.2,
+        "3": 18.9,
+        "2": 5.0
+      },
+      "payout_type": "exact",
+      "payout_source": "https://za.national-lottery.com/daily-lotto/results/04-september-2026"
+    },
+    {
       "date": "2026-09-03",
       "game": "Daily Lotto",
       "numbers": [
@@ -848,53 +895,6 @@
       },
       "payout_type": "exact",
       "payout_source": "https://za.national-lottery.com/daily-lotto/results/25-august-2026"
-    },
-    {
-      "date": "2026-08-23",
-      "game": "Daily Lotto",
-      "numbers": [
-        2,
-        14,
-        26,
-        27,
-        29
-      ],
-      "bonus": null,
-      "source": "https://za.national-lottery.com/daily-lotto/results",
-      "payouts": {
-        "5": 0.0,
-        "4": 1730.6,
-        "3": 18.5,
-        "2": 4.9
-      },
-      "payout_type": "exact",
-      "payout_source": "https://za.national-lottery.com/daily-lotto/results/23-august-2026"
-    },
-    {
-      "date": "2026-08-22",
-      "game": "Lotto",
-      "numbers": [
-        5,
-        10,
-        12,
-        14,
-        23,
-        41
-      ],
-      "bonus": 20,
-      "source": "https://za.national-lottery.com/lotto/results",
-      "payouts": {
-        "6": 15500000.0,
-        "5+B": 0.0,
-        "5": 21776.1,
-        "4+B": 4000.0,
-        "4": 200.0,
-        "3+B": 200.0,
-        "2+B": 30.0,
-        "3": 20.0
-      },
-      "payout_type": "exact",
-      "payout_source": "https://za.national-lottery.com/lotto/results/22-august-2026"
     }
   ],
   "pending_tickets": [
@@ -1291,7 +1291,7 @@
     "policy": "These lines never change. A ticket is entered on every eligible draw using the era-correct board cost."
   },
   "shadow_research": {
-    "updated_at": "2026-09-04T18:42:28.447743+00:00",
+    "updated_at": "2026-09-04T22:23:11.031459+00:00",
     "summary": {
       "powerball-frequency-reversion-30-v0.1": {
         "challenger_id": "powerball-frequency-reversion-30-v0.1",
@@ -1491,12 +1491,12 @@
   "ev_hunter": {
     "schema_version": 2,
     "model_version": "EV Hunter v2.0",
-    "updated_at": "2026-09-04T18:42:29.402637+00:00",
+    "updated_at": "2026-09-04T22:23:11.888012+00:00",
     "purpose": "Selective expected-value research based on prize mechanics, sales demand and sharing risk. It changes when to participate, not the probability of the draw.",
     "current": {
       "Daily Lotto": {
         "ticket_cost": 3.0,
-        "advertised_jackpot": 550000.0,
+        "advertised_jackpot": 500000.0,
         "jackpot_role": "display_only; Daily Lotto top pool is sales-funded and rolls down rather than rolling over",
         "predicted_line_volume": 875931,
         "risk_line_volume": 1001909,
@@ -1521,14 +1521,14 @@
         "jackpot_source": "https://za.national-lottery.com/results",
         "anti_crowd_line": {
           "numbers": [
-            23,
-            28,
-            32,
+            9,
+            29,
+            33,
             34,
-            36
+            35
           ],
           "bonus": null,
-          "crowding_score": 0.605,
+          "crowding_score": 0.667,
           "crowd_model": "behavioral_prior_v1",
           "estimated_crowding_multiplier": null,
           "meaning": "Ranks equal-probability legal lines for expected sharing risk only. The EV gate gives this line zero predictive or crowd-uplift credit."
@@ -1595,9 +1595,9 @@
       },
       "PowerBall": {
         "ticket_cost": 10.0,
-        "advertised_jackpot": 25000000.0,
-        "predicted_line_volume": 2323860,
-        "risk_line_volume": 2569178,
+        "advertised_jackpot": 27000000.0,
+        "predicted_line_volume": 2344413,
+        "risk_line_volume": 2591901,
         "sales_model_samples": 20,
         "variable_pool_rate_median": 0.301321,
         "variable_pool_rate_conservative": 0.296817,
@@ -1616,21 +1616,21 @@
           "4+PB": 0.03
         },
         "structural_components": {
-          "5+PB": 0.7128,
+          "5+PB": 0.7695,
           "4": 0.1991,
           "3+PB": 0.146,
           "3": 0.4381,
           "2+PB": 0.4186,
           "1+PB": 0.4395,
           "0+PB": 0.3604,
-          "5": 0.1161,
+          "5": 0.1167,
           "4+PB": 0.0904
         },
-        "expected_return": 2.921,
-        "conservative_return": 2.9219,
-        "expected_roi_pct": -70.79,
-        "conservative_roi_pct": -70.78,
-        "ev_ratio": 0.2922,
+        "expected_return": 2.9783,
+        "conservative_return": 2.979,
+        "expected_roi_pct": -70.22,
+        "conservative_roi_pct": -70.21,
+        "ev_ratio": 0.2979,
         "decision": "SKIP",
         "mechanic": "Fixed lower prizes are valued exactly from the current rules; top variable divisions use exact historical pool accounting. The jackpot is valued at the advertised draw amount with collision risk.",
         "break_even_jackpot": 276874000.0,
@@ -1696,6 +1696,20 @@
     },
     "decisions": [
       {
+        "date": "2026-09-08",
+        "game": "PowerBall",
+        "model_version": "EV Hunter v2.0",
+        "recorded_at": "2026-09-05T00:23:11.216911+02:00",
+        "decision": "SKIP",
+        "ev_ratio": 0.2979,
+        "expected_roi_pct": -70.22,
+        "conservative_roi_pct": -70.21,
+        "advertised_jackpot": 27000000.0,
+        "break_even_jackpot": 276874000.0,
+        "ticket_cost": 10.0,
+        "source": "https://za.national-lottery.com/results"
+      },
+      {
         "date": "2026-09-05",
         "game": "Lotto",
         "model_version": "EV Hunter v2.0",
@@ -1707,6 +1721,20 @@
         "advertised_jackpot": 4000000.0,
         "break_even_jackpot": 76079000.0,
         "ticket_cost": 5.0,
+        "source": "https://za.national-lottery.com/results"
+      },
+      {
+        "date": "2026-09-05",
+        "game": "Daily Lotto",
+        "model_version": "EV Hunter v2.0",
+        "recorded_at": "2026-09-05T00:23:11.216911+02:00",
+        "decision": "SKIP",
+        "ev_ratio": 0.5,
+        "expected_roi_pct": -50.0,
+        "conservative_roi_pct": -50.0,
+        "advertised_jackpot": 500000.0,
+        "break_even_jackpot": null,
+        "ticket_cost": 3.0,
         "source": "https://za.national-lottery.com/results"
       },
       {
