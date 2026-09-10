@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "model_version": "EV Hunter v2.0",
-  "updated_at": "2026-09-10T18:49:09.835952+00:00",
+  "updated_at": "2026-09-10T22:38:19.562655+00:00",
   "purpose": "Selective expected-value research based on prize mechanics, sales demand and sharing risk. It changes when to participate, not the probability of the draw.",
   "current": {
     "Daily Lotto": {
@@ -38,7 +38,7 @@
           36
         ],
         "bonus": null,
-        "crowding_score": 0.1725,
+        "crowding_score": 0.1025,
         "crowd_model": "behavioral_prior_v1",
         "estimated_crowding_multiplier": null,
         "meaning": "Ranks equal-probability legal lines for expected sharing risk only. The EV gate gives this line zero predictive or crowd-uplift credit."
@@ -231,6 +231,20 @@
       "advertised_jackpot": 36000000.0,
       "break_even_jackpot": 278639000.0,
       "ticket_cost": 10.0,
+      "source": "https://za.national-lottery.com/results"
+    },
+    {
+      "date": "2026-09-11",
+      "game": "Daily Lotto",
+      "model_version": "EV Hunter v2.0",
+      "recorded_at": "2026-09-11T00:38:19.022503+02:00",
+      "decision": "SKIP",
+      "ev_ratio": 0.5,
+      "expected_roi_pct": -50.0,
+      "conservative_roi_pct": -50.0,
+      "advertised_jackpot": 500000.0,
+      "break_even_jackpot": null,
+      "ticket_cost": 3.0,
       "source": "https://za.national-lottery.com/results"
     },
     {
