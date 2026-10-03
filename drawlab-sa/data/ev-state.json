@@ -1,21 +1,21 @@
 {
   "schema_version": 2,
   "model_version": "EV Hunter v2.0",
-  "updated_at": "2026-10-02T23:49:36.086347+00:00",
+  "updated_at": "2026-10-03T18:53:30.173714+00:00",
   "purpose": "Selective expected-value research based on prize mechanics, sales demand and sharing risk. It changes when to participate, not the probability of the draw.",
   "current": {
     "Daily Lotto": {
       "ticket_cost": 3.0,
       "advertised_jackpot": 500000.0,
       "jackpot_role": "display_only; Daily Lotto top pool is sales-funded and rolls down rather than rolling over",
-      "predicted_line_volume": 940046,
-      "risk_line_volume": 1075246,
+      "predicted_line_volume": 647500,
+      "risk_line_volume": 740625,
       "sales_model_samples": 56,
       "prize_pool_rate": 0.5,
-      "prize_pool_estimate": 1410069.0,
+      "prize_pool_estimate": 971250.0,
       "structural_components": {
-        "5": 0.4816,
-        "4": 0.1934,
+        "5": 0.4308,
+        "4": 0.2442,
         "3": 0.225,
         "2": 0.6
       },
@@ -27,18 +27,18 @@
       "break_even_jackpot": null,
       "decision": "SKIP",
       "mechanic": "50% of sales funds four pari-mutuel divisions; if Match 5 has no winner its allocation rolls down to Match 4. Jackpot size is therefore not treated as an external rollover asset.",
-      "draw_date": "2026-10-03",
+      "draw_date": "2026-10-04",
       "jackpot_source": "https://za.national-lottery.com/results",
       "anti_crowd_line": {
         "numbers": [
-          25,
-          31,
-          32,
-          33,
-          35
+          6,
+          24,
+          34,
+          35,
+          36
         ],
         "bonus": null,
-        "crowding_score": 0.587,
+        "crowding_score": 0.674,
         "crowd_model": "behavioral_prior_v1",
         "estimated_crowding_multiplier": null,
         "meaning": "Ranks equal-probability legal lines for expected sharing risk only. The EV gate gives this line zero predictive or crowd-uplift credit."
@@ -48,8 +48,8 @@
     "Lotto": {
       "ticket_cost": 5.0,
       "advertised_jackpot": 2000000.0,
-      "predicted_line_volume": 2173292,
-      "risk_line_volume": 2357652,
+      "predicted_line_volume": 1828081,
+      "risk_line_volume": 1983157,
       "sales_model_samples": 20,
       "variable_pool_rate_median": 0.276897,
       "variable_pool_rate_conservative": 0.272346,
@@ -67,36 +67,36 @@
         "5": 0.25
       },
       "structural_components": {
-        "6": 0.0932,
+        "6": 0.094,
         "4+B": 0.1326,
         "4": 0.1459,
         "3+B": 0.1945,
         "2+B": 0.3137,
         "3": 0.2788,
-        "5+B": 0.0982,
+        "5+B": 0.0865,
         "5": 0.3461
       },
-      "expected_return": 1.603,
-      "conservative_return": 1.601,
-      "expected_roi_pct": -67.94,
-      "conservative_roi_pct": -67.98,
-      "ev_ratio": 0.3202,
+      "expected_return": 1.5921,
+      "conservative_return": 1.5899,
+      "expected_roi_pct": -68.16,
+      "conservative_roi_pct": -68.2,
+      "ev_ratio": 0.318,
       "decision": "SKIP",
       "mechanic": "Fixed lower prizes are valued exactly from the current rules; top variable divisions use exact historical pool accounting. The jackpot is valued at the advertised draw amount with collision risk.",
-      "break_even_jackpot": 76154000.0,
-      "draw_date": "2026-10-03",
+      "break_even_jackpot": 75544000.0,
+      "draw_date": "2026-10-07",
       "jackpot_source": "https://za.national-lottery.com/results",
       "anti_crowd_line": {
         "numbers": [
-          37,
           39,
+          42,
           45,
-          49,
-          50,
-          51
+          47,
+          48,
+          52
         ],
         "bonus": null,
-        "crowding_score": -0.190397,
+        "crowding_score": -0.0545,
         "crowd_model": "behavioral_prior_v1",
         "estimated_crowding_multiplier": null,
         "meaning": "Ranks equal-probability legal lines for expected sharing risk only. The EV gate gives this line zero predictive or crowd-uplift credit."
