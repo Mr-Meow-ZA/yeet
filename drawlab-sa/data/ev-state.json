@@ -1,12 +1,12 @@
 {
   "schema_version": 2,
   "model_version": "EV Hunter v2.0",
-  "updated_at": "2026-10-03T18:53:30.173714+00:00",
+  "updated_at": "2026-10-03T23:07:02.680643+00:00",
   "purpose": "Selective expected-value research based on prize mechanics, sales demand and sharing risk. It changes when to participate, not the probability of the draw.",
   "current": {
     "Daily Lotto": {
       "ticket_cost": 3.0,
-      "advertised_jackpot": 500000.0,
+      "advertised_jackpot": 400000.0,
       "jackpot_role": "display_only; Daily Lotto top pool is sales-funded and rolls down rather than rolling over",
       "predicted_line_volume": 647500,
       "risk_line_volume": 740625,
@@ -38,7 +38,7 @@
           36
         ],
         "bonus": null,
-        "crowding_score": 0.674,
+        "crowding_score": 0.604,
         "crowd_model": "behavioral_prior_v1",
         "estimated_crowding_multiplier": null,
         "meaning": "Ranks equal-probability legal lines for expected sharing risk only. The EV gate gives this line zero predictive or crowd-uplift credit."
@@ -47,9 +47,9 @@
     },
     "Lotto": {
       "ticket_cost": 5.0,
-      "advertised_jackpot": 2000000.0,
-      "predicted_line_volume": 1828081,
-      "risk_line_volume": 1983157,
+      "advertised_jackpot": 1500000.0,
+      "predicted_line_volume": 1801285,
+      "risk_line_volume": 1954087,
       "sales_model_samples": 20,
       "variable_pool_rate_median": 0.276897,
       "variable_pool_rate_conservative": 0.272346,
@@ -67,20 +67,20 @@
         "5": 0.25
       },
       "structural_components": {
-        "6": 0.094,
+        "6": 0.0705,
         "4+B": 0.1326,
         "4": 0.1459,
         "3+B": 0.1945,
         "2+B": 0.3137,
         "3": 0.2788,
-        "5+B": 0.0865,
+        "5+B": 0.0855,
         "5": 0.3461
       },
-      "expected_return": 1.5921,
-      "conservative_return": 1.5899,
-      "expected_roi_pct": -68.16,
-      "conservative_roi_pct": -68.2,
-      "ev_ratio": 0.318,
+      "expected_return": 1.5677,
+      "conservative_return": 1.5656,
+      "expected_roi_pct": -68.65,
+      "conservative_roi_pct": -68.69,
+      "ev_ratio": 0.3131,
       "decision": "SKIP",
       "mechanic": "Fixed lower prizes are valued exactly from the current rules; top variable divisions use exact historical pool accounting. The jackpot is valued at the advertised draw amount with collision risk.",
       "break_even_jackpot": 75544000.0,
@@ -206,6 +206,20 @@
   },
   "decisions": [
     {
+      "date": "2026-10-07",
+      "game": "Lotto",
+      "model_version": "EV Hunter v2.0",
+      "recorded_at": "2026-10-04T01:07:02.085215+02:00",
+      "decision": "SKIP",
+      "ev_ratio": 0.3131,
+      "expected_roi_pct": -68.65,
+      "conservative_roi_pct": -68.69,
+      "advertised_jackpot": 1500000.0,
+      "break_even_jackpot": 75544000.0,
+      "ticket_cost": 5.0,
+      "source": "https://za.national-lottery.com/results"
+    },
+    {
       "date": "2026-10-06",
       "game": "PowerBall",
       "model_version": "EV Hunter v2.0",
@@ -217,6 +231,20 @@
       "advertised_jackpot": 97000000.0,
       "break_even_jackpot": 276874000.0,
       "ticket_cost": 10.0,
+      "source": "https://za.national-lottery.com/results"
+    },
+    {
+      "date": "2026-10-04",
+      "game": "Daily Lotto",
+      "model_version": "EV Hunter v2.0",
+      "recorded_at": "2026-10-04T01:07:02.085215+02:00",
+      "decision": "SKIP",
+      "ev_ratio": 0.5,
+      "expected_roi_pct": -50.0,
+      "conservative_roi_pct": -50.0,
+      "advertised_jackpot": 400000.0,
+      "break_even_jackpot": null,
+      "ticket_cost": 3.0,
       "source": "https://za.national-lottery.com/results"
     },
     {
