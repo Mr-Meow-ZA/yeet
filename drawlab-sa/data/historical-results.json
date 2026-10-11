@@ -1,24 +1,213 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-10-04T23:33:26.702860+00:00",
+  "updated_at": "2026-10-11T23:55:59.760816+00:00",
   "coverage": {
     "Daily Lotto": {
       "2024": 365,
       "2025": 364,
-      "2026": 277
+      "2026": 284
     },
     "Lotto": {
       "2024": 103,
       "2025": 105,
-      "2026": 79
+      "2026": 81
     },
     "PowerBall": {
       "2024": 105,
       "2025": 104,
-      "2026": 79
+      "2026": 81
     }
   },
   "results": [
+    {
+      "date": "2026-10-11",
+      "game": "Daily Lotto",
+      "numbers": [
+        10,
+        12,
+        22,
+        29,
+        34
+      ],
+      "bonus": null,
+      "source": "https://za.national-lottery.com/daily-lotto/results/11-october-2026",
+      "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v3-rule-aware",
+      "rule_version": "5of36"
+    },
+    {
+      "date": "2026-10-10",
+      "game": "Lotto",
+      "numbers": [
+        5,
+        10,
+        14,
+        29,
+        30,
+        45
+      ],
+      "bonus": 15,
+      "source": "https://za.national-lottery.com/lotto/results/10-october-2026",
+      "archive_source": "https://za.national-lottery.com/lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v3-rule-aware",
+      "rule_version": "current-6of52"
+    },
+    {
+      "date": "2026-10-10",
+      "game": "Daily Lotto",
+      "numbers": [
+        15,
+        20,
+        28,
+        31,
+        32
+      ],
+      "bonus": null,
+      "source": "https://za.national-lottery.com/daily-lotto/results/10-october-2026",
+      "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v3-rule-aware",
+      "rule_version": "5of36"
+    },
+    {
+      "date": "2026-10-09",
+      "game": "PowerBall",
+      "numbers": [
+        3,
+        14,
+        17,
+        19,
+        37
+      ],
+      "bonus": 16,
+      "source": "https://za.national-lottery.com/powerball/results/09-october-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v3-rule-aware",
+      "rule_version": "current-5of50-pb16"
+    },
+    {
+      "date": "2026-10-09",
+      "game": "Daily Lotto",
+      "numbers": [
+        9,
+        12,
+        17,
+        25,
+        31
+      ],
+      "bonus": null,
+      "source": "https://za.national-lottery.com/daily-lotto/results/09-october-2026",
+      "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v3-rule-aware",
+      "rule_version": "5of36"
+    },
+    {
+      "date": "2026-10-08",
+      "game": "Daily Lotto",
+      "numbers": [
+        5,
+        17,
+        21,
+        30,
+        34
+      ],
+      "bonus": null,
+      "source": "https://za.national-lottery.com/daily-lotto/results/08-october-2026",
+      "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v3-rule-aware",
+      "rule_version": "5of36"
+    },
+    {
+      "date": "2026-10-07",
+      "game": "Lotto",
+      "numbers": [
+        9,
+        10,
+        16,
+        23,
+        29,
+        33
+      ],
+      "bonus": 47,
+      "source": "https://za.national-lottery.com/lotto/results/07-october-2026",
+      "archive_source": "https://za.national-lottery.com/lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v3-rule-aware",
+      "rule_version": "current-6of52"
+    },
+    {
+      "date": "2026-10-07",
+      "game": "Daily Lotto",
+      "numbers": [
+        10,
+        12,
+        21,
+        29,
+        34
+      ],
+      "bonus": null,
+      "source": "https://za.national-lottery.com/daily-lotto/results/07-october-2026",
+      "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v3-rule-aware",
+      "rule_version": "5of36"
+    },
+    {
+      "date": "2026-10-06",
+      "game": "PowerBall",
+      "numbers": [
+        12,
+        18,
+        21,
+        35,
+        46
+      ],
+      "bonus": 10,
+      "source": "https://za.national-lottery.com/powerball/results/06-october-2026",
+      "archive_source": "https://za.national-lottery.com/powerball/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v3-rule-aware",
+      "rule_version": "current-5of50-pb16"
+    },
+    {
+      "date": "2026-10-06",
+      "game": "Daily Lotto",
+      "numbers": [
+        6,
+        10,
+        14,
+        15,
+        18
+      ],
+      "bonus": null,
+      "source": "https://za.national-lottery.com/daily-lotto/results/06-october-2026",
+      "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v3-rule-aware",
+      "rule_version": "5of36"
+    },
+    {
+      "date": "2026-10-05",
+      "game": "Daily Lotto",
+      "numbers": [
+        1,
+        5,
+        7,
+        25,
+        27
+      ],
+      "bonus": null,
+      "source": "https://za.national-lottery.com/daily-lotto/results/05-october-2026",
+      "archive_source": "https://za.national-lottery.com/daily-lotto/results/2026-archive",
+      "verified": true,
+      "parser_version": "archive-v3-rule-aware",
+      "rule_version": "5of36"
+    },
     {
       "date": "2026-10-04",
       "game": "Daily Lotto",
@@ -27209,10 +27398,10 @@
         "archive": "https://za.national-lottery.com/daily-lotto/results/2025-archive"
       },
       "2026": {
-        "expected": 277,
-        "parsed": 277,
-        "minimum": 180,
-        "unique_ratio": 0.9964,
+        "expected": 284,
+        "parsed": 284,
+        "minimum": 184,
+        "unique_ratio": 0.9965,
         "largest_duplicate_group": 2,
         "bonus_completeness": 1.0,
         "status": "accepted",
@@ -27241,9 +27430,9 @@
         "archive": "https://za.national-lottery.com/lotto/results/2025-archive"
       },
       "2026": {
-        "expected": 79,
-        "parsed": 79,
-        "minimum": 51,
+        "expected": 81,
+        "parsed": 81,
+        "minimum": 52,
         "unique_ratio": 1.0,
         "largest_duplicate_group": 1,
         "bonus_completeness": 1.0,
@@ -27273,9 +27462,9 @@
         "archive": "https://za.national-lottery.com/powerball/results/2025-archive"
       },
       "2026": {
-        "expected": 79,
-        "parsed": 79,
-        "minimum": 51,
+        "expected": 81,
+        "parsed": 81,
+        "minimum": 52,
         "unique_ratio": 1.0,
         "largest_duplicate_group": 1,
         "bonus_completeness": 1.0,
