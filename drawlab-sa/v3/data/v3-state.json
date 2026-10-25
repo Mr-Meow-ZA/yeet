@@ -1,6 +1,6 @@
 {
   "schema_version": 8,
-  "generated_at": "2026-10-25T18:37:30.733211+00:00",
+  "generated_at": "2026-10-25T22:36:19.775757+00:00",
   "platform": "DrawLab v3 Research Platform",
   "research_architecture": {
     "draw_prediction": "Historical-number strategies remain frozen controls unless prospective evidence beats chance after correction.",
@@ -9,7 +9,7 @@
     "integrity": "Draw Integrity Auditor tests the random/independent null before any anomaly is treated as potentially meaningful."
   },
   "cloud_status": "ok",
-  "cloud_updated_at": "2026-10-25T20:37:28.818719+02:00",
+  "cloud_updated_at": "2026-10-26T00:36:17.833509+02:00",
   "history_quality": {
     "Daily Lotto": {
       "raw": 1013,
@@ -483,6 +483,27 @@
   ],
   "recent_results": [
     {
+      "date": "2026-10-25",
+      "game": "Daily Lotto",
+      "numbers": [
+        2,
+        13,
+        15,
+        28,
+        32
+      ],
+      "bonus": null,
+      "source": "https://za.national-lottery.com/daily-lotto/results",
+      "payouts": {
+        "5": 0.0,
+        "4": 1599.0,
+        "3": 19.4,
+        "2": 5.1
+      },
+      "payout_type": "exact",
+      "payout_source": "https://za.national-lottery.com/daily-lotto/results/25-october-2026"
+    },
+    {
       "date": "2026-10-24",
       "game": "Lotto",
       "numbers": [
@@ -873,27 +894,6 @@
       },
       "payout_type": "exact",
       "payout_source": "https://za.national-lottery.com/lotto/results/14-october-2026"
-    },
-    {
-      "date": "2026-10-14",
-      "game": "Daily Lotto",
-      "numbers": [
-        7,
-        12,
-        20,
-        27,
-        36
-      ],
-      "bonus": null,
-      "source": "https://za.national-lottery.com/daily-lotto/results",
-      "payouts": {
-        "5": 68293.0,
-        "4": 351.5,
-        "3": 16.9,
-        "2": 4.7
-      },
-      "payout_type": "exact",
-      "payout_source": "https://za.national-lottery.com/daily-lotto/results/14-october-2026"
     }
   ],
   "pending_tickets": [
@@ -1290,7 +1290,7 @@
     "policy": "These lines never change. A ticket is entered on every eligible draw using the era-correct board cost."
   },
   "shadow_research": {
-    "updated_at": "2026-10-25T18:37:29.642963+00:00",
+    "updated_at": "2026-10-25T22:36:18.747014+00:00",
     "summary": {
       "powerball-frequency-reversion-30-v0.1": {
         "challenger_id": "powerball-frequency-reversion-30-v0.1",
@@ -1490,12 +1490,12 @@
   "ev_hunter": {
     "schema_version": 2,
     "model_version": "EV Hunter v2.0",
-    "updated_at": "2026-10-25T18:37:30.443957+00:00",
+    "updated_at": "2026-10-25T22:36:19.490034+00:00",
     "purpose": "Selective expected-value research based on prize mechanics, sales demand and sharing risk. It changes when to participate, not the probability of the draw.",
     "current": {
       "Daily Lotto": {
         "ticket_cost": 3.0,
-        "advertised_jackpot": 420000.0,
+        "advertised_jackpot": 500000.0,
         "jackpot_role": "display_only; Daily Lotto top pool is sales-funded and rolls down rather than rolling over",
         "predicted_line_volume": 804038,
         "risk_line_volume": 919677,
@@ -1527,7 +1527,7 @@
             35
           ],
           "bonus": null,
-          "crowding_score": 0.667,
+          "crowding_score": 0.597,
           "crowd_model": "behavioral_prior_v1",
           "estimated_crowding_multiplier": null,
           "meaning": "Ranks equal-probability legal lines for expected sharing risk only. The EV gate gives this line zero predictive or crowd-uplift credit."
@@ -1720,6 +1720,20 @@
         "advertised_jackpot": 24000000.0,
         "break_even_jackpot": 278598000.0,
         "ticket_cost": 10.0,
+        "source": "https://za.national-lottery.com/results"
+      },
+      {
+        "date": "2026-10-26",
+        "game": "Daily Lotto",
+        "model_version": "EV Hunter v2.0",
+        "recorded_at": "2026-10-26T00:36:18.998591+02:00",
+        "decision": "SKIP",
+        "ev_ratio": 0.5,
+        "expected_roi_pct": -50.0,
+        "conservative_roi_pct": -50.0,
+        "advertised_jackpot": 500000.0,
+        "break_even_jackpot": null,
+        "ticket_cost": 3.0,
         "source": "https://za.national-lottery.com/results"
       },
       {
