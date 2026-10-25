@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-10-18T22:34:49.320724+00:00",
+  "updated_at": "2026-10-25T22:47:44.456560+00:00",
   "coverage": {
     "Daily Lotto": {
       "2024": 365,
@@ -27374,15 +27374,15 @@
     }
   ],
   "errors": [
-    "Daily Lotto 2024: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /daily-lotto/results/2024-archive (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7fad65269ac0>, 'Connection to za.national-lottery.com timed out. (connect timeout=6)'))",
-    "Daily Lotto 2025: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /daily-lotto/results/2025-archive (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7fad659f7770>, 'Connection to za.national-lottery.com timed out. (connect timeout=6)'))",
-    "Daily Lotto 2026: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /daily-lotto/results/2026-archive (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7fad647cf680>, 'Connection to za.national-lottery.com timed out. (connect timeout=6)'))",
-    "Lotto 2024: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /lotto/results/2024-archive (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7fad647cfa10>, 'Connection to za.national-lottery.com timed out. (connect timeout=6)'))",
-    "Lotto 2025: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /lotto/results/2025-archive (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7fad647cfda0>, 'Connection to za.national-lottery.com timed out. (connect timeout=6)'))",
-    "Lotto 2026: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /lotto/results/2026-archive (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7fad648a0170>, 'Connection to za.national-lottery.com timed out. (connect timeout=6)'))",
-    "PowerBall 2024: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /powerball/results/2024-archive (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7fad648a04d0>, 'Connection to za.national-lottery.com timed out. (connect timeout=6)'))",
-    "PowerBall 2025: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /powerball/results/2025-archive (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7fad648a0740>, 'Connection to za.national-lottery.com timed out. (connect timeout=6)'))",
-    "PowerBall 2026: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /powerball/results/2026-archive (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7fad648a0b60>, 'Connection to za.national-lottery.com timed out. (connect timeout=6)'))"
+    "Daily Lotto 2024: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /daily-lotto/results/2024-archive (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7fc5e90134a0>, 'Connection to za.national-lottery.com timed out. (connect timeout=6)'))",
+    "Daily Lotto 2025: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /daily-lotto/results/2025-archive (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7fc5e91389b0>, 'Connection to za.national-lottery.com timed out. (connect timeout=6)'))",
+    "Daily Lotto 2026: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /daily-lotto/results/2026-archive (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7fc5e857f590>, 'Connection to za.national-lottery.com timed out. (connect timeout=6)'))",
+    "Lotto 2024: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /lotto/results/2024-archive (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7fc5e857f920>, 'Connection to za.national-lottery.com timed out. (connect timeout=6)'))",
+    "Lotto 2025: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /lotto/results/2025-archive (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7fc5e857fcb0>, 'Connection to za.national-lottery.com timed out. (connect timeout=6)'))",
+    "Lotto 2026: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /lotto/results/2026-archive (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7fc5e857ffe0>, 'Connection to za.national-lottery.com timed out. (connect timeout=6)'))",
+    "PowerBall 2024: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /powerball/results/2024-archive (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7fc5e86503e0>, 'Connection to za.national-lottery.com timed out. (connect timeout=6)'))",
+    "PowerBall 2025: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /powerball/results/2025-archive (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7fc5e8650650>, 'Connection to za.national-lottery.com timed out. (connect timeout=6)'))",
+    "PowerBall 2026: ConnectTimeout: HTTPSConnectionPool(host='za.national-lottery.com', port=443): Max retries exceeded with url: /powerball/results/2026-archive (Caused by ConnectTimeoutError(<HTTPSConnection(host='za.national-lottery.com', port=443) at 0x7fc5e8650a40>, 'Connection to za.national-lottery.com timed out. (connect timeout=6)'))"
   ],
   "status": "unavailable",
   "quality": {
