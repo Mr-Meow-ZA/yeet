@@ -1,6 +1,6 @@
 {
   "schema_version": 8,
-  "generated_at": "2026-10-28T20:41:11.164767+00:00",
+  "generated_at": "2026-10-29T00:01:44.192408+00:00",
   "platform": "DrawLab v3 Research Platform",
   "research_architecture": {
     "draw_prediction": "Historical-number strategies remain frozen controls unless prospective evidence beats chance after correction.",
@@ -9,7 +9,7 @@
     "integrity": "Draw Integrity Auditor tests the random/independent null before any anomaly is treated as potentially meaningful."
   },
   "cloud_status": "ok",
-  "cloud_updated_at": "2026-10-28T22:41:08.873816+02:00",
+  "cloud_updated_at": "2026-10-29T02:01:41.732471+02:00",
   "history_quality": {
     "Daily Lotto": {
       "raw": 1013,
@@ -1290,7 +1290,7 @@
     "policy": "These lines never change. A ticket is entered on every eligible draw using the era-correct board cost."
   },
   "shadow_research": {
-    "updated_at": "2026-10-28T20:41:10.158164+00:00",
+    "updated_at": "2026-10-29T00:01:42.994179+00:00",
     "summary": {
       "powerball-frequency-reversion-30-v0.1": {
         "challenger_id": "powerball-frequency-reversion-30-v0.1",
@@ -1490,12 +1490,12 @@
   "ev_hunter": {
     "schema_version": 2,
     "model_version": "EV Hunter v2.0",
-    "updated_at": "2026-10-28T20:41:10.918301+00:00",
+    "updated_at": "2026-10-29T00:01:43.912194+00:00",
     "purpose": "Selective expected-value research based on prize mechanics, sales demand and sharing risk. It changes when to participate, not the probability of the draw.",
     "current": {
       "Daily Lotto": {
         "ticket_cost": 3.0,
-        "advertised_jackpot": 1200000.0,
+        "advertised_jackpot": 500000.0,
         "jackpot_role": "display_only; Daily Lotto top pool is sales-funded and rolls down rather than rolling over",
         "predicted_line_volume": 924532,
         "risk_line_volume": 1057500,
@@ -1695,6 +1695,20 @@
     },
     "decisions": [
       {
+        "date": "2026-10-31",
+        "game": "Lotto",
+        "model_version": "EV Hunter v2.0",
+        "recorded_at": "2026-10-29T02:01:43.231025+02:00",
+        "decision": "SKIP",
+        "ev_ratio": 0.3627,
+        "expected_roi_pct": -63.67,
+        "conservative_roi_pct": -63.73,
+        "advertised_jackpot": 6500000.0,
+        "break_even_jackpot": 76154000.0,
+        "ticket_cost": 5.0,
+        "source": "https://za.national-lottery.com/results"
+      },
+      {
         "date": "2026-10-30",
         "game": "PowerBall",
         "model_version": "EV Hunter v2.0",
@@ -1706,6 +1720,20 @@
         "advertised_jackpot": 40000000.0,
         "break_even_jackpot": 280699000.0,
         "ticket_cost": 10.0,
+        "source": "https://za.national-lottery.com/results"
+      },
+      {
+        "date": "2026-10-29",
+        "game": "Daily Lotto",
+        "model_version": "EV Hunter v2.0",
+        "recorded_at": "2026-10-29T02:01:43.231025+02:00",
+        "decision": "SKIP",
+        "ev_ratio": 0.5,
+        "expected_roi_pct": -50.0,
+        "conservative_roi_pct": -50.0,
+        "advertised_jackpot": 500000.0,
+        "break_even_jackpot": null,
+        "ticket_cost": 3.0,
         "source": "https://za.national-lottery.com/results"
       },
       {
